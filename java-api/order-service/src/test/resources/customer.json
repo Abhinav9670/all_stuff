@@ -1,0 +1,24 @@
+	{
+		"customerId": 5228963,
+		"jwtToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW5qYXkuNjAwQG1haWxpbmF0b3IuY29tIiwiY29kZSI6IjE2ODMxMDE5ODE3OTUiLCJyb2xlIjoidXNlciIsImN1c3RvbWVySWQiOjUyMjg5NjN9.2614i9FQqK6PLNfU9X3kJ93G-TmNH4N2spl6AtmgHLZbVHS101Opx-FuRJvirUgkWJaKoU3wvsQnyjhvUs8pZA",
+		"groupId": 1,
+		"createdAt": "Wed May 03 08:19:41 GMT 2023",
+		"updatedAt": "Wed May 03 08:19:41 GMT 2023",
+		"createdIn": "English",
+		"email": "sanjay.600@mailinator.com",
+		"firstName": "sanjay",
+		"lastName": "600",
+		"mobileNumber": "+966 501234561",
+		"gender": 2,
+		"ageGroupId": 1,
+		"updateEmail": false,
+		"deleteRequested": false,
+		"storeId": 1,
+		"firstFreeShipping": {
+			"numOfDays": "9",
+			"expireOn": "2023-05-12T08:19:41.800Z",
+			"isActive": true
+		},
+		"passwordAvailable": true,
+		"whatsApp": false
+	}

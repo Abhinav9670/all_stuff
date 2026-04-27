@@ -1,0 +1,30 @@
+payment:
+  domain: dev-payment.stylifashion.com
+  replicaCount: 2
+  appname: payment
+  node_env: dev
+  host: '0.0.0.0'
+  port: 5001
+  consul_host: consul-consul-consul-server.consul
+  consul_port: 8500
+  consul_key: appConfig_qa
+  consul_payment_methods: payment_methods_dev
+  mysql_host: 10.128.0.20
+  mysql_user: payment
+  mysql_pwd: Vehufb38fbhjfe84
+  mysql_db: payment_service
+  mysql_port: 3306
+  debug_params: couchnode:lcb:error,couchnode:lcb:warn node customer_management_service
+  redis_port: 6379
+  redis_host: 10.66.16.3
+  order_count_url: http://order-service/rest/order/auth/total/count
+  customer_service_api_url: http://customer-service.oms-dev
+  utility_service_api_url: http://utility-service.oms-dev
+  merchant_key_path: /var/gcppath/merchant_id.key.pem
+  merchant_cert_path: /var/gcppath/merchant_id.crt.pem
+  elastic_apm_service_name: dev-payment-service
+  elastic_apm_service_url: http://falcondev851-apm-server.default:8200
+  memorylim: 1000Mi
+  cpulim: 500m
+  memoryreq: 1000Mi
+  cpureq: 500m

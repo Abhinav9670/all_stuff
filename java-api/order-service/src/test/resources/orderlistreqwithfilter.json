@@ -1,0 +1,22 @@
+{
+	"filters": {
+	  "customerId": "1",
+	  "customerName": "test",
+	  "customerEmail": "test@mail.com",
+	  "source": ["1"],
+	  "webSite": [
+		"3"
+	  ],
+	  "mobileNumber": "906754311",
+	  "customerSince": "",
+	  "storeId": [
+		"17"
+	  ],
+	  "gender": ["1"],
+	  "appVersion": ["1"],
+	  "incrementId":"1"
+	},
+	"offset": 0,
+	"pageSize": 20,
+	"query": ""
+  }

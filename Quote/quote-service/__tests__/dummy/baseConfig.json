@@ -1,0 +1,216 @@
+{
+    "isShukranEnable": true,
+    "blackListedCountryForShukran": [12, 13],
+    "pickFlashSaleFromProductEnrich": false,
+    "crossSellBagContextId": "bag-page-all",
+    "uuid_validation": false,
+    "enable_google_maps":true,
+    "retry_payment_limit":4,
+    "hold_order_limit":5,
+    "prefferedPaymentsEnable": true,
+    "ignorPrefferedPayments": ["cashondelivery", "free"],
+    "retryPaymentMethods": [
+                   "md_payfort_cc_vault",
+          "md_payfort",
+          "cashondelivery",
+          "apple_pay",
+          "free",
+          "tabby_installments",
+          "tamara_installments_3"
+        ],
+    "bnplAsync": false,
+    "bnplBagPage": false,
+    "priceNudge": {
+      "sa": true,
+      "ae": true,
+      "notifications": {
+        "bgColor": {
+          "PRICE_DOWN": "#E4ECF1",
+          "PRICE_UP": "#E4ECF1",
+          "PRICE_UP_FROM_FLASH": "#E4ECF1"
+        },
+        "color": {
+          "PRICE_DOWN": "#1C759B",
+          "PRICE_UP": "#1C759B",
+          "PRICE_UP_FROM_FLASH": "#1C759B"
+        },
+        "en": {
+          "PRICE_UP": "🧐 Prices of some items in your bag have changed.",
+          "PRICE_UP_FROM_FLASH": "🧐 Flash sale prices have changed in your bag.",
+          "PRICE_DOWN": "🥳 Prices of some items in your bag have dropped."
+        },
+        "ar": {
+          "PRICE_UP": " الكتابة العربي الى كتابة مفهومة من قبل اغلب برامج. 🧐",
+          "PRICE_UP_FROM_FLASH": "Flash sale prices have changed in your bag. 🧐",
+          "PRICE_DOWN": "الكتابة العربي الى كتابة مفهومة من قبل اغلب برام 🥳"
+        }
+      }
+    },
+    "giftProducts": {
+      "excludeFromPromo": true,
+      "notifications": {
+        "bgColor": {
+          "REMOVAL_MSG": "#4f7c14"
+        },
+        "color": {
+          "REMOVAL_MSG": "#2d2d2d"
+        },
+        "en": {
+          "REMOVAL_MSG": "Free gift removed from Bag."
+        },
+        "ar": {
+          "REMOVAL_MSG": "تم إزالة الهدية المجانية من الحقيبة"
+        }
+      },
+      "sa": {
+        "enabled": true,
+        "collections": [
+          {
+            "minBagVal": "150",
+            "contextId": "gifts-for-bag-below-150"
+          },
+          {
+            "minBagVal": "180",
+            "contextId": "below-180"
+          }
+        ]
+      },
+      "ae": {
+        "enabled": true,
+        "collections": [
+          {
+            "minBagVal": "150",
+            "contextId": "gifts-for-bag-below-150"
+          },
+          {
+            "minBagVal": "180",
+            "contextId": "below-180"
+          }
+        ]
+      },
+      "om": {
+        "enabled": false,
+        "collections": [
+          {
+            "minBagVal": "150",
+            "contextId": "gifts-for-bag-below-150"
+          },
+          {
+            "minBagVal": "180",
+            "contextId": "below-180"
+          }
+        ]
+      }
+    },
+    "surprizePriceDrop": {
+      "sa": {
+        "enabled": false,
+        "webEnabled": false,
+        "minQuoteVal": 10,
+        "updatedAtMinDays": 2,
+        "createdAtMaxDays": 0.001,
+        "repeatIntervalDays": 0.00000000001,
+        "offerTimeMinutes": 5,
+        "offerMaxCount": 15,
+        "priceRange": {
+          "from": 5,
+          "to":1500
+        },
+        "dropPercent": 5
+      },
+      "ae": {
+        "enabled": false,
+        "webEnabled": false,
+        "minQuoteVal": 10,
+        "updatedAtMinDays": 2,
+        "createdAtMaxDays": 0.0000000000001,
+        "repeatIntervalDays": 0.000000000001,
+        "offerTimeMinutes": 2,
+        "offerMaxCount": 10,
+        "priceRange": {
+          "from": 5,
+          "to": 1000
+        },
+        "dropPercent": 5
+      },
+      "kw": {
+        "enabled": false,
+        "webEnabled": false,
+        "minQuoteVal": 5,
+        "updatedAtMinDays": 2,
+        "createdAtMaxDays": 0,
+        "repeatIntervalDays": 0.0001,
+        "offerTimeMinutes": 10,
+        "offerMaxCount": 5000,
+        "priceRange": {
+          "from": 1,
+          "to": 3
+        },
+        "dropPercent": 5
+      },
+      "qa": {
+        "enabled": false
+      },
+      "bh": {
+        "enabled": false
+      },
+      "om": {
+        "enabled": false,
+        "webEnabled": false,
+        "minQuoteVal": 10,
+        "updatedAtMinDays": 2,
+        "createdAtMaxDays": 0.0000000000001,
+        "repeatIntervalDays": 0.000000000001,
+        "offerTimeMinutes": 2,
+        "offerMaxCount": 10,
+        "priceRange": {
+          "from": 5,
+          "to": 1000
+        },
+        "dropPercent": 5
+      }
+    },
+      "freeShipping": {
+      "sa": {
+        "enable": true,
+        "expireInDays": 360
+      },
+      "ae": {
+        "enable": false,
+        "expireInDays": 20
+      },
+      "om": {
+        "enable": false,
+        "expireInDays": 20
+      }
+    },
+    "forceLogout": {
+      "enable": true,
+      "urls": [
+        "/v6/get",
+        "/v6/get/",
+        "/v5/view/count"
+      ]
+    },
+    "bundleNudge": {
+      "sa": true,
+      "ae": true,
+      "om": false,
+      "translations": {
+        "en": {
+          "appliedText": "{{bundleDesc}} applied!",
+          "addCta": "Add",
+          "prospectText": "Add {{addMore}} more items to avail {{bundleDesc}}"
+        },
+        "ar": {
+          "appliedText": "تم تطبيق {{bundleDesc}}!",
+          "addCta": "إضافة",
+          "prospectText": "إضافة المزيد من {{addMore}} المنتجات للحصول على {{bundleDesc}}"
+        }
+      },
+      "bgColor": {
+        "applied": "#EAF1E4",
+        "prospect": "#FAEAEB"
+      }
+    }
+  }

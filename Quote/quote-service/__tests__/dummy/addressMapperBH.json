@@ -1,0 +1,988 @@
+{
+  "provinces": {
+    "BH": {
+      "611": {
+        "cities": {
+          "290": {
+            "id": "290",
+            "name_en": "Muharraq",
+            "name_ar": "المحرق",
+            "enabled": true,
+            "min_sla": 0,
+            "max_sla": 15,
+            "cod_verification": true,
+            "threshold": 102,
+            "max_threshold": 102,
+            "fast_delivery": false,
+            "type": "city",
+            "area": {
+              "5094": {
+                "enabled": true,
+                "id": "5094",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "البسيتين",
+                "name_en": "Busaiteen",
+                "type": "area"
+              },
+              "5096": {
+                "enabled": true,
+                "id": "5096",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "سماهيج",
+                "name_en": "Samaheej",
+                "type": "area"
+              },
+              "5098": {
+                "enabled": true,
+                "id": "5098",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "جزر أمواج",
+                "name_en": "Amwaj",
+                "type": "area"
+              },
+              "5100": {
+                "enabled": true,
+                "id": "5100",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "آل دير",
+                "name_en": "Al Dair",
+                "type": "area"
+              },
+              "5102": {
+                "enabled": true,
+                "id": "5102",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "حلايم نايم",
+                "name_en": "Halat Naim",
+                "type": "area"
+              },
+              "5104": {
+                "enabled": true,
+                "id": "5104",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "الحد",
+                "name_en": "Hidd",
+                "type": "area"
+              },
+              "5106": {
+                "enabled": true,
+                "id": "5106",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "أراد",
+                "name_en": "Arad",
+                "type": "area"
+              },
+              "5108": {
+                "enabled": true,
+                "id": "5108",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "قلالي",
+                "name_en": "Galali",
+                "type": "area"
+              },
+              "5110": {
+                "enabled": true,
+                "id": "5110",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "المحرق",
+                "name_en": "Muharraq",
+                "type": "area"
+              },
+              "5112": {
+                "enabled": true,
+                "id": "5112",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "هاله",
+                "name_en": "Hala",
+                "type": "area"
+              }
+            }
+          },
+          "292": {
+            "area": {
+              "5114": {
+                "enabled": true,
+                "id": "5114",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "أم الحسام",
+                "name_en": "Um Al Hassam",
+                "type": "area"
+              },
+              "5116": {
+                "enabled": true,
+                "id": "5116",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "العدلية",
+                "name_en": "Adliya",
+                "type": "area"
+              },
+              "5118": {
+                "enabled": true,
+                "id": "5118",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "الغريفة",
+                "name_en": "Al Ghurayfah",
+                "type": "area"
+              },
+              "5120": {
+                "enabled": true,
+                "id": "5120",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "الجفير",
+                "name_en": "Juffair",
+                "type": "area"
+              },
+              "5122": {
+                "enabled": true,
+                "id": "5122",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "الماحوز",
+                "name_en": "Mahooz",
+                "type": "area"
+              },
+              "5124": {
+                "enabled": true,
+                "id": "5124",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "السلمانية",
+                "name_en": "Salmaniya",
+                "type": "area"
+              },
+              "5126": {
+                "enabled": true,
+                "id": "5126",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "المنطقة الدبلوماسية",
+                "name_en": "Diplomatic Area",
+                "type": "area"
+              },
+              "5128": {
+                "enabled": true,
+                "id": "5128",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "ساقية",
+                "name_en": "Segaya",
+                "type": "area"
+              },
+              "5130": {
+                "enabled": true,
+                "id": "5130",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "القضيبية",
+                "name_en": "Qudaibiya",
+                "type": "area"
+              },
+              "5132": {
+                "enabled": true,
+                "id": "5132",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "المنامة",
+                "name_en": "Manama",
+                "type": "area"
+              },
+              "5134": {
+                "enabled": true,
+                "id": "5134",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "الحورة",
+                "name_en": "Al Hoora",
+                "type": "area"
+              },
+              "5136": {
+                "enabled": true,
+                "id": "5136",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "الزنج",
+                "name_en": "Zinj",
+                "type": "area"
+              },
+              "5138": {
+                "enabled": true,
+                "id": "5138",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "القفول",
+                "name_en": "Al Guful",
+                "type": "area"
+              }
+            },
+            "cod_verification": false,
+            "enabled": true,
+            "fast_delivery": false,
+            "id": "292",
+            "max_sla": 0,
+            "min_sla": 0,
+            "name_ar": "المنامة",
+            "name_en": "Manama",
+            "threshold": 100,
+            "type": "city"
+          },
+          "294": {
+            "area": {
+              "5140": {
+                "enabled": true,
+                "id": "5140",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "بلاد القديم",
+                "name_en": "Bilad Al Qadeem",
+                "type": "area"
+              },
+              "5142": {
+                "enabled": true,
+                "id": "5142",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "خميس",
+                "name_en": "Khamis",
+                "type": "area"
+              },
+              "5144": {
+                "enabled": true,
+                "id": "5144",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "سلماباد",
+                "name_en": "Salmabad",
+                "type": "area"
+              },
+              "5146": {
+                "enabled": true,
+                "id": "5146",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "مدينة زايد",
+                "name_en": "Zayed Town",
+                "type": "area"
+              },
+              "5148": {
+                "enabled": true,
+                "id": "5148",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "أعالي",
+                "name_en": "A Ali",
+                "type": "area"
+              }
+            },
+            "cod_verification": false,
+            "enabled": true,
+            "fast_delivery": false,
+            "id": "294",
+            "max_sla": 0,
+            "min_sla": 0,
+            "name_ar": "المنطقة الوسطى‎",
+            "name_en": "Central",
+            "threshold": 0,
+            "type": "city"
+          },
+          "296": {
+            "area": {
+              "5150": {
+                "enabled": true,
+                "id": "5150",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "مينا سلمان",
+                "name_en": "Mina Salman",
+                "type": "area"
+              },
+              "5152": {
+                "enabled": true,
+                "id": "5152",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "الغرب إيكر",
+                "name_en": "West Eker",
+                "type": "area"
+              },
+              "5154": {
+                "enabled": true,
+                "id": "5154",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "آل إيكر",
+                "name_en": "Al Eker",
+                "type": "area"
+              },
+              "5156": {
+                "enabled": true,
+                "id": "5156",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "المعامير",
+                "name_en": "Ma Ameer",
+                "type": "area"
+              },
+              "5158": {
+                "enabled": true,
+                "id": "5158",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "آلخاريا",
+                "name_en": "Al Khariya",
+                "type": "area"
+              },
+              "5160": {
+                "enabled": true,
+                "id": "5160",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "سند",
+                "name_en": "Sanad",
+                "type": "area"
+              },
+              "5162": {
+                "enabled": true,
+                "id": "5162",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "عسكر",
+                "name_en": "Askar",
+                "type": "area"
+              },
+              "5164": {
+                "enabled": true,
+                "id": "5164",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "درة البحرين",
+                "name_en": "Durrat Al Bahrain",
+                "type": "area"
+              }
+            },
+            "cod_verification": false,
+            "enabled": true,
+            "fast_delivery": false,
+            "id": "296",
+            "max_sla": 0,
+            "min_sla": 0,
+            "name_ar": "سترة",
+            "name_en": "Sitra",
+            "threshold": 0,
+            "type": "city"
+          },
+          "298": {
+            "area": {
+              "5166": {
+                "enabled": true,
+                "id": "5166",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "ريف جزيرة",
+                "name_en": "Reef Island",
+                "type": "area"
+              },
+              "5168": {
+                "enabled": true,
+                "id": "5168",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "السيف",
+                "name_en": "Seef",
+                "type": "area"
+              },
+              "5170": {
+                "enabled": true,
+                "id": "5170",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "كرباباد",
+                "name_en": "Karbabad",
+                "type": "area"
+              }
+            },
+            "cod_verification": false,
+            "enabled": true,
+            "fast_delivery": false,
+            "id": "298",
+            "max_sla": 0,
+            "min_sla": 0,
+            "name_ar": "السيف",
+            "name_en": "Seef",
+            "threshold": 0,
+            "type": "city"
+          },
+          "300": {
+            "area": {
+              "5172": {
+                "enabled": true,
+                "id": "5172",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "السنابس",
+                "name_en": "Sanabis",
+                "type": "area"
+              },
+              "5174": {
+                "enabled": true,
+                "id": "5174",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "الديه",
+                "name_en": "Daih",
+                "type": "area"
+              },
+              "5176": {
+                "enabled": true,
+                "id": "5176",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "جبلة حبشي",
+                "name_en": "Jeblat Hebshi",
+                "type": "area"
+              },
+              "5178": {
+                "enabled": true,
+                "id": "5178",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "جدحفص",
+                "name_en": "Jidhafs",
+                "type": "area"
+              },
+              "5180": {
+                "enabled": true,
+                "id": "5180",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "آلبورهاما",
+                "name_en": "Al Burhama",
+                "type": "area"
+              },
+              "5182": {
+                "enabled": true,
+                "id": "5182",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "المصلى",
+                "name_en": "Musalla",
+                "type": "area"
+              },
+              "5184": {
+                "enabled": true,
+                "id": "5184",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "السهلة",
+                "name_en": "Sehla",
+                "type": "area"
+              },
+              "5186": {
+                "enabled": true,
+                "id": "5186",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "بوخوا",
+                "name_en": "Bokhowa",
+                "type": "area"
+              },
+              "5188": {
+                "enabled": true,
+                "id": "5188",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "سرايا 2",
+                "name_en": "Saraya 2",
+                "type": "area"
+              }
+            },
+            "cod_verification": false,
+            "enabled": true,
+            "fast_delivery": false,
+            "id": "300",
+            "max_sla": 0,
+            "min_sla": 0,
+            "name_ar": "جد حفص‎",
+            "name_en": "Jidhafs",
+            "threshold": 0,
+            "type": "city"
+          },
+          "302": {
+            "area": {
+              "5190": {
+                "enabled": true,
+                "id": "5190",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "كرانة",
+                "name_en": "Karranah",
+                "type": "area"
+              },
+              "5192": {
+                "enabled": true,
+                "id": "5192",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "القدم",
+                "name_en": "Al Qadam",
+                "type": "area"
+              },
+              "5194": {
+                "enabled": true,
+                "id": "5194",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "آل مقشا",
+                "name_en": "Al Maqsha",
+                "type": "area"
+              },
+              "5196": {
+                "enabled": true,
+                "id": "5196",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "جنوسان",
+                "name_en": "Jannusan",
+                "type": "area"
+              },
+              "5198": {
+                "enabled": true,
+                "id": "5198",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "الحجر",
+                "name_en": "Al Hajar",
+                "type": "area"
+              },
+              "5200": {
+                "enabled": true,
+                "id": "5200",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "أبوصيبع",
+                "name_en": "Abu Saiba",
+                "type": "area"
+              },
+              "5202": {
+                "enabled": true,
+                "id": "5202",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "جد الحاج",
+                "name_en": "Jid Al Haj",
+                "type": "area"
+              },
+              "5204": {
+                "enabled": true,
+                "id": "5204",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "بربر",
+                "name_en": "Barbar",
+                "type": "area"
+              },
+              "5206": {
+                "enabled": true,
+                "id": "5206",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "الدراز",
+                "name_en": "Diraz",
+                "type": "area"
+              },
+              "5208": {
+                "enabled": true,
+                "id": "5208",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "المرخ",
+                "name_en": "Al Markh",
+                "type": "area"
+              },
+              "5210": {
+                "enabled": true,
+                "id": "5210",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "بني جمرة",
+                "name_en": "Bani Jamra",
+                "type": "area"
+              },
+              "5212": {
+                "enabled": true,
+                "id": "5212",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "سار",
+                "name_en": "Saar",
+                "type": "area"
+              },
+              "5214": {
+                "enabled": true,
+                "id": "5214",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "موغابا",
+                "name_en": "Mugaba",
+                "type": "area"
+              },
+              "5216": {
+                "enabled": true,
+                "id": "5216",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "البديع",
+                "name_en": "Budaiya",
+                "type": "area"
+              },
+              "5218": {
+                "enabled": true,
+                "id": "5218",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "السراي",
+                "name_en": "Saraya",
+                "type": "area"
+              },
+              "5220": {
+                "enabled": true,
+                "id": "5220",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "الجنبية",
+                "name_en": "Al Janabiyah",
+                "type": "area"
+              }
+            },
+            "cod_verification": false,
+            "enabled": true,
+            "fast_delivery": false,
+            "id": "302",
+            "max_sla": 0,
+            "min_sla": 0,
+            "name_ar": "البديع",
+            "name_en": "Budaiya",
+            "threshold": 0,
+            "type": "city"
+          },
+          "304": {
+            "area": {
+              "5222": {
+                "enabled": true,
+                "id": "5222",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "الهملة",
+                "name_en": "Hamala",
+                "type": "area"
+              },
+              "5224": {
+                "enabled": true,
+                "id": "5224",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "الجسرة",
+                "name_en": "Jasra",
+                "type": "area"
+              },
+              "5226": {
+                "enabled": true,
+                "id": "5226",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "بوري",
+                "name_en": "Buri",
+                "type": "area"
+              },
+              "5228": {
+                "enabled": true,
+                "id": "5228",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "مدينة حمد",
+                "name_en": "Hamad Town",
+                "type": "area"
+              },
+              "5230": {
+                "enabled": true,
+                "id": "5230",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "المالكية",
+                "name_en": "Malikiya",
+                "type": "area"
+              },
+              "5232": {
+                "enabled": true,
+                "id": "5232",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "شهركان",
+                "name_en": "Shahrakan",
+                "type": "area"
+              },
+              "5234": {
+                "enabled": true,
+                "id": "5234",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "آللوسي",
+                "name_en": "Al Lousy",
+                "type": "area"
+              },
+              "5236": {
+                "enabled": true,
+                "id": "5236",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "كرزكان",
+                "name_en": "Karzakan",
+                "type": "area"
+              },
+              "5238": {
+                "enabled": true,
+                "id": "5238",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "الزلاق",
+                "name_en": "Zallaq",
+                "type": "area"
+              },
+              "5240": {
+                "enabled": true,
+                "id": "5240",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "الصخير",
+                "name_en": "Al Sakhir",
+                "type": "area"
+              },
+              "5242": {
+                "enabled": true,
+                "id": "5242",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "سداد",
+                "name_en": "Sadad",
+                "type": "area"
+              }
+            },
+            "cod_verification": false,
+            "enabled": true,
+            "fast_delivery": false,
+            "id": "304",
+            "max_sla": 0,
+            "min_sla": 0,
+            "name_ar": "مدينة حمد",
+            "name_en": "Hamad Town",
+            "threshold": 0,
+            "type": "city"
+          },
+          "306": {
+            "area": {
+              "5244": {
+                "enabled": true,
+                "id": "5244",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "واديان",
+                "name_en": "Wadiyan",
+                "type": "area"
+              },
+              "5246": {
+                "enabled": true,
+                "id": "5246",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "الرفاع الشرقي",
+                "name_en": "East Riffa",
+                "type": "area"
+              },
+              "5248": {
+                "enabled": true,
+                "id": "5248",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "البحير",
+                "name_en": "Al Bahair",
+                "type": "area"
+              },
+              "5250": {
+                "enabled": true,
+                "id": "5250",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "الرفاع الغربي",
+                "name_en": "West Riffa",
+                "type": "area"
+              },
+              "5252": {
+                "enabled": true,
+                "id": "5252",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "الحجيات",
+                "name_en": "Al Hajiyat",
+                "type": "area"
+              },
+              "5254": {
+                "enabled": true,
+                "id": "5254",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "أبو بشير",
+                "name_en": "Abu Bashir",
+                "type": "area"
+              },
+              "5256": {
+                "enabled": true,
+                "id": "5256",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "الرفاع فيوز",
+                "name_en": "Riffa Views",
+                "type": "area"
+              },
+              "5258": {
+                "enabled": true,
+                "id": "5258",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "سافرة",
+                "name_en": "Safra",
+                "type": "area"
+              },
+              "5260": {
+                "enabled": true,
+                "id": "5260",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "العوالي",
+                "name_en": "Awali",
+                "type": "area"
+              },
+              "5262": {
+                "enabled": true,
+                "id": "5262",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "وادي السيل",
+                "name_en": "Wadi Alsail",
+                "type": "area"
+              }
+            },
+            "cod_verification": false,
+            "enabled": true,
+            "fast_delivery": false,
+            "id": "306",
+            "max_sla": 0,
+            "min_sla": 0,
+            "name_ar": "الرفاع",
+            "name_en": "Riffa",
+            "threshold": 0,
+            "type": "city"
+          },
+          "308": {
+            "area": {
+              "5264": {
+                "enabled": true,
+                "id": "5264",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "توبلي",
+                "name_en": "Tubli",
+                "type": "area"
+              },
+              "5266": {
+                "enabled": true,
+                "id": "5266",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "جورداب",
+                "name_en": "Jurdab",
+                "type": "area"
+              },
+              "5268": {
+                "enabled": true,
+                "id": "5268",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "جد علي",
+                "name_en": "Jid Ali",
+                "type": "area"
+              },
+              "5270": {
+                "enabled": true,
+                "id": "5270",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "ناصفة",
+                "name_en": "Nasfah",
+                "type": "area"
+              },
+              "5272": {
+                "enabled": true,
+                "id": "5272",
+                "max_sla": 0,
+                "min_sla": 0,
+                "name_ar": "مدينة عيسى",
+                "name_en": "Isa Town",
+                "type": "area"
+              }
+            },
+            "cod_verification": false,
+            "enabled": true,
+            "fast_delivery": false,
+            "id": "308",
+            "max_sla": 0,
+            "min_sla": 0,
+            "name_ar": "مدينة عيسى",
+            "name_en": "Isa Town",
+            "threshold": 0,
+            "type": "city"
+          }
+        },
+        "code": "Bahrain",
+        "enabled": true,
+        "id": "611",
+        "max_sla": 5,
+        "min_sla": 1,
+        "name": "Bahrain",
+        "name_ar": "Bahrain",
+        "type": "province"
+      }
+    }
+  },
+  "defaultCity": {
+    "area": null,
+    "cod_verification": false,
+    "enabled": true,
+    "fast_delivery": false,
+    "id": "292",
+    "max_sla": 5,
+    "min_sla": 1,
+    "name_ar": "المنامة",
+    "name_en": "Manama",
+    "threshold": 100,
+    "type": "city",
+    "region_id": "611",
+    "region_name": "Bahrain",
+    "cut_off_time": "1:0",
+    "holiday": "6,4,5",
+    "type_1": "search_city",
+    "country": "BH"
+  }
+}

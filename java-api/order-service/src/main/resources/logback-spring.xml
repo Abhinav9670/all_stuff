@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+  <include resource="org/springframework/cloud/gcp/autoconfigure/logging/logback-json-appender.xml" />
+ 
+<!--    <include resource="org/springframework/cloud/gcp/autoconfigure/logging/logback-appender.xml" />
+ -->   
+<!--    <property name="projectId" value="styli-dev-251710"/>
+   
+   <appender name="CONSOLE_JSON" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+      <layout class="org.springframework.cloud.gcp.logging.StackdriverJsonLayout">
+        <projectId>${projectId}</projectId>
+        <includeTraceId>true</includeTraceId>
+        <includeSpanId>true</includeSpanId>
+        <includeLevel>true</includeLevel>
+        <includeThreadName>true</includeThreadName>
+        <includeMDC>true</includeMDC>
+        <includeLoggerName>true</includeLoggerName>
+        <includeFormattedMessage>true</includeFormattedMessage>
+        <includeExceptionInMessage>true</includeExceptionInMessage>
+        <includeContextName>true</includeContextName>
+        <includeMessage>false</includeMessage>
+        <includeException>false</includeException>
+      </layout>
+    </encoder>
+  </appender> -->
+
+  <root level="INFO">
+    <appender-ref ref="CONSOLE_JSON"/>
+  </root>
+</configuration>
+ 
+ 
+ 

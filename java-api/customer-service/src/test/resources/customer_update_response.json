@@ -1,0 +1,52 @@
+{
+  "status": true,
+  "statusCode": "200",
+  "statusMsg": "Successfully Updated!!",
+  "response": {
+    "userMessage": "Updated Successfully !!",
+    "status": true,
+    "customer": {
+      "customerId": 5229113,
+      "groupId": 1,
+      "createdAt": "Thu May 04 06:40:18 GMT 2023",
+      "updatedAt": "Thu May 04 07:02:59 GMT 2023",
+      "email": "sanjay.800@mailinator.com",
+      "firstName": "sanjay kumar",
+      "lastName": "800",
+      "mobileNumber": "+91 9898123456",
+      "gender": 2,
+      "ageGroupId": 1,
+      "isReferral": false,
+      "updateEmail": false,
+      "deleteRequested": false,
+      "whatsApp": false,
+      "passwordAvailable": false
+    },
+    "defaultAddress": null
+  },
+  "shukranProfileData": {
+    "tierExpiryDate": "2025-08-31T11:59:59Z",
+    "tierName": "SILVER",
+    "tierStartDate": "2024-08-29T06:36:02Z",
+    "tierCode": "SILVER",
+    "tierActivity": "Upgrade",
+    "previousTierName": "2024-08-29T06:36:02Z",
+    "previousTierExpiredDate": "2024-08-29T06:36:02Z",
+    "tierNudgeFlag": "UPGRADE TO GOLD",
+    "availablePoints": "171.0",
+    "availablePointsCashValue": "8.55",
+    "qualifyingTranxCount": "3",
+    "lastEvaluateDate": "2025-08-14T12:00:00Z",
+    "cardNumber": "1800000521824634",
+    "language": "English",
+    "memberCity": "",
+    "nationality": null,
+    "consentstatus": "",
+    "isLMSLinked": "Y",
+    "consentSource": "",
+    "consentProvided": "",
+    "reqQualTxnForNxtTier": "2",
+    "retTierQualTxn": "3"
+  },
+  "error": null
+}

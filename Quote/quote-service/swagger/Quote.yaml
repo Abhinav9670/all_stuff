@@ -1,0 +1,17 @@
+components:
+  schemas:
+    Quote:
+      type: object
+          required:
+            - storeId
+          properties:
+            storeId:
+              type: number
+            source:
+              type: number
+            customerId:
+              type: number   
+            addToQuoteProductsRequests:
+              type: array
+              items:
+                type: object

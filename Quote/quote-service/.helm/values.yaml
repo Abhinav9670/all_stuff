@@ -1,0 +1,4 @@
+quote:
+  domain: dev-api-quote.stylifashion.com
+  replicaCountFront: 2
+  replicaCountBack: 1

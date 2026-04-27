@@ -1,0 +1,22 @@
+{"properties": [
+  {
+    "name": "apm.service_url",
+    "type": "java.lang.String",
+    "description": "APM Service URL"
+  },
+  {
+    "name": "region.value",
+    "type": "java.lang.String",
+    "description": "Region IN/GCC"
+  },
+  {
+    "name": "cashfree.cg.public.key",
+    "type": "java.lang.String",
+    "description": "Cashgram public key to be kept in provided path"
+  },
+  {
+    "name": "gcp.project.id",
+    "type": "java.lang.String",
+    "description": "GCP prject ID for authentication"
+  }
+]}

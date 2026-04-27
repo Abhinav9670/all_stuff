@@ -1,0 +1,76 @@
+{
+	"techSupportEmail": "anilkumar.doddanayakanahalli@landmarkgroup.com",
+	"bulkLimit": 5,
+	"baseUrl": "https://api-sandbox.cleartax.com/middle-east/ksa/einvoicing",
+	"DeviceId": "adfasdfasfdaf",
+	"clearTaxToken": "adasdffas",
+	"vatNo": "310415422600003",
+	"ID": {
+		"en": "Styli",
+		"ar": ".هذه ملاحظة"
+	},
+	"InvoiceTypeCode": {
+		"name": "0200000",
+		"value": "388"
+	},
+	"CreditTypeCode": {
+		"name": "0200000",
+		"value": "381"
+	},
+	"AccountingSupplierParty": {
+		"Party": {
+			"PartyLegalEntity": {
+				"RegistrationName": {
+					"en": "Retail Cart Trading Company",
+					"ar": null
+				}
+			},
+			"PartyTaxScheme": {
+				"CompanyID": 310415422600003,
+				"TaxScheme": {
+					"ID": "VAT"
+				}
+			},
+			"PartyIdentification": {
+				"ID": {
+					"schemeID": "SAG",
+					"value": "123C12345678"
+				}
+			},
+			"PostalAddress": {
+				"StreetName": {
+					"en": "Al Imam Saud Ibn Abdul Aziz Road",
+					"ar": "طريق الامام سعود ابن عبدالعزيز"
+				},
+				"AdditionalStreetName": {
+					"en": "Prince Turkey",
+					"ar": null
+				},
+				"BuildingNumber": {
+					"en": "3005",
+					"ar": null
+				},
+				"PlotIdentification": {
+					"en": "7815",
+					"ar": null
+				},
+				"CityName": {
+					"en": "Riyadh",
+					"ar": "الرياض"
+				},
+				"CitySubdivisionName": {
+					"en": "King Fahd",
+					"ar": "الملك فهد"
+				},
+				"PostalZone": "11564",
+				"CountrySubentity": {
+					"en": "Riyadh Region",
+					"ar": null
+				},
+				"Country": {
+					"IdentificationCode": "SA"
+				}
+			}
+		}
+	}
+}

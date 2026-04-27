@@ -1,0 +1,191 @@
+{
+  "addToQuotePayload": {
+    "storeId": 1,
+    "source": 0,
+    "customerId": 3910691,
+    "addToQuoteProductsRequests": [
+      {
+        "sku": "700272590103",
+        "parentSku": "7002725901",
+        "quantity": 1,
+        "overrideQuantity": true
+      }
+    ]
+  },
+  "getCountPayload": {
+    "quoteId": null,
+    "storeId": 1,
+    "customerId": 3910691
+  },
+  "applyCouponPayload": {
+    "quoteId": "1684234744639835",
+    "storeId": 7,
+    "coupon": "UTEST1"
+  },
+  "addressPayload": {
+    "quoteId": "1684234744639834",
+    "storeId": 1,
+    "customerId": 3910691,
+    "addressId": 2398723,
+    "address": {
+      "area": "Al Mada",
+      "buildingNumber": "frtfgyhuj",
+      "city": "Al Mada",
+      "country": "SA",
+      "defaultAddress": true,
+      "firstName": "hgfgh",
+      "lastName": "uygtu",
+      "mobileNumber": "+966 509878787",
+      "region": "Al-Baha{Al-Bahah}",
+      "regionId": "578",
+      "streetAddress": "jrgf",
+      "telephone": null,
+      "email": null,
+      "latitude": null,
+      "longitude": null
+    }
+  },
+  "getTotalsPayload": [
+    {
+      "storeId": 1,
+      "paymentMethod": "md_payfort",
+      "applyStoreCredit": false,
+      "cardBin": "",
+      "isFirstCall": true,
+      "customerId": 3910691
+    },
+    {
+      "storeId": 1,
+      "paymentMethod": "tabby_installments",
+      "applyStoreCredit": false,
+      "cardBin": "",
+      "isFirstCall": true,
+      "customerId": 3910691
+    },
+    {
+      "storeId": 1,
+      "paymentMethod": "cashondelivery",
+      "applyStoreCredit": false,
+      "cardBin": "",
+      "isFirstCall": true,
+      "customerId": 3910691
+    },
+    {
+      "storeId": 1,
+      "paymentMethod": "tamara_installments_3",
+      "applyStoreCredit": false,
+      "cardBin": "",
+      "isFirstCall": true,
+      "customerId": 3910691
+    }
+  ],
+  "pricedropPayload": {
+    "language": "en",
+    "country": "sa",
+    "dropPercent": "5",
+    "priceTo": "1500",
+    "priceFrom": "10",
+    "minBagValue": "10",
+    "offerMaxCount": "10",
+    "offerTimeMinutes": "5",
+    "customerId": "3910691"
+  },
+  "freeshipPayload": {
+    "country": "sa",
+    "language": "en",
+    "expireInHour": "1",
+    "minOrderValue": "100",
+    "customerId": "3910691"
+  },
+  "applyCreditPayload": {
+    "customerId": "3910691",
+    "storeId": 1,
+    "amount": 100
+  },
+  "getPayloadCoin": {
+    "storeId": 1,
+    "bagView": 1,
+    "statusCoinApllied": 1,
+    "screenName": "bag",
+    "customerId": 3910691
+  },
+  "changeSizePayload": {
+    "addRequest": {
+      "overrideQuantity": true,
+      "sku": "700272590104",
+      "parentSku": "7002725901",
+      "quantity": 1
+    },
+    "skuToDelete": "700272590103",
+    "quoteId": "1684234744639834",
+    "storeId": 1,
+    "customerId": 3910691
+  },
+  "getPayload": {
+    "storeId": 1,
+    "bagView": 1,
+    "screenName": "bag",
+    "customerId": 3910691
+  },
+  "getPayload2": {
+    "storeId": 1,
+    "bagView": 1,
+    "screenName": "bag",
+    "customerId": 3910692,
+    "appliedShukranPoint": 4200,
+    "appliedShukranCashValue": 210
+  },
+  "getPayload3": {
+    "storeId": 1,
+    "bagView": 1,
+    "screenName": "bag",
+    "customerId": 3910691,
+    "appliedShukranPoint": 283,
+    "appliedShukranCashValue": 14.15
+  },
+  "getPayloadFreeShip": {
+    "storeId": 1,
+    "bagView": 1,
+    "screenName": "bag",
+    "customerId": 3910693
+  },
+  "getPayloadCoupon": {
+    "storeId": 7,
+    "bagView": 1,
+    "screenName": "bag",
+    "customerId": 3910693
+  },
+  "updateQtyPayload": {
+    "sku": "700457042866",
+    "quantity": 2,
+    "quoteId": "1686569333347279",
+    "storeId": 7,
+    "customerId": 3910693
+  },
+  "disablePayload": {
+    "quoteId": "1681477874120535",
+    "customerId": null,
+    "storeId": 1,
+    "bagView": null,
+    "orderCreation": null,
+    "storeCredit": null,
+    "retryPayment": false
+  },
+  "enablePayload": {
+    "quoteId": "1681477874120535",
+    "customerId": null,
+    "storeId": 1,
+    "bagView": null,
+    "orderCreation": null,
+    "storeCredit": null,
+    "retryPayment": false
+  },
+  "paymentPayload":{
+    "quoteId": "1681477874120535",
+    "paymentCode": "md_payfort_cc_vault",
+    "storeId": 1
+  },
+  "shukranPointBalancePayload":{
+    "profileId": "50624316-dbec-4745-bc5a-1b85e3cde45f"
+  }
+}

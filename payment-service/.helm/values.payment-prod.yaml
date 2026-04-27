@@ -1,0 +1,26 @@
+payment:
+  domain: payment.stylishop.com
+  replicaCount: 2
+  apmkey: 8667g6b5cxFJj6GW8c5NxH5M
+  appname: payment
+  node_env: 'production'
+  host: '0.0.0.0'
+  port: 5001
+  consul_host: consul-consul-server.default
+  consul_port: 8500
+  consul_key: appConfig
+  consul_payment_methods: payment_methods_live
+  debug_params: couchnode:lcb:error,couchnode:lcb:warn node customer_management_service
+  redis_port: 6379
+  redis_host: 10.118.128.3
+  order_count_url: http://order-service/rest/order/auth/total/count
+  customer_service_api_url: http://customer-service.oms-prod
+  utility_service_api_url: http://utility-service.oms-prod
+  merchant_key_path: /var/gcppath/merchant_id.key.pem
+  merchant_cert_path: /var/gcppath/merchant_id.crt.pem
+  elastic_apm_service_name: payment-service
+  elastic_apm_service_url: https://10.154.0.54:8200 
+  memorylim: 1500Mi
+  cpulim: 1000m
+  memoryreq: 1500Mi
+  cpureq: 1000m  

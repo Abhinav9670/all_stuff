@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "apm.service_url",
+    "type": "java.lang.String",
+    "description": "APM service URL"
+  },
+  {
+    "name": "region",
+    "type": "java.lang.String",
+    "description": "Region IN/GCC"
+  },
+  {
+    "name": "bigquery.project-id",
+    "type": "java.lang.String",
+    "description": "BigQuery ProjectID'"
+  }
+]}

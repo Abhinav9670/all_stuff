@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sentinel-ingress-nginx-new
+  annotations:
+    kubernetes.io/ingress.class: 'nginx-new'
+    nginx.ingress.kubernetes.io/ssl-redirect: 'false'
+spec:
+  tls:
+    - hosts:
+        - {{ .Values.sentinel.domain }}
+      secretName: sslcert
+  rules:
+    - host: {{ .Values.sentinel.domain }}
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: sentinel
+                port:
+                  number: 8080

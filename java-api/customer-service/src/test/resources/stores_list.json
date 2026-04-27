@@ -1,0 +1,24 @@
+[
+	{
+		"storeId": "4",
+		"storeCode": "1",
+		"storeLanguage": "en",
+		"storeCurrency": "dolar",
+		"websiteId": "1",
+		"websiteIdentifier": "msite",
+		"storeName": "ksa",
+		"websiteCode": "1",
+		"countryCode": "+91"
+	},
+	{
+		"storeId": "5",
+		"storeCode": "2",
+		"storeLanguage": "en",
+		"storeCurrency": "rupee",
+		"websiteId": "2",
+		"websiteIdentifier": "msite",
+		"storeName": "ksa",
+		"websiteCode": "2",
+		"countryCode": "2"
+	}
+]

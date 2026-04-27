@@ -1,0 +1,19 @@
+{
+  "quoteId": "2653703",
+  "storeId": 1,
+  "address": {
+    "area": "Al Adari",
+    "buildingNumber": "11",
+    "city": "Al Adari",
+    "country": "SA",
+    "defaultAddress": true,
+    "firstName": "w",
+    "lastName": ".",
+    "mobileNumber": "+966 493403401",
+    "region": "Al-Jouf{Al Jawf}",
+    "regionId": 579,
+    "streetAddress": "",
+    "telephone": "+966493403401",
+    "email": "ab@d.com"
+  }
+}

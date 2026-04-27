@@ -1,0 +1,27 @@
+sentinel:
+  port: 8080
+  domain: dev-sentinel-api.stylifashion.com
+  node_env: dev
+  node_env_alt: dev
+  replicaCount: 1
+  appname: sentinel
+  mongo_auth_db: sentinel
+  mongo_url: 10.128.0.28:27017,10.128.0.36:27017,10.128.0.37:27017
+  mongo_db: sentinel
+  mongo_node_count: 3
+  mongo_db_options: true
+  firebase_service_key_location: /var/gcppath/sentinel-firebase.json
+  firebase_apikey: 'AIzaSyBXprkSsdWnA8Ks9HJ7XAjAvt9bcO_iAkQ'
+  firebase_url: 'https://identitytoolkit.googleapis.com/v1'
+  firebase_refreshtoken_url: 'https://securetoken.googleapis.com/v1'
+  consul_host: consul-consul-consul-server.consul
+  consul_port: 8500
+  elastic_apm_service_name: sentinel-qa
+  elastic_apm_service_token:
+  elastic_apm_service_url: http://falcondev851-apm-server.default:8200
+  memorylim: 1000Mi
+  cpulim: 500m
+  memoryreq: 1000Mi
+  cpureq: 500m
+  auth_service_url: 'https://dev-sentinel-api.stylifashion.com/api/v1/auth'
+  servicekeyname: sentinel-dev

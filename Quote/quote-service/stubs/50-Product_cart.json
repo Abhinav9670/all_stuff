@@ -1,0 +1,365 @@
+{
+    "storeId": 1,
+    "source": 0,
+    "quoteId": null,
+    "customerId": "1173316",
+    "addToQuoteProductsRequests": [
+        {
+            "sku": "3021161304",
+            "productId": "37620",
+            "parentSku": "30211613",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "3010400106",
+            "productId": "16831",
+            "parentSku": "30104001",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "4003723306",
+            "productId": "24662",
+            "parentSku": "40037233",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "8031350304",
+            "productId": "152678",
+            "parentSku": "80313503",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "1005240304",
+            "productId": "19279",
+            "parentSku": "10052403",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "1028740302",
+            "productId": "153560",
+            "parentSku": "10287403",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "8015883604",
+            "productId": "41892",
+            "parentSku": "80158836",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "8015883602",
+            "productId": "41890",
+            "parentSku": "80158836",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "8016502104",
+            "productId": "41912",
+            "parentSku": "80165021",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "8032990103",
+            "productId": "195077",
+            "parentSku": "80329901",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "1000100304",
+            "productId": "6517",
+            "parentSku": "10001003",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "1000230304",
+            "productId": "1640",
+            "parentSku": "10002303",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "8014350304",
+            "productId": "27734",
+            "parentSku": "80143503",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "8019480305",
+            "productId": "46583",
+            "parentSku": "80194803",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "8014280104",
+            "productId": "27754",
+            "parentSku": "80142801",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "3004801404",
+            "productId": "11288",
+            "parentSku": "30048014",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "3000890104",
+            "productId": "41572",
+            "parentSku": "30008901",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "8008452004",
+            "productId": "16512",
+            "parentSku": "80084520",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "8012762104",
+            "productId": "23269",
+            "parentSku": "80127621",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "3017353404",
+            "productId": "43514",
+            "parentSku": "30173534",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "3017570104",
+            "productId": "52634",
+            "parentSku": "30175701",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "8014790104",
+            "productId": "28719",
+            "parentSku": "80147901",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "1005901704",
+            "productId": "13599",
+            "parentSku": "10059017",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "1005800305",
+            "productId": "13622",
+            "parentSku": "10058003",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "1000382004",
+            "productId": "1650",
+            "parentSku": "10003820",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "1013620304",
+            "productId": "21030",
+            "parentSku": "10136203",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "1013420304",
+            "productId": "21010",
+            "parentSku": "10134203",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "8004530104",
+            "productId": "20049",
+            "parentSku": "80045301",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "1014703804",
+            "productId": "40942",
+            "parentSku": "10147038",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "8014420305",
+            "productId": "27750",
+            "parentSku": "80144203",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "3018623604",
+            "productId": "41267",
+            "parentSku": "30186236",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "3001182004",
+            "productId": "10700",
+            "parentSku": "30011820",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "3017122904",
+            "productId": "43489",
+            "parentSku": "30171229",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "8017900105",
+            "productId": "43625",
+            "parentSku": "80179001",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "1008673604",
+            "productId": "9625",
+            "parentSku": "10086736",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "1003590104",
+            "productId": "617",
+            "parentSku": "10035901",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "8016100204",
+            "productId": "32712",
+            "parentSku": "80161002",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "8015622804",
+            "productId": "44494",
+            "parentSku": "80156228",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "8004742804",
+            "productId": "16435",
+            "parentSku": "80047428",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "5015401304",
+            "productId": "36595",
+            "parentSku": "50154013",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "1000783604",
+            "productId": "1513",
+            "parentSku": "10007836",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "1005780304",
+            "productId": "13584",
+            "parentSku": "10057803",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "8001030103",
+            "productId": "1569",
+            "parentSku": "80010301",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "1015293604",
+            "productId": "28959",
+            "parentSku": "10152936",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "4004100104",
+            "productId": "32254",
+            "parentSku": "40041001",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "1014000104",
+            "productId": "24995",
+            "parentSku": "10140001",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "8019404004",
+            "productId": "46567",
+            "parentSku": "80194040",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "8014543804",
+            "productId": "41012",
+            "parentSku": "80145438",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "3022962804",
+            "productId": "32473",
+            "parentSku": "30229628",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "3001172003",
+            "productId": "10689",
+            "parentSku": "30011720",
+            "quantity": 4,
+            "overrideQuantity": true
+        },
+        {
+            "sku": "3000861404",
+            "productId": "2089",
+            "parentSku": "30008614",
+            "quantity": 4,
+            "overrideQuantity": true
+        }
+    ]
+}

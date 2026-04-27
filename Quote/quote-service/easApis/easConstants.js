@@ -1,0 +1,1 @@
+exports.CHECK_REDEEM_COIN_ON_ORDER = "/api/v1/checkRedeemCoinOnOrder";

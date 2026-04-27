@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Order shipped email</title>
+  </head>
+    <body style="text-align: left;">
+ 
+<table style="width:100%">
+  <tr>
+  	<td style="background:#EEE; padding:30px;">
+    	<img style="display:block; height: 75px;" src="https://in-mdev.stylifashion.com/logo-en.svg" />
+    </td>
+  </tr>
+  <tr>
+  <td style="padding: 0 30px;">
+    <p>{{shippingAddress.firstName}} {{shippingAddress.lastName}}</p>
+    <p>Thank you for purchasing from Styli. You can check the status of your order by logging into your account. If you have questions about an order, you can email us at hello.ksa@stylishop.com.</p>
+    <p>Below are your shipment details. Thank you again for shopping with us.</p>
+
+    <p style="font-size: 130%; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #EEE;;">Order Number #{{orderIncrementId}} Shipment Number #{{shipmentIncId}} </p>
+
+    <table style="width: 100%;">
+      <tr>
+        <th style="background: #EEE; padding: 5px;">Billing Address</th>
+        <th style="background: #EEE; padding: 5px;">Shipping Address</th>
+      </tr>
+      <tr>
+        <td style="padding: 5px;" >
+        <!-- <p style="font-size: 130%; margin: 10px 0 5px;">Payment Mode</p> -->
+        {{shippingAddress.firstName}} {{shippingAddress.lastName}}<br/>
+        {{addressLine2}}<br/>
+        {{addressLine3}}<br/>
+        T:{{shippingAddress.mobileNumber}}
+        </td>
+        <td style="padding: 5px;"> 
+          <!-- <p style="font-size: 130%; margin: 10px 0 5px;">Payment Mode</p> -->
+          {{shippingAddress.firstName}} {{shippingAddress.lastName}}<br/>
+          {{addressLine2}}<br/>
+          {{addressLine3}}<br/>
+          T:{{shippingAddress.mobileNumber}}
+        </td>
+      </tr>
+      
+      <tr>
+        <td>
+          <p style="font-size: 130%; margin-bottom: 5px;">Payment Mode</p>
+          <table >
+            <tr>
+                <td colspan="2" style="padding-bottom: 5px;">{{paymentInformation.paymentMethod}}
+                </td>
+            </tr>
+          {{#if customerIp}}
+            <tr>
+              <td style="width: 180px;"><b>Customer IP</b></td>
+              <td>{{customerIp}}</td>
+            </tr>
+          {{/if}}
+    
+          {{# if paymentInformation.merchantReference}}
+            <tr>
+              <td><b>merchant_reference</b></td>
+              <td>{{paymentInformation.merchantReference}}</td>
+            </tr>
+          {{/if}}
+          {{# if paymentInformation.authorizationCode}}
+            <tr>
+              <td><b>Authorization Code</b></td>
+              <td>{{paymentInformation.authorizationCode}}</td>
+            </tr>
+          {{/if}}
+          {{# if paymentInformation.ccType}}
+            <tr>
+              <td><b>Credit Card Type</b></td>
+              <td>{{paymentInformation.ccType}}</td>
+            </tr>
+          {{/if}}
+          {{# if paymentInformation.ccNumber}}
+            <tr>
+              <td><b>Credit Card Number</b></td>
+              <td>{{paymentInformation.ccNumber}}</td>
+            </tr>
+          {{/if}}
+          {{# if paymentInformation.amount}}
+            <tr>
+              <td><b>amount</b></td>
+              <td>{{paymentInformation.amount}}</td>
+            </tr>
+          {{/if}}
+        </table>
+        </td>
+        <td>
+          <p style="font-size: 130%; margin-bottom: 5px;">Shipping Method</p>
+          <div style="margin-bottom: 5px;">{{shippingDescription}}</div>
+
+        </td>
+      </tr>
+    </table>
+  
+    <table style="text-align: center; width: 100%; margin: 25px 0 25px; border-collapse: collapse;">
+        <tr>
+            <th style="text-align: left; padding: 5px;">Product Name</th>
+            <th width="100px" style="text-align: right; padding:5px;">Qty</th>
+        </tr>
+        {{#each products}}
+          <tr>
+            <td style="text-align: left; border-top: 1px solid #EEE; padding: 5px;">
+                <b>{{this.name}}</b><br/>
+                SKU: {{this.sku}}
+            </td>
+            <td style="border-top: 1px solid #EEE; padding: 5px;">{{this.qty}}</td>    
+          </tr>
+        {{/each}}
+    </table>
+    </td>
+  </tr>
+</table>
+        </body>
+</html>

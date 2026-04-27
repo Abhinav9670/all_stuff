@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Shipped</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #a7a4a4;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding-bottom: 8rem;
+        }
+
+        .header {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header img {
+            width: 18%;
+            padding-bottom: 20px;
+        }
+
+        .body-content {
+            padding: 20px;
+            color: #333;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .order-summary-address {
+            padding: 20px;
+            text-align: center;
+        }
+        .order-summary-address td {
+            border-radius: 10px;
+            padding: 12px;
+            vertical-align: middle;
+        }
+        .order-summary {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .order-summary td {
+            border-radius: 10px;
+            padding: 12px;
+            vertical-align: middle;
+            font-weight: bold;
+        }
+
+        .products-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .product-item {
+            width: 100%;
+            padding: 20px;
+            border-collapse: collapse;
+        }
+
+        .product-item img {
+            max-width: 65px;
+        }
+
+        .categories {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .categories img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            background-color: #edebe8;
+        }
+
+        .footer-icons {
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+
+        .footer-icons img {
+            width: 8rem;
+        }
+    </style>
+</head>
+
+<body style="margin: 0; padding: 0; background-color: #f4f4f4; font-family: Arial, Helvetica, sans-serif;">
+    <table class="container">
+        <!-- Header Section -->
+        <tr>
+            <td class="header">
+                <a href="{{websiteLink}}">
+                    <img src="https://mdev.stylifashion.com/email-imgs/logo-black.png" alt="Styli Logo" />
+                </a>
+            </td>
+        </tr>
+
+        <!-- Order Information Section -->
+        <tr>
+            <td class="body-content">
+                <p>Dear {{firstname}},</p>
+                <p>We attempted to pick up your return item for Order ID {{incrementId}} on {{pickupFailedDate}}, but unfortunately, the pickup could not be completed.</p>
+                <p>Our courier partner will connect with you directly to coordinate the next pickup attempt. Please ensure availability for a smooth collection process.</p>
+                <p style="font-size: 90%; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 1px solid #EEE;">
+                    AWB Number: {{awbNumber}} &nbsp;|&nbsp; Order ID: {{incrementId}}
+                </p>
+                <p>If you have any questions, feel free to reach out to our customer support team.</p>
+            </td>
+        </tr>
+        
+
+        <!-- Categories Section -->
+        <tr>
+            <td class="categories" style="text-align: center;">
+                <div style="max-width: 70%; margin: auto;">
+                    <h3>There's more to explore!</h3>
+                    <table width="100%" style="border-collapse: collapse;">
+                        <tr>
+                            <td style="padding: 10px;"><a href="{{storeLink}}/women"><img
+                                        src="https://mdev.stylifashion.com/email-imgs/en/category-card-women.png"
+                                        alt="Women" style="width: 100%; border-radius: 8px;" /></a></td>
+                            <td style="padding: 10px;"><a href="{{storeLink}}/men"><img
+                                        src="https://mdev.stylifashion.com/email-imgs/en/category-card-men.png"
+                                        alt="Men" style="width: 100%; border-radius: 8px;" /></a></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;"><a href="{{storeLink}}/kids"><img
+                                        src="https://mdev.stylifashion.com/email-imgs/en/category-card-kids.png"
+                                        alt="Kids" style="width: 100%; border-radius: 8px;" /></a></td>
+                            <td style="padding: 10px;"><a href="{{storeLink}}/beauty"><img
+                                        src="https://mdev.stylifashion.com/email-imgs/en/category-card-beauty.png"
+                                        alt="Beauty" style="width: 100%; border-radius: 8px;" /></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+
+        <!-- Footer Section -->
+        <tr>
+            <td class="footer" style="text-align: center; padding: 20px; background-color: #edebe8;">
+                <table role="presentation" width="100%">
+                    <tr>
+                        <td style="text-align: center;">
+                            <table role="presentation" class="footer-icons" style="margin: 0 auto; text-align: center;">
+                                <tr>
+                                    <td style="padding: 10px;">
+                                        <img src="https://mdev.stylifashion.com/email-imgs/en/footer-cta-48hr.png"
+                                            alt="48 Hour Delivery" width="100" />
+                                    </td>
+                                    <td style="padding: 10px;">
+                                        <img src="https://mdev.stylifashion.com/email-imgs/en/footer-cta-bnpl.png"
+                                            alt="Easy Returns" width="100" />
+                                    </td>
+                                    <td style="padding: 10px;">
+                                        <img src="https://mdev.stylifashion.com/email-imgs/en/footer-cta-lowest-price.png"
+                                            alt="Buy Now, Pay Later" width="100" />
+                                    </td>
+                                    <td style="padding: 10px;">
+                                        <img src="https://mdev.stylifashion.com/email-imgs/en/footer-cta-returns.png"
+                                            alt="Lowest Prices" width="100" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top: 15px; color: #555555; font-size: 14px; text-align: center;">
+                            Need further assistance? WhatsApp us on +966115208333 or e-mail us at
+                            hello.ksa@stylishop.com and we'll sort it out for you!
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

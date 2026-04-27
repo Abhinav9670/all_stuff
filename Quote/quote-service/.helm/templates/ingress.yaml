@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: api-quote-ingress-nginx
+  annotations:
+    kubernetes.io/ingress.class: "nginx-new"
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  tls:
+    - hosts:
+        - "{{ .Values.quote.domain }}"
+      secretName: sslcert
+  rules:
+    - host: "{{ .Values.quote.domain }}"
+      http:
+        paths:
+          - path: /rest/quote
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: quote-service
+                port:
+                  number: 80

@@ -1,0 +1,455 @@
+{
+    "provinces": {
+       "OM": {
+          "612": {
+             "id": "612",
+             "code": "Oman",
+             "name": "Oman",
+             "name_ar": "عمان",
+             "enabled": true,
+             "min_sla": 3,
+             "max_sla": 8,
+             "type": "province",
+             "last_mile_sla": [
+                {
+                   "warehouse": "110",
+                   "min_sla": 3,
+                   "max_sla": 8
+                }
+             ],
+             "cities": {
+                "400": {
+                   "id": "400",
+                   "name_en": "Muscat",
+                   "name_ar": "مسقط",
+                   "enabled": true,
+                   "min_sla": 2,
+                   "max_sla": 3,
+                   "cod_verification": false,
+                   "threshold": 1,
+                   "max_threshold": "10000",
+                   "fast_delivery": false,
+                   "is_payment_auto_refunded": true,
+                   "type": "city",
+                   "area": {
+                      "6001": {
+                         "enabled": true,
+                         "id": "6001",
+                         "max_sla": 0,
+                         "min_sla": 0,
+                         "name_ar": "الخور",
+                         "name_en": "Al Khuwair",
+                         "type": "area",
+                         "last_mile_sla": [
+                            {
+                               "warehouse": "110",
+                               "min_sla": 0,
+                               "max_sla": 0
+                            }
+                         ],
+                         "is_default": true
+                      },
+                      "6003": {
+                         "enabled": true,
+                         "id": "6003",
+                         "max_sla": 0,
+                         "min_sla": 0,
+                         "name_ar": "الروي",
+                         "name_en": "Ruwi",
+                         "type": "area",
+                         "last_mile_sla": [
+                            {
+                               "warehouse": "110",
+                               "min_sla": 0,
+                               "max_sla": 0
+                            }
+                         ],
+                         "is_default": false
+                      },
+                      "6005": {
+                         "enabled": true,
+                         "id": "6005",
+                         "max_sla": 0,
+                         "min_sla": 0,
+                         "name_ar": "مطرح",
+                         "name_en": "Muttrah",
+                         "type": "area",
+                         "last_mile_sla": [
+                            {
+                               "warehouse": "110",
+                               "min_sla": 0,
+                               "max_sla": 0
+                            }
+                         ],
+                         "is_default": false
+                      },
+                      "6007": {
+                         "enabled": true,
+                         "id": "6007",
+                         "max_sla": 0,
+                         "min_sla": 0,
+                         "name_ar": "السيب",
+                         "name_en": "Seeb",
+                         "type": "area",
+                         "last_mile_sla": [
+                            {
+                               "warehouse": "110",
+                               "min_sla": 0,
+                               "max_sla": 0
+                            }
+                         ],
+                         "is_default": false
+                      },
+                      "6009": {
+                         "enabled": true,
+                         "id": "6009",
+                         "max_sla": 0,
+                         "min_sla": 0,
+                         "name_ar": "الغبرة",
+                         "name_en": "Al Ghubra",
+                         "type": "area",
+                         "last_mile_sla": [
+                            {
+                               "warehouse": "110",
+                               "min_sla": 0,
+                               "max_sla": 0
+                            }
+                         ],
+                         "is_default": false
+                      },
+                      "6011": {
+                         "enabled": true,
+                         "id": "6011",
+                         "max_sla": 0,
+                         "min_sla": 0,
+                         "name_ar": "القرم",
+                         "name_en": "Qurum",
+                         "type": "area",
+                         "last_mile_sla": [
+                            {
+                               "warehouse": "110",
+                               "min_sla": 0,
+                               "max_sla": 0
+                            }
+                         ],
+                         "is_default": false
+                      },
+                      "6013": {
+                         "enabled": true,
+                         "id": "6013",
+                         "max_sla": 0,
+                         "min_sla": 0,
+                         "name_ar": "العذيبة",
+                         "name_en": "Al Azaiba",
+                         "type": "area",
+                         "last_mile_sla": [
+                            {
+                               "warehouse": "110",
+                               "min_sla": 0,
+                               "max_sla": 0
+                            }
+                         ],
+                         "is_default": false
+                      },
+                      "6015": {
+                         "enabled": true,
+                         "id": "6015",
+                         "max_sla": 0,
+                         "min_sla": 0,
+                         "name_ar": "بوشر",
+                         "name_en": "Bausher",
+                         "type": "area",
+                         "last_mile_sla": [
+                            {
+                               "warehouse": "110",
+                               "min_sla": 0,
+                               "max_sla": 0
+                            }
+                         ],
+                         "is_default": false
+                      },
+                      "6017": {
+                         "enabled": true,
+                         "id": "6017",
+                         "max_sla": 0,
+                         "min_sla": 0,
+                         "name_ar": "مدينة قابوس",
+                         "name_en": "Madinat Qaboos",
+                         "type": "area",
+                         "last_mile_sla": [
+                            {
+                               "warehouse": "110",
+                               "min_sla": 0,
+                               "max_sla": 0
+                            }
+                         ],
+                         "is_default": false
+                      },
+                      "6019": {
+                         "enabled": true,
+                         "id": "6019",
+                         "max_sla": 0,
+                         "min_sla": 0,
+                         "name_ar": "الوادي الكبير",
+                         "name_en": "Al Wadi Al Kabir",
+                         "type": "area",
+                         "last_mile_sla": [
+                            {
+                               "warehouse": "110",
+                               "min_sla": 0,
+                               "max_sla": 0
+                            }
+                         ],
+                         "is_default": false
+                      },
+                      "6021": {
+                         "enabled": true,
+                         "id": "6021",
+                         "max_sla": 0,
+                         "min_sla": 0,
+                         "name_ar": "الحمرية",
+                         "name_en": "Al Hamriyah",
+                         "type": "area",
+                         "last_mile_sla": [
+                            {
+                               "warehouse": "110",
+                               "min_sla": 0,
+                               "max_sla": 0
+                            }
+                         ],
+                         "is_default": false
+                      },
+                      "6023": {
+                         "enabled": true,
+                         "id": "6023",
+                         "max_sla": 0,
+                         "min_sla": 0,
+                         "name_ar": "المعبيلة",
+                         "name_en": "Al Maabilah",
+                         "type": "area",
+                         "last_mile_sla": [
+                            {
+                               "warehouse": "110",
+                               "min_sla": 0,
+                               "max_sla": 0
+                            }
+                         ],
+                         "is_default": false
+                      }
+                   },
+                   "last_mile_sla": [
+                      {
+                         "warehouse": "110",
+                         "min_sla": 2,
+                         "max_sla": 3
+                      }
+                   ]
+                },
+                "401": {
+                   "id": "401",
+                   "name_en": "Salalah",
+                   "name_ar": "صلالة",
+                   "enabled": true,
+                   "min_sla": 2,
+                   "max_sla": 3,
+                   "cod_verification": false,
+                   "threshold": 1,
+                   "max_threshold": "10000",
+                   "fast_delivery": false,
+                   "is_payment_auto_refunded": true,
+                   "type": "city",
+                   "area": {
+                      "6101": {
+                         "enabled": true,
+                         "id": "6101",
+                         "max_sla": 0,
+                         "min_sla": 0,
+                         "name_ar": "الدحريز",
+                         "name_en": "Al Dahariz",
+                         "type": "area",
+                         "last_mile_sla": [
+                            {
+                               "warehouse": "110",
+                               "min_sla": 0,
+                               "max_sla": 0
+                            }
+                         ]
+                      },
+                      "6103": {
+                         "enabled": true,
+                         "id": "6103",
+                         "max_sla": 0,
+                         "min_sla": 0,
+                         "name_ar": "الحافة",
+                         "name_en": "Al Haffa",
+                         "type": "area",
+                         "last_mile_sla": [
+                            {
+                               "warehouse": "110",
+                               "min_sla": 0,
+                               "max_sla": 0
+                            }
+                         ]
+                      },
+                      "6105": {
+                         "enabled": true,
+                         "id": "6105",
+                         "max_sla": 0,
+                         "min_sla": 0,
+                         "name_ar": "السعادة",
+                         "name_en": "Al Saada",
+                         "type": "area",
+                         "last_mile_sla": [
+                            {
+                               "warehouse": "110",
+                               "min_sla": 0,
+                               "max_sla": 0
+                            }
+                         ]
+                      },
+                      "6107": {
+                         "enabled": true,
+                         "id": "6107",
+                         "max_sla": 0,
+                         "min_sla": 0,
+                         "name_ar": "الأوقادين",
+                         "name_en": "Al Awqadain",
+                         "type": "area",
+                         "last_mile_sla": [
+                            {
+                               "warehouse": "110",
+                               "min_sla": 0,
+                               "max_sla": 0
+                            }
+                         ]
+                      },
+                      "6109": {
+                         "enabled": true,
+                         "id": "6109",
+                         "max_sla": 0,
+                         "min_sla": 0,
+                         "name_ar": "النهضة",
+                         "name_en": "Al Nahdah",
+                         "type": "area",
+                         "last_mile_sla": [
+                            {
+                               "warehouse": "110",
+                               "min_sla": 0,
+                               "max_sla": 0
+                            }
+                         ]
+                      }
+                   },
+                   "last_mile_sla": [
+                      {
+                         "warehouse": "110",
+                         "min_sla": 2,
+                         "max_sla": 3
+                      }
+                   ]
+                },
+                "402": {
+                   "id": "402",
+                   "name_en": "Sohar",
+                   "name_ar": "صحار",
+                   "enabled": true,
+                   "min_sla": 2,
+                   "max_sla": 3,
+                   "cod_verification": false,
+                   "threshold": 1,
+                   "max_threshold": "10000",
+                   "fast_delivery": false,
+                   "is_payment_auto_refunded": true,
+                   "type": "city",
+                   "area": {
+                      "6201": {
+                         "enabled": true,
+                         "id": "6201",
+                         "max_sla": 0,
+                         "min_sla": 0,
+                         "name_ar": "البريمي",
+                         "name_en": "Al Buraimi",
+                         "type": "area",
+                         "last_mile_sla": [
+                            {
+                               "warehouse": "110",
+                               "min_sla": 0,
+                               "max_sla": 0
+                            }
+                         ]
+                      },
+                      "6203": {
+                         "enabled": true,
+                         "id": "6203",
+                         "max_sla": 0,
+                         "min_sla": 0,
+                         "name_ar": "السويق",
+                         "name_en": "Al Suwayq",
+                         "type": "area",
+                         "last_mile_sla": [
+                            {
+                               "warehouse": "110",
+                               "min_sla": 0,
+                               "max_sla": 0
+                            }
+                         ]
+                      },
+                      "6205": {
+                         "enabled": true,
+                         "id": "6205",
+                         "max_sla": 0,
+                         "min_sla": 0,
+                         "name_ar": "صحار الصناعية",
+                         "name_en": "Sohar Industrial",
+                         "type": "area",
+                         "last_mile_sla": [
+                            {
+                               "warehouse": "110",
+                               "min_sla": 0,
+                               "max_sla": 0
+                            }
+                         ]
+                      }
+                   },
+                   "last_mile_sla": [
+                      {
+                         "warehouse": "110",
+                         "min_sla": 2,
+                         "max_sla": 3
+                      }
+                   ]
+                }
+             }
+          }
+       }
+    },
+    "defaultCity": {
+       "_id": "400",
+       "area": null,
+       "cod_verification": false,
+       "country": "OM",
+       "cut_off_time": "00:00",
+       "enabled": true,
+       "fast_delivery": false,
+       "holiday": "5,6",
+       "id": "400",
+       "is_payment_auto_refunded": true,
+       "last_mile_sla": [
+          {
+             "warehouse": "110",
+             "min_sla": 2,
+             "max_sla": 3
+          }
+       ],
+       "max_sla": 3,
+       "max_threshold": "10000",
+       "min_sla": 2,
+       "name_ar": "مسقط",
+       "name_en": "Muscat",
+       "region_id": "612",
+       "region_name": "Oman",
+       "threshold": 1,
+       "type": "city",
+       "type_1": "search_city"
+    }
+ }

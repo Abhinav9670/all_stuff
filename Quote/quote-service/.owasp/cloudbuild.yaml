@@ -1,0 +1,26 @@
+steps:
+  - id: perms
+    name: "gcr.io/cloud-builders/git"
+    entrypoint: "chmod"
+    args: ["-v", "-R", "a+rw", "."]
+    dir: "/workspace/.owasp/report"
+  - id: OWASP ZAP Scan
+    name: 'gcr.io/cloud-builders/docker'
+    entrypoint: 'bash'
+    dir: .owasp
+    args:
+     - '-c'
+     - |
+       cd report
+       docker pull owasp/zap2docker-stable
+       docker run  -v /workspace/.owasp/report:/zap/wrk:rw  -t owasp/zap2docker-stable zap-api-scan.py -t "${_STYLI_URL}" -f openapi  -r report.html -I  -J report_json -w report_md -d "authority: $_STYLI_URL" -d "accept: */*" -d "accept-language: en-GB,en-US;q=0.9,en;q=0.8" -d "access-control-request-headers: content-type,token,x-client-version,x-header-token,x-source" -d "access-control-request-method: POST" -d "origin: $_PAYLOAD_" -d "referer: $_PAYLOAD_"  -d "sec-fetch-dest: empty" -d "sec-fetch-mode: cors" -d "sec-fetch-site: same-site" -d "user-agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile Safari/537.36"
+       ls -l /workspace/.owasp/report/*
+       
+       if ! grep -q "| High | 0 |" "report_md"; then
+           echo "High vulnerability found!"
+           docker run -i --rm   -v /workspace/.owasp/report:/app/failurereports  -e TO_EMAIL=${_TO_EMAIL}   -e FROM_EMAIL=sre@stylishop.com   -e SUBJECT="$TRIGGER_NAME API Scan Status"   -e TEXT="PFA"   -e ATTACHMENT_DIR=failurereports/   gcr.io/$PROJECT_ID/sendgrid-client
+       fi
+       if  grep -q "| High | 0 |" "report_md"; then
+           echo "High vulnerability not found!"
+       fi
+           docker run -i --rm   -v /workspace/.owasp/report:/app/failurereports  -e TO_EMAIL=${_TO_EMAIL}   -e FROM_EMAIL=sre@stylishop.com   -e SUBJECT="$TRIGGER_NAME API Scan Status"   -e TEXT="PFA"   -e ATTACHMENT_DIR=failurereports/   gcr.io/$PROJECT_ID/sendgrid-client

@@ -1,0 +1,23 @@
+payment:
+  domain: in-qa-payment.stylifashion.com
+  replicaCount: 2
+  appname: payment
+  node_env: qa
+  host: '0.0.0.0'
+  port: 5001
+  consul_host: consul-consul-server.india-consul
+  consul_port: 8500
+  consul_key: appConfig_qa
+  consul_payment_methods: payment_methods_qa
+  debug_params: couchnode:lcb:error,couchnode:lcb:warn node payment
+  redis_port: 6379
+  redis_host: 10.190.197.91
+  merchant_key_path: /var/gcppath/merchant_id.key.pem
+  merchant_cert_path: /var/gcppath/merchant_id.crt.pem
+  elastic_apm_service_name: in-qa-payment-service
+  elastic_apm_service_url: https://10.128.0.50:8200
+  apmkey: 4d45uzw9n5208tX9aYBtJ1Zz
+  memorylim: 700Mi
+  cpulim: 500m
+  memoryreq: 300Mi
+  cpureq: 500m

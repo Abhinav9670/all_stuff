@@ -1,0 +1,20 @@
+{
+  "CARD_VALID": {
+    "cvv": "123",
+    "language": "en",
+    "currency": "SAR",
+    "cardToken": "7ffa5888a5bd407eab23bbef6ed57f76",
+    "customerEmail": "chandan@stylishop.com",
+    "firstName": "Chandan",
+    "lastName": "Behera",
+    "quoteId": "1683868912678855",
+    "paymentRedirectHost": "qa.stylifashion.com",
+    "customerId": 1705007,
+    "storeId": 1,
+    "source": 0,
+    "xSourceHeader": "msite",
+    "appVersion": "release/23.04.00",
+    "device_fingerprint": "0400nyhffR+vPCUNf94lis1ztln1Bau9lgpsm5o/uVBi2diN0f6/J2YtxkQII5RlYK9y15362ubh5w8CPmO9x9i9jnVLKa5eUqvJ5dzgojLfFGuxbdvTZvRNMGLy8XpHNJyx5qPTZVidrWVuOSV7aDiUO3sdUywEcm1Kr8BUasnqUFuLLTx8TmYiVXSw7PtSQtUR3qs+07R991OumniGoe+NpxZkFqaUZegb+KaePAdj0dC1DOkZ9ybRxHxfYV3WeA0UYsMZmVY5fSMSwjvQ8SdNezfPafZJpaoVoOXUWxljyPBhr+EUEFUSupVPfVKB9sZJnb10WhUkbl6LEwcCIuTMB7ju1cZrsTWpy9TxGkXeJjA2zz5z8DYYLEQhW0AoCassX6t2xsBNqMDIx5G6nzZ9jXlFnBT3M8OkdpLBWppZ1Q3D4TWhv78VEIne56x7fyVRlv/nuXQXQGuDBW+NjKMFQfPoP5g1QwsRvKoAruysRGWWYIm8dHLsYB/dQrfrAEmlYTtUNo5lYHzuXvP/g+9owonIB10aEVrpuBqprLYFQ40mlBgAVSsOV9IpG/94dXdCJuhcu7D0uboRqSsRkc8t5u3uyZyYg6+LRw6NL2GAwt8apG44isAWX3Sw7PtSQtUR3qs+07R991NmpkAkBisCG0HOclbuV2lUk0imCEgNzseW2+cs9Nkqow7vpMMuD9oN0lLZHCZWkw7sTU9/joi9e1h0TIw5qQXOmssqTe7WzQg67PDmZdnwAgYkauC37p+RsBx6w1tx0mMZz7HtmSQrKuHt39bvxE86eVaYJEF00M2dmwpFJMf4gwGnB375aYb/v+D6E17oa/RVPDYLihDanq9ZzbT/DhApJP+uJSqKjN8A6K3HjRQPNotrE1YwzZLxSzvt2LEImbpDnvJl15H3SI9qpLt2ZL85yXkdAE0MUFZ5VpgkQXTQzbLmsQMABG0XY42UpAUwVYh8YD1Y+HjfzRmFnPAJmrzwaGmbWjLLHDIeI/MHN/vji5032pJ5is2QF/ZkaV5qDeCSbYozvxHNEvE6xm3mItfJUlkHaZvfwjOwp4Zdj0+fAik4cGPRZaMciaCYOUYymmZ/GUnsXavwlZs+tc4cxQdXJrsXwsrcmGHI8I7OQmtv8AXYYpvbyv1LEOVzmJtDqimwLY4MxzBgJC0y5BDeC+xHyPCOzkJrb/AF2GKb28r9SxDlc5ibQ6opsC2ODMcwYCQtMuQQ3gvsR8jwjs5Ca2/wBdhim9vK/Uvp6wv88EXPXXA+k9XRlIy/+2ujEPIqOdlM6mrITzI3bSce7fFMUbAc1+zB984wwkJoIscUkfSWARnR2GEWohE64yvRhXnDkIv6+enaRCS8ypNMcdzUDF4v/bnXJQfUfydyGCUi1hyNV55C96Xilgk3Oyh45646iM3Kygfgkr6Iw3GRz4s5Sr/HZ/R1j+vbsys4hPhMRXCPC7/nMfhpQQhnwS9urvSwx0yJ1fEXwEGQn+LKZVt1CV1M",
+    "isClientTokenized": false
+  }
+}

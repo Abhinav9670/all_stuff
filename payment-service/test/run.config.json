@@ -1,0 +1,4 @@
+{
+  "JWT_TOKEN": "KEY eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjaGFuZGFuQHN0eWxpc2hvcC5jb20iLCJjb2RlIjoiMTY4MzA5OTcwNzYwOCIsInJvbGUiOiJ1c2VyIiwiY3VzdG9tZXJJZCI6MTcwNTAwN30.cTgY77NKK1RLmPJX3mVFWj2ts38LqGuC9jKk-Td4Pr3Bc0xZwK4uneov2UOdEXUoVtXqua0FIvLE7TugyPuvYw",
+  "X-HEADER-TOKEN": "chandan@stylishop.com"
+}

@@ -1,0 +1,38 @@
+{
+  "mobileNo":"9887863323",
+  "email":"",
+  "otp":"1234",
+  "type":"NORMAL",
+  "customerInfo":
+  {
+	"customer":{
+		"lastName":"test",
+
+	"firstName":"last",
+
+	
+	"email":"1",
+
+	"phone":"1",
+
+	"storeId":"1",
+
+	"websiteId":"1",
+
+	"gender":"1",
+
+	"ageGroupId":"1",
+
+	"addresses":[]
+		},
+
+	"password":"test@123",
+
+	"socialToken":"jhsdcbsbc",
+
+	"socialLoginType":"EMAIL",
+
+	"isSocialLogin":"false"
+  },
+  "customerId":"101"
+}

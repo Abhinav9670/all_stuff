@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: quote
+#  data:
+#    mongodb:
+#      uri: mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_HOST_PORT}/${MONGO_DATABASE}
+      
+logging:
+  pattern: 
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+      
+server:
+    port: ${TOMCAT_ORDER_PORT}

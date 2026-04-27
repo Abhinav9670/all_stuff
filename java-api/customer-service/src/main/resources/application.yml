@@ -1,0 +1,36 @@
+spring:
+  redis:
+    redisson:
+      config: classpath:redisson.yaml
+  application:
+    name: customer
+#  data:
+#    mongodb:
+#      uri: mongodb://${MONGO_USERNAME}:${MONGO_PASSWORD}@${MONGO_HOST_PORT}/${MONGO_DATABASE}
+      
+logging:
+  pattern: 
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+  level:
+    # Suppress Hibernate/JDBC error logging for foreign key constraint violations
+    # These are expected and handled gracefully in application code
+    org.hibernate: WARN
+    org.hibernate.engine.jdbc: WARN
+    org.hibernate.engine.jdbc.spi: WARN
+    com.mysql.cj.jdbc: WARN
+    com.zaxxer.hikari: WARN
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+      
+server:
+    port: ${TOMCAT_CUSTOMER_PORT}
+    
+
+    

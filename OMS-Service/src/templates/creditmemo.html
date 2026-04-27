@@ -1,0 +1,1943 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Credit Memo</title>
+  </head>
+
+  <body>
+    <tcpdf
+      method="SetFillColor"
+      key="0%3A3%3AfbpqynGzfTodMuWQXGgLKNxB%2FuRO5RzXHyyRuFZ3%2BUDUmBPi2nCV72E%3D"
+      params="%5B240%2C240%2C240%5D"
+    >
+      <tcpdf
+        method="writeHTMLCell"
+        key="0%3A3%3AfbpqynGzfTodMuWQXGgLKNxB%2FuRO5RzXHyyRuFZ3%2BUDUmBPi2nCV72E%3D"
+        params="%5B70%2C50%2C25%2C0%2C%22%3Ctable%3E%5Cn++++++++%3Ctr%3E%5Cn++++++++++++%3Ctd+style%3D%5C%22font-size%3A+65px%3B+line-height%3A150%25%3B+color%3A%23575757%3B%5C%22%3E%3Cbr%5C%2F%3E%3Cbr%5C%2F%3ECREDIT%3Cbr%5C%2F%3EMEMO%3C%5C%2Ftd%3E%5Cn++++++++%3C%5C%2Ftr%3E%5Cn++++%3C%5C%2Ftable%3E%22%2C0%2C1%2C1%2Cfalse%2C%22C%22%5D"
+      >
+        <tcpdf
+          method="SetY"
+          key="0%3A3%3AfbpqynGzfTodMuWQXGgLKNxB%2FuRO5RzXHyyRuFZ3%2BUDUmBPi2nCV72E%3D"
+          params="%5B10%5D"
+        >
+          <table
+            width="100%"
+            border="0"
+            cellpadding="6"
+            cellspacing="0"
+            dir="rtl"
+          >
+            <tbody>
+              <tr>
+                <td style="text-align: center" width="50%">
+                  <div
+                    style="
+                      font-size: 23px;
+                      color: #575757;
+                      float: right;
+                      margin-top: 15px;
+                    "
+                  >
+                  {{data.creditheadingar}}
+                  </div>
+                </td>
+                <td style="font-size: 25px; color: #575757" width="50%">
+                  <div style="float: left">{{{data.qrCode}}}</div>
+                  <div style="margin-bottom: 15px">
+                    <img
+                      src="https://oms-ui-dev.web.app/assets/logos/black.svg"
+                      width="75px"
+                      height="auto"
+                      style="display: block"
+                    />
+                  </div>
+                </td>
+              </tr>
+              <!-- <tr>
+                <td width="50%">
+                  <table width="100%">
+                    <tbody>
+                      <tr style="font-size: 10px">
+                        <td width="90%" style="float: left">
+                          {{data.companyEmail}}
+                        </td>
+                        <td width="10%" style="font-weight: bolder; float:left;">
+                      <b>Email </b>
+                   </td>   
+                      </tr>
+                      <tr style="font-size: 10px">
+                        <td width="90%">
+                          <a
+                            style="color: black; text-decoration: none"
+                            href="https://stylishop.com/"
+                            >stylishop.com</a
+                          >
+                        </td>
+                        <td width="10%" style="font-weight: bolder;">
+                      <b>Web </b>
+                     </td> 
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="50%"></td>
+              </tr> -->
+              <tr>
+                <td valign="top" width="50%" style="font-size: 12px">
+                  رقم الإشعار الدائن : {{data.incrementId}}<br />
+                  تاريخ الاشعار الدائن : {{data.createdAt}}<br />
+                  رقم الفاتورة : {{data.invoice.increment_id}}<br />
+                  تاريخ الفاتورة : {{data.invoiceCreatedAt}}<br />
+                </td>
+                <td valign="top" style="font-size: 12px">
+                  {{#each data.companyAddressAr}} {{{this}}} <br />
+                  {{/each}}
+                </td>
+              </tr>
+              <tr style="line-height: 0.4cm">
+                <td
+                  valign="top"
+                  width="50%"
+                  style="
+                    font-weight: bold;
+                    border-bottom: 4px none transparent;
+                    color: #575757;
+                    background-color: #f0f0f0;
+                  "
+                >
+                  <strong>عنوان الفاتورة</strong>
+                </td>
+                <td
+                  valign="top"
+                  style="
+                    font-weight: bold;
+                    border-bottom: 4px none transparent;
+                    color: #575757;
+                    background-color: #f0f0f0;
+                  "
+                >
+                  <strong>عنوان التسليم</strong>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" width="50%" style="font-size: 12px">
+                  {{data.shippingAddress.firstName}}
+                  {{data.shippingAddress.lastName}}<br />{{data.shippingAddress.streetAddress}}<br />
+                  {{data.shippingAddress.area}}<br />{{data.shippingAddress.city}}
+                  <br />{{data.shippingAddress.country}}<br /><span dir="ltr"
+                    >{{data.shippingAddress.mobileNumber}}</span
+                  ><br />
+                </td>
+                <td valign="top" style="font-size: 12px">
+                  {{data.shippingAddress.firstName}}
+                  {{data.shippingAddress.lastName}}<br />{{data.shippingAddress.streetAddress}}<br />
+                  {{data.shippingAddress.area}}<br />{{data.shippingAddress.city}}
+                  <br />{{data.shippingAddress.country}}<br /><span dir="ltr"
+                    >{{data.shippingAddress.mobileNumber}}</span
+                  ><br />
+                </td>
+              </tr>
+              <tr style="line-height: 0.4cm">
+                <td
+                  valign="top"
+                  width="50%"
+                  style="
+                    font-weight: bold;
+                    border-bottom: 4px none transparent;
+                    color: #575757;
+                    background-color: #f0f0f0;
+                  "
+                >
+                  <strong>طريقة الدفع</strong>
+                </td>
+                {{#if data.rmaTrackingNumber}}
+                <td
+                  valign="top"
+                  style="
+                    font-weight: bold;
+                    border-bottom: 4px none transparent;
+                    color: #575757;
+                    background-color: #f0f0f0;
+                  "
+                >
+                  <strong>طريقة الشحن</strong>
+                </td>
+                {{/if}}
+              </tr>
+              <tr>
+                <td valign="top" width="50%" style="font-size: 12px">
+                  <span>{{data.paymentModeAr}}</span>
+                  <span>{{data.ccType}}</span>
+                  <span>{{data.ccNumber}}</span>
+                </td>
+                {{#if data.rmaTrackingNumber}}
+                <td valign="top" width="50%" style="font-size: 12px">
+                  {{data.rmaTrackingCode}} : {{data.rmaTrackingNumber}}
+                </td>
+                {{/if}}
+              </tr>
+              <tr>
+                <td colspan="2">&nbsp;</td>
+              </tr>
+            </tbody>
+          </table>
+          <div
+            style="
+              /* background-color: #f0f0f0; */
+              float: right;
+              color: #575757;
+              font-weight: bold;
+            "
+          >
+            {{data.currencyText.ar}}
+          </div>
+
+          <table
+            width="100%"
+            border="0"
+            cellspacing="0"
+            cellpadding="2"
+            dir="rtl"
+          >
+            <thead>
+              <tr style="line-height: 0.4cm" nobr="true">
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="13.363636363636%"
+                >
+                  <strong style="font-size: 10px">رقم تعريف الطلب</strong>
+                </th>
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="26.181818181818%"
+                >
+                  <strong style="font-size: 10px">اسم المنتج</strong>
+                </th>
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <strong style="font-size: 10px"
+                    >سعر الوحدة (شامل ضريبة القيمة المضافة)</strong
+                  >
+                </th>
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="5.909090909091%"
+                >
+                  <strong style="font-size: 10px">الكمية</strong>
+                </th>
+
+                {{#if data.isUaeOrKsa}}
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <strong style="font-size: 10px"
+                    >المجموع الفرعي (شامل ضريبة القيمة المضافة)</strong
+                  >
+                </th>
+                {{/if}} {{#if data.showTax}}
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <strong style="font-size: 10px">قيمة الضريبة</strong>
+                </th>
+                {{/if}} {{#if data.isUaeOrKsa}}
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <strong style="font-size: 10px">الخصم</strong>
+                </th>
+                {{/if}}
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <strong style="font-size: 10px">المبلغ الإجمالي</strong>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#each data.items}}
+              <tr nobr="true" style="padding-top: 4mm" bgcolor="">
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="left"
+                  width="13.363636363636%"
+                >
+                  <p style="font-size: 10px">{{this.sku}}</p>
+                </td>
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="26.181818181818%"
+                >
+                  <p style="font-size: 10px">{{this.name}}</p>
+                </td>
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <p style="font-size: 10px">{{this.price_incl_tax}}</p>
+                </td>
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="5.909090909091%"
+                >
+                  <p style="font-size: 10px">{{this.qty}}</p>
+                </td>
+                {{#if this.isUaeOrKsa}}
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <p style="font-size: 10px">{{this.subTotal}}</p>
+                </td>
+                {{/if}} {{#if this.showTax}}
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <p style="font-size: 10px">{{this.tax_amount}}</p>
+                </td>
+                {{/if}} {{#if this.isUaeOrKsa}}
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <p style="font-size: 10px">{{this.discount_amount}}</p>
+                </td>
+                {{/if}}
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <p style="font-size: 10px">{{this.row_total_incl_tax}}</p>
+                </td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+
+          <!-- TOTALS -->
+          <table width="100%">
+            <tbody>
+              <tr>
+                <td>
+                  <table
+                    nobr="true"
+                    width="100%"
+                    border="0"
+                    cellpadding="10"
+                    cellspacing="0"
+                    dir="rtl"
+                  >
+                    <tbody>
+                      <tr style="">
+                        <!-- <td
+                          width="50%"
+                          rowspan="8"
+                          style="
+                            font-size: 12;
+                            line-height: 133%;
+                            border-bottom: 4px none transparent;
+                            border-bottom: 4px solid #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                        ></td> -->
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 40%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="40%"
+                        >
+                          المجموع الفرعي (شامل ضريبة القيمة المضافة)
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="10%"
+                        >
+                          {{data.subtotal_incl_tax}}
+                        </td>
+                      </tr>
+                      
+                      {{#if data.discount_amount}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="40%"
+                        >
+                          الخصم
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="10%"
+                        >
+                          {{data.discount_amount}}-
+                        </td>
+                      </tr>
+                      {{/if}} {{#if data.discount_amount}}{{#if data.isExcludeKsa}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                          
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                         SAR  -{{data.base_discount_amount}}
+                        </td>
+                      </tr>
+                      {{/if}}
+
+                      {{/if}} {{#if data.cash_on_delivery_fee}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="40%"
+                        >
+                          الدفع عند الاستلام
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="10%"
+                        >
+                          {{data.cash_on_delivery_fee}}
+                        </td>
+                      </tr>
+                      {{/if}} {{#if data.cash_on_delivery_fee}}{{#if data.isExcludeKsa}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                          
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                          {{data.base_cash_on_delivery_fee}}
+                        </td>
+                      </tr>
+                      {{/if}}
+                      {{/if}} {{#if data.shipping_amount}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="40%"
+                        >
+                          Shipping Fee
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="10%"
+                        >
+                          {{data.shipping_amount}}
+                        </td>
+                      </tr>
+                      {{/if}} {{#if data.shipping_amount}}{{#if data.isExcludeKsa}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                         
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                          SAR {{data.base_shipping_amount}}
+                        </td>
+                      </tr>
+                      {{/if}}
+
+                      {{/if}}
+                      <!-- <tr style="">
+                <td
+                  style="
+                    font-size: 12;
+                    line-height: 30%;
+                    border-bottom: 4px none transparent;
+                    color: #575757;
+                    background-color: #f0f0f0;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="right"
+                  width="30%"
+                >
+                  رسوم الاستيراد
+                </td>
+                <td
+                  style="
+                    font-size: 12;
+                    line-height: 30%;
+                    border-bottom: 4px none transparent;
+                    color: #575757;
+                    background-color: #f0f0f0;
+                    border-right: 4px solid #f0f0f0;
+                  "
+                  align="right"
+                  width="20%"
+                >
+                  AED 0.00
+                </td>
+              </tr> -->
+                      <!-- {{#if data.adjustment}}
+              <tr style="">
+                <td
+                  style="
+                    font-size: 12;
+                    line-height: 30%;
+                    border-bottom: 4px none transparent;
+                    color: #575757;
+                    background-color: #f0f0f0;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="right"
+                  width="30%"
+                >
+                أجر الضبط
+                </td>
+                <td
+                  style="
+                    font-size: 12;
+                    line-height: 30%;
+                    border-bottom: 4px none transparent;
+                    color: #575757;
+                    background-color: #f0f0f0;
+                    border-right: 4px solid #f0f0f0;
+                  "
+                  align="right"
+                  width="20%"
+                >
+                  {{data.adjustment}}
+                </td>
+              </tr> {{/if}} -->
+                      {{#if data.isUaeOrKsa}}
+
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="40%"
+                        >
+                          <strong
+                            >الإجمالي الكلي (غير شامل ضريبة القيمة
+                            المضافة)</strong
+                          >
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="10%"
+                        >
+                          <strong>{{data.grandTotalExcludingVat}}</strong>
+                        </td>
+                      </tr>
+                      {{/if}} {{#if data.showTax}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="40%"
+                        >
+                          ({{data.taxPercent}}) ضريبة القيمة المضافة
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="10%"
+                        >
+                          {{data.tax_amount}}
+                        </td>
+                      </tr>
+                      {{/if}} {{#if data.isUaeOrKsa}}
+
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="40%"
+                        >
+                          <strong
+                            >الإجمالي الكلي (شامل ضريبة القيمة المضافة)</strong
+                          >
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="10%"
+                        >
+                          <strong>{{data.grandTotalIncludingVat}}</strong>
+                        </td>
+                      </tr>
+                      {{/if}} {{#if data.amstorecredit_amount}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="40%"
+                        >
+                          رصيد ستايلي
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="10%"
+                        >
+                          {{data.amstorecredit_amount}}
+                        </td>
+                      </tr>
+                      {{/if}} {{#if data.easCoins}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="40%"
+                        >
+                          نقد ستايلي ({{data.easCoins}})
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="10%"
+                        >
+                          {{data.easValueInCurrency}}-
+                        </td>
+                      </tr>
+                      {{/if}}
+
+                      <tr style="">
+                        <td 
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="40%"
+                        >
+                          <strong>الإجمالي</strong>
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="10%"
+                        >
+                          <strong>{{data.order_currency_code}} {{data.refundedAmount}}</strong>
+                        </td>
+                      </tr>
+                      {{#if data.isExcludeKsa}}
+                      <tr style="">
+                        <td 
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="40%"
+                        >
+                         
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="10%"
+                        >
+                        <strong>SAR {{data.base_refundedAmount}}</strong>
+                        <div style="font-size: 8px; line-height: 100%; padding-top: 4px;">
+                          (سعر الصرف : {{data.currencyConversionRate}})</div>
+                        </td>
+                      </tr>
+                      
+                      <!-- </tr> -->
+                      {{/if}}
+                    </tbody>
+                  </table>
+                </td>
+                <!-- <td width="%"></td> -->
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- END TOTALS -->
+          <br /><br />
+          <!-- English starts here -->
+          <p style="page-break-before: always"></p>
+          <table width="100%" border="0" cellpadding="6" cellspacing="0">
+            <tbody>
+              <!-- <tr>
+                <td style="text-align: left" width="50%">
+                  <div style="font-size: 23px; color: #575757; margin-top: 5px">
+                    CREDIT MEMO
+                  </div>
+                </td>
+                <td style="text-align: left" width="50%">
+                  <div style="margin-bottom: 15px">
+                    <img
+                      src="https://oms-ui-dev.web.app/assets/logos/black.svg"
+                      width="75px"
+                      height="auto"
+                      style="display: block"
+                    />
+                  </div>
+                </td>
+              </tr> -->
+              <tr>
+                <td style="text-align: center" width="50%">
+                  <div
+                    style="
+                      font-size: 23px;
+                      color: #575757;
+                      margin-top: 15px;
+                      float: left;
+                    "
+                  >
+                  {{data.creditheadingen}}
+                  </div>
+                </td>
+                <td style="font-size: 25px; color: #575757" width="50%">
+                  <div style="float: right">{{{data.qrCode}}}</div>
+                  <div style="margin-bottom: 15px">
+                    <img
+                      src="https://oms-ui-dev.web.app/assets/logos/black.svg"
+                      width="75px"
+                      height="auto"
+                      style="display: block"
+                    />
+                  </div>
+                </td>
+              </tr>
+              <!-- <tr>
+                <td width="50%">
+                  <table width="100%">
+                    <tbody>
+                      <tr style="font-size: 10px">
+                         <td width="10%">
+                      <b>Email </b>
+                   </td>
+                        <td width="90%" style="float: left">
+                          {{data.companyEmail}}
+                        </td>
+                      </tr>
+                      <tr style="font-size: 10px">
+                         <td width="10%">
+                      <b>Web </b>
+                     </td>
+                        <td width="90%">
+                          <a
+                            style="color: black; text-decoration: none"
+                            href="https://stylishop.com/"
+                            >stylishop.com</a
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td width="50%"></td>
+              </tr> -->
+              <tr>
+                <td valign="top" width="50%" style="font-size: 12px">
+                  {{data.creditheadingen}} No: {{data.incrementId}}<br />
+                  {{data.creditheadingen}} Date: {{data.createdAt}}<br />
+                  Original invoice No: {{data.invoice.increment_id}}<br />
+                  Original Invoice Date: {{data.invoiceCreatedAt}}<br />
+                </td>
+                <td valign="top" style="font-size: 12px">
+                  {{#each data.companyAddressEn}} {{{this}}} <br />
+                  {{/each}}
+                </td>
+              </tr>
+              <tr style="line-height: 0.4cm">
+                <td
+                  valign="top"
+                  width="50%"
+                  style="
+                    font-weight: bold;
+                    border-bottom: 4px none transparent;
+                    color: #575757;
+                    background-color: #f0f0f0;
+                  "
+                >
+                  <strong>Billing Address</strong>
+                </td>
+                <td
+                  valign="top"
+                  style="
+                    font-weight: bold;
+                    border-bottom: 4px none transparent;
+                    color: #575757;
+                    background-color: #f0f0f0;
+                  "
+                >
+                  <strong>Shipping Address</strong>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" width="50%" style="font-size: 12px">
+                  {{data.shippingAddress.firstName}}
+                  {{data.shippingAddress.lastName}}<br />{{data.shippingAddress.streetAddress}}<br />
+                  {{data.shippingAddress.area}}<br />{{data.shippingAddress.city}}
+                  <br />{{data.shippingAddress.country}}<br />{{data.shippingAddress.mobileNumber}}<br />
+                </td>
+                <td valign="top" style="font-size: 12px">
+                  {{data.shippingAddress.firstName}}
+                  {{data.shippingAddress.lastName}}<br />{{data.shippingAddress.streetAddress}}<br />
+                  {{data.shippingAddress.area}}<br />{{data.shippingAddress.city}}
+                  <br />{{data.shippingAddress.country}}<br />{{data.shippingAddress.mobileNumber}}<br />
+                </td>
+              </tr>
+              <tr style="line-height: 0.4cm">
+                <td
+                  valign="top"
+                  width="50%"
+                  style="
+                    font-weight: bold;
+                    border-bottom: 4px none transparent;
+                    color: #575757;
+                    background-color: #f0f0f0;
+                  "
+                >
+                  <strong>Payment Mode</strong>
+                </td>
+                {{#if data.rmaTrackingNumber}}
+                <td
+                  valign="top"
+                  style="
+                    font-weight: bold;
+                    border-bottom: 4px none transparent;
+                    color: #575757;
+                    background-color: #f0f0f0;
+                  "
+                >
+                  <strong>Shipping Method</strong>
+                </td>
+                {{/if}}
+              </tr>
+              <tr>
+                <td valign="top" width="50%" style="font-size: 12px">
+                  <span>{{data.paymentModeEn}}</span>
+                  <span>{{data.ccNumber}}</span>
+                  <span>{{data.ccType}}</span>
+                </td>
+                {{#if data.rmaTrackingNumber}}
+                <td valign="top" width="50%" style="font-size: 12px">
+                  {{data.rmaTrackingCode}} : {{data.rmaTrackingNumber}}
+                </td>
+                {{/if}}
+              </tr>
+              <tr>
+                <td colspan="2">&nbsp;</td>
+              </tr>
+            </tbody>
+          </table>
+          <div
+            style="
+              /* background-color: #f0f0f0; */
+              float: right;
+              color: #575757;
+              font-weight: bold;
+            "
+          >
+            {{data.currencyText.en}}
+          </div>
+          <table width="100%" border="0" cellspacing="0" cellpadding="2">
+            <thead>
+              <tr style="line-height: 0.4cm" nobr="true">
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="13.363636363636%"
+                >
+                  <strong style="font-size: 10px">Item Code</strong>
+                </th>
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="26.181818181818%"
+                >
+                  <strong style="font-size: 10px">Product name</strong>
+                </th>
+                {{#if data.isKsa}}
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <strong style="font-size: 10px">Unit Price (Inc VAT)</strong>
+                </th>
+                {{/if}} {{#if data.isExcludeKsa}}
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <strong style="font-size: 10px">Unit Price</strong>
+                </th>
+                {{/if}}
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="5.909090909091%"
+                >
+                  <strong style="font-size: 10px">Qty</strong>
+                </th>
+                {{#if data.isKsa}}
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <strong style="font-size: 10px">Sub Total (Inc VAT)</strong>
+                </th>
+                {{/if}} {{#if data.isExcludeKsa}}
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <strong style="font-size: 10px">Sub Total</strong>
+                </th>
+                {{/if}} {{#if data.showTax}}
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <strong style="font-size: 10px">Tax Amount</strong>
+                </th>
+                {{/if}} {{#if data.isUaeOrKsa}}
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <strong style="font-size: 10px">Discount</strong>
+                </th>
+                {{/if}} {{#if data.isKsa}}
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <strong style="font-size: 10px">Row Total (Inc VAT)</strong>
+                </th>
+                {{/if}} {{#if data.isExcludeKsa}}
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <strong style="font-size: 10px">Row Total</strong>
+                </th>
+                {{/if}}
+              </tr>
+            </thead>
+            <tbody>
+              {{#each data.items}}
+              <tr nobr="true" style="padding-top: 4mm" bgcolor="">
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="left"
+                  width="13.363636363636%"
+                >
+                  <p style="font-size: 10px">{{this.sku}}</p>
+                </td>
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="26.181818181818%"
+                >
+                  <p style="font-size: 10px">{{this.name}}</p>
+                </td>
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <p style="font-size: 10px">{{this.price_incl_tax}}</p>
+                </td>
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="5.909090909091%"
+                >
+                  <p style="font-size: 10px">{{this.qty}}</p>
+                </td>
+                {{#if this.isUaeOrKsa}}
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <p style="font-size: 10px">{{this.subTotal}}</p>
+                </td>
+                {{/if}} {{#if this.showTax}}
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <p style="font-size: 10px">{{this.tax_amount}}</p>
+                </td>
+                {{/if}} {{#if this.isUaeOrKsa}}
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <p style="font-size: 10px">{{this.discount_amount}}</p>
+                </td>
+                {{/if}}
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <p style="font-size: 10px">{{this.row_total_incl_tax}}</p>
+                </td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+
+          <!-- TOTALS -->
+          <table width="100%">
+            <tbody>
+              <tr>
+                <!-- <td width="25%"></td> -->
+                <td>
+                  <table
+                    nobr="true"
+                    width="100%"
+                    border="0"
+                    cellpadding="10"
+                    cellspacing="0"
+                  >
+                    <tbody>
+                      {{#if data.isKsa}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                          Subtotal (Inc VAT)
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                          {{data.subtotal_incl_tax}}
+                        </td>
+                      </tr>
+                      {{/if}} {{#if data.discount_amount}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                          Discount
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                          -{{data.discount_amount}}
+                        </td>
+                      </tr>
+                      {{/if}} {{#if data.discount_amount}}{{#if data.isExcludeKsa}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                          
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                         SAR  -{{data.base_discount_amount}}
+                        </td>
+                      </tr>
+                      {{/if}}
+                      {{/if}} {{#if data.cash_on_delivery_fee}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                          COD Charges
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                          {{data.cash_on_delivery_fee}}
+                        </td>
+                      </tr>
+
+                      {{/if}} {{#if data.cash_on_delivery_fee}}{{#if data.isExcludeKsa}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                          
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                          {{data.base_cash_on_delivery_fee}}
+                        </td>
+                      </tr>
+                      {{/if}}
+                      {{/if}} {{#if data.shipping_amount}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                          Shipping Fee
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                          {{data.shipping_amount}}
+                        </td>
+                      </tr>
+                      {{/if}} {{#if data.shipping_amount}}{{#if data.isExcludeKsa}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                         
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                          {{data.base_shipping_amount}}
+                        </td>
+                      </tr>
+                      {{/if}}
+                      {{/if}}
+                      <!-- <tr style="">
+                <td
+                  style="
+                    font-size: 12;
+                    line-height: 30%;
+                    border-bottom: 4px none transparent;
+                    color: #575757;
+                    background-color: #f0f0f0;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="right"
+                  width="30%"
+                >
+                  Import Fee
+                </td>
+                <td
+                  style="
+                    font-size: 12;
+                    line-height: 30%;
+                    border-bottom: 4px none transparent;
+                    color: #575757;
+                    background-color: #f0f0f0;
+                    border-right: 4px solid #f0f0f0;
+                  "
+                  align="right"
+                  width="20%"
+                >
+                  AED 0.00
+                </td>
+              </tr> -->
+                      <!-- {{#if data.adjustment}}
+              <tr style="">
+                <td
+                  style="
+                    font-size: 12;
+                    line-height: 30%;
+                    border-bottom: 4px none transparent;
+                    color: #575757;
+                    background-color: #f0f0f0;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="right"
+                  width="30%"
+                >
+                  Adjustment Fee
+                </td>
+                <td
+                  style="
+                    font-size: 12;
+                    line-height: 30%;
+                    border-bottom: 4px none transparent;
+                    color: #575757;
+                    background-color: #f0f0f0;
+                    border-right: 4px solid #f0f0f0;
+                  "
+                  align="right"
+                  width="20%"
+                >
+                 {{data.adjustment}}
+                </td>
+              </tr>{{/if}} -->
+                      {{#if data.isKsa}}
+
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                          <strong>Grand Total (Exc VAT)</strong>
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                          <strong>{{data.grandTotalExcludingVat}}</strong>
+                        </td>
+                      </tr>
+                      {{/if}} {{#if data.showTax}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                          VAT ({{data.taxPercent}})
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                          {{data.tax_amount}}
+                        </td>
+                      </tr>
+
+                     
+                      {{/if}} {{#if data.isKsa}}
+
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                          <strong>Grand Total (Inc VAT)</strong>
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                          <strong>{{data.grandTotalIncludingVat}}</strong>
+                        </td>
+                      </tr>
+                      {{/if}} {{#if data.amstorecredit_amount}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                          STYLI Credits
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                          {{data.amstorecredit_amount}}
+                        </td>
+                      </tr>
+                      {{/if}} {{#if data.easCoins}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                          Styli cash ({{data.easCoins}})
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                          -{{data.easValueInCurrency}}
+                        </td>
+                      </tr>
+                      {{/if}}
+
+                      <tr style="">
+                        <td 
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                          <strong>Refunded Amount</strong>
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                          <strong>{{data.order_currency_code}} {{data.refundedAmount}}</strong>
+                        </td>
+                      </tr>
+                      {{#if data.isExcludeKsa}}
+                      <tr style="">
+                        <td 
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                         
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                        <strong>SAR {{data.base_refundedAmount}}</strong>
+                        <div style="font-size: 8px; line-height: 100%; padding-top: 4px;">
+                          (Exchange Rate : {{data.currencyConversionRate}})</div>
+                        </td>
+                      </tr>
+                      <!-- </tr> -->
+                      {{/if}}
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- END TOTALS -->
+        </tcpdf>
+      </tcpdf>
+    </tcpdf>
+  </body>
+</html>

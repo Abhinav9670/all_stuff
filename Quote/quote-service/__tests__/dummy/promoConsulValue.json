@@ -1,0 +1,40 @@
+{
+    "promoRedemptionUrl":{
+       "enabled":true,
+       "allowAllStores":true,
+       "allowInternalUsers":false,
+       "allowedStores":[
+        
+       ],
+       "excludeEmailId":[],
+       "defaultValidateEndpoint":"http://promonj.qa:8080/v4/coupon/validate",
+       "defaultRedemptionEndpoint":"http://promonj.qa:8080/v4/coupon/redemption",
+       "defaultRedemptionChangeStatusEndpoint":"http://promonj.qa:8080/v1/redemption/change/status",
+      "defaultCouponListEndpoint":"http://promonj.qa:8080/v1/coupon?store_id={store}",
+       "defaultBankOffersEndpoint":"http://promonj.qa:8080/v4/bank-offers?store_id={store}",
+       "validateEndpoint":"http://promonj.qa:8080/v4/coupon/validate",
+       "redemptionEndpoint":"http://promonj.qa:8080/v4/coupon/redemption",
+       "redemptionChangeStatusEndpoint":"http://promonj.qa:8080/v1/redemption/change/status"
+       
+    },
+    "bundleOffersNudge": true,
+   "bankOffer": true,
+   "cronToken": "ygjnvttcv45cvghhvxkv87y9cv",
+   "fixedDiscopuntThreshold": 50000,
+    "percentDiscopuntThreshold":100000,
+    "superadmins": [
+     "shraddha@stylishop.com",
+      "yasir@stylishop.com",
+      "annanta@stylishop.com",
+      "chandan@stylishop.com"
+      
+    ],
+   "emailConfig": {
+     "sendCreditmemoEmail": true,
+     "fromName": "",
+     "fromEmail": "",
+     "sendGridApiKey": ""
+   },
+   "bigQueryChunk": 5000,
+   "bigQueryChunkSleep": 500
+ }

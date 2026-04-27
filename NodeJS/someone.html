@@ -1,0 +1,657 @@
+<app-sidenav (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav>
+<div class="body" [ngClass]="getBodyClass()">
+  <app-header></app-header>
+  <div class="main mb-3">
+    <div class="container-fluid">
+      <div class="row mb-3">
+        <div class="col-lg-12">
+          <div class="page-head">
+            <h1 class="mb-0">Task List</h1>
+          </div>
+        </div>
+      </div>
+      <div class="card claim-info task-list-info p-4">
+
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="claim-details-grid">
+                <p><strong>Claim #:</strong> {{ claimDetails?.claimNumber || ' ' }}</p>
+                <p>
+                  <strong>Reason:</strong>
+                  {{ claimDetails?.claimReasonDefinition?.claimReasonCode ? claimDetails?.claimReasonDefinition?.claimReasonCode + ' - ' + claimDetails?.claimReasonDefinition?.claimReasonDescription : ' ' }}
+                </p>
+                <p><strong>Claim Date:</strong> {{ claimDetails?.createdDateTime ? (claimDetails.createdDateTime | date: "MM/dd/yyyy") : ' ' }}</p>
+                <p>
+                  <strong>Customer # :</strong>
+                  {{ claimCustomerDetails?.customerNumber ? claimCustomerDetails?.customerNumber + ' - ' + claimCustomerDetails?.customerName : ' ' }}
+                </p>
+              </div>
+              <!-- <div class="claim-details-grid">
+                <p ><strong>Claim #:</strong> </p>
+                <p><strong>Reason:</strong> </p>
+                <p ><strong>Claim Date:</strong></p>
+                <p ><strong>Customer # :</strong> </p>
+              </div> -->
+              
+            </div>
+            <div class="col-md-4"><div class="d-flex justify-content-end">
+
+              <div class="filter-section btn-group d-flex filter-type" dropdown [insideClick]="true">
+                <button class="btn btn-secondary me-2 filter-btn dropdown-toggle" id="button-animated" dropdownToggle>
+                  Filter by Type <i class="filter-ic"></i>
+                </button>
+                <ul class="filter-menu dropdown-menu" id="dropdown-animated" *dropdownMenu role="menu"
+                  aria-labelledby="button-animated">
+                  <li *ngFor="let value of notesFilterData">
+                    <div class="cd-check-item">
+                      <input id="styled-checkbox-{{value.noteGroupId}}" type="checkbox" class="styled-checkbox"
+                        [checked]="isSelected(value.noteGroupId)"
+                        (change)="toggleSelection(value.noteGroupId, value.noteGroupDescription)" />
+                      <label for="styled-checkbox-{{value.noteGroupId}}">{{value.noteGroupDescription}}</label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+
+              <!--     <div class="filter-section btn-group d-flex filter-user" 
+                          dropdown [insideClick]="true">
+                              <button class="btn btn-secondary me-3 filter-btn dropdown-toggle"
+                               id="button-animated"
+                                  dropdownToggle>
+                                  Filter by User <i class="filter-ic"></i>
+                              </button>
+                              <ul class="filter-menu dropdown-menu" 
+                              id="dropdown-animated" *dropdownMenu role="menu"
+                                  aria-labelledby="button-animated">
+                                  <li>
+                                      <div class="cd-check-item" 
+                                      *ngFor="let data of userNamesData">
+                                          <label (click)="onUserSelected(data)">
+                                          {{data}}                                         
+                                      </label>
+                                      </div>
+                                  </li>
+                                 
+                              </ul>
+                          </div> -->
+
+              <!-- <mat-form-field id="filter-user-new">
+                              <mat-label>Filter by User</mat-label>
+                              <mat-select [(ngModel)]="selectedUsers" (ngModelChange)="onUserSelected(selectedUsers)">
+                                <mat-option *ngFor="let data of userNamesData" [value]="data">
+                                  {{ data }}
+                                </mat-option>
+                              </mat-select>
+                            </mat-form-field>  -->
+
+                            
+
+              <mat-form-field id="filter-user-new"  class="filter-label">
+                <mat-label>Filter by User</mat-label>
+                <input matInput #userInput [matAutocomplete]="autoUser" [(ngModel)]="displaySelectedUser"
+                  (input)="filterUserOptions($event)" (keydown.enter)="onUserEnter($event)" />
+                <mat-icon matSuffix class="dropdown-icon" (click)="userInput.focus()">arrow_drop_down</mat-icon>
+              </mat-form-field>
+
+              <mat-autocomplete #autoUser="matAutocomplete">
+                <ng-container *ngIf="filteredUserList.length > 0">
+                  <mat-option *ngFor="let user of filteredUserList" [value]="user" (click)="selectUser(user)">
+                    {{ user }}
+                  </mat-option>
+                </ng-container>
+              </mat-autocomplete>
+
+
+
+              <button class="btn-primary btn-equal-wh-48 flex-shrink-0" (click)="openAddTaskModal()"
+                [disabled]="claimisvoid">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+              </button>
+            </div></div>
+          </div>
+
+          <div class="border-bottom mb-3 mt-3"></div>
+
+          <div class="row">
+            <div class="row w-100 mb-3">
+              <div class="col-6">
+                <div class="badge-clear">
+                  <button *ngFor="let data of selectedNoteChips">
+                    {{data}} <i class="fa fa-times" aria-hidden="true" (click)="removeselectedChips(data)"></i>
+                  </button>
+                  <button class="clearall" *ngIf="selectedNoteChips.length != 0" (click)="clearChips()">
+                    Clear all
+                    <!-- <i class="fa fa-times" aria-hidden="true"></i> -->
+                  </button>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="col-12 mt-3">
+              <div class="task-view-items">
+
+                <div class="task-view-section bg-white" *ngFor="let data of notesAndTasksData">
+                  <div class="d-flex justify-content-between flex-wrap align-items-center">
+                    <div class="mb-3 mb-lg-0">
+                      <div class="note-panel">
+                        <span class="badge-task"> {{data.noteGroup.noteGroupDescription}} </span>
+                        <span class="badge-text">Created By</span>
+                        <span class="badge-task"> {{data.createdUserName}} </span>
+                        <span
+                          *ngIf="(data.createdByUserId == userId || userDetails.title =='Divisional Claims Manager' ) && data.createdUserName !='SYSTEM' ">
+                          <a class="claim-contact-link" (click)="openEditNotesTasks(data)" class="cursor mx-1" [ngClass]="{ 'disabled-link': !authService.hasPermission('EDIT_DELETE_NOTE') }">
+                            <img src="../../../assets/images/ic_edit.svg">
+                          </a>
+                          <a class="claim-contact-link" (click)="openDeleteModal(data)" class="cursor mx-1" [ngClass]="{ 'disabled-link': !authService.hasPermission('EDIT_DELETE_NOTE') }">
+                            <img src="../../../assets/images/ic_delete.svg">
+                          </a>
+                        </span>
+                        <!-- *ngIf="data.statusCode === 'Pending'" -->
+                      </div>
+                      <div class="note-panel" *ngIf="data.traceTask  && data?.traceTask?.status !== 'Inactive' ">
+                        <span class="badge-task"> {{data.noteGroup.noteGroupDescription}} </span>
+                        <span class="badge-text">Assigned To</span>
+                        <span class="badge-task"> {{data.traceTask.assignedUserName}} </span>
+                        <button *ngIf="data.traceTask.status !== 'Inactive'"
+                        class="btn-primary btn-equal-wh-48 flex-shrink-0">
+                          Action Needed
+                        </button>
+                      </div>
+                    </div>
+                    <!-- <div class="date-task mb-3 mb-lg-0">
+                                                            <span class="date">{{data.createdDate | date : "MM/dd/yyyy h:mm a"}}</span>
+                                                            <span class="day-duration  rounded-circle  green-border"
+                                                             *ngIf="data?.traceTask?.traceType.traceTypeDays >0">
+                                                                +{{data?.traceTask?.traceType.traceTypeDays}} day</span>
+                                                            <span class="day-duration rounded-circle red-border" 
+                                                             *ngIf="data?.traceTask?.traceType.traceTypeDays <0"> -{{data?.traceTask?.traceType.traceTypeDays}} day</span>
+                                                            <span class="day-duration rounded-circle orange-border"
+                                                            *ngIf="data?.traceTask?.traceType.traceTypeDays == 0"> {{data?.traceTask?.traceType.traceTypeDays}} day</span>
+                                                        </div> -->
+                    <div class="date-task mb-3 mb-lg-0">
+                      <span class="date">{{data.createdDate | date : "MM/dd/yyyy h:mm a"}}</span>
+                      <span class="day-duration  green-border" *ngIf="data?.traceTask?.traceType.traceTypeDays > 0  && data?.traceTask?.status !== 'Inactive'">
+                        {{ data.traceTask.traceDate | date : "MM/dd/yyyy" : '+data?.traceTask?.traceType.traceTypeDays'
+                        }}
+                      </span>
+                      <span class="day-duration  red-border" *ngIf="data?.traceTask?.traceType.traceTypeDays < 0 && data?.traceTask?.status !== 'Inactive'">
+                        {{ data.traceTask.traceDate | date : "MM/dd/yyyy" : '+data?.traceTask?.traceType.traceTypeDays'
+                        }}
+                      </span>
+                      <span class="day-duration orange-border" *ngIf="data?.traceTask?.traceType.traceTypeDays == 0 && data?.traceTask?.status !== 'Inactive'">
+                        {{ data.traceTask.traceDate | date : "MM/dd/yyyy" }}
+                      </span>
+                    </div>    
+
+
+                  </div>
+                  <!-- <div class="desc-view-task mt-1" >
+                                                       <p (click)="openViewTask(data)"  [innerHTML]="data.claimNoteText.substring(0,130)">
+                                                        </p>
+                                                       <span *ngIf="data.claimNoteText.length >130">...</span>
+                                                        <span [innerHTML]="data.claimNoteText"></span>
+                                                       
+                                                      
+                                                    </div> -->
+                  <div>
+                    <p [innerHTML]="data.claimNoteText"></p>
+                  </div>
+                </div>
+                <div class="border-bottom mb-20 mt-20"></div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>
+
+<!-- Task Modal -->
+
+<div class="modal modal-bg" id="viewtask" tabindex="-1" role="dialog" aria-labelledby="FieldChooserLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"> View Notes </h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="closeModal('viewtask')">
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="task-view-items">
+
+          <div class="task-view-section bg-white">
+            <div class="d-flex justify-content-between flex-wrap align-items-center">
+              <div class="mb-3 mb-lg-0">
+                <div class="note-panel">
+                  <span class="badge-task"> {{selectedView?.noteGroup?.noteGroupDescription}} </span>
+                  <span class="badge-text">Created By</span>
+                  <span class="badge-task"> {{selectedView?.createdUserName}} </span>
+                </div>
+                <div class="note-panel" *ngIf="selectedView?.traceTask">
+                  <span class="badge-task"> {{selectedView?.noteGroup?.noteGroupDescription}} </span>
+                  <span class="badge-text">Assigned To</span>
+                  <span class="badge-task"> {{selectedView?.traceTask?.assignedUserName}} </span>
+                </div>
+              </div>
+              <!-- <div class="date-task mb-3 mb-lg-0">
+                        <span class="date">{{selectedView?.createdDate | date : "MM/dd/yyyy h:mm a"}}</span>
+                       <span class="day-duration  rounded-circle  green-border"
+                        *ngIf="selectedView?.traceTask?.traceType.traceTypeDays >0">
+                           +{{selectedView?.traceTask?.traceType.traceTypeDays}} day</span>
+                       <span class="day-duration rounded-circle red-border" 
+                        *ngIf="selectedView?.traceTask?.traceType.traceTypeDays <0"> -{{selectedView?.traceTask?.traceType.traceTypeDays}} day</span>
+                       <span class="day-duration rounded-circle orange-border"
+                       *ngIf="selectedView?.traceTask?.traceType.traceTypeDays == 0"> {{selectedView?.traceTask?.traceType.traceTypeDays}} day</span>
+                  
+                    </div> -->
+              <div class="date-task mb-3 mb-lg-0">
+                <span class="date">{{selectedView?.createdDate | date : "MM/dd/yyyy h:mm a"}}</span>
+                <span class="day-duration  green-border" *ngIf="selectedView?.traceTask?.traceType.traceTypeDays > 0">
+                  {{ selectedView?.traceTask?.traceDate | date : "MM/dd/yyyy" :
+                  '+selectedView?.traceTask?.traceType.traceTypeDays' }}
+                </span>
+                <span class="day-duration  red-border" *ngIf="selectedView?.traceTask?.traceType.traceTypeDays < 0">
+                  {{ selectedView?.traceTask?.traceDate | date : "MM/dd/yyyy" :
+                  '+selectedView?.traceTask?.traceType.traceTypeDays' }}
+                </span>
+                <span class="day-duration orange-border" *ngIf="selectedView?.traceTask?.traceType.traceTypeDays == 0">
+                  {{ selectedView?.traceTask?.traceDate | date : "MM/dd/yyyy" }}
+                </span>
+              </div>
+
+            </div>
+            <div class="desc-view-task mt-1">
+              <p [innerHTML]="selectedView?.claimNoteText"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeModal('viewtask')">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- add task model -->
+<div class="modal modal-bg" id="addtasklist" tabindex="-1" role="dialog" aria-labelledby="FieldChooserLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"> Add Task Notes </h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="closeModal('addtasklist')">
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="addTaskForm">
+          <div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group row mb-3">
+                  <label for="staticEmail" class="col-sm-4 col-form-label">Note Type<span
+                      class="text-danger">*</span></label>
+                  <div class="col-sm-8">
+                    <!-- <select class="form-control form-select" formControlName="noteType" (change)="setNoteGroupData()">
+                      <option *ngFor="let type of noteType" [value]="type.noteTypeId">
+                        {{type.noteTypeDescription}}
+                      </option>
+                    </select> -->
+
+                    <app-shared-dropdown [options]="filteredNoteTypeList" [placeholder]="'Search Note Type'" [selectedValue]="noteTypeDescription"
+                    (selectionChange)="selectNoteType($event)">
+                  </app-shared-dropdown>
+
+                    <!-- <mat-form-field>
+                      <input
+                        matInput
+                        #noteTypeInput
+                        
+                        placeholder="Search Note Type"
+                        [matAutocomplete]="autoNoteType"
+                        formControlName="noteType"
+                        (input)="filterNoteTypeOptions($event)"
+                        (keydown.enter)="onNoteTypeEnter($event)"
+                      />
+                      <mat-icon matSuffix class="dropdown-icon" (click)="noteTypeInput.focus()">arrow_drop_down</mat-icon>
+                    </mat-form-field>
+                
+                    <mat-autocomplete #autoNoteType="matAutocomplete">
+                      <ng-container *ngIf="filteredNoteTypeList.length > 0">
+                        <mat-option
+                          *ngFor="let type of filteredNoteTypeList"
+                          [value]="type.noteTypeId"
+                          (click)="selectNoteType(type)"
+                        >
+                          {{ type.noteTypeDescription }}
+                        </mat-option>
+                      </ng-container>
+                    </mat-autocomplete> -->
+
+                  </div>
+                </div>
+                <div class="form-group row mb-3">
+                  <label for="staticEmail" class="col-sm-4 col-form-label">Note Template</label>
+                  <div class="col-sm-8">
+                    <!-- <select class="form-control form-select" formControlName="noteTemplate" (change)="setNoteText()">
+                      <option *ngFor="let values of noteTempData " [value]="values.noteTemplateId"
+                        [selected]="values.isDefault === true">
+                        {{values.noteTemplateName}}</option>
+                    </select> -->
+
+                    <app-shared-dropdown [options]="filteredNoteTemplateList" [placeholder]="'Search Note Template'" [selectedValue]="noteTemplatename"
+                    (selectionChange)="selectNoteTemplate($event)">
+                  </app-shared-dropdown>
+
+                    <!-- <mat-form-field>
+                      <input
+                        matInput
+                        #noteTemplateInput
+                        placeholder="Search Note Template"
+                        [matAutocomplete]="autoNoteTemplate"
+                        formControlName="noteTemplate"
+                        (input)="filterNoteTemplateOptions($event)"
+                        (keydown.enter)="onNoteTemplateEnter($event)"
+                      />
+                      <mat-icon matSuffix class="dropdown-icon" (click)="noteTemplateInput.focus()">arrow_drop_down</mat-icon>
+                    </mat-form-field>
+                
+                    <mat-autocomplete #autoNoteTemplate="matAutocomplete"  >
+                      <ng-container *ngIf="filteredNoteTemplateList.length > 0">
+                        <mat-option
+                          *ngFor="let values of filteredNoteTemplateList"
+                          [value]="values.noteTemplateId"
+                          [selected]="values.isDefault === true"
+                          (click)="selectNoteTemplate(values)"
+                        >
+                          {{ values.noteTemplateName }}
+                        </mat-option>
+                      </ng-container>
+                    </mat-autocomplete> -->
+
+                  </div>
+                </div>
+
+
+              </div>
+              <div class="col-sm-6">
+
+
+                <div class="form-group row mb-3">
+                  <label for="staticEmail" class="col-sm-4 col-form-label">Note Group</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" formControlName="noteGroup">
+
+                  </div>
+                </div>
+
+
+                <div class="form-group row mb-3">
+                  <label for="staticEmail" class="col-sm-4 col-form-label">Confidential</label>
+                  <div class="col-sm-8">
+                    <div class="form-check form-switch">
+                      <input type="checkbox" class="form-check-input mt-2" formControlName="confidential"
+                        (click)="setConfidential($event)">
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6 ">
+                <!-- <div class="form-group row mb-3">
+                        <label for="staticEmail" class="col-sm-4 col-form-label">Trace Type</label>
+                        <div class="col-sm-8">
+                            <select class="form-control form-select" 
+                            formControlName="traceType"
+                            (change)="setCalenderDate()" >
+                            <option *ngFor="let data of traceData" [value]="data.traceTypeId">
+                             {{data.traceTypeDescription}}
+                            </option>
+                            </select>
+                            
+                        </div>
+                      </div> -->
+                <div class="form-group row mb-3">
+                  <label for="staticEmail" class="col-sm-4 col-form-label">Call Log</label>
+                  <div class="col-sm-8">
+                    <div class="form-check form-switch">
+                      <input type="checkbox" formControlName="callLog" class="form-check-input mt-2">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group row mb-3">
+                  <label for="staticEmail" class="col-sm-4 col-form-label">Trace Date</label>
+                  <div class="col-sm-8">
+
+                    <div class="position-relative">
+                      <input type="text" class="form-control" formControlName="traceDate" #dp="bsDatepicker"
+                        [bsConfig]="bsConfig" readonly bsDatepicker triggers="dbllclick:click" (input)="onInput($event)"
+                        placeholder="MM/DD/YYYY" />
+                      <span class="datepicker" (click)="dp.toggle()">
+                        <i class="fa-regular fa-calendar-days"></i>
+                      </span>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 mb-3">
+                <div class="form-group row">
+                  <label for="staticEmail" class="col-sm-2 col-form-label">Note Text<span
+                      class="text-danger">*</span></label>
+                  <div class="col-sm-10">
+
+                    <textarea type="text" formControlName="noteText" class="form-control h-200"
+                     ></textarea>
+                     <!-- (input)="inputValidator($event)" -->
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeModal('addtasklist')">Cancel</button>
+        <button type="button" class="btn btn-primary" (click)="savePendNoteAndTask()"
+          [disabled]="addTaskForm.invalid">Pend</button>
+        <button type="button" class="btn btn-primary" (click)="saveNoteTask()"
+          [disabled]="addTaskForm.invalid">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- edit task model -->
+<div class="modal modal-bg" id="edittasklist" tabindex="-1" role="dialog" aria-labelledby="FieldChooserLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"> Edit Task Notes </h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="closeModal('edittasklist')">
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="editTaskForm">
+          <div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group row mb-3">
+                  <label for="staticEmail" class="col-sm-4 col-form-label">Note Type<span
+                      class="text-danger">*</span></label>
+                  <div class="col-sm-8">
+                    <select class="form-control form-select" formControlName="editNoteType"
+                      (change)="editNoteGroupData()">
+                      <option *ngFor="let type of noteType" [value]="type.noteTypeId"
+                        [selected]="type.noteTypeId == editTaskForm.value.editNoteType">
+                        {{type.noteTypeDescription}}
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row mb-3">
+                  <label for="staticEmail" class="col-sm-4 col-form-label">Note Template</label>
+                  <div class="col-sm-8">
+                    <select class="form-control form-select" formControlName="editNoteTemplate"
+                      (change)="setEditNoteText()">
+                      <option *ngFor="let values of noteTempData " [value]="values.noteTemplateId"
+                        [selected]="values.noteTemplateId == 54">
+                        {{values.noteTemplateName}}</option>
+                    </select>
+                  </div>
+                </div>
+
+
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group row mb-3">
+                  <label for="staticEmail" class="col-sm-4 col-form-label">Note Group</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" formControlName="editNoteGroup">
+
+                  </div>
+                </div>
+                <div class="form-group row mb-3">
+                  <label for="staticEmail" class="col-sm-4 col-form-label">Confidential</label>
+                  <div class="col-sm-8">
+                    <div class="form-check form-switch">
+                      <input type="checkbox" class="form-check-input mt-2" formControlName="editConfidential">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <!-- <div class="form-group row mb-3">
+                            <label for="staticEmail" class="col-sm-4 col-form-label">Trace Type</label>
+                            <div class="col-sm-8">
+                                <select class="form-control form-select" 
+                                formControlName="editTraceType" >
+                                <option *ngFor="let data of traceData" [value]="data.traceTypeId"
+                                [selected]="data.traceTypeId == editTaskForm.value.editTraceType">
+                                 {{data.traceTypeDescription}}
+                                </option>
+                                </select>
+                                
+                            </div>
+                          </div> -->
+                <div class="form-group row mb-3">
+                  <label for="staticEmail" class="col-sm-4 col-form-label">Call Log</label>
+                  <div class="col-sm-8">
+                    <div class="form-check form-switch">
+                      <input type="checkbox" formControlName="editCallLog" class="form-check-input mt-2">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group row mb-3">
+                  <label for="staticEmail" class="col-sm-4 col-form-label">Trace Date</label>
+                  <div class="col-sm-8">
+
+                    <div class="position-relative">
+                      <input type="text" class="form-control" formControlName="editTraceDate" #dped="bsDatepicker"
+                        [bsConfig]="bsConfig" readonly bsDatepicker triggers="dbllclick:click" (input)="onInput($event)"
+                        placeholder="MM/DD/YYYY" />
+                      <span class="datepicker" (click)="dped.toggle()">
+                        <i class="fa-regular fa-calendar-days"></i>
+                      </span>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group row mb-3">
+                  <label for="staticEmail" class="col-sm-2 col-form-label">Note Text<span
+                      class="text-danger">*</span></label>
+                  <div class="col-sm-10">
+
+                    <textarea type="text" formControlName="editNoteText" class="form-control h-200"
+                      ></textarea>
+                      <!-- (input)="inputValidator($event)" -->
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeModal('edittasklist')">Cancel</button>
+        <!-- <button type="button" class="btn btn-primary" (click)="savePendNoteAndTask()">Pend</button> -->
+        <button type="button" class="btn btn-primary" (click)="editSaveNoteTask()"
+          [disabled]="editTaskForm.invalid">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Delete Modal -->
+<div class="modal modal-bg" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title delete-head" id="deleteModalLabel">
+          <i class="fa-solid fa-trash-can"></i> Delete Confirmation
+        </h5>
+        <button type="button" class="btn-close" aria-label="Close" (click)="closeModal('deleteModal')"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-lg-12">
+            <p>“This note template might be in use. Are you sure to delete this?”</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="row">
+          <div class="col-12 d-flex gap-3 flex-wrap">
+            <button type="button" class="btn btn-primary" (click)="deleteNoteandTasks()">
+              Delete
+            </button>
+            <button type="button" class="btn btn-secondary" (click)="closeModal('deleteModal')">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

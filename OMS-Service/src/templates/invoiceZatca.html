@@ -1,0 +1,831 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <style>
+            @font-face {
+                font-family: "myFont";
+                src: "/fonts/eng.otf";
+                /* src: url("https://m.stylishop.com/fonts/Swissra-Regular.woff2"); */
+            }
+
+            @font-face {
+                font-family: "myFontAR";
+                src: "/fonts/arabic.otf";
+                /* src: url("https://m.stylishop.com/fonts/Swissra-Regular.woff2"); */
+            }
+
+            .myFont {
+                font-family: "myFont";
+            }
+
+            .myFontAr {
+                font-family: "myFontAR";
+            }
+        </style>
+    </head>
+
+    <body>
+        <table width="100%" border="0" cellpadding="6" cellspacing="0" dir="rtl" class="myFontAr">
+            <tbody>
+                <tr>
+                    <td style="text-align: center;" width="50%">
+                        <div style="font-size: 23px; color: #575757; float: right; margin-top: 15px;">
+                            {{data.headers.invoiceHeading.ar}}
+                        </div>
+                    </td>
+                    <td style="font-size: 25px; color: #575757;" width="50%">
+                        <div style="float: left;">{{{data.qrCode}}}</div>
+                        <div style="margin-bottom: 15px;">
+                            <img src="https://oms-ui-dev.web.app/assets/logos/black.svg" width="75px" height="auto" style="display: block;" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="50%" style="font-size: 12px;">
+                        رقم الفاتورة #: {{data.incrementId}}<br />
+                        تاريخ الفاتورة: {{data.createdAt}}<br />
+                        {{data.headers.supplyDate.ar}} : {{data.createdAt}}<br />
+                        الطلب رقم #: {{data.orderIncrementId}}<br />
+                        تاريخ الطلب: {{data.orderCreatedAt}}<br />
+                    </td>
+                    <td valign="top" style="font-size: 12px;">
+                        {{#each data.companyAddressAr}} {{{this}}} <br />
+                        {{/each}}
+                    </td>
+                </tr>
+                <tr style="line-height: 0.4cm;">
+                    <td valign="top" width="50%" style="font-weight: bold; border-bottom: 4px none transparent; color: #575757; background-color: #f0f0f0;">
+                        <strong>عنوان الفاتورة</strong>
+                    </td>
+                    <td valign="top" style="font-weight: bold; border-bottom: 4px none transparent; color: #575757; background-color: #f0f0f0;">
+                        <strong>عنوان التسليم</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="50%" style="font-size: 12px;">
+                        {{data.shippingAddress.firstName}} {{data.shippingAddress.lastName}}<br />
+                        {{data.shippingAddress.streetAddress}}<br />
+                        {{#if data.shippingAddress.buildingNumber}}{{data.shippingAddress.buildingNumber}}<br />{{/if}}
+                        {{#if data.shippingAddress.unitNumber}}{{data.shippingAddress.unitNumber}}<br />{{/if}}
+                        {{#if data.shippingAddress.shortAddress}}{{data.shippingAddress.shortAddress}}<br />{{/if}}
+                        {{data.shippingAddress.area}}<br />
+                        {{data.shippingAddress.city}} <br />
+                        {{data.shippingAddress.country}}<br />
+                        {{#if data.shippingAddress.postalCode}}{{data.shippingAddress.postalCode}}<br />{{/if}}
+                        <span dir="ltr">{{data.shippingAddress.mobileNumber}}</span><br />
+                    </td>
+                    <td valign="top" style="font-size: 12px;">
+                        {{data.shippingAddress.firstName}} {{data.shippingAddress.lastName}}<br />
+                        {{data.shippingAddress.streetAddress}}<br />
+                        {{#if data.shippingAddress.buildingNumber}}{{data.shippingAddress.buildingNumber}}<br />{{/if}}
+                        {{#if data.shippingAddress.unitNumber}}{{data.shippingAddress.unitNumber}}<br />{{/if}}
+                        {{#if data.shippingAddress.shortAddress}}{{data.shippingAddress.shortAddress}}<br />{{/if}}
+                        {{data.shippingAddress.area}}<br />
+                        {{data.shippingAddress.city}} <br />
+                        {{data.shippingAddress.country}}<br />
+                        {{#if data.shippingAddress.postalCode}}{{data.shippingAddress.postalCode}}<br />{{/if}}
+                        <span dir="ltr">{{data.shippingAddress.mobileNumber}}</span><br />
+                    </td>
+                </tr>
+                <tr style="line-height: 0.4cm;">
+                    <td valign="top" width="50%" style="font-weight: bold; border-bottom: 4px none transparent; color: #575757; background-color: #f0f0f0;">
+                        <strong>طريقة الدفع</strong>
+                    </td>
+                    {{#if data.trackings.title}}
+                    <td valign="top" width="50%" style="font-weight: bold; border-bottom: 4px none transparent; color: #575757; background-color: #f0f0f0;">
+                        <strong>معلومات البريد السريع </strong>
+                    </td>
+                    {{/if}}
+                </tr>
+                <tr>
+                    <td valign="top" width="50%" style="font-size: 12px;">
+                        <span>{{data.paymentModeAr}}</span>
+                        <span>{{data.ccType}}</span>
+                        <span>{{data.ccNumber}}</span>
+                    </td>
+                    <td valign="top" width="50%" style="font-size: 12px;">
+                        {{#if data.trackings.title}}
+                        <span>{{data.trackings.title}}</span>
+                        :
+                        <span>{{data.trackings.trackNumber}}</span>
+                        {{/if}}
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="50%" style="font-size: 12px;"></td>
+                    <td valign="top" width="50%" style="font-size: 12px;">
+                        <span>تاريخ الوصول المتوقع</span>
+                        :
+                        <span>{{data.eDDAr}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="float: left; color: #575757; font-weight: bold;">
+            {{data.headers.currencyText.ar}}
+        </div>
+        <table width="100%" border="1" cellspacing="0" dir="rtl" class="myFontAr">
+            <thead>
+                <tr height="35px" nobr="true">
+                    <th align="center" width="9.363636363636%">
+                        <strong style="font-size: 5px;">{{data.headers.itemCode.ar}}</strong>
+                    </th>
+                    <th align="center" width="18.181818181818%">
+                        <strong style="font-size: 5px;">{{data.headers.productName.ar}}</strong>
+                    </th>
+                    <th align="center" width="3.909090909091%">
+                        <strong style="font-size: 5px;">{{data.headers.qty.ar}}</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 5px;">{{data.headers.unitPriceExclVat.ar}}</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 5px;">{{data.headers.subtotalExclVat.ar}}</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 5px;">{{data.headers.discountExclVat.ar}}</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 5px;">{{data.headers.taxableAmount.ar}}</strong>
+                    </th>
+                    <th align="center" width="3.909090909091%">
+                        <strong style="font-size: 5px;">{{data.headers.vatRate.ar}}</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 5px;">{{data.headers.vatAmount.ar}}</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 5px;">{{data.headers.totalPayable.ar}}</strong>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each data.products}}
+                <tr nobr="true" height="35px" bgcolor="">
+                    <td align="left" width="9.363636363636%">
+                        <p style="font-size: 10px;">{{this.sku}}</p>
+                    </td>
+                    <td align="center" width="18.181818181818%">
+                        <p style="font-size: 10px;">{{this.nameAr}}</p>
+                    </td>
+                    <td align="center" width="3.909090909091%">
+                        <p style="font-size: 9px;">{{this.qty}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{this.unitPriceExclTax}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{this.subTotalExclTax}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{this.totalDiscountExclTaxProduct}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{this.taxablePriceProduct}}</p>
+                    </td>
+                    <td align="center" width="3.909090909091%">
+                        <p style="font-size: 9px;">{{this.taxPercentage}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{this.totalTaxAmountProduct}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{this.totalPriceInclTaxProduct}}</p>
+                    </td>
+                </tr>
+                {{/each}} {{#if data.totals.isCOD}}
+                <tr nobr="true" height="35px" bgcolor="">
+                    <td align="left" width="9.363636363636%">
+                        <p style="font-size: 10px;"></p>
+                    </td>
+                    <td align="center" width="18.181818181818%">
+                        <p style="font-size: 10px;">{{data.headers.codFeeExclVat.ar}}</p>
+                    </td>
+                    <td align="center" width="3.909090909091%">
+                        <p style="font-size: 9px;">1</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.codCharges}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.codCharges}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">0</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.codCharges}}</p>
+                    </td>
+                    <td align="center" width="3.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.taxPercent}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.codTaxCharges}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{ data.totals.codChargesTotal }}</p>
+                    </td>
+                </tr>
+                {{/if}} {{#if data.totals.isShipping}}
+                <tr nobr="true" height="35px" bgcolor="">
+                    <td align="left" width="9.363636363636%">
+                        <p style="font-size: 10px;"></p>
+                    </td>
+                    <td align="center" width="18.181818181818%">
+                        <p style="font-size: 10px;">{{data.headers.shippingAmountExclVat.ar}}</p>
+                    </td>
+                    <td align="center" width="3.909090909091%">
+                        <p style="font-size: 9px;">1</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.shippingAmount}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.shippingAmount}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">0</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.shippingAmount}}</p>
+                    </td>
+                    <td align="center" width="3.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.taxPercent}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{ data.totals.shippingTaxAmount }}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{ data.totals.shippingAmountTotal }}</p>
+                    </td>
+                </tr>
+                {{/if}} {{#if data.totals.isDonation}}
+                <tr nobr="true" height="35px" bgcolor="">
+                    <td align="left" width="9.363636363636%">
+                        <p style="font-size: 10px;"></p>
+                    </td>
+                    <td align="center" width="18.181818181818%">
+                        <p style="font-size: 10px;">{{data.donationTextsExclTax.ar}}</p>
+                    </td>
+                    <td align="center" width="3.909090909091%">
+                        <p style="font-size: 9px;">1</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.donationAmount}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.donationAmount}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">0</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.donationAmount}}</p>
+                    </td>
+                    <td align="center" width="3.909090909091%">
+                        <p style="font-size: 9px;">0</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">0</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.donationAmount}}</p>
+                    </td>
+                </tr>
+                {{/if}} {{#if data.totals.isImportFee}}
+                <tr nobr="true" height="35px" bgcolor="">
+                    <td align="left" width="9.363636363636%">
+                        <p style="font-size: 10px;"></p>
+                    </td>
+                    <td align="center" width="18.181818181818%">
+                        <p style="font-size: 10px;">{{data.headers.importFee.ar}}</p>
+                    </td>
+                    <td align="center" width="3.909090909091%">
+                        <p style="font-size: 9px;">1</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.importFeesAmount}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.importFeesAmount}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">0</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.importFeesAmount}}</p>
+                    </td>
+                    <td align="center" width="3.909090909091%">
+                        <p style="font-size: 9px;">0</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">0</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.importFeesAmount}}</p>
+                    </td>
+                </tr>
+                {{/if}}
+            </tbody>
+        </table>
+        <!-- TOTALS -->
+        <table width="100%" border="1" cellpadding="10" cellspacing="0" dir="rtl" class="myFontAr">
+            <tbody>
+                <tr style="">
+                    <td align="right" width="40%">
+                        {{data.headers.totalExclVat.ar}}
+                    </td>
+                    <td align="right" width="10%">
+                        {{data.totals.totalTaxableAmount}}
+                    </td>
+                </tr>
+                <tr style="">
+                    <td align="right" width="10%">
+                        {{data.headers.vat.ar}}
+                    </td>
+                    <td align="right" width="10%">
+                        {{data.totals.taxAmount}}
+                    </td>
+                </tr>
+                {{#if data.totals.isRounding}}
+                <tr style="">
+                    <td align="right" width="10%">
+                        {{data.headers.payableRounding.ar}}
+                    </td>
+                    <td align="right" width="10%">
+                        {{data.totals.roundingAmount}}
+                    </td>
+                </tr>
+                {{/if}}
+                <tr style="">
+                    <td align="right" width="10%">
+                        {{data.headers.totalPayable.ar}}
+                    </td>
+                    <td align="right" width="10%">
+                        <div>{{data.totals.invoicedAmount}}</div>
+                        {{#if data.headers.isNotKsa}}
+                        <div>SAR {{data.totals.baseInvoicedAmount}}</div>
+                        <div style="font-size: 8px; line-height: 100%; padding-top: 4px;">
+                            (سعر الصرف : {{data.currencyConversionRate}}00)
+                        </div>
+                        {{/if}}
+                    </td>
+                </tr>
+
+                {{#if data.totals.giftVoucherAmount}}
+                <tr style="">
+                    <td align="right" width="30%">
+                        {{data.headers.giftVoucher.ar}}
+                    </td>
+                    <td align="right" width="10%">
+                        - {{data.totals.giftVoucherAmount}}
+                    </td>
+                </tr>
+                {{/if}} {{#if data.totals.spendCoin}}
+                <tr style="">
+                    <td align="right" width="30%">
+                        {{data.headers.styliCoins.ar}}({{data.totals.spendCoin}})
+                    </td>
+                    <td align="right" width="10%">
+                        - {{data.totals.coinToCurrency}}
+                    </td>
+                </tr>
+                {{/if}} {{#if data.totals.totalShukranBurnedPoints}}
+                <tr style="">
+                    <td align="right" width="30%">
+                        نقاط شكراً({{data.totals.totalShukranBurnedPoints}})
+                    </td>
+                    <td align="right" width="10%">
+                        - {{data.totals.totalShukranBurnedValueInCurrency}}
+                    </td>
+                </tr>
+                {{/if}} {{#if data.totals.storeCreditAmount}}
+                <tr style="">
+                    <td align="right" width="30%">
+                        {{data.headers.styliCredit.ar}}
+                    </td>
+                    <td align="right" width="10%">
+                        - {{data.totals.storeCreditAmount}}
+                    </td>
+                </tr>
+                {{/if}}
+                <tr style="">
+                    <td align="right" width="30%">
+                        {{data.headers.totalNetPayable.ar}}
+                    </td>
+                    <td align="right" width="10%">
+                        {{data.totals.grandTotal}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- END TOTALS -->
+        <br />
+        <br />
+        <!-- English starts here -->
+        <p style="page-break-before: always;"></p>
+        <table width="100%" border="0" cellpadding="6" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td style="text-align: center;" width="50%">
+                        <div style="font-size: 23px; color: #575757; margin-top: 15px; float: left;">
+                            {{data.headers.invoiceHeading.en}}
+                        </div>
+                    </td>
+                    <td style="font-size: 25px; color: #575757;" width="50%">
+                        <div style="float: right;">{{{data.qrCode}}}</div>
+                        <div style="margin-bottom: 15px;">
+                            <img src="https://oms-ui-dev.web.app/assets/logos/black.svg" width="75px" height="auto" style="display: block;" />
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td valign="top" width="50%" style="font-size: 12px;">
+                        Invoice No: {{data.incrementId}}<br />
+                        Invoice Date: {{data.createdAt}}<br />
+                        {{data.headers.supplyDate.en}} : {{data.createdAt}}<br />
+                        Order No: {{data.orderIncrementId}}<br />
+                        Order Date: {{data.orderCreatedAt}}<br />
+                    </td>
+                    <td valign="top" style="font-size: 12px;">
+                        {{#each data.companyAddressEn}} {{{this}}} <br />
+                        {{/each}}
+                    </td>
+                </tr>
+                <tr style="line-height: 0.4cm;">
+                    <td valign="top" width="50%" style="font-weight: bold; border-bottom: 4px none transparent; color: #575757; background-color: #f0f0f0;">
+                        <strong>Billing Address</strong>
+                    </td>
+                    <td valign="top" style="font-weight: bold; border-bottom: 4px none transparent; color: #575757; background-color: #f0f0f0;">
+                        <strong>Shipping Address</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="50%" style="font-size: 12px;">
+                        {{data.shippingAddress.firstName}} {{data.shippingAddress.lastName}}<br />
+                        {{data.shippingAddress.streetAddress}}<br />
+                        {{#if data.shippingAddress.buildingNumber}}{{data.shippingAddress.buildingNumber}}<br />{{/if}}
+                        {{#if data.shippingAddress.unitNumber}}{{data.shippingAddress.unitNumber}}<br />{{/if}}
+                        {{#if data.shippingAddress.shortAddress}}{{data.shippingAddress.shortAddress}}<br />{{/if}}
+                        {{data.shippingAddress.area}}<br />
+                        {{data.shippingAddress.city}} <br />
+                        {{data.shippingAddress.country}}<br />
+                        {{#if data.shippingAddress.postalCode}}{{data.shippingAddress.postalCode}}<br />{{/if}}
+                        {{data.shippingAddress.mobileNumber}}<br />
+                    </td>
+                    <td valign="top" style="font-size: 12px;">
+                        {{data.shippingAddress.firstName}} {{data.shippingAddress.lastName}}<br />
+                        {{data.shippingAddress.streetAddress}}<br />
+                        {{#if data.shippingAddress.buildingNumber}}{{data.shippingAddress.buildingNumber}}<br />{{/if}}
+                        {{#if data.shippingAddress.unitNumber}}{{data.shippingAddress.unitNumber}}<br />{{/if}}
+                        {{#if data.shippingAddress.shortAddress}}{{data.shippingAddress.shortAddress}}<br />{{/if}}
+                        {{data.shippingAddress.area}}<br />
+                        {{data.shippingAddress.city}} <br />
+                        {{data.shippingAddress.country}}<br />
+                        {{#if data.shippingAddress.postalCode}}{{data.shippingAddress.postalCode}}<br />{{/if}}
+                        {{data.shippingAddress.mobileNumber}}<br />
+                    </td>
+                </tr>
+                <tr style="line-height: 0.4cm;">
+                    <td valign="top" width="50%" style="font-weight: bold; border-bottom: 4px none transparent; color: #575757; background-color: #f0f0f0;">
+                        <strong>Payment Mode</strong>
+                    </td>
+                    {{#if data.trackings.title}}
+                    <td valign="top" width="50%" style="font-weight: bold; border-bottom: 4px none transparent; color: #575757; background-color: #f0f0f0;">
+                        <strong>Courier Info</strong>
+                    </td>
+                    {{/if}}
+                </tr>
+                <tr>
+                    <td valign="top" width="50%" style="font-size: 12px;">
+                        <span>{{data.paymentModeEn}}</span>
+                        <span>{{data.ccNumber}}</span>
+                        <span>{{data.ccType}}</span>
+                    </td>
+                    <td valign="top" width="50%" style="font-size: 12px;">
+                        {{#if data.trackings.title}}
+                        <span>{{data.trackings.title}}</span>
+                        :
+                        <span>{{data.trackings.trackNumber}}</span>
+                        {{/if}}
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="50%" style="font-size: 12px;"></td>
+                    <td valign="top" width="50%" style="font-size: 12px;">
+                        <span>Estimated delivery date</span>
+                        :
+                        <span>{{data.eDD}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="/* background-color: #f0f0f0; */ float: right; color: #575757; font-weight: bold;">
+            {{data.headers.currencyText.en}}
+        </div>
+        <table width="100%" border="1" cellspacing="0">
+            <thead>
+                <tr nobr="true" height="35px">
+                    <th align="center" width="16.363636363636%">
+                        <strong style="font-size: 10px;">{{data.headers.itemCode.en}}</strong>
+                    </th>
+                    <th align="center" width="18.181818181818%">
+                        <strong style="font-size: 10px;">{{data.headers.productName.en}}</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 10px;">{{data.headers.qty.en}}</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 10px;">{{data.headers.unitPriceExclVat.en}}</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 10px;">{{data.headers.subtotalExclVat.en}}</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 10px;">{{data.headers.discountExclVat.en}}</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 10px;">{{data.headers.taxableAmount.en}}</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 10px;">{{data.headers.vatRate.en}}</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 10px;">{{data.headers.vatAmount.en}}</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 10px;">{{data.headers.totalPayable.en}}</strong>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each data.products}}
+                <tr nobr="true" height="35px" bgcolor="">
+                    <td align="left" width="16.363636363636%">
+                        <p style="font-size: 10px;">{{this.sku}}</p>
+                    </td>
+                    <td align="center" width="18.181818181818%">
+                        <p style="font-size: 10px;">{{this.name}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{this.qty}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{this.unitPriceExclTax}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{this.subTotalExclTax}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{this.totalDiscountExclTaxProduct}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{this.taxablePriceProduct}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{this.taxPercentage}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{this.totalTaxAmountProduct}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{this.totalPriceInclTaxProduct}}</p>
+                    </td>
+                </tr>
+                {{/each}} {{#if data.totals.isCOD}}
+                <tr nobr="true" height="35px" bgcolor="">
+                    <td align="left" width="16.363636363636%">
+                        <p style="font-size: 10px;"></p>
+                    </td>
+                    <td align="center" width="18.181818181818%">
+                        <p style="font-size: 10px;">{{data.headers.codFeeExclVat.en}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">1</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.codCharges}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.codCharges}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">0</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.codCharges}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.taxPercent}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{ data.totals.codTaxCharges }}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{ data.totals.codChargesTotal }}</p>
+                    </td>
+                </tr>
+                {{/if}} {{#if data.totals.isShipping}}
+                <tr nobr="true" height="35px" bgcolor="">
+                    <td align="left" width="16.363636363636%">
+                        <p style="font-size: 10px;"></p>
+                    </td>
+                    <td align="center" width="18.181818181818%">
+                        <p style="font-size: 10px;">{{data.headers.shippingAmountExclVat.en}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">1</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.shippingAmount}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.shippingAmount}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">0</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.shippingAmount}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.taxPercent}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{ data.totals.shippingTaxAmount }}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{ data.totals.shippingAmountTotal }}</p>
+                    </td>
+                </tr>
+                {{/if}} {{#if data.totals.isDonation}}
+                <tr nobr="true" height="35px" bgcolor="">
+                    <td align="left" width="16.363636363636%">
+                        <p style="font-size: 10px;"></p>
+                    </td>
+                    <td align="center" width="18.181818181818%">
+                        <p style="font-size: 10px;">{{data.donationTextsExclTax.en}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">1</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.donationAmount}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.donationAmount}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">0</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.donationAmount}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">0</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">0</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.donationAmount}}</p>
+                    </td>
+                </tr>
+                {{/if}} {{#if data.totals.isImportFee}}
+                <tr nobr="true" height="35px" bgcolor="">
+                    <td align="left" width="16.363636363636%">
+                        <p style="font-size: 10px;"></p>
+                    </td>
+                    <td align="center" width="18.181818181818%">
+                        <p style="font-size: 10px;">{{data.headers.importFee.en}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">1</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.importFeesAmount}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.importFeesAmount}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">0</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.importFeesAmount}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">0</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">0</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totals.importFeesAmount}}</p>
+                    </td>
+                </tr>
+                {{/if}}
+            </tbody>
+        </table>
+        <!-- TOTALS -->
+        <table nobr="true" width="100%" border="1" cellpadding="10" cellspacing="0">
+            <tbody>
+                <tr style="">
+                    <td align="right" width="40%">
+                        {{data.headers.totalExclVat.en}}
+                    </td>
+                    <td align="right" width="10%">
+                        {{data.totals.totalTaxableAmount}}
+                    </td>
+                </tr>
+                <tr style="">
+                    <td align="right" width="10%">
+                        {{data.headers.vat.en}}
+                    </td>
+                    <td align="right" width="10%">
+                        {{data.totals.taxAmount}}
+                    </td>
+                </tr>
+                {{#if data.totals.isRounding}}
+                <tr style="">
+                    <td align="right" width="10%">
+                        {{data.headers.payableRounding.en}}
+                    </td>
+                    <td align="right" width="10%">
+                        {{data.totals.roundingAmount}}
+                    </td>
+                </tr>
+                {{/if}}
+                <tr style="">
+                    <td align="right" width="10%">
+                        {{data.headers.totalPayable.en}}
+                    </td>
+                    <td align="right" width="10%">
+                        <div>{{data.totals.invoicedAmount}}</div>
+                        {{#if data.headers.isNotKsa}}
+                        <div>SAR {{data.totals.baseInvoicedAmount}}</div>
+                        <div style="font-size: 8px; line-height: 100%; padding-top: 4px;">
+                            (سعر الصرف : {{data.currencyConversionRate}}00)
+                        </div>
+                        {{/if}}
+                    </td>
+                </tr>
+
+                {{#if data.totals.giftVoucherAmount}}
+                <tr style="">
+                    <td align="right" width="30%">
+                        {{data.headers.giftVoucher.en}}
+                    </td>
+                    <td align="right" width="10%">
+                       - {{data.totals.giftVoucherAmount}}
+                    </td>
+                </tr>
+                {{/if}} {{#if data.totals.spendCoin}}
+                <tr style="">
+                    <td align="right" width="30%">
+                        {{data.headers.styliCoins.en}}({{data.totals.spendCoin}})
+                    </td>
+                    <td align="right" width="10%">
+                        - {{data.totals.coinToCurrency}}
+                    </td>
+                </tr>
+                {{/if}} {{#if data.totals.totalShukranBurnedPoints}}
+                <tr style="">
+                    <td align="right" width="30%">
+                        Shukran Points({{data.totals.totalShukranBurnedPoints}})
+                    </td>
+                    <td align="right" width="10%">
+                        - {{data.totals.totalShukranBurnedValueInCurrency}}
+                    </td>
+                </tr>
+                {{/if}} {{#if data.totals.storeCreditAmount}}
+                <tr style="">
+                    <td align="right" width="30%">
+                        {{data.headers.styliCredit.en}}
+                    </td>
+                    <td align="right" width="10%">
+                        - {{data.totals.storeCreditAmount}}
+                    </td>
+                </tr>
+                {{/if}}
+                <tr style="">
+                    <td align="right" width="30%">
+                        {{data.headers.totalNetPayable.en}}
+                    </td>
+                    <td align="right" width="10%">
+                        {{data.totals.grandTotal}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- END TOTALS -->
+    </body>
+</html>

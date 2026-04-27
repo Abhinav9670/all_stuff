@@ -1,0 +1,1119 @@
+swagger: "2.0"
+info:
+  title: QUOTE SERVICE API DOCUMENTATION
+  description: API DOCUMENTAION FOR QUOTE SERVICE
+  version: 1.0
+  contact:
+    email: test@gmail.com
+  liscence:
+    name: Apache 2.0
+    url: "http://www.apache.org/liscences/LIS"
+  servers:
+    -url: https://qa-api.stylifashion.com
+    description: THis is my local Server
+    basePath: { default: "rest" }
+schemes: [https, http]
+paths:
+  /rest/quote/auth/v5:
+    post:
+      basePath: '/'
+      summary: Add to Quote.
+      consumes:
+        - application/json
+      parameters:
+        - in: header
+          name: Token
+          type: string
+          required: true
+        - in: body
+          name: user
+          description: The Quote is added here.
+          schema:
+            # $ref: "swagger/schemas/Quote.yaml"
+            type: object
+            required:
+              - storeId
+            properties:
+              storeId:
+                type: number
+              source:
+                type: number
+              customerId:
+                type: string
+              addToQuoteProductsRequests:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    sku:
+                      type: string
+                    parentSku: 
+                      type: string
+                    quantity: 
+                      type: number
+                    caSource: 
+                      type: string
+                    caSourceType: 
+                      type: string
+                    caSourceValue: 
+                      type: string
+                    overrideQuantity: 
+                      type: boolean
+      responses:
+        200:
+          description: created
+          schema:
+                type: object
+                properties:
+                  customerId :
+                    type: number
+                  error : 
+                    type: boolean
+                  quoteId :
+                    type : string
+                  status :
+                    type : boolean
+                  statusCode :
+                    type : string
+                  statusMsg :
+                    type : string        
+        400:
+          description : failure
+          schema:
+                type: object
+                properties:
+                      status: 
+                        type: boolean
+                        default: false
+                      statusCode :
+                        type: string
+                      statusMsg :
+                        type: string
+    delete:
+      summary: Remove Item
+      consumes:
+        - application/json
+      parameters:
+        - in: header
+          name: Token
+          type: string
+          required: true
+        - in: body
+          name: Remove Item
+          description: Remove Item.
+          schema:
+            type: object
+            properties:
+              customerId:
+                type : number
+              quoteId:
+                type : string
+              skus:
+                type: array
+                items:
+                  oneOf:
+                    - type: string  
+      responses:
+          200:
+            description: success
+            schema:
+                  type: object
+                  properties:
+                    status: 
+                      type: boolean
+                    statusCode :
+                      type: string
+                    statusMsg :
+                      type: string 
+          400:
+            description : failure
+            schema:
+                  type: object
+                  properties:
+                        status: 
+                          type: boolean
+                          default: false
+                        statusCode :
+                          type: string
+                        statusMsg :
+                          type: string                         
+  /rest/quote/auth/v5/view/metadata:
+    get:
+      summary: Get a Quote Details
+      parameters:
+        - in: query
+          name: quoteId
+          example: "164248805632946"
+      responses:
+        200:
+          description: A single Quote details.
+          schema:
+                type: object
+                properties:
+                  status:
+                    type: boolean
+                  statusCode: 
+                    type: string
+                  statusMsg: 
+                    type: string
+                  quoteId: 
+                    type: string      
+                  error : 
+                    type : boolean
+                  response : 
+                    type: object
+                    properties:
+                      metadata:
+                        type: array
+                        items:
+                          type: object
+                  error:
+                    type: boolean
+  /rest/quote/auth/v6/get:
+    post:
+      summary: Get Quote
+      consumes:
+        - application/json
+      parameters:
+        - in: header
+          name: Token
+          type: string
+          required: true
+          name: x-header-token
+          type : string
+          required : true
+        - in: body
+          name: Qute Auth get
+          description: The Quote is added here.
+          schema:
+            type: object
+            properties:
+              quoteId:
+                type: string
+              customerId:
+                type: string
+              storeId :
+                type: number
+              bagView:
+                type: number
+              orderCreation:
+                type: boolean
+              storeCredit:
+                type: boolean
+      responses:
+        200:
+          description: Success
+          schema:
+                type: object
+                properties:
+                  status :
+                    type: boolean                 
+                  statusCode :
+                    type: boolean
+                  statusMsg :
+                    type: string
+                  response:
+                    type: object
+                    properties:
+                      donationAmount:
+                        type: string
+                      storeId:
+                        type: string
+                      quoteId:
+                        type: string
+                      customerId:
+                        type: string
+                      customerEmail:
+                        type: string
+                      customerIsGuest:
+                        type: string
+                      itemsCount:
+                        type: string
+                      itemsQty:
+                        type: string
+                      flashSale :
+                        type: object
+                        properties:
+                          active:
+                            type: string      
+                      subtotal :
+                       type: string
+                      subtotalInclTax:
+                        type: string
+                      subtotalExclTax:
+                        type: string
+                      subtotalWithDiscount:
+                        type: string
+                      crossSellBagContextId:
+                        type: string
+                      estimatedTotal:
+                        type: string
+                      importFeesAmount :
+                        type: string
+                      total :
+                        type : string
+                      discount :
+                        type : string
+                      couponDiscount:
+                        type : string
+                      autoCouponApplied:
+                        type : string
+                      autoCouponDiscount:
+                        type : string
+                      shippingThreshold:
+                        type: string
+                      shippingMethod:
+                        type: string
+                      shippingWaived:
+                        type: boolean                  
+                      shippingDescription:
+                        type: string
+                      shippingAmount:
+                        type: string
+                      shippingFreeCeiling:
+                        type: string
+                      shippingInclTax:
+                        type: string
+                      selectedAddressId:
+                        type: string
+                      selectedPaymentMethod:
+                        type: string
+                      isCouponApplicable:
+                        type: boolean
+                      couponCodeApplied:
+                        type: string            
+                      currency:
+                        type: string
+                      storeCreditApplied:
+                        type: string
+                      storeCreditBalance:
+                        type: string
+                      grandTotal:
+                          type: string
+                      baseGrandTotal:
+                          type: string
+                      taxAmount:
+                          type: string
+                      codCharges:
+                          type: string
+                      calcSource:
+                          type: string                
+                      products:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            parentProductId:
+                              type: string
+                            productId:
+                              type: string
+                            parentSku:
+                              type: string
+                            sku:
+                              type: string
+                            name:
+                              type: string
+                            productStatus:
+                              type: boolean
+                            brandName:
+                              type: string
+                            landedCost:
+                              type: string
+                            prices:
+                              type: object
+                              properties:
+                                price:
+                                  type: string
+                                specialPrice:
+                                  type: string
+                            images:
+                              type: object
+                              properties:
+                                image:
+                                  type: string
+                            size:
+                              type: string
+                            quantity:
+                              type: string
+                            quantityStock:
+                              type: string
+                            discount:
+                              type: string
+                            gender:
+                              type: string
+                            taxAmount:
+                              type: string
+                            taxPercent:
+                              type: string
+                            rowTotal:
+                              type: string
+                            rowTotalWithDiscount:
+                              type: string
+                            discountAmount:
+                              type: string
+                            discountPercent:
+                              type: string
+                            priceInclTax:
+                              type: string
+                            rowTotalInclTax:
+                              type: string
+                            superAttributeId:
+                              type: string
+                            superAttributeValue:
+                              type: string
+                            superAttributeLabel:
+                              type: string
+                            isMulin:
+                              type: boolean
+                            appliedCouponValue:
+                              type: array
+                              items:
+                                oneOf:
+                                  - type: string
+                            sizes:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  label:
+                                    type: string
+                                  sku:
+                                    type: string
+                                  productId:
+                                    type: string    
+                            price:
+                              type: string
+                            discountTaxCompensationAmount:
+                              type: string                                   
+                      discountData:
+                              type: array
+                              items:
+                                oneOf:
+                                  - type: string
+                      shippingAddress:
+                              type: object
+                              properties:
+                                  customerAddressId:
+                                    type: string
+                                  addressType:
+                                    type: string
+                                  email:
+                                    type: string
+                                  defaultAddress:
+                                    type: string
+                                  firstname:
+                                    type: string
+                                  lastname :
+                                    type : string
+                                  mobileNumber :
+                                    type : string
+                                  city:
+                                    type : string
+                                  region:
+                                    type : string
+                                  regionId :
+                                    type : string
+                                  postcode :
+                                    type : string
+                                  countryId :
+                                    type : string
+                                  telephone :
+                                    type : string
+                                  shippingMethod :
+                                    type : string
+                                  shippingDescription:
+                                    type : string
+                                  locationType :
+                                    type : string
+                                  nearestLandmark :
+                                    type: string
+                                  area :
+                                    type : string
+                                  buildingNumber :
+                                    type : string
+                                  cityMapper :
+                                    type : object              
+                      tabbyPaymentId :
+                        type : string
+                      availablePaymentMethods:
+                        type : array
+                        items:
+                          oneOf:
+                            - type: string
+                      paymentRestriction :
+                        type: object
+                        properties:
+                          codEnabled:
+                            type: boolean
+                          otpValidation:
+                            type: boolean  
+                          otpValidationType:
+                            type: string
+                          otpFlag :
+                              type: number  
+        400:
+          description : failure
+          schema:
+                type: object
+                properties:
+                      status: 
+                        type: boolean
+                        default: false
+                      statusCode :
+                        type: string
+                      statusMsg :
+                        type: string
+  /rest/quote/auth/v6/get/totals:
+    post:
+      summary: Payment Totals
+      consumes:
+        - application/json
+      parameters:
+        - in: header
+          name: Token
+          type: string
+          required: true
+        - in: body
+          name: Payment Totals
+          description: The Quote total Payment.
+          schema:
+            type: object
+            properties:
+              storeId:
+                type: number
+              paymentMethod:
+                type: string
+              applyStoreCredit:
+                type: boolean
+              cardBin:
+                type: string
+              isFirstCall:
+                type: string
+              customerId:
+                type: string
+              quoteId:
+                type: string              
+      responses:
+        200:
+          description: Success
+          schema:
+                type: object
+                properties:
+                  status :
+                    type: boolean
+                  statusCode:
+                    type: true
+                  statusMsg:
+                    type: string
+                  response:
+                    type: object
+                    properties:
+                      donationAmount:
+                        type: string
+                      storeId:
+                        type: string
+                      quoteId:
+                        type: string
+                      subtotal :
+                        type: string
+                      quoteId:
+                        type: string
+                      subtotal:
+                        type : string
+                      total:
+                        type : string
+                      discount:
+                        type : string
+                      estimatedTotal:
+                        type : string
+                      importFeesAmount:
+                        type : string
+                      couponDiscount:
+                        type: string
+                      isCouponApplicable: 
+                        type: boolean
+                      couponCodeApplied :
+                        type: string
+                      autoCouponApplied :
+                        type: string 
+                      autoCouponDiscount :
+                        type: string
+                      selectedPaymentMethod :
+                        type: string 
+                      shippingAmount :
+                        type: string
+                      shippingAddress:
+                        type : object
+                        properties:
+                          customerAddressId :
+                            type: string
+                          addressType:
+                            type: string
+                          email:
+                            type: string
+                          defaultAddress:
+                            type: string
+                          firstname:
+                            type: string
+                          lastname:
+                            type: string
+                          street:
+                            type: string
+                          mobileNumber:
+                            type: string
+                          city:
+                            type: string
+                          region:
+                            type: string
+                          postcode:
+                            type: string
+                          countryId:
+                            type: string
+                          telephone:
+                            type: string
+                          shippingMethod:
+                            type: string
+                          shippingDescription:
+                            type: string
+                          locationType:
+                            type: string
+                          nearestLandmark:
+                            type: string
+                          area:
+                            type: string
+                          buildingNumber:
+                            type: string
+                          cityMapper:
+                            type: object
+                            properties:
+                                  id:
+                                    type: string
+                                  name_en:
+                                    type: string
+                                  name_ar:
+                                    type: string
+                                  enabled:
+                                    type: boolean
+                                  min_sla:
+                                    type: number
+                                  max_sla:
+                                    type: number
+                                  cod_verification:
+                                    type: boolean
+                                  threshold:
+                                    type: number
+                                  max_threshold:
+                                    type: number    
+                                  fast_delivery:
+                                    type: boolean
+                                  cutoff_time_excluded:
+                                    type: boolean
+                                  cut_off_time :
+                                    type:  string
+                                  holiday:
+                                    type : string
+                                  estimated_date:
+                                    type: string
+                                  threshold_time: 
+                                    type : string   
+                      discountData:
+                        type : array
+                        items:
+                          oneOf:
+                            - type: string
+                      storeCreditBalance:
+                        type: string
+                      storeCreditApplied:
+                        type: boolean
+                      prepaidPayable:
+                        type: object
+                      grandTotal:
+                        type: string
+                      baseGrandTotal:
+                        type: string
+                      codCharges:
+                        type: string
+                      paymentRestriction:
+                        type: object
+                        properties:
+                          codEnabled:
+                            type: boolean
+                          otpValidation:
+                            type: boolean
+                          otpValidationType:
+                            type: string 
+                          otpFlag:
+                            type: number
+                      xSource:
+                        type: string
+                      xClientVersion:
+                        type: string
+                      availablePaymentMethods:
+                        type: object    
+                      paymentsConfig:
+                        type: object
+                        properties:
+                          tabby_installments:
+                            type: object
+                            properties:
+                              web_url:
+                                type: string
+                              pay_per_installment:
+                                type: string
+                              installments_count:
+                                type: number
+                              amount_to_pay:
+                                type: string     
+                          tabby_paylater:
+                            properties:
+                              web_url:
+                                type : string
+                              amount_to_pay :
+                                type : string
+                              installments_count :
+                                type : number  
+                              pay_per_installment :
+                                type : string
+                              installments_count :
+                                type : number
+                              amount_to_pay :
+                                type : string  
+                          tamara_installments_3:
+                            properties:
+                              amount_to_pay:
+                                type : string
+                              installments_count :
+                                type : number  
+                              pay_per_installment :
+                                type : string
+                          tamara_installments_6:
+                            properties:
+                              amount_to_pay:
+                                type : string
+                              installments_count :
+                                type : number  
+                              pay_per_installment :
+                                type : string      
+        400:
+          description : failure
+          schema:
+                type: object
+                properties:
+                      status: 
+                        type: boolean
+                        default: false
+                      statusCode :
+                        type: string
+                      statusMsg :
+                        type: string
+  /rest/quote/auth/v5/view/count:
+    put:
+      summary: update Qty
+      consumes:
+        - application/json
+      parameters:
+        - in: header
+          name: Token
+          type: string
+          required: true
+          name : x-header-token
+          type : string
+          required : true
+        - in: body
+          name: Update Qty
+          description: Update the Qty.
+          schema:
+            type: object
+            properties:
+              sku:
+                type: string
+              quantity:
+                type: number
+              quoteId:
+                type: string
+              storeId:
+                type: number
+              customerId:
+                type: number  
+      responses:
+          200:
+            description: created
+            schema:
+                  type: object
+                  properties:
+                    status :
+                      type: boolean
+                    statusCode : 
+                      type: string
+                    statusMsg : 
+                      type: string  
+                    quoteId :
+                      type : string
+                    customerId :
+                      type : string
+                    error :
+                      type : string
+          400:
+            description : failure
+            schema:
+                  type: object
+                  properties:
+                        status: 
+                          type: boolean
+                          default: false
+                        statusCode :
+                          type: string
+                        statusMsg :
+                          type: string
+    post:
+      summary: Get Count.
+      consumes:
+        - application/json
+      parameters:
+        - in: header
+          name: Token
+          type: string
+          required: true
+        - in: body
+          name: Get Count
+          description: The item count
+          schema:
+            type: object
+            properties:
+              quoteId:
+                type: string
+              storeId:
+                type: number
+              customerId:
+                type: number
+      responses:
+        200:
+          description: Success
+          schema:
+                type: object
+                properties:
+                  status :
+                    type: boolean
+                  statusCode : 
+                    type: string
+                  statusMsg :
+                    type : string
+                  response :
+                    type : object
+                    properties:
+                      itemsCount:
+                        type : number
+                      itemsQty:
+                        type : number
+                  error:
+                    type : string        
+        400:
+          description : failure
+          schema:
+                type: object
+                properties:
+                      status: 
+                        type: boolean
+                        default: false
+                      statusCode :
+                        type: string
+                      statusMsg :
+                        type: string
+  /rest/quote/auth/v5/changesize :
+    put :
+      summary: change size
+      consumes:
+        - application/json
+      parameters:
+        - in: header
+          name: Token
+          type: string
+          required: true
+          name : x-header-token
+          type : string
+          required : true
+        - in: body
+          name: Change Size
+          description: Update the size.
+          schema:
+            type: object
+            properties:
+              addRequest:
+                type: object
+                properties:
+                  overrideQuantity:
+                    type: boolean
+                  sku:
+                    type : string
+                  parentSku:
+                    type : string
+                  quantity :
+                    type: number
+              skuToDelete : 
+                type : string
+              quoteId:
+                type : string
+              storeId: 
+                type: number
+              customerId: 
+                type: number           
+      responses:
+          200:
+            description: success
+            schema:
+                  type: object
+                  properties:
+                    customerId :
+                      type: string
+                    error : 
+                      type: string
+                    quoteId : 
+                      type: string  
+                    status :
+                      type : boolean
+                    statusCode :
+                      type : string
+                    statusMsg :
+                      type : string
+          400:
+            description : failure
+            schema:
+                  type: object
+                  properties:
+                        status: 
+                          type: boolean
+                          default: false
+                        statusCode :
+                          type: string
+                        statusMsg :
+                          type: string
+  /rest/quote/auth/v5/coupon :
+    put :
+      summary: Apply Coupon
+      consumes:
+        - application/json
+      parameters:
+        - in: header
+          name: Token
+          type: string
+          required: true
+          name : x-header-token
+          type : string
+          required : true
+        - in: body
+          name: Change Size
+          description: Apply Coupon.
+          schema:
+            type: object
+            properties:
+              coupon:
+                type : string
+              quoteId:
+                type : string
+              storeId:
+                type : string          
+      responses:
+          200:
+            description: success
+            schema:
+                  type: object
+                  properties:
+                    status: 
+                      type: boolean
+                    statusCode :
+                      type: string
+                    statusMsg :
+                      type: string 
+          400:
+            description : failure
+            schema:
+                  type: object
+                  properties:
+                        status: 
+                          type: boolean
+                          default: false
+                        statusCode :
+                          type: string
+                        statusMsg :
+                          type: string                        
+ 
+    delete :
+      summary: Remove Coupon
+      consumes:
+        - application/json
+      parameters:
+        - in: header
+          name: Token
+          type: string
+          required: true
+          name : x-header-token
+          type : string 
+          required : true
+        - in: body
+          name: Change Size
+          description: Remove Coupon.
+          schema:
+            type: object
+            properties:
+              quoteId:
+                type : string
+              storeId:
+                type : string
+      responses:
+          200:
+            description: success
+            schema:
+                  type: object
+                  properties:
+                    status: 
+                      type: boolean
+                    statusCode :
+                      type: string
+                    statusMsg :
+                      type: string 
+          400:
+            description : failure
+            schema:
+                  type: object
+                  properties:
+                        status: 
+                          type: boolean
+                          default: false
+                        statusCode :
+                          type: string
+                        statusMsg :
+                          type: string  
+  /rest/quote/auth/v5/migrate:
+    post:
+      basePath: '/'
+      summary: Migrate API.
+      consumes:
+        - application/json
+      parameters:
+        - in: header
+          name: Token
+          type: string
+          required: true
+        - in: body
+          name: Migrate API.
+          description: Migrate API.
+          schema:
+            type: object
+            properties:
+              customerId:
+                type: number
+              quoteList:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    quoteId:
+                      type: string
+                    storeId: 
+                      type: number
+      responses:
+        200:
+          description: success
+          schema:
+                type: object
+                properties:
+                  customerId :
+                    type: string
+                  error : 
+                    type: string
+                  quoteId :
+                    type : string
+                  status :
+                    type : boolean
+                  statusCode :
+                    type : string
+                  statusMsg :
+                    type : string        
+        400:
+          description : failure
+          schema:
+                type: object
+                properties:
+                      status: 
+                        type: boolean
+                        default: false
+                      statusCode :
+                        type: string
+                      statusMsg :
+                        type: string
+  /rest/quote/auth/v5/address:
+    post:
+      summary: Add Address.
+      consumes:
+        - application/json
+      parameters:
+        - in: header
+          name: Token
+          type: string
+          required: true
+        - in: body
+          name: Add Address.
+          description: Add Address.
+          schema:
+            type: object
+            properties:
+              quoteId:
+                type: string
+              storeId:
+                type: number
+              customerId:
+                type: number
+              addressId:
+                type : number    
+              address:
+                type: object
+                properties:
+                  area:
+                    type: string
+                  buildingNumber: 
+                    type: string
+                  city: 
+                    type: string
+                  country: 
+                    type: string
+                  defaultAddress: 
+                    type: boolean
+                  firstName:
+                    type: string
+                  lastName:
+                    type : string
+                  mobileNumber:
+                    type: string
+                  region :
+                    type : string
+                  regionId :
+                    type : string
+                  streetAddress:
+                    type : string
+                  telephone :
+                    type : string                 
+      responses:
+        200:
+          description: success
+          schema:
+                type: object
+                properties:
+                  status: 
+                    type: boolean
+                  statusCode :
+                    type: string
+                  statusMsg :
+                    type: string    
+        400:
+          description : failure
+          schema:
+                type: object
+                properties:
+                      status: 
+                        type: boolean
+                        default: false
+                      statusCode :
+                        type: string
+                      statusMsg :
+                        type: string
+                        

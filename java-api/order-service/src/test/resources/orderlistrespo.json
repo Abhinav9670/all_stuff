@@ -1,0 +1,24 @@
+{
+	
+		"customerId": 5234645,
+		"customerName": "me .",
+		"customerEmail": "testw@hsj.com",
+		"group": "GENERAl",
+		"mobileNumber": "+971 564046431",
+		"countryName": null,
+		"provinceName": null,
+		"customerSince": "Thu Jun 08 08:20:23 GMT 2023",
+		"website": "3",
+		"gender": 2,
+		"optedForwhatsapp": null,
+		"isReferral": "false",
+		"signUpBy": "email",
+		"currentSignInBy": "email",
+		"lastSignedInTimestamp": null,
+		"storeId":"1",
+		"status":"true",
+		"source":"1"
+		
+		
+	
+  }

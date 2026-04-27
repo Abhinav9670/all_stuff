@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Confirmed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #a7a4a4;
+        }
+
+        .shukran-box{
+            box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.05);
+            border-radius: 6px 6px 6px 6px;
+            padding: 15px;
+        }
+        .shukran-button a{
+            color: #fff;
+            text-decoration: none;
+        }
+        .myaccount{
+            border-radius: 60px 60px 60px 60px;
+            padding: 15px 5px;
+        }
+        .shukran-button .platinum{
+            background-color: #2b3a43;
+        }
+        .shukran-button .classic{
+            background-color: #cf997e;
+        }
+        .shukran-button .gold{
+            background-color: #ab8545;
+        }
+        .shukran-button .silver{
+            background-color: #9da6a6;
+        }
+ 
+        .shukran-box .shukran-logo{
+            position: relative;
+            width: 64px;
+            margin: 0 auto 10px auto;
+        }
+        .shukran-box .earn{
+            padding: 5px 0 5px 0;
+            color: #c09e60;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .shukran-box .msg{
+            font-size: 12px;
+            color: #5c5c5c;
+        }
+        .shukran-box .msg span{
+            color: #000;
+            font-weight: 600;
+        }
+ 
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding-bottom: 8rem;
+        }
+ 
+        .header {
+            padding: 20px;
+            text-align: center;
+        }
+ 
+        .header img {
+            width: 18%;
+            padding-bottom: 20px;
+        }
+ 
+        .banner-section img {
+            width: 100%;
+            pointer-events: none;
+        }
+ 
+        .body-content {
+            color: #333;
+            font-size: 16px;
+            text-align: center;
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+ 
+        .order-details {
+            text-align: center;
+        }
+ 
+        .order-details td {
+            background-color: #edebe8;
+            border-radius: 10px;
+            padding: 12px;
+            vertical-align: middle;
+            font-weight: bold;
+        }
+ 
+        .address-table {
+            padding-left: 16%;
+        }
+ 
+        .products-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+ 
+        .product-item {
+            width: 100%;
+            padding: 20px;
+            border-collapse: collapse;
+        }
+ 
+        .product-item img {
+            max-width: 65px;
+        }
+ 
+        .categories {
+            text-align: center;
+            padding: 20px;
+        }
+ 
+        .categories img {
+            width: 100%;
+            border-radius: 8px;
+        }
+ 
+        .footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            background-color: #edebe8;
+        }
+ 
+        .footer-icons {
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+ 
+        .footer-icons img {
+            width: 8rem;
+        }
+ 
+        @media only screen and (max-width: 600px) {
+ 
+            /* Set consistent font size */
+            .order-details p {
+                font-size: 10px !important;
+                line-height: 1.2 !important;
+                white-space: nowrap !important;
+                margin: 0;
+                padding: 0;
+            }
+ 
+            .order-details {
+                padding: 5px !important;
+                /* Adjust padding to fit small screens */
+            }
+ 
+            /* Flex layout for side-by-side display */
+            .order-details table[role="presentation"] {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 !important;
+            }
+ 
+            .order-details td {
+                width: 50%;
+                text-align: center;
+                padding: 5px !important;
+                box-sizing: border-box;
+            }
+ 
+            .order-details td table[role="presentation"] {
+                width: 100%;
+            }
+ 
+            .order-details td img {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+ 
+<body style="margin: 0; padding: 0; background-color: #f4f4f4; font-family: Arial, Helvetica, sans-serif;">
+    <table class="container">
+        <!-- Header Section -->
+        <tr>
+            <td class="header">
+                <a href="{{websiteLink}}">
+                    <img src="https://mdev.stylifashion.com/email-imgs/logo-black.png" alt="Styli Logo" />
+                </a>
+            </td>
+        </tr>
+ 
+        <!-- Banner Section -->
+        <tr>
+            <td class="banner-section">
+                <a href="#"> <img src="https://mdev.stylifashion.com/email-imgs/en/top-banner-order-confirmed.jpg"
+                        alt="Order Confirmed Banner" /></a>
+            </td>
+        </tr>
+ 
+        <!-- Order Information Section -->
+        <tr>
+            <td class="body-content">
+                <p>Hi {{shippingAddress.firstName}},</p>
+                <p>
+                    Thanks for shopping with us. Your order #{{orderIncrementId}} is being processed
+                    and will soon be ready to be shipped. Get ready for great style!
+                </p>
+            </td>
+        </tr>
+ 
+        <!-- Order Details -->
+        <tr>
+            <td class="order-details">
+                <table role="presentation" width="80%" style="max-width: 60%; table-layout: fixed;" cellpadding="3"
+                    cellspacing="25" align="center">
+                    <tr>
+                        <!-- Order Details -->
+                        <td style="width: 50%; text-align: center; vertical-align: top; padding: 0;">
+                            <table role="presentation" style="width: 100%; border-collapse: collapse;">
+                                <tr>
+                                    <td
+                                        style="width: 25%; text-align: center; vertical-align: middle; padding-top: 18px;">
+                                        <a href="#">
+                                            <img src="https://mdev.stylifashion.com/email-imgs/icon-order-menu.png"
+                                                width="25" height="25" alt="Order Details"
+                                                style="display: inline-block;" />
+                                        </a>
+                                    </td>
+                                    <td
+                                        style="width: 75%; text-align: left; vertical-align: middle; padding-left: 5px;">
+                                        <p style="margin: 0; font-weight: bold; line-height: 1.2;">Order Details</p>
+                                        <p style="margin: 0; line-height: 1.2;">#{{orderIncrementId}}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+ 
+                        <!-- Estimated Delivery -->
+                        <td style="width: 50%; text-align: center; vertical-align: top; padding: 0;">
+                            <table role="presentation" style="width: 100%; border-collapse: collapse;">
+                                <tr>
+                                    <td
+                                        style="width: 25%; text-align: center; vertical-align: middle; padding-top: 18px;">
+                                        <a href="#">
+                                            <img src="https://mdev.stylifashion.com/email-imgs/icon-expected-delivery.png"
+                                                width="25" height="25" alt="Estimated Delivery"
+                                                style="display: inline-block;" />
+                                        </a>
+                                    </td>
+                                    <td
+                                        style="width: 75%; text-align: left; vertical-align: middle; padding-left: 5px;">
+                                        <p style="margin: 0; font-weight: bold; line-height: 1.2;">Estimated Delivery
+                                        </p>
+                                        <p style="margin: 0; line-height: 1.2;">{{{estimatedDeliveryTime}}}</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- Delivery Address -->
+        <tr>
+            <td class="address-table">
+                <p><strong>Delivery Address:</strong></p>
+                <p>{{shippingAddress.firstName}} {{shippingAddress.lastName}}, {{addressLine2}}</p>
+                <p>{{addressLine3}}</p>
+                <p><strong> Phone number: </strong> {{shippingAddress.mobileNumber}}</p>
+            </td>
+        </tr>
+        <!-- Order Items Section -->
+        <tr>
+            <td class="products-section" style="text-align: center;">
+                <div style="max-width: 75%; margin: auto; padding-right: 2%;">
+                    <h3>What's in Your Order:</h3>
+                    {{#each products}}
+                    <table class="product-item" width="41%" style="margin-bottom: 20px;">
+                        <tr>
+ 
+                            <td style="width: 20%;"> <a href="{{this.url}}"><img src="{{this.image}}" alt="Item Image"
+                                        style="max-width: 50%;" /></a></td>
+                            <td style="width: 40%; padding: 5px; text-align: left;">
+                                <a href="{{this.url}}" style="text-decoration: none;">
+                                    <p style="margin: 0; font-weight: bold; color: #777777;text-decoration: none">
+                                        {{this.brandName}}</p>
+                                    <p style="margin: 0; font-weight: bold;color: #777777;text-decoration: none">
+                                        {{this.name}}</p>
+                                    <p style="margin: 0;text-decoration: none; color: black;">Size: {{this.size}}</p>
+                                    <p style="margin: 0;text-decoration: none; color: black;">Quantity: {{floor
+                                        this.qty}}</p>
+                                    <p style="margin:0;text-decoration: none; color: black;">
+                                        {{#if (eq this.returnCategoryRestriction "true")}}
+                                        <strong style="color: black;">
+                                            This item cannot be returned
+                                        </strong>
+                                        <a href="#"> <img
+                                                src="https://mdev.stylifashion.com/email-imgs/icon-non-returnable.png"
+                                                style="max-width: 12px; padding-top: 3px; pointer-events: none;" /></a>
+                                        {{/if}}
+                                    </p>
+                                </a>
+                            </td>
+ 
+                            <td style="width: 30%; padding: 28px; text-align: right;">
+                                <p style="margin: 0;"><strong>{{totals.currency}} {{this.rowTotalInclTax}}</strong></p>
+                                {{#if (gt this.discountPercentage 0)}}
+                                <p
+                                    style="margin: 0; color: #999; text-decoration: line-through; word-break: break-all;">
+                                  <strong>  {{totals.currency}} {{this.originalPrice}} </strong>
+                                </p>
+                                <p style="margin: 0; color: black; word-break: break-all;">
+                                  <strong>  {{ this.discountPercentage}}% off </strong>
+                                </p>
+                                {{/if}}
+                            </td>
+                        </tr>
+                    </table>
+                    {{/each}}
+                </div>
+            </td>
+        </tr>
+ 
+        <!-- Payment Information Section -->
+        <tr>
+            <td style="text-align: center;">
+                <div style="max-width: 70%; margin: auto;">
+                    <table class="order-summary" width="100%" style="border-collapse: collapse; font-size: smaller;">
+                        <tr>
+                            <td style="width: 50%; padding: 10px; text-align: left; font-weight: bold;">
+                                <strong>PAYMENT METHOD:</strong>
+                            </td>
+                            <td style="width: 50%; padding: 10px; text-align: right;">
+                                <strong>{{paymentInformation.paymentMethod}}</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; padding: 10px; text-align: left; font-weight: bold;">
+                                <strong>SUBTOTAL:</strong>
+                            </td>
+                            <td style="width: 50%; padding: 10px; text-align: right;">
+                                <strong>{{totals.subtotalInclTax}}</strong>
+                            </td>
+                        </tr>
+                        {{#if totals.shippingAmount}}
+                        <tr>
+                            <td style="width: 50%; padding: 10px; text-align: left; font-weight: bold;">
+                                <strong>SHIPPING CHARGES:</strong>
+                            </td>
+                            <td style="width: 50%; padding: 10px; text-align: right;">
+                                <strong>{{totals.shippingAmount}}</strong>
+                            </td>
+                        </tr>
+                        {{/if}}
+                        {{#if totals.codCharges}}
+                        <tr>
+                            <td style="width: 50%; padding: 10px; text-align: left; font-weight: bold;">
+                                <strong>COD CHARGES:</strong>
+                            </td>
+                            <td style="width: 50%; padding: 10px; text-align: right;">
+                                <strong>{{totals.codCharges}}</strong>
+                            </td>
+                        </tr>
+                        {{/if}}
+                        {{#if totals.importFeesAmount}}
+                        <tr>
+                            <td style="width: 50%; padding: 10px; text-align: left; font-weight: bold;">
+                                <strong>IMPORT FEE:</strong>
+                            </td>
+                            <td style="width: 50%; padding: 10px; text-align: right;">
+                                <strong>{{totals.importFeesAmount}}</strong>
+                            </td>
+                        </tr>
+                        {{/if}}
+                        {{#if totals.discountAmount}}
+                        <tr>
+                            <td style="width: 50%; padding: 10px; text-align: left; font-weight: bold;">
+                                <strong>DISCOUNT:</strong>
+                            </td>
+                            <td style="width: 50%; padding: 10px; text-align: right;">
+                                <strong>{{totals.discountAmount}}</strong>
+                            </td>
+                        </tr>
+                        {{/if}}
+                        {{#if totals.totalShukranBurnedPoints}}
+                        <tr>
+                            <td style="width: 50%; padding: 10px; text-align: left; font-weight: bold;">
+                                <strong>Shukran Points:</strong>
+                            </td>
+                            <td style="width: 50%; padding: 10px; text-align: right;">
+                                <strong>{{totals.totalShukranBurnedPoints}}</strong>
+                            </td>
+                        </tr>
+                        {{/if}}
+                        {{#if totals.taxAmount}}
+                        <tr>
+                            <td style="width: 50%; padding: 10px; text-align: left; font-weight: bold;">
+                                <strong>VAT:</strong>
+                            </td>
+                            <td style="width: 50%; padding: 10px; text-align: right;">
+                                <strong>{{totals.taxAmount}}</strong>
+                            </td>
+                        </tr>
+                        {{/if}}
+                        <tr>
+                            <td style="width: 50%; padding: 10px; text-align: left; font-weight: bold;">
+                                <strong>GRAND TOTAL:</strong>
+                            </td>
+                            <td style="width: 50%; padding: 10px; text-align: right; font-weight: bold;">
+                                <strong>{{totals.grandTotal}}</strong>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+
+        {{#if totals.totalShukranEarnedPoints}}
+         <tr>
+            <td class="categories" style="text-align: center;">
+                <div style="max-width: 70%; margin: auto;" class="shukran-box">
+                    <div class="shukran-logo">
+                        <img src="https://mdev.stylifashion.com/shukran/{{totals.shukranTierName}}.png" alt="Shukran Logo" />
+                    </div>
+                    <div>Your Order Just Earned You</div>
+                    <div class="earn">{{totals.totalShukranEarnedPoints}} Shukrans</div>
+                    <div class="msg">They'll be credited to the account registered for <span dir="ltr">{{totals.shukranPhoneNumber}} </span></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="categories" style="text-align: center;"> 
+                <div style="max-width: 65%; margin: auto;" class="shukran-button">
+                    <a href="{{storeLink}}/account" >
+                        <div class="{{totals.shukranTierName}} myaccount">Go to My Account</div>
+                    </a>
+                </div>
+            </td>
+        </tr>
+        {{/if}}
+ 
+        <!-- Categories Section -->
+        <tr>
+            <td class="categories" style="text-align: center;">
+                <div style="max-width: 70%; margin: auto;">
+                    <h3>There's more to explore!</h3>
+                    <table width="100%" style="border-collapse: collapse;">
+                        <tr>
+                            <td style="padding: 10px;"><a href="{{storeLink}}/list/women"><img
+                                        src="https://mdev.stylifashion.com/email-imgs/en/category-card-women.png"
+                                        alt="Women" style="width: 100%; border-radius: 8px;" /></a></td>
+                            <td style="padding: 10px;"><a href="{{storeLink}}/list/men"><img
+                                        src="https://mdev.stylifashion.com/email-imgs/en/category-card-men.png"
+                                        alt="Men" style="width: 100%; border-radius: 8px;" /></a></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;"><a href="{{storeLink}}/list/kids"><img
+                                        src="https://mdev.stylifashion.com/email-imgs/en/category-card-kids.png"
+                                        alt="Kids" style="width: 100%; border-radius: 8px;" /></a></td>
+                            <td style="padding: 10px;"><a href="{{storeLink}}/list/beauty"><img
+                                        src="https://mdev.stylifashion.com/email-imgs/en/category-card-beauty.png"
+                                        alt="Beauty" style="width: 100%; border-radius: 8px;" /></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+ 
+ 
+        <!-- Footer Section -->
+        <!-- Footer Section -->
+        <tr>
+            <td class="footer" style="text-align: center; padding: 20px; background-color: #edebe8;">
+                <table role="presentation" width="100%">
+                    <tr>
+                        <td style="text-align: center;">
+                            <table role="presentation" class="footer-icons" style="margin: 0 auto; text-align: center;">
+                                <tr>
+                                    <td style="padding: 10px;">
+                                        <img src="https://mdev.stylifashion.com/email-imgs/en/footer-cta-48hr.png"
+                                            alt="48 Hour Delivery" width="100" />
+                                    </td>
+                                    <td style="padding: 10px;">
+                                        <img src="https://mdev.stylifashion.com/email-imgs/en/footer-cta-bnpl.png"
+                                            alt="Easy Returns" width="100" />
+                                    </td>
+                                    <td style="padding: 10px;">
+                                        <img src="https://mdev.stylifashion.com/email-imgs/en/footer-cta-lowest-price.png"
+                                            alt="Buy Now, Pay Later" width="100" />
+                                    </td>
+                                    <td style="padding: 10px;">
+                                        <img src="https://mdev.stylifashion.com/email-imgs/en/footer-cta-returns.png"
+                                            alt="Lowest Prices" width="100" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top: 15px; color: #555555; font-size: 14px; text-align: center;">
+                            Need further assistance? WhatsApp us at +966115208333 or email us at
+                            <a href="mailto:hello.ksa@stylishop.com"
+                                style="color: #0000EE;">hello.ksa@stylishop.com</a>, and we'll sort it out for you!
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+ 
+    </table>
+</body>
+ 
+</html>
+ 

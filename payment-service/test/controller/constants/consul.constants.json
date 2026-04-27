@@ -1,0 +1,114 @@
+{
+  "payfortConfig": {
+    "cahshfree": {
+      "CF_BASE_URL": "https://sandbox.cashfree.com/pg",
+      "CF_APP_ID": "205045341280650c4330aacaaf540502",
+      "CF_SECRET": "2d5a0f34bda8b01e21a6b8de4b7ad8f3e702a508",
+      "CF_VERSION": "2021-05-21",
+      "NOTIFICATIOIN_URL": "https://in-qa-api.stylifashion.com/rest/order/cf/webhook",
+      "orders_minutes_ago": 20,
+      "orders_hours_ago": 24,
+      "CASHGRAM_BASE_URL": "https://payout-gamma.cashfree.com",
+      "CASHGRAM_APP_ID": "CF205045CD807VGKTK23TRNLDK00",
+      "CASHGRAM_SECRET": "045b4a17d99d6531475e48359c94a429f24681d6",
+      "CASHGRAM_EXPIRE_IN_DAYS": 0
+    },
+    "payfort": {
+      "ksa_credentials": {
+        "PAYFORT_TOKEN_KSA_APPLE_REQ_PASSPHRASE": "$2y$10$I8o1AIg7s",
+        "PAYFORT_TOKEN_KSA_APPLE_RES_PASSPHRASE": "$2y$10$PJZVWSdcg",
+        "PAYFORT_TOKEN_KSA_CARD_RES_PASSPHRASE": "$2y$10$SiECNG8D9",
+        "PAYFORT_TOKEN_KSA_CARD_REQ_PASSPHRASE": "$2y$10$h5.IX5SM7",
+        "PAYFORT_TOKEN_KSA_APPLE_ACCESS_CODE": "OGBJDVY74QJCFO2N6aB0",
+        "PAYFORT_TOKEN_KSA_APPLE_MERCHANT_IDENTIFIER": "iyQDkUjv",
+        "PAYFORT_TOKEN_KSA_CARD_ACCESS_CODE": "CJAIgi62JhWdLFa31193",
+        "PAYFORT_TOKEN_KSA_CARD_MERCHANT_IDENTIFIER": "iyQDkUjv",
+        "PAYFORT_KSA_AMOUNT_MULTIPLIER_HUNDRED": "100"
+      },
+      "paymentService": {
+        "apiDomain": "https://qa-api.stylifashion.com",
+        "websiteHost": "qa.stylifashion.com",
+        "baseUrl": "qa-payment.stylifashion.com",
+        "purchaseUrl": "https://sbpaymentservices.payfort.com/FortAPI/paymentApi",
+        "storeCountryMap": {
+          "1": "ksa",
+          "3": "ksa",
+          "7": "uae",
+          "11": "uae",
+          "12": "kwt",
+          "13": "kwt",
+          "19": "bah",
+          "21": "bah"
+        }
+      }
+    }
+  },
+  "storeConfig": {
+    "environments": [
+      {
+        "stores": [
+          {
+            "storeId": "1",
+            "storeCode": "en",
+            "storeLanguage": "en_US",
+            "storeCurrency": "SAR",
+            "showAddLowValueAmount": 50,
+            "shipmentChargesThreshold": 150,
+            "shipmentCharges": 12,
+            "codCharges": 9,
+            "websiteCode": "sa",
+            "isPayfortAuthorized": true
+          }
+        ]
+      }
+    ]
+  },
+  "paymentMethods": {
+    "tamaraEligibilityCheck": true,
+    "credentials": {
+      "httpTimeoutInMs": 2000,
+      "sa": {
+        "merchantCode": "ksa",
+        "oldMerchantCode": "ksa",
+        "apiUrl": "https://api.tabby.ai/api/v2/checkout78",
+        "apiPublicKey": "pk_test_a0e5339b-3fbd-4bee-9a69-d83301f7708478",
+        "successUrl": "https://qa.stylifashion.com/sa/LANG/checkout/payment/confirmation78",
+        "cancelUrl": "https://qa.stylifashion.com/sa/LANG/checkout/payment/replica78",
+        "failureUrl": "https://qa.stylifashion.com/sa/LANG/checkout/payment/replica78",
+        "appSuccessUrl": "styliapp://applinks/sa/checkout/payment/confirmation78",
+        "appCancelUrl": "styliapp://applinks/sa/checkout/payment/replica78?cancel=cancel",
+        "appFailureUrl": "styliapp://applinks/sa/checkout/payment/replica78",
+        "tamaraApiUrl": "https://api-sandbox.tamara.co/checkout",
+        "tamaraToken": "78eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhY2NvdW50SWQiOiJjMTQyMzBiMC1hMTgyLTRhZGYtYTFiYS1lOTRlZWM1MGFlMTciLCJ0eXBlIjoibWVyY2hhbnQiLCJzYWx0IjoiZWMwZTE1YWUwNmNjMTUzMWUzMDAzMmZiNGM0ZjMzZGQiLCJpYXQiOjE2MzY5NTk5ODUsImlzcyI6IlRhbWFyYSJ9.U00w9Btq_6mBZUdvBYbKugWcsckczJ-Gq7j1xW-5lHw6C-bmF_FcGFyTbFIez4VK6g-A3yl-_7zhOqPFWigFvA-vNSerVD2Tut82Cv5or5KE8TmWF3zL4XCjaYL0ikZd9-ctVArB9SuNynDZ5XZyMIAkjaMe_B_z56AKL8WR8f1bJ--9kOhA9_-seRprRGatzgw7sKxRg_Uhq7cs_bK4ryAvU2dU8fsZZsTIrNomOXNC_WsnL_LZ2qYNq_TJgAidkCcXXKVeJE-uL0APeygxBrdCW4B2uifvbafsNPHq_6_aSgbCGvfJYEZogHg5ACqYpr8KTAsdqbBPuqpW11Dp6Q",
+        "tamaraNotificationUrl": "https://qa-api.stylifashion.com/rest/order/tamara/webhook",
+        "tamarapublickey": "f072f1b2-129d-4084-a67d-78e6a337eba478",
+        "methods": [
+          "md_payfort_cc_vault",
+          "md_payfort",
+          "cashondelivery",
+          "apple_pay",
+          "free",
+          "tabby_installments",
+          "tamara_installments_3"
+        ],
+        "loyaltyLevels": [
+          {
+            "minOrder": 0,
+            "maxOrder": 10,
+            "level": 1
+          },
+          {
+            "minOrder": 10,
+            "maxOrder": 50,
+            "level": 2
+          },
+          {
+            "minOrder": 50,
+            "maxOrder": 100,
+            "level": 3
+          }
+        ]
+      }
+    }
+  }
+}

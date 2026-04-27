@@ -1,0 +1,228 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment
+  labels:
+    app: {{ template "app.fullname" . }}
+    service: payment
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.payment.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "app.fullname" . }}
+      service: payment
+      release: {{ .Release.Name }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: {{ template "app.fullname" . }}
+        service: payment
+        release: {{ .Release.Name }}
+    spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 50
+              podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    service: payment
+                    revision: "{{ .Release.Revision }}"
+                topologyKey: "kubernetes.io/hostname"
+      volumes:
+        - name: gcpauth
+          secret:
+            secretName: payment-pem
+      
+      containers:
+        - name: payment
+          image: "{{ .Values.payment.image }}"
+          imagePullPolicy: {{ .Values.payment.pullPolicy }}
+          readinessProbe:
+            httpGet:
+              path: /payment/rest/health-check
+              port: 5001
+              initialDelaySeconds: 30
+            timeoutSeconds: 2
+            periodSeconds: 30
+            failureThreshold: 3
+            successThreshold: 1
+          livenessProbe:
+            httpGet:
+              path: /payment/rest/health-check
+              port: 5001
+            initialDelaySeconds: 60
+            timeoutSeconds: 2
+            periodSeconds: 10
+            failureThreshold: 3
+          resources:
+            requests:
+              cpu: {{ .Values.payment.cpureq }}
+              memory: {{ .Values.payment.memoryreq }}
+            limits:
+              cpu: {{ .Values.payment.cpulim }}
+              memory: {{ .Values.payment.memorylim }}
+          ports:
+            - name: http
+              containerPort: 5001
+          env:
+            - name: APMKEY
+              value: "{{ .Values.payment.apmkey }}"
+            - name: ELASTIC_APM_VERIFY_SERVER_CERT
+              value: "false"
+            - name: NODE_ENV
+              value: "{{ .Values.payment.node_env }}"
+            - name: HOST
+              value: "{{ .Values.payment.host }}"
+            - name: PORT
+              value: "{{ .Values.payment.port }}"
+            - name: CONSUL_HOST
+              value: "{{ .Values.payment.consul_host }}"
+            - name: CONSUL_PORT
+              value: "{{ .Values.payment.consul_port }}"
+            - name: CONSUL_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: consul-secrets
+                  key: consul_token
+            - name: CONSUL_KEY
+              value: "{{ .Values.payment.consul_key }}"
+            - name: CONSUL_PAYMENT_METHODS
+              value: "{{ .Values.payment.consul_payment_methods }}"
+            - name: MYSQL_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: payment-mysql
+                  key: mysql_host
+            - name: MYSQL_USER
+              valueFrom:
+                secretKeyRef:
+                  name: payment-mysql
+                  key: mysql_db_username
+            - name: MYSQL_PWD
+              valueFrom:
+                secretKeyRef:
+                  name: payment-mysql
+                  key: mysql_db_password
+            - name: MYSQL_DB
+              valueFrom:
+                secretKeyRef:
+                  name: payment-mysql
+                  key: mysql_db_name
+            - name: MYSQL_DB_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: payment-mysql
+                  key: mysql_port
+            - name: COUCHBASE_CLUSTER_ADDRESS
+              valueFrom:
+                secretKeyRef:
+                  name: cb-customermg
+                  key: host
+            - name: COUCHBASE_CLUSTER_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: cb-customermg
+                  key: username
+            - name: COUCHBASE_CLUSTER_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: cb-customermg
+                  key: password
+            - name: COUCHBASE_CLUSTER_BUCKET
+              valueFrom:
+                secretKeyRef:
+                  name: cb-customermg
+                  key: database
+            - name: jwt_secret
+              valueFrom:
+                secretKeyRef:
+                  name: jwtoldsalt
+                  key: JWT_SALT_OLD_SECRET
+            - name: REDIS_HOST
+              value: "{{ .Values.payment.redis_host }}"
+            - name: REDIS_PORT
+              value: "{{ .Values.payment.redis_port }}"
+            - name: MERCHANT_KEY_PATH
+              value: "{{ .Values.payment.merchant_key_path }}"
+            - name: ELASTIC_APM_SERVICE_NAME
+              value: "{{ .Values.payment.elastic_apm_service_name }}"
+            - name: ELASTIC_APM_SERVER_URL
+              value: "{{ .Values.payment.elastic_apm_service_url }}"  
+            - name: MERCHANT_CERT_PATH
+              value: "{{ .Values.payment.merchant_cert_path }}"
+            - name: MONGODB_URL
+              valueFrom:
+                secretKeyRef:
+                  name: customermg-mongo
+                  key: MONGODB_URL
+            - name: MONGODB_DB
+              valueFrom:
+                secretKeyRef:
+                  name: customermg-mongo
+                  key: MONGODB_DB   
+            - name: MONGODB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: customermg-mongo
+                  key: MONGODB_USER
+            - name: MONGODB_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: customermg-mongo
+                  key: MONGODB_PASS
+            - name: MONGODB_READ_PREFERENCE
+              valueFrom:
+                secretKeyRef:
+                  name: customermg-mongo
+                  key: MONGODB_READ_PREFERENCE
+            - name: MONGODB_AUTH_SOURCE
+              valueFrom:
+                secretKeyRef:
+                  name: customermg-mongo
+                  key: MONGODB_AUTH_SOURCE
+            - name: MONGODB_REPLICASET
+              valueFrom:
+                secretKeyRef:
+                  name: customermg-mongo
+                  key: MONGODB_REPLICASET  
+            - name: REDIS_AUTH_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: redis-auth
+                  key: authkey
+            - name: AUTH_INTERNAL_HEADER_BEARER_TOKEN
+              valueFrom:
+                secretKeyRef:
+                 name: authinternaloms  
+                 key: AUTH_INTERNAL_HEADER_BEARER_TOKEN
+          volumeMounts:
+            - name: gcpauth
+              mountPath: /var/gcppath
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: payment
+  labels:
+    app: {{ template "app.fullname" . }}
+    service: payment
+    release: {{ .Release.Name }}
+
+spec:
+  ports:
+    - port: 5001
+      targetPort: 5001
+      protocol: TCP
+  selector:
+    app: {{ template "app.fullname" . }}
+    service: payment
+    release: {{ .Release.Name }}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
+   <suppress>
+      <notes><![CDATA[
+      Suppressing CVE-2022-27140 due to custom reasons.
+      ]]></notes>
+      <cve>CVE-2022-27140</cve>
+   </suppress>
+   <suppress>
+      <notes><![CDATA[
+      Suppressing CVE-2023-26136 due to custom reasons.
+      ]]></notes>
+      <cve>CVE-2023-26136</cve>
+   </suppress>
+   <suppress>
+      <notes><![CDATA[
+      Suppressing CVE-2023-36665 due to custom reasons.
+      ]]></notes>
+      <cve>CVE-2023-36665</cve>
+   </suppress>
+</suppressions>

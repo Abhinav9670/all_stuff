@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Out for Delivery</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f3f3f3;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111111;
+        }
+
+        .outer {
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        .main {
+            width: 100%;
+            max-width: 390px;
+            margin: 0 auto;
+            background: #ffffff;
+        }
+
+        .logo {
+            text-align: center;
+            padding: 16px 16px 8px;
+        }
+
+        .logo img {
+            width: 94px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 0 18px 10px;
+        }
+
+        .hero-hi {
+            margin: 0;
+            font-size: 10px;
+            line-height: 1.2;
+        }
+
+        .hero-title {
+            margin: 10px 0 10px;
+            font-size: 36px;
+            line-height: 0.96;
+            letter-spacing: 0.2px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .hero-icon {
+            font-size: 14px;
+            vertical-align: middle;
+            margin-left: 2px;
+        }
+
+        .get-ready {
+            text-align: center;
+            font-size: 28px;
+            line-height: 1;
+            letter-spacing: 1px;
+            font-weight: 700;
+            margin: 8px 0 10px;
+            text-transform: uppercase;
+        }
+
+        .hero-text {
+            margin: 0 auto;
+            max-width: 330px;
+            font-size: 9px;
+            line-height: 1.45;
+        }
+
+        .badge {
+            width: 165px;
+            margin: 10px auto 8px;
+            background: #5d3ebc;
+            color: #ffffff;
+            font-size: 7px;
+            line-height: 1.3;
+            padding: 5px 7px;
+            border-radius: 1px;
+        }
+
+        .cta {
+            text-align: center;
+            padding: 2px 16px 14px;
+        }
+
+        .cta a {
+            display: inline-block;
+            width: 165px;
+            background: #5d3ebc;
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 8px;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            padding: 6px 10px;
+        }
+
+        .blue-line {
+            border-top: 1px solid #e6e6e6;
+        }
+
+        .order-box-wrap {
+            padding: 8px 10px 0;
+        }
+
+        .order-box {
+            background: #efefef;
+            border: 1px solid #e0e0e0;
+            padding: 10px;
+        }
+
+        .shipment-id {
+            font-size: 7px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .product-row {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+
+        .product-row td {
+            vertical-align: top;
+        }
+
+        .product-image {
+            width: 54px;
+            height: 78px;
+            object-fit: cover;
+            background: #ffffff;
+            border: 1px solid #dfdfdf;
+        }
+
+        .product-name {
+            font-size: 6.8px;
+            line-height: 1.35;
+            color: #111111;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .product-meta {
+            font-size: 6.8px;
+            line-height: 1.35;
+            color: #111111;
+            margin: 0;
+        }
+
+        .product-price {
+            text-align: right;
+            font-size: 7px;
+            font-weight: 700;
+            line-height: 1.35;
+            white-space: nowrap;
+        }
+
+        .small-divider {
+            border-top: 1px dashed #c7c7c7;
+            margin: 6px 0 8px;
+        }
+
+        .summary {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 6px;
+        }
+
+        .summary td {
+            font-size: 6.8px;
+            line-height: 1.35;
+            padding: 1px 0;
+            vertical-align: top;
+        }
+
+        .summary .left {
+            font-weight: 700;
+            width: 56%;
+        }
+
+        .summary .right {
+            text-align: right;
+            width: 44%;
+            font-weight: 700;
+        }
+
+        .address {
+            font-size: 6.8px;
+            line-height: 1.35;
+            margin-top: 10px;
+        }
+
+        .thanks {
+            text-align: center;
+            font-size: 6.8px;
+            line-height: 1.35;
+            padding: 12px 14px 8px;
+        }
+
+        .shukran-box-wrap {
+            padding: 0 10px 2px;
+        }
+
+        .shukran-box {
+            background: #6442b9;
+            color: #ffffff;
+            padding: 8px 10px 6px;
+        }
+
+        .shukran-row {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .shukran-row td {
+            vertical-align: middle;
+        }
+
+        .shukran-logo {
+            width: 50px;
+            height: 25px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .shukran-text {
+            font-family: Inter, Arial, Helvetica, sans-serif;
+            font-size: 7.5px;
+            font-weight: 400;
+            line-height: 2;
+            text-align: left;
+        }
+
+        .shukran-button {
+            text-align: left;
+            margin-top: 0;
+            padding-left: 62px;
+        }
+
+        .shukran-button a {
+            color: #ffffff;
+            font-family: Inter, Arial, Helvetica, sans-serif;
+            font-size: 7.5px;
+            font-weight: 700;
+            text-decoration: underline;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            line-height: 2;
+        }
+
+        .social-copy {
+            text-align: center;
+            font-family: Inter, Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 9px;
+            line-height: 200%;
+            letter-spacing: 0;
+            padding: 10px 20px 6px;
+        }
+
+        .social-row {
+            text-align: center;
+            padding: 2px 0 8px;
+        }
+
+        .social-row img {
+            width: 18px;
+            height: 18px;
+            margin: 0 4px 14px;
+            vertical-align: middle;
+        }
+
+        .explore-title {
+            text-align: center;
+            font-size: 8px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            margin: 6px 0 8px;
+        }
+
+        .explore-grid {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 5px auto 0;
+            max-width: 300px;
+        }
+
+        .explore-grid td {
+            width: 33.33%;
+            text-align: center;
+            padding: 3px;
+            vertical-align: top;
+        }
+
+        .explore-grid img {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 4px;
+        }
+
+        .explore-label {
+            font-size: 6.5px;
+            line-height: 1.2;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .bottom-badges {
+            border-top: 1px solid #e6e6e6;
+            margin-top: 8px;
+            padding: 9px 8px 7px;
+            text-align: center;
+        }
+
+        .bottom-badges img {
+            width: 74px;
+            margin: 0 1px;
+            vertical-align: middle;
+        }
+
+        .support-text {
+            text-align: center;
+            font-size: 6.5px;
+            line-height: 1.35;
+            color: #666666;
+            padding: 0 16px 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="outer" role="presentation" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table class="main" role="presentation" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="logo">
+                            <a href="{{websiteLink}}">
+                                <img src="https://mdev.stylifashion.com/email-imgs/logo-black.png" alt="Styli" />
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="hero">
+                            <p class="hero-hi">Hi {{shippingAddress.firstName}},</p>
+                            <div class="hero-title">
+                                Your Shipment Is<br />Out For Delivery <span class="hero-icon">💃</span>
+                            </div>
+                            <div class="get-ready">Get Ready</div>
+                            <p class="hero-text">
+                                Good news! Your Shipment {{incrementIdData}} is out for delivery today.
+                                Please keep your phone handy and prepare for a smooth delivery.
+                                <br />You can track delivery experience.
+                            </p>
+                            <div class="badge">You can follow its journey anytime here</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="cta">
+                            <a href="{{trackingBaseUrl}}">Track Shipment</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="blue-line"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="order-box-wrap">
+                            <div class="order-box">
+                                <div class="shipment-id">Order #{{incrementIdData}}</div>
+
+                                {{#each products}}
+                                <table class="product-row" role="presentation">
+                                    <tr>
+                                        <td style="width: 64px;">
+                                            <a href="{{this.url}}">
+                                                <img class="product-image" src="{{this.image}}" alt="Product" />
+                                            </a>
+                                        </td>
+                                        <td style="padding: 0 6px;">
+                                            <a href="{{this.url}}" style="text-decoration: none; color: #111111;">
+                                                <p class="product-name">{{this.brandName}}</p>
+                                                <p class="product-meta">{{this.name}}</p>
+                                                <p class="product-meta">Size: {{this.size}}</p>
+                                                <p class="product-meta">Quantity: {{floor this.qty}}</p>
+                                            </a>
+                                        </td>
+                                        <td class="product-price">
+                                            {{totals.currency}} {{this.rowTotalInclTax}}
+                                        </td>
+                                    </tr>
+                                </table>
+                                {{/each}}
+
+                                <div class="small-divider"></div>
+
+                                <table class="summary" role="presentation">
+                                    <tr>
+                                        <td class="left">PAYMENT METHOD:</td>
+                                        <td class="right">{{paymentInformation.paymentMethod}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left">SUBTOTAL:</td>
+                                        <td class="right">{{totals.subtotal}}</td>
+                                    </tr>
+                                    {{#if totals.shippingAmount}}
+                                    <tr>
+                                        <td class="left">CHARGES:</td>
+                                        <td class="right">{{totals.shippingAmount}}</td>
+                                    </tr>
+                                    {{/if}}
+                                    {{#if totals.discountAmount}}
+                                    <tr>
+                                        <td class="left">DISCOUNT:</td>
+                                        <td class="right">{{totals.currency}} {{finalDiscount}}</td>
+                                    </tr>
+                                    {{/if}}
+                                    {{#if totals.taxAmount}}
+                                    <tr>
+                                        <td class="left">VAT:</td>
+                                        <td class="right">{{totals.taxAmount}}</td>
+                                    </tr>
+                                    {{/if}}
+                                    <tr>
+                                        <td class="left">GRAND TOTAL:</td>
+                                        <td class="right">{{totals.grandTotal}}</td>
+                                    </tr>
+                                </table>
+
+                                <div class="small-divider"></div>
+
+                                <div class="address">
+                                    <strong>Delivery To:</strong><br />
+                                    {{shippingAddress.firstName}} {{shippingAddress.lastName}}<br />
+                                    {{addressLine2}}<br />
+                                    {{addressLine3}}<br />
+                                    Contact: {{shippingAddress.mobileNumber}}
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="blue-line"></td>
+                    </tr>
+
+                    <tr>
+                        <td class="thanks">
+                            Thanks for shopping with Styli 💜<br /><br />- Team Styli
+                        </td>
+                    </tr>
+
+                    {{#if totals.totalShukranEarnedPoints}}
+                    <tr>
+                        <td class="shukran-box-wrap">
+                            <div class="shukran-box">
+                                <table class="shukran-row" role="presentation">
+                                    <tr>
+                                        <td style="width: 58px; vertical-align: top; padding-top: 2px;">
+                                            <img src="../assets/shukran.png" alt="Shukran" class="shukran-logo" />
+                                        </td>
+                                        <td class="shukran-text">
+                                            Your Order Just Earned You {{totals.totalShukranEarnedPoints}} Shukrans<br />
+                                            They'll be credited to the account registered for <span dir="ltr">{{totals.shukranPhoneNumber}}</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div class="shukran-button">
+                                    <a href="{{storeLink}}/account">Go To My Account</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    {{/if}}
+
+                    <tr>
+                        <td class="social-copy">
+                            Let us know what you think of your latest buys - rate them on the Styli app!<br />
+                            Also, tag us with #StyliStar on your socials if you post pics in your new Styli buys.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="social-row">
+                            <img src="https://img.icons8.com/ios-filled/30/000000/instagram-new.png" alt="Instagram" />
+                            <img src="https://img.icons8.com/ios-filled/30/000000/tiktok--v1.png" alt="TikTok" />
+                            <img src="https://img.icons8.com/ios-filled/30/000000/snapchat.png" alt="Snapchat" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="explore-title">There's More To Explore!</td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding: 0 16px;">
+                            <table class="explore-grid" role="presentation">
+                                <tr>
+                                    <td>
+                                        <a href="{{storeLink}}/list/women" style="text-decoration: none; color: #111111;">
+                                            <img src="../assets/women.png" alt="Women" />
+                                            <div class="explore-label">Women</div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="{{storeLink}}/list/men" style="text-decoration: none; color: #111111;">
+                                            <img src="../assets/Men.png" alt="Mens" />
+                                            <div class="explore-label">Mens</div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="{{storeLink}}/list/kids" style="text-decoration: none; color: #111111;">
+                                            <img src="../assets/kids.png" alt="Kids" />
+                                            <div class="explore-label">Kids</div>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="{{storeLink}}/list/beauty" style="text-decoration: none; color: #111111;">
+                                            <img src="../assets/beauty.png" alt="Beauty" />
+                                            <div class="explore-label">Beauty</div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="{{storeLink}}/list/home" style="text-decoration: none; color: #111111;">
+                                            <img src="../assets/home.png" alt="Home" />
+                                            <div class="explore-label">Home</div>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="{{storeLink}}/list/baby" style="text-decoration: none; color: #111111;">
+                                            <img src="../assets/baby.png" alt="Baby" />
+                                            <div class="explore-label">Baby</div>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="bottom-badges">
+                            <img src="https://mdev.stylifashion.com/email-imgs/en/footer-cta-returns.png" alt="Easy Returns" />
+                            <img src="https://mdev.stylifashion.com/email-imgs/en/footer-cta-48hr.png" alt="48 Hour Delivery" />
+                            <img src="https://mdev.stylifashion.com/email-imgs/en/footer-cta-lowest-price.png" alt="Lowest Prices" />
+                            <img src="https://mdev.stylifashion.com/email-imgs/en/footer-cta-bnpl.png" alt="Buy Now Pay Later" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="support-text">
+                            Need further assistance?
+                           <p>
+                            WhatsApp us on +966115208333 or e-mail us at hello.ksa@stylishop.com and we'll sort it out for you!
+                           </p>
+                        </td>
+                        
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

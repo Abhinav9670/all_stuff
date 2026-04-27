@@ -1,0 +1,28 @@
+{
+  "status": true,
+  "statusCode": "200",
+  "statusMsg": "Successfully Updated!!",
+  "response": {
+    "userMessage": "Updated Successfully !!",
+    "status": true,
+    "customer": {
+      "customerId": 5229113,
+      "groupId": 1,
+      "createdAt": "Thu May 04 06:40:18 GMT 2023",
+      "updatedAt": "Thu May 04 07:02:59 GMT 2023",
+      "email": "sanjay.800@mailinator.com",
+      "firstName": "sanjay kumar",
+      "lastName": "800",
+      "mobileNumber": "+91 9898123456",
+      "gender": 2,
+      "ageGroupId": 1,
+      "isReferral": false,
+      "updateEmail": false,
+      "deleteRequested": false,
+      "whatsApp": false,
+      "passwordAvailable": false
+    },
+    "defaultAddress": null
+  },
+  "error": null
+}

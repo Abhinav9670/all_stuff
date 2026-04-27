@@ -1,0 +1,104 @@
+.online {
+    display: inline-block;
+    width: 10px; /* Adjust size as needed */
+    height: 10px; /* Adjust size as needed */
+    border-radius: 50%;
+    background-color: #1e8e3e;
+  }
+
+  .selected-row {
+    border: 2px solid black; /* Choose your desired border color */
+}
+
+  .offline {
+    display: inline-block;
+    width: 10px; /* Adjust size as needed */
+    height: 10px; /* Adjust size as needed */
+    border-radius: 50%;
+    background-color: gray;
+  }
+
+  .buttonClass {
+    background-color: #184f90; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    outline: none; /* Remove default focus outline */
+  }
+  
+  .buttonClass:hover {
+    background-color: #45a049; /* Darker Green */
+  }
+  
+  .spanClass {
+    margin-right: 10px;
+  }
+  
+  .selectClass {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none; /* Remove default focus outline */
+  }
+  
+  .selectClass:focus {
+    border-color: #4CAF50; /* Change border color on focus */
+  }
+  
+  .selectClass {
+    appearance: none; /* Remove default select arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%234CAF50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5H7z"/></svg>'); /* Add custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 20px auto;
+  }
+  
+  .selectClass:hover {
+    border-color: #4CAF50; /* Change border color on hover */
+    transition: border-color 0.3s ease; /* Add transition effect */
+  }
+
+  .pagination-info {
+    display: flex;
+    align-items: center;
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+  }
+  
+  .page-info {
+    margin-right: 20px;
+  }
+  
+  .goto-page {
+    display: flex;
+    align-items: center;
+  }
+  
+  .goto-page label {
+    margin-right: 10px;
+    margin-top: 0.3rem
+  }
+  
+  #page-input {
+    width: 60px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  #page-input:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }

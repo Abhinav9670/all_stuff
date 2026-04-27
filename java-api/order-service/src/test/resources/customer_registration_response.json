@@ -1,0 +1,32 @@
+{
+  "status": true,
+  "statusCode": "200",
+  "statusMsg": "SUCCESS",
+  "response": {
+    "customer": {
+      "customerId": 5228971,
+      "jwtToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW5qYXkuNzAwQG1haWxpbmF0b3IuY29tIiwiY29kZSI6IjE2ODMxMTk0NjI1OTkiLCJyb2xlIjoidXNlciIsImN1c3RvbWVySWQiOjUyMjg5NzF9.bf6Ia8SLElzDkeXquZNupLh1jyP09piQZ8lHyOkOHJHwI-i9aeywK7ooxJVPfJMGU-KL1RFimCMIUitZ3Otvcg",
+      "groupId": 1,
+      "createdAt": "Wed May 03 13:11:02 GMT 2023",
+      "updatedAt": "Wed May 03 13:11:02 GMT 2023",
+      "createdIn": "English",
+      "email": "sanjay.700@mailinator.com",
+      "firstName": "sanjay",
+      "lastName": "700",
+      "mobileNumber": "+966 666777658",
+      "gender": 2,
+      "ageGroupId": 1,
+      "updateEmail": false,
+      "deleteRequested": false,
+      "storeId": 1,
+      "firstFreeShipping": {
+        "numOfDays": "9",
+        "expireOn": "2023-05-12T13:11:03.134Z",
+        "isActive": true
+      },
+      "whatsApp": false,
+      "passwordAvailable": true
+    }
+  },
+  "error": null
+}

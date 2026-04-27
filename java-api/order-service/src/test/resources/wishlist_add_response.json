@@ -1,0 +1,9 @@
+{
+  "status": true,
+  "statusCode": "200",
+  "statusMsg": "Saved SuccessFully!!",
+  "response": {
+    "customerId": 5229113,
+    "wishListItemId": "80269330"
+  }
+}

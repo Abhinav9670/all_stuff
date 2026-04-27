@@ -1,0 +1,241 @@
+{
+    "usePaymentService":true,
+    "tamaraEligibilityCheck":false,
+    "credentials": {
+      "httpTimeoutInMs": 2000,
+      "ae": {
+        "merchantCode": "uae_new",
+        "oldMerchantCode": "uae",
+        "apiUrl": "https://api.tabby.ai/api/v2/checkout",
+        "apiPublicKey": "pk_test_a0e5339b-3fbd-4bee-9a69-d83301f77084",
+        "successUrl": "https://qa.stylifashion.com/ae/LANG/checkout/payment/confirmation",
+        "cancelUrl": "https://qa.stylifashion.com/ae/LANG/checkout/payment/replica",
+        "failureUrl": "https://qa.stylifashion.com/ae/LANG/checkout/payment/replica",
+        "appSuccessUrl": "styliapp://applinks/ae/checkout/payment/confirmation2",
+        "appCancelUrl": "styliapp://applinks/sa/checkout/payment/replica?cancel=cancel",
+        "appFailureUrl": "styliapp://applinks/ae/checkout/payment/replica",
+        "tamaraApiUrl": "https://api-sandbox.tamara.co/checkout",
+        "tamaraToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhY2NvdW50SWQiOiJjMTQyMzBiMC1hMTgyLTRhZGYtYTFiYS1lOTRlZWM1MGFlMTciLCJ0eXBlIjoibWVyY2hhbnQiLCJzYWx0IjoiZWMwZTE1YWUwNmNjMTUzMWUzMDAzMmZiNGM0ZjMzZGQiLCJpYXQiOjE2MzY5NTk5ODUsImlzcyI6IlRhbWFyYSJ9.U00w9Btq_6mBZUdvBYbKugWcsckczJ-Gq7j1xW-5lHw6C-bmF_FcGFyTbFIez4VK6g-A3yl-_7zhOqPFWigFvA-vNSerVD2Tut82Cv5or5KE8TmWF3zL4XCjaYL0ikZd9-ctVArB9SuNynDZ5XZyMIAkjaMe_B_z56AKL8WR8f1bJ--9kOhA9_-seRprRGatzgw7sKxRg_Uhq7cs_bK4ryAvU2dU8fsZZsTIrNomOXNC_WsnL_LZ2qYNq_TJgAidkCcXXKVeJE-uL0APeygxBrdCW4B2uifvbafsNPHq_6_aSgbCGvfJYEZogHg5ACqYpr8KTAsdqbBPuqpW11Dp6Q",
+        "tamaraNotificationUrl": "https://qa-api.stylifashion.com/rest/order/tamara/webhook",
+        "tamarapublickey":"f072f1b2-129d-4084-a67d-78e6a337eba4",
+        "methods": [
+                   "md_payfort_cc_vault",
+          "md_payfort",
+          "cashondelivery",
+          "apple_pay",
+          "free",
+          "tabby_installments",
+          "tamara_installments_3"
+        ],
+        "loyaltyLevels": [
+          {
+            "minOrder": 0,
+            "maxOrder": 10,
+            "level": 1
+          },
+          {
+            "minOrder": 10,
+            "maxOrder": 50,
+            "level": 2
+          },
+          {
+            "minOrder": 50,
+            "maxOrder": 100,
+            "level": 3
+          }
+        ]
+      },
+      "sa": {
+        "merchantCode": "ksa",
+        "oldMerchantCode": "ksa",
+        "apiUrl": "https://api.tabby.ai/api/v2/checkout",
+        "apiPublicKey": "pk_test_a0e5339b-3fbd-4bee-9a69-d83301f77084",
+        "successUrl": "https://qa.stylifashion.com/sa/LANG/checkout/payment/confirmation",
+        "cancelUrl": "https://qa.stylifashion.com/sa/LANG/checkout/payment/replica",
+        "failureUrl": "https://qa.stylifashion.com/sa/LANG/checkout/payment/replica",
+        "appSuccessUrl": "styliapp://applinks/sa/checkout/payment/confirmation",
+        "appCancelUrl": "styliapp://applinks/sa/checkout/payment/replica?cancel=cancel",
+        "appFailureUrl": "styliapp://applinks/sa/checkout/payment/replica",
+        "tamaraApiUrl": "https://api-sandbox.tamara.co/checkout",
+        "tamaraToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhY2NvdW50SWQiOiJjMTQyMzBiMC1hMTgyLTRhZGYtYTFiYS1lOTRlZWM1MGFlMTciLCJ0eXBlIjoibWVyY2hhbnQiLCJzYWx0IjoiZWMwZTE1YWUwNmNjMTUzMWUzMDAzMmZiNGM0ZjMzZGQiLCJpYXQiOjE2MzY5NTk5ODUsImlzcyI6IlRhbWFyYSJ9.U00w9Btq_6mBZUdvBYbKugWcsckczJ-Gq7j1xW-5lHw6C-bmF_FcGFyTbFIez4VK6g-A3yl-_7zhOqPFWigFvA-vNSerVD2Tut82Cv5or5KE8TmWF3zL4XCjaYL0ikZd9-ctVArB9SuNynDZ5XZyMIAkjaMe_B_z56AKL8WR8f1bJ--9kOhA9_-seRprRGatzgw7sKxRg_Uhq7cs_bK4ryAvU2dU8fsZZsTIrNomOXNC_WsnL_LZ2qYNq_TJgAidkCcXXKVeJE-uL0APeygxBrdCW4B2uifvbafsNPHq_6_aSgbCGvfJYEZogHg5ACqYpr8KTAsdqbBPuqpW11Dp6Q",
+        "tamaraNotificationUrl": "https://qa-api.stylifashion.com/rest/order/tamara/webhook",
+        "tamarapublickey":"f072f1b2-129d-4084-a67d-78e6a337eba4",
+        "methods": [
+          "md_payfort_cc_vault",
+          "md_payfort",
+          "cashondelivery",
+          "apple_pay",
+          "free",
+          "tabby_installments",
+          "tamara_installments_3"
+        ],
+        "loyaltyLevels": [
+          {
+            "minOrder": 0,
+            "maxOrder": 10,
+            "level": 1
+          },
+          {
+            "minOrder": 10,
+            "maxOrder": 50,
+            "level": 2
+          },
+          {
+            "minOrder": 50,
+            "maxOrder": 100,
+            "level": 3
+          }
+        ]
+      },
+      "kw": {
+        "merchantCode": "kwt",
+        "apiUrl": "https://api.tabby.ai/api/v2/checkout",
+        "apiPublicKey": "pk_test_a0e5339b-3fbd-4bee-9a69-d83301f77084",
+        "successUrl": "https://qa.stylifashion.com/kw/LANG/checkout/payment/confirmation",
+        "cancelUrl": "https://qa.stylifashion.com/kw/LANG/checkout/payment/replica",
+        "failureUrl": "https://qa.stylifashion.com/kw/LANG/checkout/payment/replica",
+        "appSuccessUrl": "styliapp://applinks/sa/checkout/payment/confirmation",
+        "appCancelUrl": "styliapp://applinks/sa/checkout/payment/replica",
+        "appFailureUrl": "styliapp://applinks/sa/checkout/payment/replica",
+        "methods": [
+          "md_payfort_cc_vault",
+          "md_payfort",
+          "cashondelivery",
+          "free"
+        ],
+        "loyaltyLevels": [
+          {
+            "minOrder": 0,
+            "maxOrder": 10,
+            "level": 1
+          },
+          {
+            "minOrder": 10,
+            "maxOrder": 50,
+            "level": 2
+          },
+          {
+            "minOrder": 50,
+            "maxOrder": 100,
+            "level": 3
+          }
+        ]
+      },
+      "bh": {
+        "merchantCode": "bhr",
+        "apiUrl": "https://api.tabby.ai/api/v2/checkout",
+        "apiPublicKey": "pk_test_a0e5339b-3fbd-4bee-9a69-d83301f77084",
+        "successUrl": "https://qa.stylifashion.com/bh/LANG/checkout/payment/confirmation",
+        "cancelUrl": "https://qa.stylifashion.com/bh/LANG/checkout/payment/replica",
+        "failureUrl": "https://qa.stylifashion.com/bh/LANG/checkout/payment/replica",
+        "appSuccessUrl": "styliapp://applinks/sa/checkout/payment/confirmation",
+        "appCancelUrl": "styliapp://applinks/sa/checkout/payment/replica",
+        "appFailureUrl": "styliapp://applinks/sa/checkout/payment/replica",
+        "methods": [
+          "md_payfort_cc_vault",
+          "md_payfort",
+          "cashondelivery",
+          "free"
+        ],
+        "loyaltyLevels": [
+          {
+            "minOrder": 0,
+            "maxOrder": 10,
+            "level": 1
+          },
+          {
+            "minOrder": 10,
+            "maxOrder": 50,
+            "level": 2
+          },
+          {
+            "minOrder": 50,
+            "maxOrder": 100,
+            "level": 3
+          }
+        ]
+      },
+      "om": {
+        "merchantCode": "omn",
+        "apiUrl": "https://api.tabby.ai/api/v2/checkout",
+        "apiPublicKey": "pk_test_a0e5339b-3fbd-4bee-9a69-d83301f77084",
+        "successUrl": "https://qa.stylifashion.com/om/LANG/checkout/payment/confirmation",
+        "cancelUrl": "https://qa.stylifashion.com/om/LANG/checkout/payment/replica",
+        "failureUrl": "https://qa.stylifashion.com/om/LANG/checkout/payment/replica",
+        "appSuccessUrl": "styliapp://applinks/om/checkout/payment/confirmation",
+        "appCancelUrl": "styliapp://applinks/om/checkout/payment/replica",
+        "appFailureUrl": "styliapp://applinks/om/checkout/payment/replica",
+        "methods": [
+          "md_payfort_cc_vault",
+          "md_payfort",
+          "cashondelivery",
+          "free"
+        ],
+        "loyaltyLevels": [
+          {
+            "minOrder": 0,
+            "maxOrder": 10,
+            "level": 1
+          },
+          {
+            "minOrder": 10,
+            "maxOrder": 50,
+            "level": 2
+          },
+          {
+            "minOrder": 50,
+            "maxOrder": 100,
+            "level": 3
+          }
+        ]
+      },
+      "us": {
+        "merchantCode": "qa",
+        "apiUrl": "https://api.tabby.ai/api/v2/checkout",
+        "apiPublicKey": "pk_test_a0e5339b-3fbd-4bee-9a69-d83301f77084",
+        "successUrl": "https://qa.stylifashion.com/us/LANG/checkout/payment/confirmation",
+        "cancelUrl": "https://qa.stylifashion.com/us/LANG/checkout/payment/replica",
+        "failureUrl": "https://qa.stylifashion.com/us/LANG/checkout/payment/replica",
+        "appSuccessUrl": "styliapp://applinks/sa/checkout/payment/confirmation",
+        "appCancelUrl": "styliapp://applinks/sa/checkout/payment/replica?cancel=cancel",
+        "appFailureUrl": "styliapp://applinks/sa/checkout/payment/replica",
+        "methods": [
+          "md_payfort_cc_vault",
+          "md_payfort",
+          "cashondelivery",
+          "apple_pay",
+          "free"
+        ],
+        "loyaltyLevels": [
+          {
+            "minOrder": 0,
+            "maxOrder": 10,
+            "level": 1
+          },
+          {
+            "minOrder": 10,
+            "maxOrder": 50,
+            "level": 2
+          },
+          {
+            "minOrder": 50,
+            "maxOrder": 100,
+            "level": 3
+          }
+        ]
+      }
+    },
+    "CODRestriction" : {
+      "sa": {
+        "codRestrictionEnabled": false,
+        "codRestrictionMin": 50,
+        "codRestrictionMax": 500
+      },
+      "in": {
+        "codRestrictionEnabled": true,
+        "codRestrictionMin": 1000,
+        "codRestrictionMax": 5000
+      }
+    }
+  }
+  

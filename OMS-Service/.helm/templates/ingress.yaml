@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: omsnode-ingress-nginx
+  annotations:
+    kubernetes.io/ingress.class: "nginx-new"
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  tls:
+    - hosts:
+        - "{{ .Values.omsnode.domain }}"
+      secretName: sslcert
+  rules:
+    - host: "{{ .Values.omsnode.domain }}"
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: omsnode
+                port:
+                  number: 8080

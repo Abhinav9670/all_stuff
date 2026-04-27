@@ -1,0 +1,27 @@
+sentinel:
+  port: 8080
+  domain: prod-sentinel-api.stylishop.com
+  node_env: prod
+  node_env_alt: prod
+  replicaCount: 1
+  appname: sentinel
+  mongo_auth_db: sentinel_prod
+  mongo_url: 10.154.0.21:27017,10.154.0.22:27017,10.154.0.23:27017
+  mongo_db: sentinel_prod
+  mongo_node_count: 3
+  mongo_db_options: true
+  firebase_service_key_location: /var/gcppath/sentinel-firebase.json
+  firebase_apikey: 'AIzaSyBE5jksNFb01168sKeTRjgfInnBQNDtUXU'
+  firebase_url: 'https://identitytoolkit.googleapis.com/v1'
+  firebase_refreshtoken_url: 'https://securetoken.googleapis.com/v1'
+  consul_host: consul-consul-server.default
+  consul_port: 8500
+  elastic_apm_service_name: sentinel-prod
+  elastic_apm_service_token:
+  elastic_apm_service_url: http://10.154.15.204:8200
+  auth_service_url: 'https://prod-sentinel-api.stylishop.com/api/v1/auth'
+  memorylim: 1000Mi
+  cpulim: 500m
+  memoryreq: 1000Mi
+  cpureq: 500m
+  servicekeyname: sentinel-prod

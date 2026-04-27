@@ -1,0 +1,63 @@
+name: ZAP CI Scan
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'feature/*'
+      - 'bugfix/*'
+      - 'release/*'
+      - development
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Sanity check of git actions
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run a one-line script
+        run: echo No error. Do the necessary build steps here.
+
+  zap-baseline-scan:
+    runs-on: ubuntu-latest
+    name: ZAP Baseline Scan
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Log current directory
+        run: echo $PWD
+
+      - name: Pull ZAP OWASP Image
+        run: docker pull ghcr.io/zaproxy/zaproxy:weekly
+
+      - name: Run ZAP Baseline Scan
+        run: |
+          sudo docker run --user root -v $(pwd):/zap/wrk/:rw -t ghcr.io/zaproxy/zaproxy:weekly zap-baseline.py -t https://qa.stylifashion.com -r zap_report.html -I
+
+      - name: Upload ZAP Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: zap-report
+          path: zap_report.html
+
+      - name: Send ZAP Report via Email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.sendgrid.net
+          server_port: 587
+          username: apikey 
+          password: ${{ secrets.SENDGRID_API_KEY }}
+          subject: ZAP Baseline Scan Report
+          to: sre@stylishop.com
+          from: madhuri@stylishop.com
+          body: |
+            Hi Team,
+
+            Please find the attached ZAP Baseline Scan Report.
+
+            Regards,
+            SRE Team
+          attachments: zap_report.html

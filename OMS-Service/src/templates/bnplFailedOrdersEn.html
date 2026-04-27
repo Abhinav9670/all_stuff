@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Order failed</title>
+</head>
+
+<body style="text-align: left;">
+
+  <table style="width:100%">
+    <tr>
+      <td style="background:#EEE; padding:30px;">
+        <img style="display:block; height: 75px;" src="https://oms-ui-dev.web.app/assets/logos/logo.png" />
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0 30px;">
+        <p>Hi {{name}}, </p>
+        
+        <p>Thanks for shopping with Styli!</p>
+
+        <p>Unfortunately, we were unable to process your order #{{orderId}}. But no worries, it’s probably a trivial issue that we’ll try to guide you through! </p>
+        
+        <p>We invite you to place the order again & make sure of the following: </p>
+        
+          <p>1. Double check if the card used carries sufficient funds.</p>
+        
+          <p>2. Make sure overdue {{paymentType}} bills are paid off. </p>
+        
+          <p>3. If you have multiple orders with {{paymentType}}, it can help to close a few of them. </p>
+        
+          <p>4. Use a valid {{country}} debit or credit card when making a purchase. </p>
+        
+        <p>A third-party partner usually considers multiple factors prior to approving a purchase. Please reach out to
+        {{paymentType}} for further assistance. </p>
+      </td>
+    </tr>
+   
+  </table>
+</body>
+
+</html>

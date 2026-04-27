@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700');
+@import './_01_mixins.scss';
+@import './_02_variables';
+@import './_03_core.scss';
+@import './_04_plugins.scss';
+@import './_05_views.scss';
+
+/** your custom css code **/
+/* 
+html {
+    background-color: $theme-color-1 !important;
+}
+*/
+.card_layout {
+  user-select: none;
+  height: fit-content;
+  background-color: white;
+  border-radius: 10px;
+  word-break: break-word;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 15px, rgba(0, 0, 0, 0.04) 0px 1px 6px;
+}
+
+
+.justifyContent-cen {
+  justify-content: center;
+}
+
+.justifyContent-spaceBtwn {
+  justify-content: space-between;
+}
+
+.alignItm-cen {
+  align-items: center;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.d-none {
+  display: none;
+}
+
+.blkUpload-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.r-table tbody tr._active td {
+  border-top: 1px solid #adadad !important;
+  border-bottom: 1px solid #adadad !important;
+}
+
+.r-table tbody tr._active td:first-child {
+  border-left: 1px solid #adadad !important;
+}
+
+.r-table tbody tr._active td:last-child {
+  border-right: 1px solid #adadad !important;
+}

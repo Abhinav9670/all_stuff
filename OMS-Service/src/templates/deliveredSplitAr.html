@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Delivered</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #a7a4a4;
+        }
+
+        .shukran-box{
+            box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.05);
+            border-radius: 6px 6px 6px 6px;
+            padding: 15px;
+        }
+        .shukran-button a{
+            color: #fff;
+            text-decoration: none;
+        }
+        .myaccount{
+            border-radius: 60px 60px 60px 60px;
+            padding: 15px 5px;
+        }
+        .shukran-button .platinum{
+            background-color: #2b3a43;
+        }
+        .shukran-button .classic{
+            background-color: #cf997e;
+        }
+        .shukran-button .gold{
+            background-color: #ab8545;
+        }
+        .shukran-button .silver{
+            background-color: #9da6a6;
+        }
+ 
+        .shukran-box .shukran-logo{
+            position: relative;
+            width: 64px;
+            margin: 0 auto 10px auto;
+        }
+        .shukran-box .earn{
+            padding: 5px 0 5px 0;
+            color: #c09e60;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .shukran-box .msg{
+            font-size: 12px;
+            color: #5c5c5c;
+        }
+        .shukran-box .msg span{
+            color: #000;
+            font-weight: 600;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding-bottom: 8rem;
+        }
+
+        .header {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header img {
+            width: 18%;
+            padding-bottom: 20px;
+        }
+
+        .banner-section img {
+            width: 100%;
+            pointer-events: none;
+        }
+
+        .body-content {
+            padding: 20px;
+            color: #333;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .order-details {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .order-details td {
+            background-color: #edebe8;
+            border-radius: 10px;
+            padding: 12px;
+            vertical-align: middle;
+            font-weight: bold;
+        }
+
+        .products-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .product-item {
+            width: 100%;
+            padding: 20px;
+            border-collapse: collapse;
+        }
+
+        .product-item img {
+            max-width: 65px;
+        }
+
+        .categories {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .categories img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            background-color: #edebe8;
+        }
+
+        .footer-icons {
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+
+        .footer-icons img {
+            width: 8rem;
+        }
+    </style>
+</head>
+
+<body style="margin: 0; padding: 0; background-color: #f4f4f4; font-family: Arial, Helvetica, sans-serif;">
+    <table class="container">
+        <!-- Header Section -->
+        <tr>
+            <td class="header">
+                <a href="{{websiteLink}}">
+                    <img src="https://mdev.stylifashion.com/email-imgs/logo-black.png" alt="Styli Logo" />
+                </a>
+            </td>
+        </tr>
+
+        <!-- Banner Section -->
+        <tr>
+            <td class="banner-section">
+                <a href="#">
+                    <img src="https://mdev.stylifashion.com/email-imgs/ar/top-banner-order-delivered.jpg"
+                        alt="Order Delivered Banner" />
+                </a>
+            </td>
+        </tr>
+
+        <!-- Order Information Section -->
+        <tr dir="rtl">
+            <td class="body-content">
+                <p>أهلاً {{shippingAddress.firstname}},</p>
+                <p>تم تسليم إحدى الشحنات رقم #<span dir="ltr">{{orderIncrementId}}</span> من طلبك لدى ستايلي رقم #<span
+                        dir="ltr">{{mainIncrementId}}</span> بتاريخ <span dir="ltr">{{{estimatedDeliveryTime}}}</span>.</p>
+                <p>عطينا رأيك بالمنتجات على تطبيق ستايلي!</p>
+                <!-- <br /> -->
+                <p>ومنشني ستايلي على مواقع التواصيل الاجتماعي مع هاشتاق StyliStar#</p>
+            </td>
+        </tr>
+
+        <!-- Order Items Section -->
+        <tr dir="rtl">
+            <td class="products-section">
+                <div style="max-width: 75%; margin: auto; padding-left: 2%;">
+                    <h3>ما هو في طلبك:</h3>
+                    <table width="100%" style="margin: 20px 0 10px;" dir="rtl">
+                        <tr>
+                            <td style="
+                                                                                    padding-right: 2rem;
+                                                                                    font-size: 13px;
+                                                                                    font-weight: 700;
+                                                                                    color: #000000;
+                                                                                    line-height: 10px;
+                                                                                    text-align: right;
+                                                                                ">
+                                الشحنة. #<span dir="ltr">{{orderIncrementId}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="
+                                                                                    padding-right: 2rem;
+                                                                                    font-size: 16px;
+                                                                                    font-weight: 700;
+                                                                                    color: #000000;
+                                                                                    line-height: 15px;
+                                                                                    padding-top: 2px;
+                                                                                    text-align: right;
+                                                                                ">
+                                تم التسليم بتاريخ. <span dir="ltr">{{{estimatedDeliveryTime}}}</span>
+                            </td>
+                        </tr>
+                    </table>
+                    {{#each products}}
+                    <table class="product-item" width="100%" style="margin-bottom: 20px;">
+                        <tr>
+                            <td style="width: 20%;">
+                                <a href="{{this.url}}"><img src="{{this.item_img_url}}" alt="Item Image"
+                                        style="max-width: 50%;" /></a>
+                            </td>
+                            <td style="width: 40%; padding: 10px; text-align: right;">
+                                <a href="{{this.url}}" style="text-decoration: none;">
+                                    <p style="margin: 0; font-weight: bold;color: #777777; text-decoration: none;">
+                                        {{this.item_brand_name}}</p>
+                                    <p style="margin: 0; color: #777777;text-decoration: none;">{{this.name}}</p>
+                                    <p style="margin: 0; text-decoration: none;color: black;">المقاس: {{this.item_size}}
+                                    </p>
+                                    <p style="margin: 0; text-decoration: none;color: black;">الكمية: {{floor
+                                        this.qty_ordered}}</p>
+                                    {{#if (eq this.returnable 0)}}
+                                    <p><strong style="color: black;">
+                                            لا يمكن إرجاع هذا العنصر
+                                        </strong>
+                                        <a href="#"> <img
+                                                src="https://mdev.stylifashion.com/email-imgs/icon-non-returnable.png"
+                                                style="max-width: 12px; padding-top: 3px;" /></a>
+                                    </p>
+                                    {{/if}}
+                                </a>
+                            </td>
+                            <td style="width: 30%; padding: 10px; text-align: left;">
+                                <p style="margin: 0;"><strong>{{this.currency}} {{mul this.price_incl_tax
+                                        this.qty_ordered}}</strong></p>
+                                {{#if (gt this.discountPercentage 0)}}
+                                <p style="margin: 0; color: #999; text-decoration: line-through;">
+                                    <strong>{{this.currency}} {{mul this.original_price this.qty_ordered}}</strong>
+                                </p>
+                                <p style="margin: 0; color: black;"><strong>{{this.discountPercentage}}% عن</strong></p>
+                                {{/if}}
+                            </td>
+                        </tr>
+                    </table>
+                    {{/each}}
+                </div>
+            </td>
+        </tr>
+
+        <!-- Payment Information Section -->
+        <tr dir="rtl">
+            <td style="text-align: center;">
+                <h3>معلومات الدفع:</h3>
+
+                <div style="max-width: 70%; margin: auto;">
+                    <table class="order-summary" width="100%" style="border-collapse: collapse; font-size: smaller;">
+                        <tr>
+                            <td style="width: 50%; padding: 10px; text-align: right; font-weight: bold;"><strong> طريقة
+                                    الدفع :</strong></td>
+                            <td style="width: 50%; padding: 10px; text-align: left;"><strong>{{paymentMethod}}</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 50%; padding: 10px; text-align: right; font-weight: bold;"><strong> المبلغ
+                                    قبل الإجمالي:</strong></td>
+                            <td style="width: 50%; padding: 10px; text-align: left;"><strong>{{totals.currency}} {{
+                                    totals.subtotalInlTax}}</strong></td>
+                        </tr>
+                        {{#if totals.shippingAmount}}
+                        <tr>
+                            <td style="width: 50%; padding: 10px; text-align: right; font-weight: bold;"><strong>
+                                    مصاريف:</strong></td>
+                            <td style="width: 50%; padding: 10px; text-align: left;"><strong>{{totals.currency}} {{
+                                    totals.shippingAmount}}</strong></td>
+                        </tr>
+                        {{/if}}
+                        {{#if totals.codCharges}}
+                        <tr>
+                            <td style="width: 50%; padding: 10px; text-align: right; font-weight: bold;"><strong> مصاريف
+                                    الشحن:</strong></td>
+                            <td style="width: 50%; padding: 10px; text-align: left;"><strong>{{totals.currency}} {{
+                                    totals.codCharges}}</strong></td>
+                        </tr>
+                        {{/if}}
+                        {{#if totals.importFeesAmount}}
+                        <tr>
+                            <td style="width: 50%; padding: 10px; text-align: right; font-weight: bold;"><strong> الشحن
+                                    :</strong></td>
+                            <td style="width: 50%; padding: 10px; text-align: left;"><strong>{{totals.currency}} {{
+                                    totals.importFeesAmount}}</strong></td>
+                        </tr>
+                        {{/if}}
+                        {{#if totals.discountAmount}}
+                        <tr>
+                            <td style="width: 50%; padding: 10px; text-align: right; font-weight: bold;"><strong> إجمالي
+                                    التخفيضات على المشتريات
+                                    :</strong></td>
+                            <td style="width: 50%; padding: 10px; text-align: left;"><strong>{{totals.currency}} {{
+                                    totals.discountAmount}}</strong></td>
+                        </tr>
+                        {{/if}}
+                        {{#if totals.totalShukranBurnedPoints}}
+                        <tr>
+                            <td style="width: 50%; padding: 10px; text-align: right; font-weight: bold;">
+                                <strong>
+                                    نقاط شكراً                                                               
+                                </strong>
+                            </td>
+                            <td style="width: 50%; padding: 10px; text-align: left;"><strong>
+                                    {{totals.totalShukranBurnedPoints}}</strong></td>
+                        </tr>
+                        {{/if}}
+                        {{#if totals.spendCoin}}
+                        <tr>
+                            <td style="width: 50%; padding: 10px; text-align: right; font-weight: bold;"><strong>
+                                    نقد ستايلي:</strong></td>
+                            <td style="width: 50%; padding: 10px; text-align: left;"><strong>{{totals.currency}} {{
+                                    totals.spendCoin}}</strong></td>
+                        </tr>
+                        {{/if}}
+                        {{#if totals.taxAmount}}
+                        <tr>
+                            <td style="width: 50%; padding: 10px; text-align: right; font-weight: bold;">
+                                <strong> الضريبه المضافه
+                                </strong>
+                            </td>
+                            <td style="width: 50%; padding: 10px; text-align: left;"><strong>{{totals.currency}} {{
+                                    totals.taxAmount}}</strong></td>
+                        </tr>
+                        {{/if}}
+                        <tr>
+                            <td style="width: 50%; padding: 10px; text-align: right; font-weight: bold;"><strong>
+                                    الإجمالي:</strong></td>
+                            <td style="width: 50%; padding: 10px; text-align: left; font-weight: bold;">
+                                <strong>{{totals.currency}} {{ totals.grandTotal}}</strong>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+
+        {{#if totals.totalShukranEarnedPoints}}
+        <tr>
+            <td class="categories" style="text-align: center;">
+                <div style="max-width: 70%; margin: auto;" class="shukran-box">
+                    <div class="shukran-logo">
+                        <img src="https://mdev.stylifashion.com/shukran/{{totals.shukranTierName}}.png" alt="Shukran Logo" />
+                    </div>
+                    <div>طلبك أكسبك للتو</div>
+                    <div class="earn">نقاط شكراً {{totals.totalShukranEarnedPoints}}</div>
+                    <div class="msg">سيتم إضافتها إلى الحساب المسجل لـ <span dir="ltr">{{totals.shukranPhoneNumber}}</span></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="categories" style="text-align: center;"> 
+                <div style="max-width: 65%; margin: auto;" class="shukran-button">
+                    <a href="{{storeLink}}/account" >
+                        <div class="{{totals.shukranTierName}} myaccount">اذهب إلى حسابي</div>
+                    </a>
+                </div>
+            </td>
+        </tr>
+        {{/if}}
+
+        <!-- Categories Section -->
+        <tr dir="ltr">
+            <td class="categories" style="text-align: center;">
+                <div style="max-width: 70%; margin: auto;">
+                    <h3>!اكتشفوا ستايلات أكثر هنا</h3>
+                    <table width="100%" style="border-collapse: collapse;">
+                        <tr>
+                            <td style="padding: 10px;"><a href="{{storeLink}}/list/women"><img
+                                        src="https://mdev.stylifashion.com/email-imgs/ar/category-card-women.png"
+                                        alt="Women" style="width: 100%; border-radius: 8px;" /></a></td>
+                            <td style="padding: 10px;"><a href="{{storeLink}}/list/men"><img
+                                        src="https://mdev.stylifashion.com/email-imgs/ar/category-card-men.png"
+                                        alt="Men" style="width: 100%; border-radius: 8px;" /></a></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;"><a href="{{storeLink}}/list/kids"><img
+                                        src="https://mdev.stylifashion.com/email-imgs/ar/category-card-kids.png"
+                                        alt="Kids" style="width: 100%; border-radius: 8px;" /></a></td>
+                            <td style="padding: 10px;"><a href="{{storeLink}}/list/beauty"><img
+                                        src="https://mdev.stylifashion.com/email-imgs/ar/category-card-beauty.png"
+                                        alt="Beauty" style="width: 100%; border-radius: 8px;" /></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+
+        <!-- Footer Section -->
+        <tr dir="rtl">
+            <td class="footer" style="text-align: center; padding: 20px; background-color: #edebe8;">
+                <table role="presentation" width="100%">
+                    <tr>
+                        <td style="text-align: center;">
+                            <table role="presentation" class="footer-icons" style="margin: 0 auto; text-align: center;">
+                                <tr>
+                                    <td style="padding: 10px;">
+                                        <img src="https://mdev.stylifashion.com/email-imgs/ar/footer-cta-48hr.png"
+                                            alt="48 Hour Delivery" width="100" />
+                                    </td>
+                                    <td style="padding: 10px;">
+                                        <img src="https://mdev.stylifashion.com/email-imgs/ar/footer-cta-bnpl.png"
+                                            alt="Easy Returns" width="100" />
+                                    </td>
+                                    <td style="padding: 10px;">
+                                        <img src="https://mdev.stylifashion.com/email-imgs/ar/footer-cta-lowest-price.png"
+                                            alt="Buy Now, Pay Later" width="100" />
+                                    </td>
+                                    <td style="padding: 10px;">
+                                        <img src="https://mdev.stylifashion.com/email-imgs/ar/footer-cta-returns.png"
+                                            alt="Lowest Prices" width="100" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-top: 15px; color: #555555; font-size: 14px; text-align: center;">
+                            هل تحتاج إلى مزيد من المساعدة؟ راسلنا عبر الواتساب على الرقم 966115208333 أو راسلنا عبر
+                            البريد الإلكتروني على hello.ksa@stylishop.com وسنقوم بحل المشكلة لك
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

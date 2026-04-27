@@ -1,0 +1,686 @@
+{
+    "hits": [
+      {
+        "name": "Cold Shoulder Mini Bodycon Dress",
+        "url": "http://127.0.0.1/styli/en/product-veni-vedi-vici-cold-shoulder-mini-bodycon-dress-30193501",
+        "visibility_search": 1,
+        "visibility_catalog": 1,
+        "type_id": "configurable",
+        "ordered_qty": 13,
+        "rating_summary": "",
+        "categories": {
+          "level0": [
+            "Women"
+          ],
+          "level1": [
+            "Women /// Clothing",
+            "Women /// Sale",
+            "Women /// Dresses Under 40",
+            "Women /// View All"
+          ],
+          "level2": [
+            "Women /// Clothing /// Dresses",
+            "Women /// Sale /// Dresses",
+            "Women /// View All /// Dresses"
+          ]
+        },
+        "categories_without_path": [
+          "Women",
+          "Clothing",
+          "Dresses",
+          "Dresses",
+          "Dresses Under 40",
+          "Dresses"
+        ],
+        "categoryIds": [
+          "7",
+          "9",
+          "16",
+          "3536",
+          "8525",
+          "4890",
+          "8659",
+          "8755"
+        ],
+        "thumbnail_url": "//127.0.0.1/styli/pub/static/version1591517494/frontend/Codazon/fastest_fashion/en_US/Magento_Catalog/images/product/placeholder/thumbnail.jpg",
+        "image_url": "//127.0.0.1/styli/pub/static/version1591517494/frontend/Codazon/fastest_fashion/en_US/Magento_Catalog/images/product/placeholder/image.jpg",
+        "in_stock": 1,
+        "sku": [
+          "30193501",
+          "3019350102",
+          "3019350103",
+          "3019350104",
+          "3019350105"
+        ],
+        "color": [
+          "Black"
+        ],
+        "images_data": {
+          "black": "//127.0.0.1/styli/pub/static/version1591517494/frontend/Codazon/fastest_fashion/en_US/Magento_Catalog/images/product/placeholder/image.jpg"
+        },
+        "brand_name": "Veni Vedi Vici",
+        "price": {
+          "SAR": {
+            "default": 60,
+            "default_formated": "SAR 60.00",
+            "special_from_date": false,
+            "special_to_date": false,
+            "default_original_formated": "SAR 75.00"
+          }
+        },
+        "fabric_1": "Polyester",
+        "size": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "sleeve_length_women_topwear_dr": "Short Sleeves",
+        "discount_percentage": 20,
+        "ranking": 3414,
+        "length_skirts_dresses_lingerie": "Mini",
+        "shape_dresses": "Bodycon",
+        "created_at": "2019-12-19 09:27:26",
+        "algoliaLastUpdateAtCET": "2020-06-07 14:39:14",
+        "configProducts": [
+          {
+            "id": "34138",
+            "sku": "3019350102",
+            "size": "S",
+            "sizeOptionId": "1817"
+          },
+          {
+            "id": "34139",
+            "sku": "3019350103",
+            "size": "M",
+            "sizeOptionId": "1818"
+          },
+          {
+            "id": "34140",
+            "sku": "3019350104",
+            "size": "L",
+            "sizeOptionId": "1819"
+          },
+          {
+            "id": "34141",
+            "sku": "3019350105",
+            "size": "XL",
+            "sizeOptionId": "1820"
+          }
+        ],
+        "objectID": "34142",
+        "_snippetResult": {
+          "name": {
+            "value": "Cold Shoulder Mini Bodycon Dress",
+            "matchLevel": "none"
+          },
+          "url": {
+            "value": "http://127.0.0.1/styli/en/product-veni-vedi-vici-cold-shoulder-mini-bodycon-dress-<em>301935</em>01",
+            "matchLevel": "full"
+          },
+          "visibility_search": {
+            "value": "1",
+            "matchLevel": "none"
+          },
+          "visibility_catalog": {
+            "value": "1",
+            "matchLevel": "none"
+          },
+          "type_id": {
+            "value": "configurable",
+            "matchLevel": "none"
+          },
+          "ordered_qty": {
+            "value": "13",
+            "matchLevel": "none"
+          },
+          "rating_summary": {
+            "value": "",
+            "matchLevel": "none"
+          },
+          "categories": {
+            "level0": [
+              {
+                "value": "Women",
+                "matchLevel": "none"
+              }
+            ],
+            "level1": [
+              {
+                "value": "Women /// Clothing",
+                "matchLevel": "none"
+              },
+              {
+                "value": "Women /// Sale",
+                "matchLevel": "none"
+              },
+              {
+                "value": "Women /// Dresses Under 40",
+                "matchLevel": "none"
+              },
+              {
+                "value": "Women /// View All",
+                "matchLevel": "none"
+              }
+            ],
+            "level2": [
+              {
+                "value": "Women /// Clothing /// Dresses",
+                "matchLevel": "none"
+              },
+              {
+                "value": "Women /// Sale /// Dresses",
+                "matchLevel": "none"
+              },
+              {
+                "value": "Women /// View All /// Dresses",
+                "matchLevel": "none"
+              }
+            ]
+          },
+          "categories_without_path": [
+            {
+              "value": "Women",
+              "matchLevel": "none"
+            },
+            {
+              "value": "Clothing",
+              "matchLevel": "none"
+            },
+            {
+              "value": "Dresses",
+              "matchLevel": "none"
+            },
+            {
+              "value": "Dresses",
+              "matchLevel": "none"
+            },
+            {
+              "value": "Dresses Under 40",
+              "matchLevel": "none"
+            },
+            {
+              "value": "Dresses",
+              "matchLevel": "none"
+            }
+          ],
+          "categoryIds": [
+            {
+              "value": "7",
+              "matchLevel": "none"
+            },
+            {
+              "value": "9",
+              "matchLevel": "none"
+            },
+            {
+              "value": "16",
+              "matchLevel": "none"
+            },
+            {
+              "value": "3536",
+              "matchLevel": "none"
+            },
+            {
+              "value": "8525",
+              "matchLevel": "none"
+            },
+            {
+              "value": "4890",
+              "matchLevel": "none"
+            },
+            {
+              "value": "8659",
+              "matchLevel": "none"
+            },
+            {
+              "value": "8755",
+              "matchLevel": "none"
+            }
+          ],
+          "thumbnail_url": {
+            "value": "//127.0.0.1/styli/pub/static/version1591517494/frontend/Codazon/fastest_fashion/en_US/Magento_Catalog/images/product/placeholder …",
+            "matchLevel": "none"
+          },
+          "image_url": {
+            "value": "//127.0.0.1/styli/pub/static/version1591517494/frontend/Codazon/fastest_fashion/en_US/Magento_Catalog/images/product/placeholder …",
+            "matchLevel": "none"
+          },
+          "in_stock": {
+            "value": "1",
+            "matchLevel": "none"
+          },
+          "sku": [
+            {
+              "value": "<em>301935</em>01",
+              "matchLevel": "full"
+            },
+            {
+              "value": "<em>301935</em>0102",
+              "matchLevel": "full"
+            },
+            {
+              "value": "<em>301935</em>0103",
+              "matchLevel": "full"
+            },
+            {
+              "value": "<em>301935</em>0104",
+              "matchLevel": "full"
+            },
+            {
+              "value": "<em>301935</em>0105",
+              "matchLevel": "full"
+            }
+          ],
+          "color": [
+            {
+              "value": "Black",
+              "matchLevel": "none"
+            }
+          ],
+          "images_data": {
+            "black": {
+              "value": "//127.0.0.1/styli/pub/static/version1591517494/frontend/Codazon/fastest_fashion/en_US/Magento_Catalog/images/product/placeholder …",
+              "matchLevel": "none"
+            }
+          },
+          "brand_name": {
+            "value": "Veni Vedi Vici",
+            "matchLevel": "none"
+          },
+          "price": {
+            "SAR": {
+              "default": {
+                "value": "60",
+                "matchLevel": "none"
+              },
+              "default_formated": {
+                "value": "SAR 60.00",
+                "matchLevel": "none"
+              },
+              "default_original_formated": {
+                "value": "SAR 75.00",
+                "matchLevel": "none"
+              }
+            }
+          },
+          "fabric_1": {
+            "value": "Polyester",
+            "matchLevel": "none"
+          },
+          "size": [
+            {
+              "value": "S",
+              "matchLevel": "none"
+            },
+            {
+              "value": "M",
+              "matchLevel": "none"
+            },
+            {
+              "value": "L",
+              "matchLevel": "none"
+            },
+            {
+              "value": "XL",
+              "matchLevel": "none"
+            }
+          ],
+          "sleeve_length_women_topwear_dr": {
+            "value": "Short Sleeves",
+            "matchLevel": "none"
+          },
+          "discount_percentage": {
+            "value": "20",
+            "matchLevel": "none"
+          },
+          "ranking": {
+            "value": "3414",
+            "matchLevel": "none"
+          },
+          "length_skirts_dresses_lingerie": {
+            "value": "Mini",
+            "matchLevel": "none"
+          },
+          "shape_dresses": {
+            "value": "Bodycon",
+            "matchLevel": "none"
+          },
+          "created_at": {
+            "value": "2019-12-19 09:27:26",
+            "matchLevel": "none"
+          },
+          "algoliaLastUpdateAtCET": {
+            "value": "2020-06-07 14:39:14",
+            "matchLevel": "none"
+          },
+          "configProducts": [
+            {
+              "id": {
+                "value": "34138",
+                "matchLevel": "none"
+              },
+              "sku": {
+                "value": "<em>301935</em>0102",
+                "matchLevel": "full"
+              },
+              "size": {
+                "value": "S",
+                "matchLevel": "none"
+              },
+              "sizeOptionId": {
+                "value": "1817",
+                "matchLevel": "none"
+              }
+            },
+            {
+              "id": {
+                "value": "34139",
+                "matchLevel": "none"
+              },
+              "sku": {
+                "value": "<em>301935</em>0103",
+                "matchLevel": "full"
+              },
+              "size": {
+                "value": "M",
+                "matchLevel": "none"
+              },
+              "sizeOptionId": {
+                "value": "1818",
+                "matchLevel": "none"
+              }
+            },
+            {
+              "id": {
+                "value": "34140",
+                "matchLevel": "none"
+              },
+              "sku": {
+                "value": "<em>301935</em>0104",
+                "matchLevel": "full"
+              },
+              "size": {
+                "value": "L",
+                "matchLevel": "none"
+              },
+              "sizeOptionId": {
+                "value": "1819",
+                "matchLevel": "none"
+              }
+            },
+            {
+              "id": {
+                "value": "34141",
+                "matchLevel": "none"
+              },
+              "sku": {
+                "value": "<em>301935</em>0105",
+                "matchLevel": "full"
+              },
+              "size": {
+                "value": "XL",
+                "matchLevel": "none"
+              },
+              "sizeOptionId": {
+                "value": "1820",
+                "matchLevel": "none"
+              }
+            }
+          ]
+        },
+        "_highlightResult": {
+          "name": {
+            "value": "Cold Shoulder Mini Bodycon Dress",
+            "matchLevel": "none",
+            "matchedWords": []
+          },
+          "categories": {
+            "level0": [
+              {
+                "value": "Women",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            ],
+            "level1": [
+              {
+                "value": "Women /// Clothing",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Women /// Sale",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Women /// Dresses Under 40",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Women /// View All",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            ],
+            "level2": [
+              {
+                "value": "Women /// Clothing /// Dresses",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Women /// Sale /// Dresses",
+                "matchLevel": "none",
+                "matchedWords": []
+              },
+              {
+                "value": "Women /// View All /// Dresses",
+                "matchLevel": "none",
+                "matchedWords": []
+              }
+            ]
+          },
+          "categories_without_path": [
+            {
+              "value": "Women",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            {
+              "value": "Clothing",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            {
+              "value": "Dresses",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            {
+              "value": "Dresses",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            {
+              "value": "Dresses Under 40",
+              "matchLevel": "none",
+              "matchedWords": []
+            },
+            {
+              "value": "Dresses",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          ],
+          "sku": [
+            {
+              "value": "<em>301935</em>01",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "31935"
+              ]
+            },
+            {
+              "value": "<em>301935</em>0102",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "31935"
+              ]
+            },
+            {
+              "value": "<em>301935</em>0103",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "31935"
+              ]
+            },
+            {
+              "value": "<em>301935</em>0104",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "31935"
+              ]
+            },
+            {
+              "value": "<em>301935</em>0105",
+              "matchLevel": "full",
+              "fullyHighlighted": false,
+              "matchedWords": [
+                "31935"
+              ]
+            }
+          ],
+          "color": [
+            {
+              "value": "Black",
+              "matchLevel": "none",
+              "matchedWords": []
+            }
+          ],
+          "brand_name": {
+            "value": "Veni Vedi Vici",
+            "matchLevel": "none",
+            "matchedWords": []
+          }
+        },
+        "_rankingInfo": {
+          "nbTypos": 1,
+          "firstMatchedWord": 1000,
+          "proximityDistance": 0,
+          "userScore": 2072,
+          "geoDistance": 0,
+          "geoPrecision": 1,
+          "nbExactWords": 0,
+          "words": 1,
+          "filters": 1
+        }
+      }
+    ],
+    "nbHits": 1,
+    "page": 0,
+    "nbPages": 1,
+    "hitsPerPage": 10,
+    "facets": {
+      "size": {
+        "L": 1,
+        "M": 1,
+        "S": 1,
+        "XL": 1
+      },
+      "color": {
+        "Black": 1
+      },
+      "ranking": {
+        "3414": 1
+      },
+      "fabric_1": {
+        "Polyester": 1
+      },
+      "brand_name": {
+        "Veni Vedi Vici": 1
+      },
+      "categoryIds": {
+        "7": 1,
+        "9": 1,
+        "16": 1,
+        "3536": 1,
+        "4890": 1,
+        "8525": 1,
+        "8659": 1,
+        "8755": 1
+      },
+      "shape_dresses": {
+        "Bodycon": 1
+      },
+      "categories.level0": {
+        "Women": 1
+      },
+      "categories.level1": {
+        "Women /// Clothing": 1,
+        "Women /// Dresses Under 40": 1,
+        "Women /// Sale": 1,
+        "Women /// View All": 1
+      },
+      "categories.level2": {
+        "Women /// Clothing /// Dresses": 1,
+        "Women /// Sale /// Dresses": 1,
+        "Women /// View All /// Dresses": 1
+      },
+      "price.SAR.default": {
+        "60": 1
+      },
+      "discount_percentage": {
+        "20": 1
+      },
+      "length_skirts_dresses_lingerie": {
+        "Mini": 1
+      },
+      "sleeve_length_women_topwear_dr": {
+        "Short Sleeves": 1
+      }
+    },
+    "facets_stats": {
+      "ranking": {
+        "min": 3414,
+        "max": 3414,
+        "avg": 3414,
+        "sum": 3414
+      },
+      "categoryIds": {
+        "min": 7,
+        "max": 8755,
+        "avg": 4299,
+        "sum": 34397
+      },
+      "price.SAR.default": {
+        "min": 60,
+        "max": 60,
+        "avg": 60,
+        "sum": 60
+      },
+      "discount_percentage": {
+        "min": 20,
+        "max": 20,
+        "avg": 20,
+        "sum": 20
+      }
+    },
+    "exhaustiveFacetsCount": true,
+    "exhaustiveNbHits": true,
+    "query": "31935",
+    "params": "highlightPreTag=%3Cais-highlight-0000000000%3E&highlightPostTag=%3C%2Fais-highlight-0000000000%3E&getRankingInfo=true&analytics=false&enableABTest=false&hitsPerPage=10&attributesToRetrieve=*&attributesToSnippet=*%3A20&snippetEllipsisText=%E2%80%A6&responseFields=*&query=31935&maxValuesPerFacet=100&page=0&facets=%5B%22*%22%2C%22brand_name%22%2C%22categories.level0%22%2C%22categories.level1%22%2C%22categories.level2%22%2C%22categories.level3%22%2C%22categoryIds%22%2C%22color%22%2C%22discount_percentage%22%2C%22fabric_1%22%2C%22length_skirts_dresses_lingerie%22%5D&tagFilters=&facetFilters=%5B%5B%22categories.level1%3AWomen%20%2F%2F%2F%20Clothing%22%5D%5D",
+    "index": "amit_local_en_products",
+    "serverUsed": "b1-fr-3.algolia.net",
+    "indexUsed": "amit_local_en_products",
+    "parsedQuery": "31935",
+    "timeoutCounts": false,
+    "timeoutHits": false,
+    "processingTimeMS": 1
+  }

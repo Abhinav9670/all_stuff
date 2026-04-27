@@ -1,0 +1,328 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quote-service
+  labels:
+    app: {{ template "app.fullname" . }}
+    service: quote-service
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.quote.replicaCountBack }}
+  selector:
+    matchLabels:
+      app: {{ template "app.fullname" . }}
+      service: quote-service
+      release: {{ .Release.Name }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 5
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: {{ template "app.fullname" . }}
+        service: quote-service
+        release: {{ .Release.Name }}
+    spec:
+      nodeSelector:
+        for: wi
+      serviceAccountName: {{ .Values.quote.servicekeyname }}
+      containers:
+        - name: quote-service
+          image: "{{ .Values.quote.image }}"
+          imagePullPolicy: {{ .Values.quote.pullPolicy }}
+          readinessProbe:
+            httpGet:
+              path: /rest/quote/health-check
+              port: 5000
+            initialDelaySeconds: 30
+            timeoutSeconds: 2
+            periodSeconds: 60
+            failureThreshold: 3
+            successThreshold: 1
+          livenessProbe:
+            httpGet:
+              path: /rest/quote/health-check
+              port: 5000
+            initialDelaySeconds: 60
+            timeoutSeconds: 2
+            periodSeconds: 10
+            failureThreshold: 3
+          resources:
+            requests:
+              cpu: {{ .Values.quote.cpureq }}
+              memory: {{ .Values.quote.memoryreq }}
+            limits:
+              cpu: {{ .Values.quote.cpulim }}
+              memory: {{ .Values.quote.memorylim }}
+          ports:
+            - name: http
+              containerPort: 5000
+          env:
+          - name: APMKEY
+            value: "{{ .Values.quote.apmkey }}"
+          - name: ELASTIC_APM_VERIFY_SERVER_CERT
+            value: "false"
+          - name: styli_env
+            value: "{{ .Values.quote.styli_env }}"
+          - name: new_relic_env
+            value: "{{ .Values.quote.new_relic_env }}"
+          - name: debug_params
+            value: "{{ .Values.quote.debug_params }}"
+          - name: jwt_secret
+            valueFrom:
+              secretKeyRef:
+                name: jwtoldsalt
+                key: JWT_SALT_OLD_SECRET
+          - name: cb_address
+            valueFrom:
+              secretKeyRef:
+                name: cb-quoteservice
+                key: host
+          - name: cb_user
+            valueFrom:
+              secretKeyRef:
+                name: cb-quoteservice
+                key: username
+          - name: cb_pass
+            valueFrom:
+              secretKeyRef:
+                name: cb-quoteservice
+                key: password
+          - name: cb_bucket
+            valueFrom:
+              secretKeyRef:
+                name: cb-quoteservice
+                key: database
+          - name: AUTH_EXTERNAL_HEADER_BEARER_TOKEN
+            valueFrom:
+                secretKeyRef:
+                 name: authinternaloms  
+                 key: AUTH_EXTERNAL_HEADER_BEARER_TOKEN
+          - name: AUTH_INTERNAL_HEADER_BEARER_TOKEN
+            valueFrom:
+                secretKeyRef:
+                 name: authinternaloms  
+                 key: AUTH_INTERNAL_HEADER_BEARER_TOKEN
+          - name: cb_customer_bucket
+            value: "{{ .Values.quote.cb_customer_bucket }}"
+          - name: cb_address_bucket
+            value: "{{ .Values.quote.cb_address_bucket }}"
+          - name: cb_expiry
+            value: "{{ .Values.quote.cb_expiry }}"
+          - name: cb_kv_timeout
+            value: "{{ .Values.quote.cb_kv_timeout }}"
+          - name: cb_n1ql_timeout
+            value: "{{ .Values.quote.cb_n1ql_timeout }}"
+          - name: elastic_url
+            value: "{{ .Values.quote.elastic_url }}"
+          - name: order_count_url
+            value: "{{ .Values.quote.order_count_url }}"
+          - name: inv_check_url
+            value: "{{ .Values.quote.inv_check_url }}"
+          - name: order_list_url
+            value: "{{ .Values.quote.order_list_url }}"
+          - name: store_credit_url
+            value: "{{ .Values.quote.store_credit_url }}"
+          - name: customer_delete_status_update_url
+            value: "{{ .Values.quote.customer_delete_status_update_url }}"  
+          - name: customer_get_profile_url
+            value: "{{ .Values.quote.customer_get_profile_url }}"  
+          - name: promo_url
+            value: "{{ .Values.quote.promo_url }}"
+          - name: apigee_base_url
+            value: "{{ .Values.quote.apigee_base_url }}"
+          - name: customer_update_wishlist_url
+            value: "{{ .Values.quote.customer_update_wishlist_url }}"
+          - name: mysql_host
+            valueFrom:
+                secretKeyRef:
+                  name: oms-mysql
+                  key: mysql_host
+          - name: mysql_user
+            valueFrom:
+                secretKeyRef:
+                  name: oms-mysql
+                  key: mysql_db_username
+          - name: mysql_pass
+            valueFrom:
+                secretKeyRef:
+                  name: oms-mysql
+                  key: mysql_db_password
+          - name: mysql_dbname
+            valueFrom:
+                secretKeyRef:
+                  name: oms-mysql
+                  key: mysql_db_name
+          - name: mysql_port
+            valueFrom:
+                secretKeyRef:
+                  name: oms-mysql
+                  key: mysql_port
+          - name: mysql_import_batch_size
+            value: "{{ .Values.quote.mysql_import_batch_size }}"
+          - name: import_last_updated_after
+            value: "{{ .Values.quote.import_last_updated_after }}"
+          - name: consul_host
+            value: "{{ .Values.quote.consul_host }}"
+          - name: consul_port
+            value: "{{ .Values.quote.consul_port }}"
+          - name: CONSUL_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: consul-secrets
+                key: consul_token
+          - name: consul_key
+            value: "{{ .Values.quote.consul_key }}"
+          - name: consul_promo_base_url
+            value: "{{ .Values.quote.consul_promo_base_url}}"
+          - name: consul_addressMapper_sa_qa
+            value: "{{ .Values.quote.consul_addressMapper_sa_qa }}"
+          - name: consul_addressMapper_ae_qa
+            value: "{{ .Values.quote.consul_addressMapper_ae_qa }}"
+          - name: consul_addressMapper_kw_qa
+            value: "{{ .Values.quote.consul_addressMapper_kw_qa }}"
+          - name: consul_addressMapper_bh_qa
+            value: "{{ .Values.quote.consul_addressMapper_bh_qa }}"
+          - name: consul_addressMapper_qa_qa
+            value: "{{ .Values.quote.consul_addressMapper_qa_qa }}"
+          - name: consul_addressMapper_om_qa
+            value: "{{ .Values.quote.consul_addressMapper_om_qa }}"
+          - name: consul_promo_keys
+            value: "{{ .Values.quote.consul_promo_keys }}"
+         
+          - name: kafka_brokers
+            value: "{{ .Values.quote.kafka_brokers }}"
+          - name: kafka_client_id
+            value: "{{ .Values.quote.kafka_client_id }}"
+          - name: kafka_topic_quote
+            value: "{{ .Values.quote.kafka_topic_quote }}"
+          - name: kafka_topic_quote_items
+            value: "{{ .Values.quote.kafka_topic_quote_items }}"
+          - name: kafka_topic_delete_customer
+            value: "{{ .Values.quote.kafka_topic_delete_customer }}"
+          - name: KAFKA_PRICE_DROP_TOPIC
+            value: "{{ .Values.quote.kafka_price_drop_topic }}"
+          - name: kafka_group_id
+            value: "{{ .Values.quote.kafka_group_id }}"
+
+          - name: kafka_store_credit_topic
+            value: "{{ .Values.quote.kafka_store_credit_topic }}"
+          - name: FETCH_CITY_ENDPOINT
+            value: "{{ .Values.quote.fetch_city_endpoint }}"
+          - name: ELASTIC_APM_SERVICE_NAME
+            value: "{{ .Values.quote.elastic_apm_service_name }}"
+          - name: ELASTIC_APM_SECRET_TOKEN
+            value: "{{ .Values.quote.elastic_apm_service_token }}"
+          - name: ELASTIC_APM_SERVER_URL
+            value: "{{ .Values.quote.elastic_apm_service_url }}"
+          - name: CONSUL_CUSTOMER_AUTH_CONFIG
+            value: "{{ .Values.quote.consul_customer_auth_config }}"
+          - name: CONSUL_PAYMENT_METHODS
+            value: "{{ .Values.quote.consul_payment_methods }}"
+          - name: GCP_ADDRESS_MAPPER_KEY_IN
+            value: "{{ .Values.quote.gcp_addressMapper_in }}"
+          - name: EAS_URL
+            value: "{{ .Values.quote.eas_url }}"
+          - name: REGION
+            value: "{{ .Values.quote.region }}"
+          - name: GCP_BUCKET_URL
+            value: "{{ .Values.quote.gcp_bucket_url }}"
+          - name: consul_tax
+            value: "{{ .Values.quote.consul_tax }}"
+          - name: REDIS_URL
+            value: "{{ .Values.quote.redis_url }}"
+          - name: PAYMENT_SERVICE_URL
+            value: "{{ .Values.quote.payment_service_url }}"
+          - name: BRAZE_BASE_URL
+            value: {{ .Values.quote.braze_base_url }}
+          - name: BRAZE_AUTH_TOKEN
+            value: {{ .Values.quote.braze_auth_token }}
+          - name: KAFKA_MULIN_CLIENT_ID
+            value: {{ .Values.quote.kafka_mulin_client_id }}
+          - name: PUBSUB_DELETE_CUSTOMERS_SUBSCRIPTION
+            value: "{{ .Values.quote.deleteCustomersSub }}"
+          - name: PUBSUB_PRICE_DROP_SUBSCRIPTION
+            value: "{{ .Values.quote.priceDropSub }}"
+          - name: MONGODB_URL
+            valueFrom:
+              secretKeyRef:
+                name: mongo-credentials-adrsmpr
+                key: MONGODB_URL
+          - name: MONGODB_DB_CUSTOMERMG
+            valueFrom:
+              secretKeyRef:
+                name: mongo-credentials-adrsmpr
+                key: MONGODB_DB_CUSTOMERMG
+          - name: MONGODB_DB_ADRSMPR
+            valueFrom:
+              secretKeyRef:
+                name: mongo-credentials-adrsmpr
+                key: MONGODB_DB_ADRSMPR
+          - name: MONGODB_USER
+            valueFrom:
+              secretKeyRef:
+                name: mongo-credentials-adrsmpr
+                key: MONGODB_USER
+          - name: MONGODB_PASS
+            valueFrom:
+              secretKeyRef:
+                name: mongo-credentials-adrsmpr
+                key: MONGODB_PASS
+          - name: MONGODB_READ_PREFERENCE
+            valueFrom:
+              secretKeyRef:
+                name: mongo-credentials-adrsmpr
+                key: MONGODB_READ_PREFERENCE
+          - name: MONGODB_AUTH_SOURCE
+            valueFrom:
+              secretKeyRef:
+                name: mongo-credentials-adrsmpr
+                key: MONGODB_AUTH_SOURCE
+          - name: MONGODB_REPLICASET
+            valueFrom:
+              secretKeyRef:
+                name: mongo-credentials-adrsmpr
+                key: MONGODB_REPLICASET
+          - name: PROXY_HOST
+            valueFrom:
+              secretKeyRef:
+                name: shukran
+                key: PROXY_HOST
+          - name: GLOBAL_REDIS_URL
+            valueFrom:
+              secretKeyRef:
+                name: shukran
+                key: GLOBAL_REDIS_URL
+          - name: GLOBAL_REDIS_PORT
+            valueFrom:
+              secretKeyRef:
+                name: shukran
+                key: GLOBAL_REDIS_PORT
+          - name: GLOBAL_REDIS_AUTH
+            valueFrom:
+              secretKeyRef:
+                name: shukran
+                key: GLOBAL_REDIS_AUTH
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: quote-service
+  labels:
+    app: {{ template "app.fullname" . }}
+    service: quote-service
+    release: {{ .Release.Name }}
+
+spec:
+  ports:
+    - port: 80
+      targetPort: 5000
+      protocol: TCP
+  selector:
+    app: {{ template "app.fullname" . }}
+    service: quote-service
+    release: {{ .Release.Name }}

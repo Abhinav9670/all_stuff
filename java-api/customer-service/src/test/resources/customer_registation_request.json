@@ -1,0 +1,15 @@
+{
+  "customerInfo": {
+    "customer": {
+      "firstName": "sanjay",
+      "lastName": "700",
+      "email": "sanjay.700@mailinator.com",
+      "gender": 2,
+      "storeId": 1,
+      "websiteId": 1,
+      "phone": "+966 666777658",
+      "ageGroupId": 1
+    },
+    "password": "test@123"
+  }
+}

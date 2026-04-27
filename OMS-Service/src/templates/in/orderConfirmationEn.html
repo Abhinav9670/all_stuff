@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Order Confirmation Email</title>
+</head>
+
+<body style="text-align: left;">
+
+  <table style="width:100%">
+    <tr>
+      <td style="background:#EEE; padding:30px;">
+        <img style="display:block; height: 75px;" src="https://in-mdev.stylifashion.com/logo-en.svg" />
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 0 30px;">
+        <p>Congrats! You've got style coming your way! Thanks for shopping with us, {{shippingAddress.firstName}}
+          {{shippingAddress.lastName}}.</p>
+        <p>For your reference, your order number is {{orderIncrementId}}</p>
+        <p style="font-size: 130%; margin-bottom: 5px;">Shipping Address</p>
+        <p style="margin-top: 0;">
+          {{shippingAddress.firstName}} {{shippingAddress.lastName}}<br />
+          {{addressLine2}}<br />
+          {{addressLine3}}<br />
+          T:{{shippingAddress.mobileNumber}}
+        </p>
+        <p style="font-size: 130%; margin-bottom: 5px;">Payment Mode</p>
+
+        <table>
+          <tr>
+            <td colspan="2" style="padding-bottom: 5px;">{{paymentInformation.paymentMethod}}
+            </td>
+          </tr>
+          {{#if customerIp}}
+          <tr>
+            <td style="width: 180px;"><b>Customer IP</b></td>
+            <td>{{customerIp}}</td>
+          </tr>
+          {{/if}}
+
+          {{# if paymentInformation.merchantReference}}
+          <tr>
+            <td><b>merchant_reference</b></td>
+            <td>{{paymentInformation.merchantReference}}</td>
+          </tr>
+          {{/if}}
+          {{# if paymentInformation.authorizationCode}}
+          <tr>
+            <td><b>Authorization Code</b></td>
+            <td>{{paymentInformation.authorizationCode}}</td>
+          </tr>
+          {{/if}}
+          {{# if paymentInformation.ccType}}
+          <tr>
+            <td><b>Credit Card Type</b></td>
+            <td>{{paymentInformation.ccType}}</td>
+          </tr>
+          {{/if}}
+          {{# if paymentInformation.ccNumber}}
+          <tr>
+            <td><b>Credit Card Number</b></td>
+            <td>{{paymentInformation.ccNumber}}</td>
+          </tr>
+          {{/if}}
+          {{# if paymentInformation.amount}}
+          <tr>
+            <td><b>amount</b></td>
+            <td>{{paymentInformation.amount}}</td>
+          </tr>
+          {{/if}}
+        </table>
+        <table style="text-align: center; width: 100%; margin: 20px 0 25px; border-collapse: collapse;">
+          <tr>
+            <th width="40%" style="text-align: left; padding: 5px;">Product Name</th>
+            <th width="12%" style="padding: 5px;">Original Price</th>
+            <th width="12%" style="padding: 5px;">Qty</th>
+            <th width="12%" style="padding: 5px;">Subtotal</th>
+            <th width="12%" style="padding: 5px;">Discount</th>
+            <th width="12%" style="text-align: right; padding:5px;">Final Price</th>
+          </tr>
+          {{#each products}}
+          <tr>
+            <td style="text-align: left; border-top: 1px solid #EEE; padding: 5px;">
+              <b>{{this.name}}</b><br />
+              SKU: {{this.sku}}
+            </td>
+            <td style="border-top: 1px solid #EEE; padding: 5px;">{{this.originalPrice}}</td>
+            <td style="border-top: 1px solid #EEE; padding: 5px;">{{this.qty}}</td>
+            <td style="border-top: 1px solid #EEE; padding: 5px;">{{this.baseSubtotal}}</td>
+            <td style="border-top: 1px solid #EEE; padding: 5px;">{{this.discount}}</td>
+            <td style="border-top: 1px solid #EEE; padding: 5px;">{{this.rowTotalInclTax}}</td>
+            <!-- <td style="text-align: right; border-top: 1px solid #EEE; padding: 5px;">SAR 300.00</td> -->
+          </tr>
+          {{/each}}
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:20px 30px; background: #EEE;">
+        <table style="text-align: right; width: 100%;">
+          <tr>
+            <td>Subtotal</td>
+            <td style="padding:3px; width: 150px;">{{totals.subtotalInclTax}}</td>
+          </tr>
+          {{#if totals.shippingAmount}}
+          <tr>
+            <td>Shipping & Handling</td>
+            <td style="padding:3px;">{{totals.shippingAmount}}</td>
+          </tr>
+          {{/if}}
+          {{#if totals.codCharges}}
+          <tr>
+            <td>COD Charges</td>
+            <td style="padding:3px;">{{totals.codCharges}}</td>
+          </tr>
+          {{/if}}
+          {{#if totals.importFeesAmount}}
+          <tr>
+            <td>Import Fee</td>
+            <td style="padding:3px;">{{totals.importFeesAmount}}</td>
+          </tr>
+          {{/if}}
+          <tr>
+            <td>Discount</td>
+            <td style="padding:3px;">{{totals.discountAmount}}</td>
+          </tr>
+          {{#if totals.spendCoin}}
+          <tr>
+            <td>Styli cash ({{totals.spendCoin}})</td>
+            <td style="padding:3px;">{{totals.coinToCurrency}}</td>
+          </tr>
+          {{/if}}
+          {{#if totals.taxAmount}}
+          <tr>
+            <td>Tax</td>
+            <td style="padding:3px;">{{totals.taxAmount}}</td>
+          </tr>
+          {{/if}}
+          <tr>
+            <td><b>Estimated Total</b></td>
+            <td style="padding:3px;"><b>{{totals.grandTotal}}</b></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Please don’t reply to this mail.
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>

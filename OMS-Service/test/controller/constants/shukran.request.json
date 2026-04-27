@@ -1,0 +1,55 @@
+{
+  "ProfileId": "50624316-dbec-4745-bc5a-1b85e3cde45f",
+  "TransactionTypeCode": "PR",
+  "TransactionNetTotal": -1200.0,
+  "TransactionNumber": "Txn-11112",
+  "CurrencyCode": "AED",
+  "TransactionDateTime": "2022-03-05T06:00:00Z",
+  "StoreCode": "54LMSTYLIAE",
+  "ProgramCode": "SHUKRAN",
+  "TransactionDetails": [
+    {
+      "DollarValueGross": 0,
+      "DollarValueNet": -400,
+      "ItemNumber": "51511",
+      "ItemNumberTypeCode": "S",
+      "Quantity": 1,
+      "LineNumber": 1,
+      "FulfillStoreCode": "54LMSTYLIAE",
+      "TransactionNumber": "Txn-11112",
+      "TransactionDateTime": "2022-03-05T06:00:00Z",
+      "JsonExternalData": {
+        "SaleFlag": "Y",
+        "ConceptCode": "54",
+        "DepartmentCode": "9404",
+        "ProductName": "LMG basic accrual",
+        "InvoiceTerritory": "United Arab Emirates"
+      }
+    },
+    {
+      "DollarValueGross": 0,
+      "DollarValueNet": -800,
+      "ItemNumber": "51511",
+      "ItemNumberTypeCode": "S",
+      "Quantity": 1,
+      "LineNumber": 2,
+      "FulfillStoreCode": "54LMSTYLIAE",
+      "TransactionNumber": "Txn-11112",
+      "TransactionDateTime": "2022-03-05T06:00:00Z",
+      "JsonExternalData": {
+        "SaleFlag": "Y",
+        "ConceptCode": "54",
+        "DepartmentCode": "9404",
+        "ProductName": "LMG basic accrual",
+        "InvoiceTerritory": "United Arab Emirates"
+      }
+    }
+  ],
+  "Tenders": [
+    {
+      "TenderCode": "LMG_CASH",
+      "TenderAmount": -1200.0,
+      "TransactionDateTime": "2022-03-05T06:00:00Z"
+    }
+  ]
+}

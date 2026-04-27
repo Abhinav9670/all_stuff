@@ -1,0 +1,16 @@
+{
+  "status": true,
+  "statusCode": "201",
+  "statusMsg": "SUCCESS",
+  "response": {
+    "email": null,
+    "mobileNumber": null,
+    "mesage": "Email ID Doesn't Exist",
+    "signedInNowUsing": null,
+    "isVerifyMobileNumber": null,
+    "exists": false,
+    "passwordAvailable": false
+  },
+  "error": null,
+  "isVerifyMobileNumber": false
+}

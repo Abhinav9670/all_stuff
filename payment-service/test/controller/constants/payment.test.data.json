@@ -1,0 +1,89 @@
+{
+  "OPTIONS_VALID": {
+    "id": "1665147420953781",
+    "storeId": 1,
+    "customerId": "3742023",
+    "storeCurrencyCode": "SAR",
+    "subtotal": 434,
+    "customerEmail": "chandan21@stylishop.com",
+    "paymentMethod": "tamara_installments_3",
+    "quoteAddress": {
+      "firstname": "Chandan",
+      "lastname": "Behera",
+      "mobileNumber": "+91 7204631734",
+      "buildingNumber": "House 123",
+      "region": "Odisha",
+      "area": "751024",
+      "city": "Bhubaneswar",
+      "countryId": "SA"
+    },
+    "quoteItem": [
+      {
+        "name": "Mystic Sun Graphic Oversized T-Shirt",
+        "type": "simple",
+        "qty": 1,
+        "imgUrl": "https://images.stylishop.com/media/catalog/product/10423007/images/10423007_1.jpg",
+        "sku": "1042300702",
+        "priceInclTax": 724
+      }
+    ]
+  },
+  "OPTIONS_VALID_TABBY": {
+    "id": "1665147420953781",
+    "storeId": 1,
+    "customerId": "3742023",
+    "storeCurrencyCode": "INR",
+    "subtotal": 330,
+    "customerEmail": "chandan21@stylishop.com",
+    "paymentMethod": "tabby_installments",
+    "quoteAddress": {
+      "firstname": "Chandan",
+      "lastname": "Behera",
+      "mobileNumber": "+91 7204631734",
+      "buildingNumber": "House 123",
+      "region": "Odisha",
+      "area": "751024",
+      "city": "Bhubaneswar",
+      "countryId": "IN"
+    },
+    "quoteItem": [
+      {
+        "name": "Mystic Sun Graphic Oversized T-Shirt",
+        "type": "simple",
+        "qty": 1,
+        "imgUrl": "https://images.stylishop.com/media/catalog/product/10423007/images/10423007_1.jpg",
+        "sku": "1042300702",
+        "priceInclTax": 724
+      }
+    ]
+  },
+  "OPTIONS_INVALID": {
+    "id": "1665147420953781",
+    "storeId": 3,
+    "customerId": "3742023",
+    "storeCurrencyCode": "INR",
+    "subtotal": 0,
+    "customerEmail": "chandan21@stylishop.com",
+    "paymentMethod": "cashfree",
+    "quoteAddress": {
+      "firstname": "Chandan",
+      "lastname": "Behera",
+      "mobileNumber": "+91 7204631734",
+      "buildingNumber": "House 123",
+      "region": "Odisha",
+      "area": "751024",
+      "city": "Bhubaneswar",
+      "countryId": "IN"
+    },
+    "quoteItem": [
+      {
+        "name": "Mystic Sun Graphic Oversized T-Shirt",
+        "type": "simple",
+        "qty": 1,
+        "imgUrl": "https://images.stylishop.com/media/catalog/product/10423007/images/10423007_1.jpg",
+        "sku": "1042300702",
+        "priceInclTax": 724
+      }
+    ]
+  }
+}

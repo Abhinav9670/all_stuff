@@ -1,0 +1,6 @@
+{
+  "MANUAL": { "en": "Coupon Code", "ar": "كود الخصم" },
+  "AUTO": { "en": "Bundle Discount", "ar": "المبلغ قبل الإجمالي" },
+  "BANK": { "en": "Bank Offer", "ar": "خصم البنك" },
+  "PREPAID": { "en": "Prepaid Discount", "ar": "خصم الدفع مسبقًا" }
+}

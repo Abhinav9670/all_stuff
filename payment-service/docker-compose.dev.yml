@@ -1,0 +1,7 @@
+version: "2"
+services:
+  node-app:
+    container_name: node-app-dev
+    command: yarn dev -- -L
+    environment:
+      - NODE_ENV=development

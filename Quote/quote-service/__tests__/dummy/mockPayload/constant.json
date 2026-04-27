@@ -1,0 +1,4077 @@
+{
+  "commonHeaders": {
+    "token": "KEY eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzbmlAZ21haWwuY29tIiwiY29kZSI6IjE2ODE5NzY1NjYyMzAiLCJyb2xlIjoidXNlciIsImN1c3RvbWVySWQiOjM5MTA2OTF9.1jLyXehWgJUNtk9rIor9yU-z7N7hhG6xNsHcu2iKhpsnks1FhBatJ6CeIkZGMSf7a9oItrE-oClqPRqM_i0akg",
+    "x-header-token": "sni@gmail.com",
+    "x-client-version": "4.0.5800"
+  },
+  "addQuoteObj": {
+    "id": "1684234744639834",
+    "storeId": 1,
+    "source": 0,
+    "customerId": "3910691",
+    "customerIsGuest": 0,
+    "quoteItem": [
+      {
+        "addedAt": "2023-05-16T10:59:04.675Z",
+        "landedCost": "20.5700",
+        "parentProductId": "7002725901",
+        "productId": "700272590103",
+        "storeId": 1,
+        "parentSku": "7002725901",
+        "sku": "700272590103",
+        "name": "Hook & Eye Detail Active Leggings",
+        "qty": 1,
+        "price": 52.17,
+        "basePrice": 52.17,
+        "originalPrice": "60.00",
+        "discountPercent": "6",
+        "soldBy": "STYLI",
+        "brandName": "Styli Active",
+        "imgUrl": "https://images.stylishop.com/media/catalog/product/7002725901/images/7002725901_1.jpg?v=1",
+        "discountAmount": 3.6,
+        "baseDiscountAmount": 3.6,
+        "taxPercent": 15,
+        "taxAmount": 7.35,
+        "baseTaxAmount": 7.35,
+        "rowTotal": 52.17,
+        "baseRowTotal": 52.17,
+        "rowTotalWithDiscount": 0,
+        "productType": "simple",
+        "priceInclTax": 60,
+        "basePriceInclTax": 60,
+        "rowTotalInclTax": 60,
+        "baseRowTotalInclTax": 60,
+        "discountTaxCompensationAmount": 0.48,
+        "baseDiscountTaxCompensationAmount": 0.48,
+        "superAttributeId": "213",
+        "superAttributeValue": "1818",
+        "superAttributeLabel": "M",
+        "gender": "Women",
+        "enrich": {
+          "c_20kfilter": 1,
+          "f_price_QAR": 9.7,
+          "last7qty": 6,
+          "color": [
+            "Black"
+          ],
+          "f_price_SAR": 10,
+          "rs_asdfa_2": 1,
+          "c_collection-nov2-false": 1,
+          "c_sanjib-test-dec-16": 1,
+          "c_test-collection-9906": 1,
+          "last30views": 0,
+          "last30cr": 0,
+          "stockCap": 6,
+          "last7rev": 313,
+          "last30qty": 53,
+          "allu": 496088,
+          "sku": "7002725901",
+          "last90rev": 6700,
+          "last30qtyros": 1.767,
+          "rs_allu_2": 490910,
+          "f_price_BHD": 1,
+          "f_price_AED": 9.200000000000001,
+          "c_collection-10": 1,
+          "asdfa": 1,
+          "last90qty": 136,
+          "c_collection-styli-dec6": 1,
+          "last30rev": 2650,
+          "last15qty": 28,
+          "Universal_Women_Ranking": 1,
+          "last30revros": 88.343,
+          "brand_name": "Styli Active",
+          "c_collection-nov1-21": 1,
+          "rs_abhilash_spark_test_2": 1,
+          "abhilash_spark_test": 1,
+          "c_sanjib1stnov22": 1,
+          "rs_Universal_Women_Ranking_1": 486892,
+          "ranktest": 1,
+          "last15rev": 1423,
+          "rs_ranktest_2": 1,
+          "c_combo-offer-qa": 1,
+          "c_nice-to-have-collection-0011": 1,
+          "f_price_KWD": 0.8,
+          "rs_test_abhilash_2": 1,
+          "test_abhilash": 1,
+          "c_bestsellers-acquistionpage-w": 1,
+          "c_sale-b1g1-uae-tc-w": 1,
+          "c_test-shohin-women": 1,
+          "c_top-picks-uae-w": 1,
+          "c_collection-3-bogovm-w": 1,
+          "c_activewear-from-sar-acquisition-w": 1,
+          "c_trending-now-acquition-page-ksa-w": 1,
+          "c_activewear-for-a-new-you-w": 1,
+          "c_flash-sale-7thfeb-2pm-ksa-w": 1,
+          "c_bundle-buy-1-get-1-free-herobanner-uae-w": 1,
+          "c_free-tees-ksa-w": 1,
+          "c_cat-nav-bottoms-activewear-uae-w": 1,
+          "c_top-picks-ksa-w": 1,
+          "c_cat-nav-clothing-activewear-w": 1,
+          "c_view-all-bestsellers-cat-nav-w": 1,
+          "c_activewear-uae-w": 1,
+          "c_discounted-collection-1-vm-w": 1,
+          "c_activewear-bestsellers-cat-nav-w": 1,
+          "c_test-collection-20122022-after-curofy": 1,
+          "c_under-79-merch-women-sd": 1,
+          "c_activewear-w": 1,
+          "c_activewear-starting-from-crm-w": 1,
+          "c_sale-b1g1-topcarousel-w": 1,
+          "c_active-tops-and-bottoms-uae-w": 1,
+          "c_everything-under-sar-19-crm-w": 1,
+          "c_activewear-new-for-you-uae-w": 1,
+          "c_flash-deal-10thmar-1pm-uae-w": 1,
+          "c_upto-60-percent-off-crm-w": 1,
+          "c_flash-sale-fs-w": 1,
+          "c_highstockstyles-wk723": 1,
+          "c_flash-deal-10thmar-1pm-ksa-w": 1,
+          "c_leen-marjans-picks-winterseason-w": 1,
+          "c_dummy-womens-w": 1,
+          "c_cat-nav-bottoms-activewear-w": 1,
+          "c_flash-deal-uae-collection-w": 1,
+          "c_up-to-50-percent-off-new-vm": 1,
+          "c_active-tops-and-bottoms-w": 1,
+          "c_view-all-w": 1,
+          "c_high-depth-options-ksa-w": 1,
+          "c_everything-under-79-w": 1,
+          "c_styli-x-alinma-bank-w": 1,
+          "c_buy-1-get-1-free-herobanner-w": 1,
+          "c_acquisition-page-activewear-w": 1,
+          "c_flash-sale-3rdmar-9pm-uae-w": 1,
+          "c_cat-nav-activewear-clothing-uae-w": 1,
+          "c_flash-sale-7thmar-6pm-uae-w": 1,
+          "c_flash-sale-3rdmar-9pm-ksa-w": 1
+        },
+        "metadata": {
+          "level-1": [
+            {
+              "categoryId": "7",
+              "categoryName": "Women",
+              "path": "Women"
+            }
+          ],
+          "level-2": [
+            {
+              "categoryId": "9",
+              "categoryName": "Clothing",
+              "path": "Women /// Clothing"
+            }
+          ],
+          "level-3": [
+            {
+              "categoryId": "15",
+              "categoryName": "Activewear",
+              "path": "Women /// Clothing /// Activewear"
+            }
+          ],
+          "level-4": [
+            {
+              "categoryId": "248",
+              "categoryName": "Bottoms",
+              "path": "Women /// Clothing /// Activewear /// Bottoms"
+            }
+          ],
+          "sku": "7002725901",
+          "productId": "7002725901"
+        },
+        "disableSpecialPrice": false,
+        "isMulin": false,
+        "droppedPrice": 0,
+        "appliedCouponValue": [
+          {
+            "coupon": "UTEST1",
+            "type": "MANUAL",
+            "discount": "3.6",
+            "label": {
+              "en": "Coupon discount",
+              "ar": "وفّرت من كود الخصم"
+            },
+            "id": "645b4587530469002739e884",
+            "isGiftVoucher": false
+          }
+        ],
+        "priceHistory": [
+          {
+            "price": 60,
+            "type": "normal"
+          }
+        ],
+        "taxObj": {}
+      },
+      {
+        "addedAt": "2023-05-18T06:48:03.378Z",
+        "landedCost": "31.6800",
+        "parentProductId": "7004022824",
+        "productId": "700402282403",
+        "storeId": 1,
+        "parentSku": "7004022824",
+        "sku": "700402282403",
+        "name": "Floral Print Drop Waist A-Line Maxi Dress",
+        "qty": 1,
+        "price": 67.26,
+        "basePrice": 67.26,
+        "originalPrice": "91.00",
+        "discountPercent": "6",
+        "soldBy": "STYLI",
+        "brandName": "Styli",
+        "imgUrl": "https://images.stylishop.com/media/catalog/product/7004022824/images/7004022824_1.jpg?v=1",
+        "discountAmount": 4.64,
+        "baseDiscountAmount": 4.64,
+        "taxPercent": 15,
+        "taxAmount": 9.45,
+        "baseTaxAmount": 9.45,
+        "rowTotal": 67.26,
+        "baseRowTotal": 67.26,
+        "rowTotalWithDiscount": 0,
+        "productType": "simple",
+        "priceInclTax": 77.35,
+        "basePriceInclTax": 77.35,
+        "rowTotalInclTax": 77.35,
+        "baseRowTotalInclTax": 77.35,
+        "discountTaxCompensationAmount": 0.64,
+        "baseDiscountTaxCompensationAmount": 0.64,
+        "superAttributeId": "213",
+        "superAttributeValue": "1818",
+        "superAttributeLabel": "M",
+        "caSource": "plp",
+        "caSourceType": "context",
+        "caSourceValue": "dima-alhaj-influencerlook-hp-w",
+        "caBannerPromoName": "0",
+        "gender": "Women",
+        "enrich": {
+          "asdfa": 1,
+          "color": [
+            "Off White"
+          ],
+          "Universal_Women_Ranking": 1,
+          "allu": 491627,
+          "brand_name": "Styli",
+          "sku": "7004022824",
+          "abhilash_spark_test": 1,
+          "test_abhilash": 1,
+          "ranktest": 1,
+          "c_suhoor-deal-1stapr-8pm-ksa-w": 1,
+          "c_amadan-edit-2023-uae-w": 1,
+          "c_influencer-curation-new": 1,
+          "c_up-to-30-percent-off-w": 1,
+          "c_alaa-alnoamans-collection-influenceredit-w": 1,
+          "c_inflcuration-new": 1,
+          "c_suhoor-deal-3rdapr-8pm-ksa-w": 1,
+          "c_suhoor-deal-3rdapr-8pm-uae-w": 1,
+          "c_elegant-dresses-ramadanspecial-banner-uae-w": 1,
+          "c_cat-nav-a-line-dresses-w": 1,
+          "c_suhoor-deal-1stapr-8pm-uae-w": 1,
+          "c_spring-florals-w": 1,
+          "c_nouf-wk37-23": 1,
+          "c_dima-alhaj-influencerlook-hp-w": 1,
+          "c_nora-al-alis-collection-influenceredit-w": 1,
+          "c_cat-nav-maxi-dresses-w": 1,
+          "c_midi-and-maxi-dresses-ramadan-w": 1,
+          "c_cat-nav-back-to-cool-dresses-uae-w": 1,
+          "c_suhoor-picks-2023-w": 1,
+          "c_flash-deal-10thmar-1pm-uae-w": 1,
+          "c_dresses-under-crm-w": 1,
+          "c_yasmeen-dakheels-collection-influenceredit-w": 1,
+          "c_flash-sale-fs-w": 1,
+          "c_suhoor-deal-8thapril-8pm-uae-w": 1,
+          "c_cat-nav-a-line-dresses-uae-w": 1,
+          "c_flash-deal-10thmar-1pm-ksa-w": 1,
+          "c_up-to-70-percent-off-bestsellers-landingpage-ss23-w": 1,
+          "c_suhoor-deal-8thapril-8pm-ksa-w": 1,
+          "c_cat-nav-dresses-new-arrivals-w": 1,
+          "c_dresses-w": 1,
+          "c_doaa-alnajars-collection-influenceredit-w": 1,
+          "c_flash-deal-uae-collection-w": 1,
+          "c_view-all-w": 1,
+          "c_best-sellers-uae-w": 1,
+          "c_nouf-wk36-23": 1,
+          "c_bestsellers-curofy-w": 1,
+          "c_influencer-curation-w": 1,
+          "c_ramadan-w-2023": 1,
+          "c_up-to-60-percent-off-w": 1,
+          "c_cat-nav-clothing-dresses-w": 1
+        },
+        "metadata": {
+          "level-1": [
+            {
+              "categoryId": "7",
+              "categoryName": "Women",
+              "path": "Women"
+            }
+          ],
+          "level-2": [
+            {
+              "categoryId": "9",
+              "categoryName": "Clothing",
+              "path": "Women /// Clothing"
+            }
+          ],
+          "level-3": [
+            {
+              "categoryId": "16",
+              "categoryName": "Dresses",
+              "path": "Women /// Clothing /// Dresses"
+            }
+          ],
+          "level-4": [
+            {
+              "categoryId": "328",
+              "categoryName": "Dresses",
+              "path": "Women /// Clothing /// Dresses /// Dresses"
+            }
+          ],
+          "sku": "7004022824",
+          "productId": "7004022824"
+        },
+        "disableSpecialPrice": false,
+        "specialPrice": "77.35",
+        "isMulin": false,
+        "droppedPrice": 0,
+        "appliedCouponValue": [
+          {
+            "coupon": "UTEST1",
+            "type": "MANUAL",
+            "discount": "4.64",
+            "label": {
+              "en": "Coupon discount",
+              "ar": "وفّرت من كود الخصم"
+            },
+            "id": "645b4587530469002739e884",
+            "isGiftVoucher": false
+          }
+        ],
+        "priceHistory": [
+          {
+            "price": 77.35,
+            "type": "normal"
+          }
+        ],
+        "taxObj": {}
+      },
+      {
+        "addedAt": "2023-05-18T08:01:46.361Z",
+        "landedCost": "14.5400",
+        "parentProductId": "7003241501",
+        "productId": "700324150102",
+        "storeId": 1,
+        "parentSku": "7003241501",
+        "sku": "700324150102",
+        "name": "Long Sleeves Forever Slogan Back Print Oversized T-shirt",
+        "qty": 1,
+        "price": 25.43,
+        "basePrice": 25.43,
+        "originalPrice": "45.00",
+        "discountPercent": "6",
+        "soldBy": "STYLI",
+        "brandName": "Styli",
+        "imgUrl": "https://images.stylishop.com/media/catalog/product/7003241501/images/7003241501_1.jpg",
+        "discountAmount": 1.76,
+        "baseDiscountAmount": 1.76,
+        "taxPercent": 15,
+        "taxAmount": 3.6,
+        "baseTaxAmount": 3.6,
+        "rowTotal": 25.43,
+        "baseRowTotal": 25.43,
+        "rowTotalWithDiscount": 0,
+        "productType": "simple",
+        "priceInclTax": 29.25,
+        "basePriceInclTax": 29.25,
+        "rowTotalInclTax": 29.25,
+        "baseRowTotalInclTax": 29.25,
+        "discountTaxCompensationAmount": 0.22,
+        "baseDiscountTaxCompensationAmount": 0.22,
+        "superAttributeId": "213",
+        "superAttributeValue": "1817",
+        "superAttributeLabel": "S",
+        "caSource": "plp",
+        "caSourceType": "context",
+        "caSourceValue": "winterwear-w",
+        "caBannerPromoName": "EN-KSA-Top Category-W",
+        "gender": "Women",
+        "enrich": {
+          "asdfa": 1,
+          "color": [
+            "Black"
+          ],
+          "c_winterwear-collection-test-w": 1,
+          "Universal_Women_Ranking": 1,
+          "brand_name": "Styli",
+          "abhilash_spark_test": 1,
+          "c_sanjib-test-dec-16": 1,
+          "rs_Universal_Women_Ranking_1": 494167,
+          "ranktest": 1,
+          "c_combo-offer-qa": 1,
+          "allu": 490950,
+          "sku": "7003241501",
+          "test_abhilash": 1,
+          "c_cat-nav-winter-topwear-hw-w": 1,
+          "c_everyday-t-shirts-uae-w": 1,
+          "c_camping-collection-2022-w": 1,
+          "c_test-shohin-women": 1,
+          "c_new-topwear-acquisition-page-w": 1,
+          "c_everything-under-sar-49-w": 1,
+          "c_30-percent-to-80-percent-uae-w": 1,
+          "c_flash-deal-9thmay-5pm-uae-w": 1,
+          "c_bundle-buy-1-get-2-free-brands-w": 1,
+          "c_flash-sale-7thfeb-2pm-ksa-w": 1,
+          "c_flash-deal-28thapr-6pm-uae-w": 1,
+          "c_cotton-topwear-w": 1,
+          "c_up-to-80-percent-off-uae-w": 1,
+          "c_winterwear-uae-w": 1,
+          "c_flash-sale-12thfeb-2pm-uae-w": 1,
+          "c_flash-deal-12thmar-2pm-ksa-w": 1,
+          "c_suhoor-deal-10thapr-8pm-ksa-w": 1,
+          "c_cat-nav-printed-t-shirts-w": 1,
+          "c_tops-and-t-shirts-from-sar-19": 1,
+          "c_flash-deal-7thmay-6pm-uae-w": 1,
+          "c_coats-sweaters-and-more-under-sar-69-w": 1,
+          "c_tops-w": 1,
+          "c_t-shirts-w": 1,
+          "c_daytime-w": 1,
+          "c_tops-uae-w": 1,
+          "c_flash-sale-12thfeb-2pm-ksa-w": 1,
+          "c_suhoor-deal-10thapr-8pm-uae-w": 1,
+          "c_test-collection-20122022-after-curofy": 1,
+          "c_topwear-and-jumpsuits-upto-80-percent-off-crm-w": 1,
+          "c_flash-deal-7thmay-6pm-ksa-w": 1,
+          "c_flash-sale-10thfeb-6pm-ksa-w": 1,
+          "c_cat-nav-tops-under-49-w": 1,
+          "c_flash-deal-28thmar-8pm-uae-w": 1,
+          "c_topwear-buy-1-get-1-free-crm-uae-w": 1,
+          "c_cat-nav-casual-tops-uae-w": 1,
+          "c_cat-nav-printed-t-shirts-uae-w": 1,
+          "c_flash-deal-24thmar-7pm-uae-w": 1,
+          "c_casuals-w": 1,
+          "c_cotton-topwear-uae-w": 1,
+          "c_flash-deal-10thmar-1pm-uae-w": 1,
+          "c_cat-nav-topwear-outerwear-uae-w": 1,
+          "c_flash-sale-10thfeb-6pm-uae-w": 1,
+          "c_kawkabs-collection-influenceredit-w": 1,
+          "c_cat-nav-topwear-outerwear-w": 1,
+          "c_winterwear-w": 1,
+          "c_flash-sale-fs-w": 1,
+          "c_flash-sale-9thfeb-6pm-uae-w": 1,
+          "c_flash-deal-28thmar-8pm-ksa-w": 1,
+          "c_coats-sweaters-and-more-under-aed-69-w": 1,
+          "c_up-to-80-percent-off-w": 1,
+          "c_flash-deal-24thmar-7pm-ksa-w": 1,
+          "c_suhoor-deal-5thapr-8pm-ksa-w": 1,
+          "c_flash-deal-10thmar-1pm-ksa-w": 1,
+          "c_suhoor-deal-5thapr-8pm-uae-w": 1,
+          "c_light-winterwear-new-w": 1,
+          "c_up-to-60-percent-off-uae-w": 1,
+          "c_casuals-uae-w": 1,
+          "c_flash-sale-9thfeb-6pm-ksa-w": 1,
+          "c_cat-nav-t-shirts-min-30-percent-off-uae-w": 1,
+          "c_20-percent-70-percent-off-w": 1,
+          "c_daytime-wear-test-w": 1,
+          "c_30-percent-to-80-w": 1,
+          "c_bundle-buy-1-get-2-free-brands-uae-w": 1,
+          "c_flash-deal-uae-collection-w": 1,
+          "c_flash-deal-9thmay-5pm-ksa-w": 1,
+          "c_flash-deal-28thapr-6pm-ksa-w": 1,
+          "c_up-to-50-percent-off-new-vm": 1,
+          "c_30-percent-60-percent-off-w": 1,
+          "c_view-all-w": 1,
+          "c_20-percent-70-percent-off-uae-w": 1,
+          "c_cat-nav-black-tops-w": 1,
+          "c_on-discount-acquition-page-ksa-w": 1,
+          "c_styli-x-alinma-bank-w": 1,
+          "c_bottomwear-and-topwear-min-30-percent-off-crm-w": 1,
+          "c_cat-nav-graphic-t-shirts-uae-w": 1,
+          "c_new-everything-under-sar-39-w": 1,
+          "c_acquisition-page-topwear": 1,
+          "c_flash-sale-3rdmar-9pm-uae-w": 1,
+          "c_daytime-chic-crm-w": 1,
+          "c_week23-new-w": 1,
+          "c_flash-sale-7thmar-6pm-uae-w": 1,
+          "c_cat-nav-black-tops-uae-w": 1,
+          "c_cat-nav-tshirts-min-30-percent-off-uae-w": 1,
+          "c_daytime-casuals-uae-w": 1,
+          "c_up-to-60-percent-off-w": 1,
+          "c_cat-nav-casual-tops-w": 1,
+          "c_flash-sale-3rdmar-9pm-ksa-w": 1
+        },
+        "metadata": {
+          "level-1": [
+            {
+              "categoryId": "7",
+              "categoryName": "Women",
+              "path": "Women"
+            }
+          ],
+          "level-2": [
+            {
+              "categoryId": "9",
+              "categoryName": "Clothing",
+              "path": "Women /// Clothing"
+            }
+          ],
+          "level-3": [
+            {
+              "categoryId": "318",
+              "categoryName": "Tops & T-shirts",
+              "path": "Women /// Clothing /// Tops & T-shirts"
+            }
+          ],
+          "level-4": [
+            {
+              "categoryId": "320",
+              "categoryName": "T-Shirts",
+              "path": "Women /// Clothing /// Tops & T-shirts /// T-Shirts"
+            }
+          ],
+          "sku": "7003241501",
+          "productId": "7003241501"
+        },
+        "disableSpecialPrice": false,
+        "specialPrice": "29.25",
+        "isMulin": false,
+        "droppedPrice": 0,
+        "appliedCouponValue": [
+          {
+            "coupon": "UTEST1",
+            "type": "MANUAL",
+            "discount": "1.76",
+            "label": {
+              "en": "Coupon discount",
+              "ar": "وفّرت من كود الخصم"
+            },
+            "id": "645b4587530469002739e884",
+            "isGiftVoucher": false
+          }
+        ],
+        "priceHistory": [
+          {
+            "price": 29.25,
+            "type": "normal"
+          }
+        ],
+        "taxObj": {}
+      }
+    ],
+    "convertedAt": null,
+    "isActive": 1,
+    "itemsCount": 3,
+    "itemsQty": 3,
+    "storeToBaseRate": 0,
+    "baseCurrencyCode": "SAR",
+    "storeCurrencyCode": "SAR",
+    "grandTotal": 0,
+    "baseGrandTotal": 0,
+    "appliedRuleIds": [],
+    "couponCode": "UTEST1",
+    "subtotal": 166.6,
+    "baseSubtotal": 166.6,
+    "subtotalWithDiscount": 156.6,
+    "baseSubtotalWithDiscount": 156.6,
+    "autoPromoCode": "",
+    "autoPromoAmount": null,
+    "triggerRecollect": 0,
+    "amstorecreditUse": false,
+    "amstorecreditBaseAmount": null,
+    "amstorecreditAmount": null,
+    "promoAppliedAt": null,
+    "quoteAddress": [
+      {
+        "customerAddressId": "2398723",
+        "addressType": "shipping",
+        "email": "",
+        "defaultAddress": true,
+        "firstname": "hgfgh",
+        "lastname": "uygtu",
+        "street": "jrgf frtfgyhuj",
+        "mobileNumber": "+966 509878787",
+        "city": "Al Mada",
+        "region": "Al-Baha{Al-Bahah}",
+        "regionId": "578",
+        "postcode": "",
+        "countryId": "SA",
+        "telephone": "+966 509878787",
+        "shippingMethod": "",
+        "shippingDescription": "",
+        "locationType": "",
+        "nearestLandmark": "",
+        "area": "Al Mada",
+        "buildingNumber": "frtfgyhuj",
+        "latitude": null,
+        "longitude": null,
+        "formattedAddress": "",
+        "cityMapper": {
+          "id": "1",
+          "name_en": "Al Mada",
+          "name_ar": "المدى",
+          "enabled": true,
+          "min_sla": 5,
+          "max_sla": 23,
+          "cod_verification": false,
+          "threshold": 0,
+          "max_threshold": 0,
+          "type": "city",
+          "fast_delivery": false,
+          "cutoff_time_excluded": false,
+          "cut_off_time": "22:30",
+          "holiday": "0,1,2",
+          "country": "SA",
+          "province_id": "578",
+          "estimated_date": "2023-06-14 12:49:02",
+          "estimated_date_tostring_en": "Delivery by ${{'type':'bold', 'text':'Wed, 14th Jun'}}$",
+          "estimated_date_tostring_ar": "التوصيل المتوقع Wed, 14th Jun",
+          "threshold_time": ""
+        }
+      }
+    ],
+    "quotePayment": {
+      "method": null,
+      "additionalInformation": null,
+      "createdAt": null,
+      "updatedAt": "2023-05-22T09:49:02.655Z",
+      "cardBin": "",
+      "applyStoreCredit": null
+    },
+    "metadata": [
+      {
+        "level-1": [
+          {
+            "categoryId": "7",
+            "categoryName": "Women",
+            "path": "Women"
+          }
+        ],
+        "level-2": [
+          {
+            "categoryId": "9",
+            "categoryName": "Clothing",
+            "path": "Women /// Clothing"
+          }
+        ],
+        "level-3": [
+          {
+            "categoryId": "15",
+            "categoryName": "Activewear",
+            "path": "Women /// Clothing /// Activewear"
+          }
+        ],
+        "level-4": [
+          {
+            "categoryId": "248",
+            "categoryName": "Bottoms",
+            "path": "Women /// Clothing /// Activewear /// Bottoms"
+          }
+        ],
+        "sku": "7002725901",
+        "productId": "7002725901"
+      },
+      {
+        "level-1": [
+          {
+            "categoryId": "7",
+            "categoryName": "Women",
+            "path": "Women"
+          }
+        ],
+        "level-2": [
+          {
+            "categoryId": "9",
+            "categoryName": "Clothing",
+            "path": "Women /// Clothing"
+          }
+        ],
+        "level-3": [
+          {
+            "categoryId": "16",
+            "categoryName": "Dresses",
+            "path": "Women /// Clothing /// Dresses"
+          }
+        ],
+        "level-4": [
+          {
+            "categoryId": "328",
+            "categoryName": "Dresses",
+            "path": "Women /// Clothing /// Dresses /// Dresses"
+          }
+        ],
+        "sku": "7004022824",
+        "productId": "7004022824"
+      },
+      {
+        "level-1": [
+          {
+            "categoryId": "7",
+            "categoryName": "Women",
+            "path": "Women"
+          }
+        ],
+        "level-2": [
+          {
+            "categoryId": "9",
+            "categoryName": "Clothing",
+            "path": "Women /// Clothing"
+          }
+        ],
+        "level-3": [
+          {
+            "categoryId": "318",
+            "categoryName": "Tops & T-shirts",
+            "path": "Women /// Clothing /// Tops & T-shirts"
+          }
+        ],
+        "level-4": [
+          {
+            "categoryId": "320",
+            "categoryName": "T-Shirts",
+            "path": "Women /// Clothing /// Tops & T-shirts /// T-Shirts"
+          }
+        ],
+        "sku": "7003241501",
+        "productId": "7003241501"
+      }
+    ],
+    "createdAt": "2023-05-16T10:59:04.639Z",
+    "customerEmail": "sni@gmail.com",
+    "updatedAt": "2023-05-22T11:16:32.383Z",
+    "discountData": [
+      {
+        "couponCode": "UTEST1",
+        "discountType": "FIXED",
+        "redeemType": "MANUAL",
+        "value": "10",
+        "label": "{\"en\":\"Coupon Code\",\"ar\":\"كود الخصم\"}",
+        "onOsp": false,
+        "isGiftVoucher": false
+      }
+    ],
+    "donationAmount": 0,
+    "totalOrderedCount": 3,
+    "flashSale": {
+      "active": null
+    },
+    "currencyConversionRate": 1,
+    "priceDropData": {
+      "offerTime": 0
+    },
+    "coupon": "UTEST1",
+    "check_for_auto_apply": true,
+    "groupedData": {
+      "data": {
+        "700402282403": {
+          "products": [
+            "700402282403"
+          ],
+          "prospect": {
+            "name": "UTEST5B1G1",
+            "description": "",
+            "context": "dresses-w",
+            "addMore": 1
+          }
+        },
+        "700272590103_700324150102": {
+          "products": [
+            "700272590103",
+            "700324150102"
+          ]
+        }
+      },
+      "configs": {
+        "translations": {
+          "appliedText": "{{bundleDesc}} applied!",
+          "addCta": "Add",
+          "prospectText": "Add {{addMore}} more items to avail {{bundleDesc}}"
+        },
+        "bgColor": {
+          "applied": "#EAF1E4",
+          "prospect": "#FAEAEB"
+        }
+      }
+    },
+    "couponDiscount": "10",
+    "shippingThreshold": 150,
+    "shippingCharges": 0,
+    "codCharges": 0,
+    "calcSource": "promo",
+    "prepaidPayable": {
+      "total": null,
+      "discount_value": null,
+      "discount_type": null
+    },
+    "skus": [
+      "700272590103",
+      "700402282403",
+      "700324150102"
+    ],
+    "websiteId": [
+      1
+    ],
+    "city": {
+      "id": "1",
+      "name_en": "Al Mada",
+      "name_ar": "المدى",
+      "enabled": true,
+      "min_sla": 5,
+      "max_sla": 23,
+      "cod_verification": false,
+      "threshold": 0,
+      "max_threshold": 0,
+      "type": "city",
+      "fast_delivery": false,
+      "cutoff_time_excluded": false,
+      "cut_off_time": "22:30",
+      "holiday": "0,1,2",
+      "country": "SA",
+      "province_id": "578",
+      "estimated_date": "2023-06-14 12:49:02",
+      "estimated_date_tostring_en": "Delivery by ${{'type':'bold', 'text':'Wed, 14th Jun'}}$",
+      "estimated_date_tostring_ar": "التوصيل المتوقع Wed, 14th Jun",
+      "threshold_time": ""
+    },
+    "isWhitelistedCustomer": false,
+    "appliedFraudRules": [],
+    "appliedFRulesOutput": [],
+    "otpFlag": 0,
+    "bnplSessionAmount": "156.6",
+    "tabbyPaymentId": null,
+    "totalBurnCashValue": 80
+  },
+  "addQuoteObj2": {
+    "id": "1684234744639835",
+    "storeId": 1,
+    "source": 0,
+    "customerId": "3910692",
+    "customerIsGuest": 0,
+    "quoteItem": [
+      {
+        "addedAt": "2023-05-16T10:59:04.675Z",
+        "landedCost": "20.5700",
+        "parentProductId": "7002725901",
+        "productId": "700272590103",
+        "storeId": 1,
+        "parentSku": "7002725901",
+        "sku": "700272590103",
+        "name": "Hook & Eye Detail Active Leggings",
+        "qty": 1,
+        "price": 52.17,
+        "basePrice": 52.17,
+        "originalPrice": "60.00",
+        "discountPercent": "6",
+        "soldBy": "STYLI",
+        "brandName": "Styli Active",
+        "imgUrl": "https://images.stylishop.com/media/catalog/product/7002725901/images/7002725901_1.jpg?v=1",
+        "discountAmount": 3.6,
+        "baseDiscountAmount": 3.6,
+        "taxPercent": 15,
+        "taxAmount": 7.35,
+        "baseTaxAmount": 7.35,
+        "rowTotal": 52.17,
+        "baseRowTotal": 52.17,
+        "rowTotalWithDiscount": 0,
+        "productType": "simple",
+        "priceInclTax": 60,
+        "basePriceInclTax": 60,
+        "rowTotalInclTax": 60,
+        "baseRowTotalInclTax": 60,
+        "discountTaxCompensationAmount": 0.48,
+        "baseDiscountTaxCompensationAmount": 0.48,
+        "superAttributeId": "213",
+        "superAttributeValue": "1818",
+        "superAttributeLabel": "M",
+        "gender": "Women",
+        "enrich": {
+          "c_20kfilter": 1,
+          "f_price_QAR": 9.7,
+          "last7qty": 6,
+          "color": [
+            "Black"
+          ],
+          "f_price_SAR": 10,
+          "rs_asdfa_2": 1,
+          "c_collection-nov2-false": 1,
+          "c_sanjib-test-dec-16": 1,
+          "c_test-collection-9906": 1,
+          "last30views": 0,
+          "last30cr": 0,
+          "stockCap": 6,
+          "last7rev": 313,
+          "last30qty": 53,
+          "allu": 496088,
+          "sku": "7002725901",
+          "last90rev": 6700,
+          "last30qtyros": 1.767,
+          "rs_allu_2": 490910,
+          "f_price_BHD": 1,
+          "f_price_AED": 9.200000000000001,
+          "c_collection-10": 1,
+          "asdfa": 1,
+          "last90qty": 136,
+          "c_collection-styli-dec6": 1,
+          "last30rev": 2650,
+          "last15qty": 28,
+          "Universal_Women_Ranking": 1,
+          "last30revros": 88.343,
+          "brand_name": "Styli Active",
+          "c_collection-nov1-21": 1,
+          "rs_abhilash_spark_test_2": 1,
+          "abhilash_spark_test": 1,
+          "c_sanjib1stnov22": 1,
+          "rs_Universal_Women_Ranking_1": 486892,
+          "ranktest": 1,
+          "last15rev": 1423,
+          "rs_ranktest_2": 1,
+          "c_combo-offer-qa": 1,
+          "c_nice-to-have-collection-0011": 1,
+          "f_price_KWD": 0.8,
+          "rs_test_abhilash_2": 1,
+          "test_abhilash": 1,
+          "c_bestsellers-acquistionpage-w": 1,
+          "c_sale-b1g1-uae-tc-w": 1,
+          "c_test-shohin-women": 1,
+          "c_top-picks-uae-w": 1,
+          "c_collection-3-bogovm-w": 1,
+          "c_activewear-from-sar-acquisition-w": 1,
+          "c_trending-now-acquition-page-ksa-w": 1,
+          "c_activewear-for-a-new-you-w": 1,
+          "c_flash-sale-7thfeb-2pm-ksa-w": 1,
+          "c_bundle-buy-1-get-1-free-herobanner-uae-w": 1,
+          "c_free-tees-ksa-w": 1,
+          "c_cat-nav-bottoms-activewear-uae-w": 1,
+          "c_top-picks-ksa-w": 1,
+          "c_cat-nav-clothing-activewear-w": 1,
+          "c_view-all-bestsellers-cat-nav-w": 1,
+          "c_activewear-uae-w": 1,
+          "c_discounted-collection-1-vm-w": 1,
+          "c_activewear-bestsellers-cat-nav-w": 1,
+          "c_test-collection-20122022-after-curofy": 1,
+          "c_under-79-merch-women-sd": 1,
+          "c_activewear-w": 1,
+          "c_activewear-starting-from-crm-w": 1,
+          "c_sale-b1g1-topcarousel-w": 1,
+          "c_active-tops-and-bottoms-uae-w": 1,
+          "c_everything-under-sar-19-crm-w": 1,
+          "c_activewear-new-for-you-uae-w": 1,
+          "c_flash-deal-10thmar-1pm-uae-w": 1,
+          "c_upto-60-percent-off-crm-w": 1,
+          "c_flash-sale-fs-w": 1,
+          "c_highstockstyles-wk723": 1,
+          "c_flash-deal-10thmar-1pm-ksa-w": 1,
+          "c_leen-marjans-picks-winterseason-w": 1,
+          "c_dummy-womens-w": 1,
+          "c_cat-nav-bottoms-activewear-w": 1,
+          "c_flash-deal-uae-collection-w": 1,
+          "c_up-to-50-percent-off-new-vm": 1,
+          "c_active-tops-and-bottoms-w": 1,
+          "c_view-all-w": 1,
+          "c_high-depth-options-ksa-w": 1,
+          "c_everything-under-79-w": 1,
+          "c_styli-x-alinma-bank-w": 1,
+          "c_buy-1-get-1-free-herobanner-w": 1,
+          "c_acquisition-page-activewear-w": 1,
+          "c_flash-sale-3rdmar-9pm-uae-w": 1,
+          "c_cat-nav-activewear-clothing-uae-w": 1,
+          "c_flash-sale-7thmar-6pm-uae-w": 1,
+          "c_flash-sale-3rdmar-9pm-ksa-w": 1
+        },
+        "metadata": {
+          "level-1": [
+            {
+              "categoryId": "7",
+              "categoryName": "Women",
+              "path": "Women"
+            }
+          ],
+          "level-2": [
+            {
+              "categoryId": "9",
+              "categoryName": "Clothing",
+              "path": "Women /// Clothing"
+            }
+          ],
+          "level-3": [
+            {
+              "categoryId": "15",
+              "categoryName": "Activewear",
+              "path": "Women /// Clothing /// Activewear"
+            }
+          ],
+          "level-4": [
+            {
+              "categoryId": "248",
+              "categoryName": "Bottoms",
+              "path": "Women /// Clothing /// Activewear /// Bottoms"
+            }
+          ],
+          "sku": "7002725901",
+          "productId": "7002725901"
+        },
+        "disableSpecialPrice": false,
+        "isMulin": false,
+        "droppedPrice": 0,
+        "appliedCouponValue": [
+          {
+            "coupon": "UTEST1",
+            "type": "AUTO",
+            "discount": "3.6",
+            "label": {
+              "en": "Coupon discount",
+              "ar": "وفّرت من كود الخصم"
+            },
+            "id": "645b4587530469002739e884",
+            "isGiftVoucher": false
+          }
+        ],
+        "priceHistory": [
+          {
+            "price": 60,
+            "type": "normal"
+          }
+        ],
+        "taxObj": {}
+      }
+    ],
+    "convertedAt": null,
+    "isActive": 1,
+    "itemsCount": 3,
+    "itemsQty": 3,
+    "storeToBaseRate": 0,
+    "baseCurrencyCode": "SAR",
+    "storeCurrencyCode": "SAR",
+    "grandTotal": 0,
+    "baseGrandTotal": 0,
+    "appliedRuleIds": [],
+    "couponCode": "UTEST1",
+    "subtotal": 166.6,
+    "baseSubtotal": 166.6,
+    "subtotalWithDiscount": 156.6,
+    "baseSubtotalWithDiscount": 156.6,
+    "autoPromoCode": "",
+    "autoPromoAmount": null,
+    "triggerRecollect": 0,
+    "amstorecreditUse": false,
+    "amstorecreditBaseAmount": null,
+    "amstorecreditAmount": null,
+    "promoAppliedAt": null,
+    "quoteAddress": [
+      {
+        "customerAddressId": "2398723",
+        "addressType": "shipping",
+        "email": "",
+        "defaultAddress": true,
+        "firstname": "hgfgh",
+        "lastname": "uygtu",
+        "street": "jrgf frtfgyhuj",
+        "mobileNumber": "+966 509878787",
+        "city": "Al Mada",
+        "region": "Al-Baha{Al-Bahah}",
+        "regionId": "578",
+        "postcode": "",
+        "countryId": "SA",
+        "telephone": "+966 509878787",
+        "shippingMethod": "",
+        "shippingDescription": "",
+        "locationType": "",
+        "nearestLandmark": "",
+        "area": "Al Mada",
+        "buildingNumber": "frtfgyhuj",
+        "latitude": null,
+        "longitude": null,
+        "formattedAddress": "",
+        "cityMapper": {
+          "id": "1",
+          "name_en": "Al Mada",
+          "name_ar": "المدى",
+          "enabled": true,
+          "min_sla": 5,
+          "max_sla": 23,
+          "cod_verification": false,
+          "threshold": 0,
+          "max_threshold": 0,
+          "type": "city",
+          "fast_delivery": false,
+          "cutoff_time_excluded": false,
+          "cut_off_time": "22:30",
+          "holiday": "0,1,2",
+          "country": "SA",
+          "province_id": "578",
+          "estimated_date": "2023-06-14 12:49:02",
+          "estimated_date_tostring_en": "Delivery by ${{'type':'bold', 'text':'Wed, 14th Jun'}}$",
+          "estimated_date_tostring_ar": "التوصيل المتوقع Wed, 14th Jun",
+          "threshold_time": ""
+        }
+      }
+    ],
+    "quotePayment": {
+      "method": null,
+      "additionalInformation": null,
+      "createdAt": null,
+      "updatedAt": "2023-05-22T09:49:02.655Z",
+      "cardBin": "",
+      "applyStoreCredit": null
+    },
+    "metadata": [
+      {
+        "level-1": [
+          {
+            "categoryId": "7",
+            "categoryName": "Women",
+            "path": "Women"
+          }
+        ],
+        "level-2": [
+          {
+            "categoryId": "9",
+            "categoryName": "Clothing",
+            "path": "Women /// Clothing"
+          }
+        ],
+        "level-3": [
+          {
+            "categoryId": "15",
+            "categoryName": "Activewear",
+            "path": "Women /// Clothing /// Activewear"
+          }
+        ],
+        "level-4": [
+          {
+            "categoryId": "248",
+            "categoryName": "Bottoms",
+            "path": "Women /// Clothing /// Activewear /// Bottoms"
+          }
+        ],
+        "sku": "7002725901",
+        "productId": "7002725901"
+      },
+      {
+        "level-1": [
+          {
+            "categoryId": "7",
+            "categoryName": "Women",
+            "path": "Women"
+          }
+        ],
+        "level-2": [
+          {
+            "categoryId": "9",
+            "categoryName": "Clothing",
+            "path": "Women /// Clothing"
+          }
+        ],
+        "level-3": [
+          {
+            "categoryId": "16",
+            "categoryName": "Dresses",
+            "path": "Women /// Clothing /// Dresses"
+          }
+        ],
+        "level-4": [
+          {
+            "categoryId": "328",
+            "categoryName": "Dresses",
+            "path": "Women /// Clothing /// Dresses /// Dresses"
+          }
+        ],
+        "sku": "7004022824",
+        "productId": "7004022824"
+      },
+      {
+        "level-1": [
+          {
+            "categoryId": "7",
+            "categoryName": "Women",
+            "path": "Women"
+          }
+        ],
+        "level-2": [
+          {
+            "categoryId": "9",
+            "categoryName": "Clothing",
+            "path": "Women /// Clothing"
+          }
+        ],
+        "level-3": [
+          {
+            "categoryId": "318",
+            "categoryName": "Tops & T-shirts",
+            "path": "Women /// Clothing /// Tops & T-shirts"
+          }
+        ],
+        "level-4": [
+          {
+            "categoryId": "320",
+            "categoryName": "T-Shirts",
+            "path": "Women /// Clothing /// Tops & T-shirts /// T-Shirts"
+          }
+        ],
+        "sku": "7003241501",
+        "productId": "7003241501"
+      }
+    ],
+    "createdAt": "2023-05-16T10:59:04.639Z",
+    "customerEmail": "sni@gmail.com",
+    "updatedAt": "2023-05-22T11:16:32.383Z",
+    "discountData": [
+      {
+        "couponCode": "UTEST1",
+        "discountType": "FIXED",
+        "redeemType": "MANUAL",
+        "value": "10",
+        "label": "{\"en\":\"Coupon Code\",\"ar\":\"كود الخصم\"}",
+        "onOsp": false,
+        "isGiftVoucher": false
+      }
+    ],
+    "donationAmount": 0,
+    "totalOrderedCount": 3,
+    "flashSale": {
+      "active": null
+    },
+    "currencyConversionRate": 1,
+    "priceDropData": {
+      "offerTime": 0
+    },
+    "coupon": "UTEST1",
+    "check_for_auto_apply": true,
+    "groupedData": {
+      "data": {
+        "700402282403": {
+          "products": [
+            "700402282403"
+          ],
+          "prospect": {
+            "name": "UTEST5B1G1",
+            "description": "",
+            "context": "dresses-w",
+            "addMore": 1
+          }
+        },
+        "700272590103_700324150102": {
+          "products": [
+            "700272590103",
+            "700324150102"
+          ]
+        }
+      },
+      "configs": {
+        "translations": {
+          "appliedText": "{{bundleDesc}} applied!",
+          "addCta": "Add",
+          "prospectText": "Add {{addMore}} more items to avail {{bundleDesc}}"
+        },
+        "bgColor": {
+          "applied": "#EAF1E4",
+          "prospect": "#FAEAEB"
+        }
+      }
+    },
+    "couponDiscount": "10",
+    "shippingThreshold": 150,
+    "shippingCharges": 0,
+    "codCharges": 0,
+    "calcSource": "promo",
+    "prepaidPayable": {
+      "total": null,
+      "discount_value": null,
+      "discount_type": null
+    },
+    "skus": [
+      "700272590103",
+      "700402282403",
+      "700324150102"
+    ],
+    "websiteId": [
+      1
+    ],
+    "city": {
+      "id": "1",
+      "name_en": "Al Mada",
+      "name_ar": "المدى",
+      "enabled": true,
+      "min_sla": 5,
+      "max_sla": 23,
+      "cod_verification": false,
+      "threshold": 0,
+      "max_threshold": 0,
+      "type": "city",
+      "fast_delivery": false,
+      "cutoff_time_excluded": false,
+      "cut_off_time": "22:30",
+      "holiday": "0,1,2",
+      "country": "SA",
+      "province_id": "578",
+      "estimated_date": "2023-06-14 12:49:02",
+      "estimated_date_tostring_en": "Delivery by ${{'type':'bold', 'text':'Wed, 14th Jun'}}$",
+      "estimated_date_tostring_ar": "التوصيل المتوقع Wed, 14th Jun",
+      "threshold_time": ""
+    },
+    "isWhitelistedCustomer": false,
+    "appliedFraudRules": [],
+    "appliedFRulesOutput": [],
+    "otpFlag": 0,
+    "bnplSessionAmount": "156.6",
+    "tabbyPaymentId": null
+  },
+  "quoteForDelete": {
+    "id": "1681477874120535",
+    "storeId": 1,
+    "source": 0,
+    "customerId": "5226813",
+    "customerIsGuest": 0,
+    "quoteItem": [
+      {
+        "addedAt": "2023-04-14T13:11:14.160Z",
+        "landedCost": "37.4300",
+        "parentProductId": "7004174901",
+        "productId": "700417490103",
+        "storeId": 1,
+        "parentSku": "7004174901",
+        "sku": "700417490103",
+        "name": "Lace Insert Sheath Midi Dress",
+        "qty": 1,
+        "price": 111,
+        "basePrice": 111,
+        "originalPrice": "111.00",
+        "discountPercent": 0,
+        "soldBy": "STYLI",
+        "brandName": "Styli",
+        "imgUrl": "https://images.stylishop.com/media/catalog/product/7004174901/images/7004174901_1.jpg?v=1",
+        "discountAmount": 0,
+        "baseDiscountAmount": 0,
+        "taxPercent": 15,
+        "taxAmount": 14.48,
+        "baseTaxAmount": 14.48,
+        "rowTotal": 96.52,
+        "baseRowTotal": 96.52,
+        "rowTotalWithDiscount": 0,
+        "productType": "simple",
+        "priceInclTax": 111,
+        "basePriceInclTax": 111,
+        "rowTotalInclTax": 111,
+        "baseRowTotalInclTax": 111,
+        "discountTaxCompensationAmount": 0,
+        "baseDiscountTaxCompensationAmount": 0,
+        "superAttributeId": "213",
+        "superAttributeValue": "1818",
+        "superAttributeLabel": "M",
+        "caSource": "plp",
+        "caSourceType": "context",
+        "caSourceValue": "dresses-w",
+        "caBannerPromoName": "topcarousel",
+        "gender": "Women",
+        "enrich": {
+          "asdfa": 1,
+          "color": [
+            "Black"
+          ],
+          "Universal_Women_Ranking": 1,
+          "allu": 491354,
+          "brand_name": "Styli",
+          "abhilash_spark_test": 1,
+          "sku": "7004174901",
+          "test_abhilash": 1,
+          "ranktest": 1,
+          "c_bestsellers-acquistionpage-w": 1,
+          "c_influencer-curation-new": 1,
+          "c_highneck-w": 1,
+          "c_amadan-edit-2023-uae-w": 1,
+          "c_alaa-alnoamans-collection-influenceredit-w": 1,
+          "c_national-day-offer-ksa-w": 1,
+          "c_iftar-picks-2023-w": 1,
+          "c_black-and-white-dresses-crm-w": 1,
+          "c_new-season-edit-uae-w": 1,
+          "c_ramadan-dresses-2023-w": 1,
+          "c_nouf-wk38-23": 1,
+          "c_up-to-80-percent-off-uae-w": 1,
+          "c_80sitewide": 1,
+          "c_category-ramadan-dresses-w": 1,
+          "c_dresses-and-jumpsuits-shopbycat-w": 1,
+          "c_ramadan-dresses-2023-uae-w1": 1,
+          "c_elegant-dresses-ramadanspecial-banner-uae-w": 1,
+          "c_view-all-donation-w": 1,
+          "c_nouf-wk37-23": 1,
+          "c_nora-al-alis-collection-influenceredit-w": 1,
+          "c_lace-23-w": 1,
+          "c_highnecks-uae-w": 1,
+          "c_trendydresses-crm-w": 1,
+          "c_cat-nav-midi-dresse-uae-w": 1,
+          "c_cat-nav-nightwear-nightdress-w": 1,
+          "c_midi-and-maxi-dresses-ramadan-w": 1,
+          "c_dresses-starting-from-w": 1,
+          "c_black-dresses-interstitial-tile-dresses-w": 1,
+          "c_dresses-uae-w": 1,
+          "c_cat-nav-midi-dresses-w": 1,
+          "c_cat-nav-clothing-w": 1,
+          "c_view-all-game-w": 1,
+          "c_yasmeen-dakheels-collection-influenceredit-w": 1,
+          "c_flash-sale-fs-w": 1,
+          "c_black-dresses-interstitial-tile-dresses-uae-w": 1,
+          "c_up-to-80-percent-off-w": 1,
+          "c_cat-nav-new-arrivals-w": 1,
+          "c_view-all-uae-w": 1,
+          "c_cashback-offer-w": 1,
+          "c_cashback-offer-uae-w": 1,
+          "c_modesr-ramadan-23": 1,
+          "c_cat-nav-dresses-new-arrivals-w": 1,
+          "c_spring-summer-2021-2022-w": 1,
+          "c_iftar-picks-ramadan-uae-w": 1,
+          "c_dresses-and-sets-shopbycat-w": 1,
+          "c_fresh-arrivals-w": 1,
+          "c_dresses-w": 1,
+          "c_acquisition-page-dresses-w": 1,
+          "c_doaa-alnajars-collection-influenceredit-w": 1,
+          "c_flash-deal-uae-collection-w": 1,
+          "c_dresses-starting-at-29-w": 1,
+          "c_national-day-edit-uae-w": 1,
+          "c_cat-nav-black-dresses-w": 1,
+          "c_midi-and-maxi-dresses-ramadan-uae-w": 1,
+          "c_view-all-w": 1,
+          "c_dresses-crm-w": 1,
+          "c_khloud-abouzieids-collection": 1,
+          "c_styli-x-alinma-bank-w": 1,
+          "c_best-sellers-uae-w": 1,
+          "c_dresses-starting-sar-35-crm-w": 1,
+          "c_nouf-wk38-2": 1,
+          "c_bestsellers-curofy-w": 1,
+          "c_cat-nav-clothing-dresses-uae-w": 1,
+          "c_ramadan-w-2023": 1,
+          "c_new-season-edit-ksa-w": 1,
+          "c_cat-nav-black-dresses-uae-w": 1,
+          "c_cat-nav-clothing-dresses-w": 1
+        },
+        "metadata": {
+          "level-1": [
+            {
+              "categoryId": "7",
+              "categoryName": "Women",
+              "path": "Women"
+            }
+          ],
+          "level-2": [
+            {
+              "categoryId": "9",
+              "categoryName": "Clothing",
+              "path": "Women /// Clothing"
+            }
+          ],
+          "level-3": [
+            {
+              "categoryId": "16",
+              "categoryName": "Dresses",
+              "path": "Women /// Clothing /// Dresses"
+            }
+          ],
+          "level-4": [
+            {
+              "categoryId": "328",
+              "categoryName": "Dresses",
+              "path": "Women /// Clothing /// Dresses /// Dresses"
+            }
+          ],
+          "sku": "7004174901",
+          "productId": "7004174901"
+        },
+        "disableSpecialPrice": false,
+        "isMulin": false,
+        "droppedPrice": 0,
+        "appliedCouponValue": [],
+        "priceHistory": [
+          {
+            "price": 111,
+            "type": "normal"
+          }
+        ]
+      }
+    ],
+    "convertedAt": null,
+    "isActive": 1,
+    "itemsCount": 1,
+    "itemsQty": 1,
+    "storeToBaseRate": 0,
+    "baseCurrencyCode": "SAR",
+    "storeCurrencyCode": "SAR",
+    "grandTotal": 0,
+    "baseGrandTotal": 0,
+    "appliedRuleIds": [],
+    "couponCode": null,
+    "subtotal": 111,
+    "baseSubtotal": 111,
+    "subtotalWithDiscount": 111,
+    "baseSubtotalWithDiscount": 111,
+    "autoPromoCode": null,
+    "autoPromoAmount": null,
+    "triggerRecollect": 0,
+    "amstorecreditUse": false,
+    "amstorecreditBaseAmount": null,
+    "amstorecreditAmount": null,
+    "promoAppliedAt": null,
+    "quoteAddress": [
+      {
+        "customerAddressId": "",
+        "addressType": "shipping",
+        "email": "",
+        "defaultAddress": false,
+        "firstname": "",
+        "lastname": "",
+        "mobileNumber": "",
+        "city": "",
+        "region": "",
+        "regionId": "",
+        "postcode": "",
+        "countryId": "",
+        "telephone": "",
+        "shippingMethod": "",
+        "shippingDescription": "",
+        "locationType": "",
+        "nearestLandmark": "",
+        "area": "",
+        "buildingNumber": "",
+        "latitude": null,
+        "longitude": null,
+        "formattedAddress": "",
+        "cityMapper": {}
+      }
+    ],
+    "quotePayment": {
+      "method": null,
+      "additionalInformation": null,
+      "createdAt": null,
+      "updatedAt": null,
+      "cardBin": "",
+      "applyStoreCredit": null
+    },
+    "metadata": [
+      {
+        "level-1": [
+          {
+            "categoryId": "7",
+            "categoryName": "Women",
+            "path": "Women"
+          }
+        ],
+        "level-2": [
+          {
+            "categoryId": "9",
+            "categoryName": "Clothing",
+            "path": "Women /// Clothing"
+          }
+        ],
+        "level-3": [
+          {
+            "categoryId": "16",
+            "categoryName": "Dresses",
+            "path": "Women /// Clothing /// Dresses"
+          }
+        ],
+        "level-4": [
+          {
+            "categoryId": "328",
+            "categoryName": "Dresses",
+            "path": "Women /// Clothing /// Dresses /// Dresses"
+          }
+        ],
+        "sku": "7004174901",
+        "productId": "7004174901"
+      }
+    ],
+    "createdAt": "2023-04-14T13:11:14.120Z",
+    "customerEmail": "snigg@gmail.com",
+    "updatedAt": "2023-04-19T09:43:41.136Z",
+    "previousOrderList": [
+      {
+        "status": "processing",
+        "incrementId": "000327647",
+        "createdAt": "2022-12-15T12:36:56.000Z",
+        "holdOrder": 0
+      }
+    ],
+    "discountData": [],
+    "donationAmount": 0,
+    "totalOrderedCount": 1,
+    "flashSale": {
+      "active": null
+    },
+    "currencyConversionRate": 1,
+    "priceDropData": {
+      "offerTime": 0
+    },
+    "coupon": null,
+    "check_for_auto_apply": true,
+    "groupedData": {
+      "data": {
+        "700417490103": {
+          "products": [
+            "700417490103"
+          ]
+        }
+      },
+      "configs": {
+        "translations": {
+          "appliedText": "{{bundleDesc}} applied!",
+          "addCta": "Add",
+          "prospectText": "Add {{addMore}} more items to avail {{bundleDesc}}"
+        },
+        "bgColor": {
+          "applied": "#EAF1E4",
+          "prospect": "#FAEAEB"
+        }
+      }
+    },
+    "couponDiscount": null,
+    "shippingThreshold": 200,
+    "shippingCharges": 10,
+    "codCharges": 0,
+    "calcSource": "native",
+    "prepaidPayable": {},
+    "skus": [
+      "700417490103"
+    ],
+    "websiteId": [
+      1
+    ],
+    "coinDiscountData": {
+      "message": {
+        "default": "Success",
+        "en": "Success",
+        "ar": "Success"
+      },
+      "storeCurrency": "SAR",
+      "coins": 0,
+      "customerCoinsAvailable": 0,
+      "storeCoinValue": "0.00",
+      "baseCurrencyValue": "0.00",
+      "isCoinApplied": 1,
+      "statusMinValueSatisfy": 0
+    },
+    "freeShippingConfig": {},
+    "webhookFreeShippingData": {}
+  },
+  "quoteWithoutCoupon": {
+    "id": "1684234744639835",
+    "storeId": 7,
+    "source": 0,
+    "customerId": "3910691",
+    "customerIsGuest": 0,
+    "quoteItem": [
+      {
+        "addedAt": "2023-05-16T10:59:04.675Z",
+        "landedCost": "20.5700",
+        "parentProductId": "7002725901",
+        "productId": "700272590103",
+        "storeId": 1,
+        "parentSku": "7002725901",
+        "sku": "700272590103",
+        "name": "Hook & Eye Detail Active Leggings",
+        "qty": 1,
+        "price": 60,
+        "basePrice": 60,
+        "originalPrice": "60.00",
+        "discountPercent": 0,
+        "soldBy": "STYLI",
+        "brandName": "Styli Active",
+        "imgUrl": "https://images.stylishop.com/media/catalog/product/7002725901/images/7002725901_1.jpg?v=1",
+        "discountAmount": 0,
+        "baseDiscountAmount": 0,
+        "taxPercent": 15,
+        "taxAmount": 7.83,
+        "baseTaxAmount": 7.83,
+        "rowTotal": 52.17,
+        "baseRowTotal": 52.17,
+        "rowTotalWithDiscount": 0,
+        "productType": "simple",
+        "priceInclTax": 60,
+        "basePriceInclTax": 60,
+        "rowTotalInclTax": 60,
+        "baseRowTotalInclTax": 60,
+        "discountTaxCompensationAmount": 0,
+        "baseDiscountTaxCompensationAmount": 0,
+        "superAttributeId": "213",
+        "superAttributeValue": "1818",
+        "superAttributeLabel": "M",
+        "gender": "Women",
+        "enrich": {
+          "c_20kfilter": 1,
+          "f_price_QAR": 9.7,
+          "last7qty": 6,
+          "color": [
+            "Black"
+          ],
+          "f_price_SAR": 10,
+          "rs_asdfa_2": 1,
+          "c_collection-nov2-false": 1,
+          "c_sanjib-test-dec-16": 1,
+          "c_test-collection-9906": 1,
+          "last30views": 0,
+          "last30cr": 0,
+          "stockCap": 6,
+          "last7rev": 313,
+          "last30qty": 53,
+          "allu": 496088,
+          "sku": "7002725901",
+          "last90rev": 6700,
+          "last30qtyros": 1.767,
+          "rs_allu_2": 490910,
+          "f_price_BHD": 1,
+          "f_price_AED": 9.200000000000001,
+          "c_collection-10": 1,
+          "asdfa": 1,
+          "last90qty": 136,
+          "c_collection-styli-dec6": 1,
+          "last30rev": 2650,
+          "last15qty": 28,
+          "Universal_Women_Ranking": 1,
+          "last30revros": 88.343,
+          "brand_name": "Styli Active",
+          "c_collection-nov1-21": 1,
+          "rs_abhilash_spark_test_2": 1,
+          "abhilash_spark_test": 1,
+          "c_sanjib1stnov22": 1,
+          "rs_Universal_Women_Ranking_1": 486892,
+          "ranktest": 1,
+          "last15rev": 1423,
+          "rs_ranktest_2": 1,
+          "c_combo-offer-qa": 1,
+          "c_nice-to-have-collection-0011": 1,
+          "f_price_KWD": 0.8,
+          "rs_test_abhilash_2": 1,
+          "test_abhilash": 1,
+          "c_bestsellers-acquistionpage-w": 1,
+          "c_sale-b1g1-uae-tc-w": 1,
+          "c_test-shohin-women": 1,
+          "c_top-picks-uae-w": 1,
+          "c_collection-3-bogovm-w": 1,
+          "c_activewear-from-sar-acquisition-w": 1,
+          "c_trending-now-acquition-page-ksa-w": 1,
+          "c_activewear-for-a-new-you-w": 1,
+          "c_flash-sale-7thfeb-2pm-ksa-w": 1,
+          "c_bundle-buy-1-get-1-free-herobanner-uae-w": 1,
+          "c_free-tees-ksa-w": 1,
+          "c_cat-nav-bottoms-activewear-uae-w": 1,
+          "c_top-picks-ksa-w": 1,
+          "c_cat-nav-clothing-activewear-w": 1,
+          "c_view-all-bestsellers-cat-nav-w": 1,
+          "c_activewear-uae-w": 1,
+          "c_discounted-collection-1-vm-w": 1,
+          "c_activewear-bestsellers-cat-nav-w": 1,
+          "c_test-collection-20122022-after-curofy": 1,
+          "c_under-79-merch-women-sd": 1,
+          "c_activewear-w": 1,
+          "c_activewear-starting-from-crm-w": 1,
+          "c_sale-b1g1-topcarousel-w": 1,
+          "c_active-tops-and-bottoms-uae-w": 1,
+          "c_everything-under-sar-19-crm-w": 1,
+          "c_activewear-new-for-you-uae-w": 1,
+          "c_flash-deal-10thmar-1pm-uae-w": 1,
+          "c_upto-60-percent-off-crm-w": 1,
+          "c_flash-sale-fs-w": 1,
+          "c_highstockstyles-wk723": 1,
+          "c_flash-deal-10thmar-1pm-ksa-w": 1,
+          "c_leen-marjans-picks-winterseason-w": 1,
+          "c_dummy-womens-w": 1,
+          "c_cat-nav-bottoms-activewear-w": 1,
+          "c_flash-deal-uae-collection-w": 1,
+          "c_up-to-50-percent-off-new-vm": 1,
+          "c_active-tops-and-bottoms-w": 1,
+          "c_view-all-w": 1,
+          "c_high-depth-options-ksa-w": 1,
+          "c_everything-under-79-w": 1,
+          "c_styli-x-alinma-bank-w": 1,
+          "c_buy-1-get-1-free-herobanner-w": 1,
+          "c_acquisition-page-activewear-w": 1,
+          "c_flash-sale-3rdmar-9pm-uae-w": 1,
+          "c_cat-nav-activewear-clothing-uae-w": 1,
+          "c_flash-sale-7thmar-6pm-uae-w": 1,
+          "c_flash-sale-3rdmar-9pm-ksa-w": 1
+        },
+        "metadata": {
+          "level-1": [
+            {
+              "categoryId": "7",
+              "categoryName": "Women",
+              "path": "Women"
+            }
+          ],
+          "level-2": [
+            {
+              "categoryId": "9",
+              "categoryName": "Clothing",
+              "path": "Women /// Clothing"
+            }
+          ],
+          "level-3": [
+            {
+              "categoryId": "15",
+              "categoryName": "Activewear",
+              "path": "Women /// Clothing /// Activewear"
+            }
+          ],
+          "level-4": [
+            {
+              "categoryId": "248",
+              "categoryName": "Bottoms",
+              "path": "Women /// Clothing /// Activewear /// Bottoms"
+            }
+          ],
+          "sku": "7002725901",
+          "productId": "7002725901"
+        },
+        "disableSpecialPrice": false,
+        "isMulin": false,
+        "droppedPrice": 0,
+        "appliedCouponValue": [],
+        "priceHistory": [
+          {
+            "price": 60,
+            "type": "normal"
+          }
+        ],
+        "taxObj": {}
+      },
+      {
+        "addedAt": "2023-05-18T06:48:03.378Z",
+        "landedCost": "31.6800",
+        "parentProductId": "7004022824",
+        "productId": "700402282403",
+        "storeId": 1,
+        "parentSku": "7004022824",
+        "sku": "700402282403",
+        "name": "Floral Print Drop Waist A-Line Maxi Dress",
+        "qty": 1,
+        "price": 77.35,
+        "basePrice": 77.35,
+        "originalPrice": "91.00",
+        "discountPercent": 0,
+        "soldBy": "STYLI",
+        "brandName": "Styli",
+        "imgUrl": "https://images.stylishop.com/media/catalog/product/7004022824/images/7004022824_1.jpg?v=1",
+        "discountAmount": 0,
+        "baseDiscountAmount": 0,
+        "taxPercent": 15,
+        "taxAmount": 10.09,
+        "baseTaxAmount": 10.09,
+        "rowTotal": 67.26,
+        "baseRowTotal": 67.26,
+        "rowTotalWithDiscount": 0,
+        "productType": "simple",
+        "priceInclTax": 77.35,
+        "basePriceInclTax": 77.35,
+        "rowTotalInclTax": 77.35,
+        "baseRowTotalInclTax": 77.35,
+        "discountTaxCompensationAmount": 0,
+        "baseDiscountTaxCompensationAmount": 0,
+        "superAttributeId": "213",
+        "superAttributeValue": "1818",
+        "superAttributeLabel": "M",
+        "caSource": "plp",
+        "caSourceType": "context",
+        "caSourceValue": "dima-alhaj-influencerlook-hp-w",
+        "caBannerPromoName": "0",
+        "gender": "Women",
+        "enrich": {
+          "asdfa": 1,
+          "color": [
+            "Off White"
+          ],
+          "Universal_Women_Ranking": 1,
+          "allu": 491627,
+          "brand_name": "Styli",
+          "sku": "7004022824",
+          "abhilash_spark_test": 1,
+          "test_abhilash": 1,
+          "ranktest": 1,
+          "c_suhoor-deal-1stapr-8pm-ksa-w": 1,
+          "c_amadan-edit-2023-uae-w": 1,
+          "c_influencer-curation-new": 1,
+          "c_up-to-30-percent-off-w": 1,
+          "c_alaa-alnoamans-collection-influenceredit-w": 1,
+          "c_inflcuration-new": 1,
+          "c_collection-may23-1": 1,
+          "c_suhoor-deal-3rdapr-8pm-ksa-w": 1,
+          "c_suhoor-deal-3rdapr-8pm-uae-w": 1,
+          "c_elegant-dresses-ramadanspecial-banner-uae-w": 1,
+          "c_cat-nav-a-line-dresses-w": 1,
+          "c_suhoor-deal-1stapr-8pm-uae-w": 1,
+          "c_spring-florals-w": 1,
+          "c_nouf-wk37-23": 1,
+          "c_dima-alhaj-influencerlook-hp-w": 1,
+          "c_nora-al-alis-collection-influenceredit-w": 1,
+          "c_cat-nav-maxi-dresses-w": 1,
+          "c_midi-and-maxi-dresses-ramadan-w": 1,
+          "c_cat-nav-back-to-cool-dresses-uae-w": 1,
+          "c_suhoor-picks-2023-w": 1,
+          "c_flash-deal-10thmar-1pm-uae-w": 1,
+          "c_dresses-under-crm-w": 1,
+          "c_yasmeen-dakheels-collection-influenceredit-w": 1,
+          "c_flash-sale-fs-w": 1,
+          "c_suhoor-deal-8thapril-8pm-uae-w": 1,
+          "c_cat-nav-a-line-dresses-uae-w": 1,
+          "c_flash-deal-10thmar-1pm-ksa-w": 1,
+          "c_up-to-70-percent-off-bestsellers-landingpage-ss23-w": 1,
+          "c_suhoor-deal-8thapril-8pm-ksa-w": 1,
+          "c_cat-nav-dresses-new-arrivals-w": 1,
+          "c_dresses-w": 1,
+          "c_doaa-alnajars-collection-influenceredit-w": 1,
+          "c_flash-deal-uae-collection-w": 1,
+          "c_view-all-w": 1,
+          "c_best-sellers-uae-w": 1,
+          "c_nouf-wk36-23": 1,
+          "c_bestsellers-curofy-w": 1,
+          "c_influencer-curation-w": 1,
+          "c_ramadan-w-2023": 1,
+          "c_up-to-60-percent-off-w": 1,
+          "c_cat-nav-clothing-dresses-w": 1
+        },
+        "metadata": {
+          "level-1": [
+            {
+              "categoryId": "7",
+              "categoryName": "Women",
+              "path": "Women"
+            }
+          ],
+          "level-2": [
+            {
+              "categoryId": "9",
+              "categoryName": "Clothing",
+              "path": "Women /// Clothing"
+            }
+          ],
+          "level-3": [
+            {
+              "categoryId": "16",
+              "categoryName": "Dresses",
+              "path": "Women /// Clothing /// Dresses"
+            }
+          ],
+          "level-4": [
+            {
+              "categoryId": "328",
+              "categoryName": "Dresses",
+              "path": "Women /// Clothing /// Dresses /// Dresses"
+            }
+          ],
+          "sku": "7004022824",
+          "productId": "7004022824"
+        },
+        "disableSpecialPrice": false,
+        "specialPrice": "77.35",
+        "isMulin": false,
+        "droppedPrice": 0,
+        "appliedCouponValue": [],
+        "priceHistory": [
+          {
+            "price": 77.35,
+            "type": "normal"
+          }
+        ],
+        "taxObj": {}
+      },
+      {
+        "addedAt": "2023-05-18T08:01:46.361Z",
+        "landedCost": "14.5400",
+        "parentProductId": "7003241501",
+        "productId": "700324150102",
+        "storeId": 1,
+        "parentSku": "7003241501",
+        "sku": "700324150102",
+        "name": "Long Sleeves Forever Slogan Back Print Oversized T-shirt",
+        "qty": 1,
+        "price": 29.25,
+        "basePrice": 29.25,
+        "originalPrice": "45.00",
+        "discountPercent": 0,
+        "soldBy": "STYLI",
+        "brandName": "Styli",
+        "imgUrl": "https://images.stylishop.com/media/catalog/product/7003241501/images/7003241501_1.jpg",
+        "discountAmount": 0,
+        "baseDiscountAmount": 0,
+        "taxPercent": 15,
+        "taxAmount": 3.82,
+        "baseTaxAmount": 3.82,
+        "rowTotal": 25.43,
+        "baseRowTotal": 25.43,
+        "rowTotalWithDiscount": 0,
+        "productType": "simple",
+        "priceInclTax": 29.25,
+        "basePriceInclTax": 29.25,
+        "rowTotalInclTax": 29.25,
+        "baseRowTotalInclTax": 29.25,
+        "discountTaxCompensationAmount": 0,
+        "baseDiscountTaxCompensationAmount": 0,
+        "superAttributeId": "213",
+        "superAttributeValue": "1817",
+        "superAttributeLabel": "S",
+        "caSource": "plp",
+        "caSourceType": "context",
+        "caSourceValue": "winterwear-w",
+        "caBannerPromoName": "EN-KSA-Top Category-W",
+        "gender": "Women",
+        "enrich": {
+          "asdfa": 1,
+          "color": [
+            "Black"
+          ],
+          "c_winterwear-collection-test-w": 1,
+          "Universal_Women_Ranking": 1,
+          "brand_name": "Styli",
+          "abhilash_spark_test": 1,
+          "c_sanjib-test-dec-16": 1,
+          "rs_Universal_Women_Ranking_1": 494167,
+          "ranktest": 1,
+          "c_combo-offer-qa": 1,
+          "allu": 490950,
+          "sku": "7003241501",
+          "test_abhilash": 1,
+          "c_cat-nav-winter-topwear-hw-w": 1,
+          "c_everyday-t-shirts-uae-w": 1,
+          "c_camping-collection-2022-w": 1,
+          "c_test-shohin-women": 1,
+          "c_new-topwear-acquisition-page-w": 1,
+          "c_everything-under-sar-49-w": 1,
+          "c_30-percent-to-80-percent-uae-w": 1,
+          "c_flash-deal-9thmay-5pm-uae-w": 1,
+          "c_bundle-buy-1-get-2-free-brands-w": 1,
+          "c_flash-sale-7thfeb-2pm-ksa-w": 1,
+          "c_flash-deal-28thapr-6pm-uae-w": 1,
+          "c_cotton-topwear-w": 1,
+          "c_up-to-80-percent-off-uae-w": 1,
+          "c_winterwear-uae-w": 1,
+          "c_flash-sale-12thfeb-2pm-uae-w": 1,
+          "c_flash-deal-12thmar-2pm-ksa-w": 1,
+          "c_suhoor-deal-10thapr-8pm-ksa-w": 1,
+          "c_cat-nav-printed-t-shirts-w": 1,
+          "c_tops-and-t-shirts-from-sar-19": 1,
+          "c_flash-deal-7thmay-6pm-uae-w": 1,
+          "c_coats-sweaters-and-more-under-sar-69-w": 1,
+          "c_tops-w": 1,
+          "c_t-shirts-w": 1,
+          "c_daytime-w": 1,
+          "c_tops-uae-w": 1,
+          "c_flash-sale-12thfeb-2pm-ksa-w": 1,
+          "c_suhoor-deal-10thapr-8pm-uae-w": 1,
+          "c_test-collection-20122022-after-curofy": 1,
+          "c_topwear-and-jumpsuits-upto-80-percent-off-crm-w": 1,
+          "c_flash-deal-7thmay-6pm-ksa-w": 1,
+          "c_flash-sale-10thfeb-6pm-ksa-w": 1,
+          "c_cat-nav-tops-under-49-w": 1,
+          "c_flash-deal-28thmar-8pm-uae-w": 1,
+          "c_topwear-buy-1-get-1-free-crm-uae-w": 1,
+          "c_cat-nav-casual-tops-uae-w": 1,
+          "c_cat-nav-printed-t-shirts-uae-w": 1,
+          "c_flash-deal-24thmar-7pm-uae-w": 1,
+          "c_casuals-w": 1,
+          "c_cotton-topwear-uae-w": 1,
+          "c_flash-deal-10thmar-1pm-uae-w": 1,
+          "c_cat-nav-topwear-outerwear-uae-w": 1,
+          "c_flash-sale-10thfeb-6pm-uae-w": 1,
+          "c_kawkabs-collection-influenceredit-w": 1,
+          "c_cat-nav-topwear-outerwear-w": 1,
+          "c_winterwear-w": 1,
+          "c_flash-sale-fs-w": 1,
+          "c_flash-sale-9thfeb-6pm-uae-w": 1,
+          "c_flash-deal-28thmar-8pm-ksa-w": 1,
+          "c_coats-sweaters-and-more-under-aed-69-w": 1,
+          "c_up-to-80-percent-off-w": 1,
+          "c_flash-deal-24thmar-7pm-ksa-w": 1,
+          "c_suhoor-deal-5thapr-8pm-ksa-w": 1,
+          "c_flash-deal-10thmar-1pm-ksa-w": 1,
+          "c_suhoor-deal-5thapr-8pm-uae-w": 1,
+          "c_light-winterwear-new-w": 1,
+          "c_up-to-60-percent-off-uae-w": 1,
+          "c_casuals-uae-w": 1,
+          "c_flash-sale-9thfeb-6pm-ksa-w": 1,
+          "c_cat-nav-t-shirts-min-30-percent-off-uae-w": 1,
+          "c_20-percent-70-percent-off-w": 1,
+          "c_daytime-wear-test-w": 1,
+          "c_30-percent-to-80-w": 1,
+          "c_bundle-buy-1-get-2-free-brands-uae-w": 1,
+          "c_flash-deal-uae-collection-w": 1,
+          "c_flash-deal-9thmay-5pm-ksa-w": 1,
+          "c_flash-deal-28thapr-6pm-ksa-w": 1,
+          "c_up-to-50-percent-off-new-vm": 1,
+          "c_30-percent-60-percent-off-w": 1,
+          "c_view-all-w": 1,
+          "c_20-percent-70-percent-off-uae-w": 1,
+          "c_cat-nav-black-tops-w": 1,
+          "c_on-discount-acquition-page-ksa-w": 1,
+          "c_styli-x-alinma-bank-w": 1,
+          "c_bottomwear-and-topwear-min-30-percent-off-crm-w": 1,
+          "c_cat-nav-graphic-t-shirts-uae-w": 1,
+          "c_new-everything-under-sar-39-w": 1,
+          "c_acquisition-page-topwear": 1,
+          "c_flash-sale-3rdmar-9pm-uae-w": 1,
+          "c_daytime-chic-crm-w": 1,
+          "c_week23-new-w": 1,
+          "c_flash-sale-7thmar-6pm-uae-w": 1,
+          "c_cat-nav-black-tops-uae-w": 1,
+          "c_cat-nav-tshirts-min-30-percent-off-uae-w": 1,
+          "c_daytime-casuals-uae-w": 1,
+          "c_up-to-60-percent-off-w": 1,
+          "c_cat-nav-casual-tops-w": 1,
+          "c_flash-sale-3rdmar-9pm-ksa-w": 1
+        },
+        "metadata": {
+          "level-1": [
+            {
+              "categoryId": "7",
+              "categoryName": "Women",
+              "path": "Women"
+            }
+          ],
+          "level-2": [
+            {
+              "categoryId": "9",
+              "categoryName": "Clothing",
+              "path": "Women /// Clothing"
+            }
+          ],
+          "level-3": [
+            {
+              "categoryId": "318",
+              "categoryName": "Tops & T-shirts",
+              "path": "Women /// Clothing /// Tops & T-shirts"
+            }
+          ],
+          "level-4": [
+            {
+              "categoryId": "320",
+              "categoryName": "T-Shirts",
+              "path": "Women /// Clothing /// Tops & T-shirts /// T-Shirts"
+            }
+          ],
+          "sku": "7003241501",
+          "productId": "7003241501"
+        },
+        "disableSpecialPrice": false,
+        "specialPrice": "29.25",
+        "isMulin": false,
+        "droppedPrice": 0,
+        "appliedCouponValue": [],
+        "priceHistory": [
+          {
+            "price": 29.25,
+            "type": "normal"
+          }
+        ],
+        "taxObj": {}
+      }
+    ],
+    "convertedAt": null,
+    "isActive": 1,
+    "itemsCount": 3,
+    "itemsQty": 3,
+    "storeToBaseRate": 0,
+    "baseCurrencyCode": "SAR",
+    "storeCurrencyCode": "SAR",
+    "grandTotal": 0,
+    "baseGrandTotal": 0,
+    "appliedRuleIds": [],
+    "couponCode": null,
+    "subtotal": 166.6,
+    "baseSubtotal": 166.6,
+    "subtotalWithDiscount": 166.6,
+    "baseSubtotalWithDiscount": 166.6,
+    "autoPromoCode": null,
+    "autoPromoAmount": null,
+    "triggerRecollect": 0,
+    "amstorecreditUse": false,
+    "amstorecreditBaseAmount": null,
+    "amstorecreditAmount": 100,
+    "promoAppliedAt": null,
+    "quoteAddress": [
+      {
+        "customerAddressId": "2398723",
+        "addressType": "shipping",
+        "email": "",
+        "defaultAddress": true,
+        "firstname": "hgfgh",
+        "lastname": "uygtu",
+        "street": "jrgf frtfgyhuj",
+        "mobileNumber": "+966 509878787",
+        "city": "Al Mada",
+        "region": "Al-Baha{Al-Bahah}",
+        "regionId": "578",
+        "postcode": "",
+        "countryId": "SA",
+        "telephone": "+966 509878787",
+        "shippingMethod": "",
+        "shippingDescription": "",
+        "locationType": "",
+        "nearestLandmark": "",
+        "area": "Al Mada",
+        "buildingNumber": "frtfgyhuj",
+        "latitude": null,
+        "longitude": null,
+        "formattedAddress": "",
+        "cityMapper": {
+          "id": "1",
+          "name_en": "Al Mada",
+          "name_ar": "المدى",
+          "enabled": true,
+          "min_sla": 5,
+          "max_sla": 22,
+          "cod_verification": false,
+          "threshold": 0,
+          "max_threshold": 0,
+          "type": "city",
+          "fast_delivery": false,
+          "cutoff_time_excluded": false,
+          "cut_off_time": "22:30",
+          "holiday": "0,1,2",
+          "country": "SA",
+          "province_id": "578",
+          "estimated_date": "2023-06-14 14:14:02",
+          "estimated_date_tostring_en": "Delivery by ${{'type':'bold', 'text':'Wed, 14th Jun'}}$",
+          "estimated_date_tostring_ar": "التوصيل المتوقع Wed, 14th Jun",
+          "threshold_time": ""
+        }
+      }
+    ],
+    "quotePayment": {
+      "method": null,
+      "additionalInformation": null,
+      "createdAt": null,
+      "updatedAt": "2023-05-23T11:14:02.898Z",
+      "cardBin": "",
+      "applyStoreCredit": null
+    },
+    "metadata": [
+      {
+        "level-1": [
+          {
+            "categoryId": "7",
+            "categoryName": "Women",
+            "path": "Women"
+          }
+        ],
+        "level-2": [
+          {
+            "categoryId": "9",
+            "categoryName": "Clothing",
+            "path": "Women /// Clothing"
+          }
+        ],
+        "level-3": [
+          {
+            "categoryId": "15",
+            "categoryName": "Activewear",
+            "path": "Women /// Clothing /// Activewear"
+          }
+        ],
+        "level-4": [
+          {
+            "categoryId": "248",
+            "categoryName": "Bottoms",
+            "path": "Women /// Clothing /// Activewear /// Bottoms"
+          }
+        ],
+        "sku": "7002725901",
+        "productId": "7002725901"
+      },
+      {
+        "level-1": [
+          {
+            "categoryId": "7",
+            "categoryName": "Women",
+            "path": "Women"
+          }
+        ],
+        "level-2": [
+          {
+            "categoryId": "9",
+            "categoryName": "Clothing",
+            "path": "Women /// Clothing"
+          }
+        ],
+        "level-3": [
+          {
+            "categoryId": "16",
+            "categoryName": "Dresses",
+            "path": "Women /// Clothing /// Dresses"
+          }
+        ],
+        "level-4": [
+          {
+            "categoryId": "328",
+            "categoryName": "Dresses",
+            "path": "Women /// Clothing /// Dresses /// Dresses"
+          }
+        ],
+        "sku": "7004022824",
+        "productId": "7004022824"
+      },
+      {
+        "level-1": [
+          {
+            "categoryId": "7",
+            "categoryName": "Women",
+            "path": "Women"
+          }
+        ],
+        "level-2": [
+          {
+            "categoryId": "9",
+            "categoryName": "Clothing",
+            "path": "Women /// Clothing"
+          }
+        ],
+        "level-3": [
+          {
+            "categoryId": "318",
+            "categoryName": "Tops & T-shirts",
+            "path": "Women /// Clothing /// Tops & T-shirts"
+          }
+        ],
+        "level-4": [
+          {
+            "categoryId": "320",
+            "categoryName": "T-Shirts",
+            "path": "Women /// Clothing /// Tops & T-shirts /// T-Shirts"
+          }
+        ],
+        "sku": "7003241501",
+        "productId": "7003241501"
+      }
+    ],
+    "createdAt": "2023-05-16T10:59:04.639Z",
+    "customerEmail": "sni@gmail.com",
+    "updatedAt": "2023-05-24T06:29:35.788Z",
+    "previousOrderList": [
+      {
+        "status": "processing",
+        "incrementId": "000359733",
+        "createdAt": "2023-05-11T07:05:35.000Z",
+        "holdOrder": null
+      },
+      {
+        "status": "processing",
+        "incrementId": "000356459",
+        "createdAt": "2023-04-20T07:45:55.000Z",
+        "holdOrder": null
+      },
+      {
+        "status": "processing",
+        "incrementId": "000355779",
+        "createdAt": "2023-04-14T07:05:18.000Z",
+        "holdOrder": null
+      }
+    ],
+    "discountData": [],
+    "donationAmount": 0,
+    "totalOrderedCount": 3,
+    "flashSale": {
+      "active": null
+    },
+    "currencyConversionRate": 1,
+    "priceDropData": {
+      "offerTime": 0
+    },
+    "coupon": null,
+    "check_for_auto_apply": true,
+    "groupedData": {
+      "data": {
+        "700402282403": {
+          "products": [
+            "700402282403"
+          ],
+          "prospect": {
+            "name": "UTEST5B1G1",
+            "description": "",
+            "context": "dresses-w",
+            "addMore": 1
+          }
+        },
+        "700272590103_700324150102": {
+          "products": [
+            "700272590103",
+            "700324150102"
+          ]
+        }
+      },
+      "configs": {
+        "translations": {
+          "appliedText": "{{bundleDesc}} applied!",
+          "addCta": "Add",
+          "prospectText": "Add {{addMore}} more items to avail {{bundleDesc}}"
+        },
+        "bgColor": {
+          "applied": "#EAF1E4",
+          "prospect": "#FAEAEB"
+        }
+      }
+    },
+    "couponDiscount": null,
+    "shippingThreshold": 300,
+    "shippingCharges": 10,
+    "codCharges": 0,
+    "calcSource": "native",
+    "prepaidPayable": {
+      "total": null,
+      "discount_value": null,
+      "discount_type": null
+    },
+    "skus": [
+      "700272590103",
+      "700402282403",
+      "700324150102"
+    ],
+    "websiteId": [
+      1
+    ],
+    "city": {
+      "id": "1",
+      "name_en": "Al Mada",
+      "name_ar": "المدى",
+      "enabled": true,
+      "min_sla": 5,
+      "max_sla": 22,
+      "cod_verification": false,
+      "threshold": 0,
+      "max_threshold": 0,
+      "type": "city",
+      "fast_delivery": false,
+      "cutoff_time_excluded": false,
+      "cut_off_time": "22:30",
+      "holiday": "0,1,2",
+      "country": "SA",
+      "province_id": "578",
+      "estimated_date": "2023-06-14 14:14:02",
+      "estimated_date_tostring_en": "Delivery by ${{'type':'bold', 'text':'Wed, 14th Jun'}}$",
+      "estimated_date_tostring_ar": "التوصيل المتوقع Wed, 14th Jun",
+      "threshold_time": ""
+    },
+    "isWhitelistedCustomer": false,
+    "appliedFraudRules": [],
+    "appliedFRulesOutput": [],
+    "otpFlag": 0,
+    "bnplSessionAmount": "37.35",
+    "tabbyPaymentId": null
+  },
+  "quoteWithCoin": {
+    "id": "168562580914836",
+    "storeId": 1,
+    "source": 1,
+    "customerId": "4004499",
+    "customerIsGuest": 0,
+    "quoteItem": [
+      {
+        "addedAt": "2023-06-01T13:23:29.189Z",
+        "landedCost": "13.9700",
+        "parentProductId": "7003892911",
+        "productId": "700389291103",
+        "storeId": "1",
+        "parentSku": "7003892911",
+        "sku": "700389291103",
+        "name": "Mock Neck Oversize T Shirt",
+        "qty": 1,
+        "price": 37.05,
+        "basePrice": 37.05,
+        "originalPrice": "39.00",
+        "discountPercent": 0,
+        "soldBy": "STYLI",
+        "brandName": "Styli",
+        "imgUrl": "https://images.stylishop.com/media/catalog/product/7003892911/images/7003892911_1.jpg?v=1",
+        "discountAmount": 0,
+        "baseDiscountAmount": 0,
+        "taxPercent": 15,
+        "taxAmount": 4.83,
+        "baseTaxAmount": 4.83,
+        "rowTotal": 32.22,
+        "baseRowTotal": 32.22,
+        "rowTotalWithDiscount": 0,
+        "productType": "simple",
+        "priceInclTax": 37.05,
+        "basePriceInclTax": 37.05,
+        "rowTotalInclTax": 37.05,
+        "baseRowTotalInclTax": 37.05,
+        "discountTaxCompensationAmount": 0,
+        "baseDiscountTaxCompensationAmount": 0,
+        "superAttributeId": "213",
+        "superAttributeValue": "1818",
+        "superAttributeLabel": "M",
+        "caSource": "plp",
+        "caSourceType": "context",
+        "caSourceValue": "eid-edit-23-m",
+        "caBannerPromoName": "topcarousel",
+        "gender": "Men",
+        "enrich": {
+          "asdfa": 1,
+          "color": [
+            "Cream"
+          ],
+          "Universal_Women_Ranking": 1,
+          "allu": 1,
+          "brand_name": "Styli",
+          "sku": "7003892911",
+          "abhilash_spark_test": 1,
+          "test_abhilash": 1,
+          "ranktest": 1,
+          "c_up-to-60-percent-off": 1,
+          "c_summer-new-arrivals-m": 1,
+          "c_flash-deal-uae-collection-m": 1,
+          "c_summer-new-arrivals-ksa-m": 1,
+          "c_eid-edit-23-m": 1,
+          "c_basics-for-men-m": 1,
+          "c_best-sellers-uae-m": 1,
+          "c_hastouris-collection-influencer2-m": 1,
+          "c_view-all-m": 1,
+          "c_going-out-tees-m": 1,
+          "c_t-shirts": 1,
+          "c_flash-sale-fs-m": 1,
+          "c_bestsellers-ksa-new-m": 1,
+          "c_newarrivals-t-shirts-and-tanks-m": 1
+        },
+        "metadata": {
+          "level-1": [
+            {
+              "categoryId": "3",
+              "categoryName": "Men",
+              "path": "Men"
+            }
+          ],
+          "level-2": [
+            {
+              "categoryId": "5",
+              "categoryName": "Clothing",
+              "path": "Men /// Clothing"
+            }
+          ],
+          "level-3": [
+            {
+              "categoryId": "145",
+              "categoryName": "Tops",
+              "path": "Men /// Clothing /// Tops"
+            }
+          ],
+          "level-4": [
+            {
+              "categoryId": "177",
+              "categoryName": "T-Shirts",
+              "path": "Men /// Clothing /// Tops /// T-Shirts"
+            }
+          ],
+          "sku": "7003892911",
+          "productId": "7003892911"
+        },
+        "disableSpecialPrice": false,
+        "isMulin": false,
+        "droppedPrice": 37.05,
+        "appliedCouponValue": [],
+        "priceHistory": [
+          {
+            "price": 39,
+            "type": "normal"
+          }
+        ],
+        "actualPrice": "39.00"
+      }
+    ],
+    "convertedAt": null,
+    "isActive": 1,
+    "itemsCount": 1,
+    "itemsQty": 1,
+    "storeToBaseRate": 0,
+    "baseCurrencyCode": "SAR",
+    "storeCurrencyCode": "SAR",
+    "grandTotal": 0,
+    "baseGrandTotal": 0,
+    "appliedRuleIds": [],
+    "couponCode": null,
+    "subtotal": 37.05,
+    "baseSubtotal": 37.05,
+    "subtotalWithDiscount": 37.05,
+    "baseSubtotalWithDiscount": 37.05,
+    "autoPromoCode": null,
+    "autoPromoAmount": null,
+    "triggerRecollect": 0,
+    "amstorecreditUse": false,
+    "amstorecreditBaseAmount": null,
+    "amstorecreditAmount": null,
+    "promoAppliedAt": null,
+    "quoteAddress": [
+      {
+        "customerAddressId": "2403401",
+        "addressType": "shipping",
+        "email": "",
+        "defaultAddress": false,
+        "firstname": "manas",
+        "lastname": ".",
+        "street": "mata matha",
+        "mobileNumber": "+966 564327183",
+        "city": "Riyadh",
+        "region": "Al-Riyadh",
+        "regionId": "600",
+        "postcode": "",
+        "countryId": "SA",
+        "telephone": "+966 564327183",
+        "shippingMethod": "",
+        "shippingDescription": "",
+        "locationType": "",
+        "nearestLandmark": "",
+        "area": "Riyadh Principality",
+        "buildingNumber": "mata matha",
+        "latitude": 24.7135625,
+        "longitude": 46.6752969,
+        "formattedAddress": "PM7G+C4F، ، العليا،، Al Olaya, Riyadh 12251, Saudi Arabia"
+      }
+    ],
+    "quotePayment": {
+      "method": null,
+      "additionalInformation": null,
+      "createdAt": null,
+      "updatedAt": null,
+      "cardBin": "",
+      "applyStoreCredit": null
+    },
+    "metadata": [
+      {
+        "level-1": [
+          {
+            "categoryId": "3",
+            "categoryName": "Men",
+            "path": "Men"
+          }
+        ],
+        "level-2": [
+          {
+            "categoryId": "5",
+            "categoryName": "Clothing",
+            "path": "Men /// Clothing"
+          }
+        ],
+        "level-3": [
+          {
+            "categoryId": "145",
+            "categoryName": "Tops",
+            "path": "Men /// Clothing /// Tops"
+          }
+        ],
+        "level-4": [
+          {
+            "categoryId": "177",
+            "categoryName": "T-Shirts",
+            "path": "Men /// Clothing /// Tops /// T-Shirts"
+          }
+        ],
+        "sku": "7003892911",
+        "productId": "7003892911"
+      }
+    ],
+    "createdAt": "2023-06-01T13:23:29.148Z",
+    "customerEmail": "m11@c.in",
+    "updatedAt": "2023-06-01T13:48:26.091Z",
+    "skus": [
+      "700389291103"
+    ],
+    "websiteId": [
+      1
+    ],
+    "previousOrderList": [
+      {
+        "status": "processing",
+        "incrementId": "000361319",
+        "createdAt": "2023-06-01T10:21:37.000Z",
+        "holdOrder": 0
+      },
+      {
+        "status": "processing",
+        "incrementId": "000361285",
+        "createdAt": "2023-05-31T10:33:33.000Z",
+        "holdOrder": 0
+      }
+    ],
+    "discountData": [],
+    "donationAmount": 0,
+    "totalOrderedCount": 2,
+    "flashSale": {
+      "active": null
+    },
+    "currencyConversionRate": 1,
+    "priceDropData": {
+      "offerTime": 5,
+      "offerStart": "2023-06-01T13:48:24.304Z",
+      "offerTimeMinutes": 5,
+      "offerEnd": "2023-06-01T13:53:24.304Z",
+      "offersCompleted": 2,
+      "usingWebhookConfig": false
+    },
+    "coupon": null,
+    "check_for_auto_apply": true,
+    "groupedData": {
+      "data": {
+        "700389291103": {
+          "products": [
+            "700389291103"
+          ]
+        }
+      },
+      "configs": {
+        "translations": {
+          "appliedText": "{{bundleDesc}} applied!",
+          "addCta": "Add",
+          "prospectText": "Add {{addMore}} more items to avail {{bundleDesc}}"
+        },
+        "bgColor": {
+          "applied": "#EAF1E4",
+          "prospect": "#FAEAEB"
+        }
+      }
+    },
+    "couponDiscount": null,
+    "shippingThreshold": 300,
+    "shippingCharges": 10,
+    "codCharges": 0,
+    "calcSource": "native",
+    "prepaidPayable": {},
+    "priceDropConfig": {}
+  },
+  "headerAccount2": {
+    "token": "KEY eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtMTFAYy5pbiIsImNvZGUiOiIxNjg1NTI4OTM4NDg2Iiwicm9sZSI6InVzZXIiLCJjdXN0b21lcklkIjo0MDA0NDk5fQ.GGrRiFaPkjAra-5S6lvipLL-ydSccpZrdvPf2Kk8bsCx4JvP3NqQpAKjJH0fYdy55wbGFmPZ2Mm8gCk2zRZ6zg",
+    "x-header-token": "m11@c.in"
+  },
+  "quoteWithFreeShipping": {
+    "id": "1684234744639833",
+    "storeId": 1,
+    "source": 0,
+    "customerId": "3910693",
+    "customerIsGuest": 0,
+    "quoteItem": [],
+    "convertedAt": null,
+    "isActive": 1,
+    "itemsCount": 0,
+    "itemsQty": 0,
+    "storeToBaseRate": 0,
+    "baseCurrencyCode": "SAR",
+    "storeCurrencyCode": "SAR",
+    "grandTotal": 0,
+    "baseGrandTotal": 0,
+    "appliedRuleIds": [],
+    "couponCode": null,
+    "subtotal": 0,
+    "baseSubtotal": 0,
+    "subtotalWithDiscount": 0,
+    "baseSubtotalWithDiscount": 0,
+    "autoPromoCode": null,
+    "autoPromoAmount": null,
+    "triggerRecollect": 0,
+    "amstorecreditUse": false,
+    "amstorecreditBaseAmount": null,
+    "amstorecreditAmount": null,
+    "promoAppliedAt": null,
+    "quoteAddress": [
+      {
+        "customerAddressId": "2398723",
+        "addressType": "shipping",
+        "email": "",
+        "defaultAddress": true,
+        "firstname": "hgfgh",
+        "lastname": "uygtu",
+        "street": "jrgf frtfgyhuj",
+        "mobileNumber": "+966 509878787",
+        "city": "Al Mada",
+        "region": "Al-Baha{Al-Bahah}",
+        "regionId": "578",
+        "postcode": "",
+        "countryId": "SA",
+        "telephone": "+966 509878787",
+        "shippingMethod": "",
+        "shippingDescription": "",
+        "locationType": "",
+        "nearestLandmark": "",
+        "area": "Al Mada",
+        "buildingNumber": "frtfgyhuj",
+        "latitude": null,
+        "longitude": null,
+        "formattedAddress": "",
+        "cityMapper": {
+          "id": "1",
+          "name_en": "Al Mada",
+          "name_ar": "المدى",
+          "enabled": true,
+          "min_sla": 5,
+          "max_sla": 23,
+          "cod_verification": false,
+          "threshold": 0,
+          "max_threshold": 0,
+          "type": "city",
+          "fast_delivery": false,
+          "cutoff_time_excluded": false,
+          "cut_off_time": "22:30",
+          "holiday": "0,1,2",
+          "country": "SA",
+          "province_id": "578",
+          "estimated_date": "2023-06-14 12:49:02",
+          "estimated_date_tostring_en": "Delivery by ${{'type':'bold', 'text':'Wed, 14th Jun'}}$",
+          "estimated_date_tostring_ar": "التوصيل المتوقع Wed, 14th Jun",
+          "threshold_time": ""
+        }
+      }
+    ],
+    "quotePayment": {
+      "method": null,
+      "additionalInformation": null,
+      "createdAt": null,
+      "updatedAt": "2023-06-12T11:04:16.228Z",
+      "cardBin": "",
+      "applyStoreCredit": null
+    },
+    "metadata": [],
+    "createdAt": "2023-05-16T10:59:04.639Z",
+    "customerEmail": "sni@gmail.com",
+    "updatedAt": "2023-06-12T11:06:07.382Z",
+    "discountData": [],
+    "donationAmount": 0,
+    "totalOrderedCount": 3,
+    "flashSale": {
+      "active": null
+    },
+    "currencyConversionRate": 1,
+    "priceDropData": {
+      "offerTime": 0
+    },
+    "coupon": null,
+    "check_for_auto_apply": true,
+    "groupedData": {
+      "data": {},
+      "configs": {
+        "translations": {
+          "appliedText": "{{bundleDesc}} applied!",
+          "addCta": "Add",
+          "prospectText": "Add {{addMore}} more items to avail {{bundleDesc}}"
+        },
+        "bgColor": {
+          "applied": "#EAF1E4",
+          "prospect": "#FAEAEB"
+        }
+      }
+    },
+    "couponDiscount": null,
+    "shippingThreshold": 150,
+    "shippingCharges": 12,
+    "codCharges": 0,
+    "calcSource": "native",
+    "prepaidPayable": {},
+    "skus": [
+      "700272590103",
+      "700402282403",
+      "700324150102"
+    ],
+    "websiteId": [
+      1
+    ],
+    "city": {
+      "id": "1",
+      "name_en": "Al Mada",
+      "name_ar": "المدى",
+      "enabled": true,
+      "min_sla": 5,
+      "max_sla": 23,
+      "cod_verification": false,
+      "threshold": 0,
+      "max_threshold": 0,
+      "type": "city",
+      "fast_delivery": false,
+      "cutoff_time_excluded": false,
+      "cut_off_time": "22:30",
+      "holiday": "0,1,2",
+      "country": "SA",
+      "province_id": "578",
+      "estimated_date": "2023-06-14 12:49:02",
+      "estimated_date_tostring_en": "Delivery by ${{'type':'bold', 'text':'Wed, 14th Jun'}}$",
+      "estimated_date_tostring_ar": "التوصيل المتوقع Wed, 14th Jun",
+      "threshold_time": ""
+    },
+    "isWhitelistedCustomer": false,
+    "appliedFraudRules": [],
+    "appliedFRulesOutput": [],
+    "otpFlag": 0,
+    "bnplSessionAmount": "166.6",
+    "tabbyPaymentId": null,
+    "priceDropConfig": {
+      "language": "en",
+      "country": "sa",
+      "dropPercent": "5",
+      "priceTo": "1500",
+      "priceFrom": "10",
+      "minBagValue": "10",
+      "offerMaxCount": "10",
+      "offerTimeMinutes": "5",
+      "customerId": "3910691"
+    },
+    "previousOrderList": [
+      {
+        "status": "processing",
+        "incrementId": "000327647",
+        "createdAt": "2022-12-15T12:36:56.000Z",
+        "holdOrder": 0
+      }
+    ],
+    "freeShippingConfig": {
+      "country": "sa",
+      "language": "en",
+      "expireInHour": "490",
+      "minOrderValue": "100",
+      "customerId": "3910691",
+      "storeId": 1,
+      "requestedAt": "2023-06-12T11:04:15.710Z"
+    },
+    "webhookFreeShippingData": {
+      "isFreeShipping": true,
+      "expireOn": "2024-06-12T14:27:50.481Z",
+      "webhookCallOn": "2023-06-12T11:04:15.710Z",
+      "expireAt": "2024-06-12T14:27:50.481Z"
+    }
+  },
+  "fRuleCouchbase":{
+    "name": "Fraud",
+    "criteria": "returnOrderCount",
+    "enabled": true,
+    "operator": "<",
+    "input1": 3,
+    "output": "otpValidation",
+    "updated_at": "2023-06-09T02:20:29.716Z",
+    "id": "fRules_1686277229718950",
+    "type": "fRules"
+  },
+  "adrsmprCouchbase":{
+    "area": null,
+    "cod_verification": false,
+    "cutoff_time": false,
+    "enabled": true,
+    "fast_delivery": true,
+    "id": "1",
+    "max_sla": 20,
+    "max_threshold": 0,
+    "min_sla": 5,
+    "name_ar": "المدى",
+    "name_en": "Al Mada",
+    "threshold": 0,
+    "type": "city",
+    "region_id": "578",
+    "region_name": "Al-Baha{Al-Bahah}",
+    "cut_off_time": "22:30",
+    "holiday": "0,1,2",
+    "type_1": "search_city",
+    "country": "SA"
+  },
+  "quoteWithCoupon":{
+    "id": "1686569333347279",
+    "storeId": 7,
+    "source": 0,
+    "customerId": "3910693",
+    "customerIsGuest": 0,
+    "quoteItem": [
+      {
+        "addedAt": "2023-06-12T11:28:53.371Z",
+        "landedCost": "39.8900",
+        "parentProductId": "7004570428",
+        "productId": "700457042866",
+        "storeId": 1,
+        "parentSku": "7004570428",
+        "sku": "700457042866",
+        "name": "Plus Tie Waist Detail Shift Midi Dress",
+        "qty": 1,
+        "price": 100,
+        "basePrice": 100,
+        "originalPrice": "115.00",
+        "discountPercent": "64.65",
+        "soldBy": "STYLI",
+        "brandName": "Styli",
+        "imgUrl": "https://images.stylishop.com/media/catalog/product/7004570428/images/7004570428_1.jpg?v=2",
+        "discountAmount": 74.35,
+        "baseDiscountAmount": 74.35,
+        "taxPercent": 15,
+        "taxAmount": 5.25,
+        "baseTaxAmount": 5.25,
+        "rowTotal": 100,
+        "baseRowTotal": 100,
+        "rowTotalWithDiscount": 0,
+        "productType": "simple",
+        "priceInclTax": 115,
+        "basePriceInclTax": 115,
+        "rowTotalInclTax": 115,
+        "baseRowTotalInclTax": 115,
+        "discountTaxCompensationAmount": 9.75,
+        "baseDiscountTaxCompensationAmount": 9.75,
+        "superAttributeId": "213",
+        "superAttributeValue": "4245",
+        "superAttributeLabel": "18",
+        "caSource": "plp",
+        "caSourceType": "context",
+        "caSourceValue": "dresses-w",
+        "caBannerPromoName": "EN-KSA-Top Category-W",
+        "gender": "Women",
+        "enrich": {
+          "asdfa": 1,
+          "color": [
+            "Pink"
+          ],
+          "Universal_Women_Ranking": 1,
+          "allu": 1,
+          "brand_name": "Styli",
+          "sku": "7004570428",
+          "abhilash_spark_test": 1,
+          "test_abhilash": 1,
+          "ranktest": 1,
+          "c_plus-size-new-arrivals-catnav-w": 1,
+          "c_flash-sale-fs-w": 1,
+          "c_plus-size-weddingstore-w": 1,
+          "c_plus-size-w": 1,
+          "c_eid-exclusive-deal-new-w": 1,
+          "c_cat-nav-dresses-new-arrivals-w": 1,
+          "c_eidedit-23-w": 1,
+          "c_dresses-w": 1,
+          "c_nouf-wk43-23": 1,
+          "c_flash-deal-uae-collection-w": 1,
+          "c_view-all-w": 1,
+          "c_midi-and-maxi-dresses-ramadan-w": 1,
+          "c_cat-nav-midi-dresses-w": 1,
+          "c_ramadan-w-2023": 1,
+          "c_up-to-60-percent-off-w": 1
+        },
+        "metadata": {
+          "level-1": [
+            {
+              "categoryId": "7",
+              "categoryName": "Women",
+              "path": "Women"
+            }
+          ],
+          "level-2": [
+            {
+              "categoryId": "11683",
+              "categoryName": "Plus & Curvy",
+              "path": "Women /// Plus & Curvy"
+            }
+          ],
+          "level-3": [
+            {
+              "categoryId": "11689",
+              "categoryName": "Plus Dresses",
+              "path": "Women /// Plus & Curvy /// Plus Dresses"
+            }
+          ],
+          "level-4": [
+            {
+              "categoryId": "11691",
+              "categoryName": "Plus Dresses",
+              "path": "Women /// Plus & Curvy /// Plus Dresses /// Plus Dresses"
+            }
+          ],
+          "sku": "7004570428",
+          "productId": "7004570428"
+        },
+        "disableSpecialPrice": false,
+        "isMulin": false,
+        "droppedPrice": 0,
+        "appliedCouponValue": [
+          {
+            "coupon": "UTEST1",
+            "type": "MANUAL",
+            "discount": "74.35",
+            "label": {
+              "en": "Coupon discount",
+              "ar": "وفّرت من كود الخصم"
+            },
+            "id": "645b4587530469002739e884",
+            "isGiftVoucher": false
+          }
+        ],
+        "priceHistory": [
+          {
+            "price": 115,
+            "type": "normal"
+          }
+        ],
+        "taxObj": {}
+      },
+      {
+        "addedAt": "2023-06-12T11:29:11.687Z",
+        "landedCost": "74.2800",
+        "parentProductId": "7003332801",
+        "productId": "700333280103",
+        "storeId": 1,
+        "parentSku": "7003332801",
+        "sku": "700333280103",
+        "name": "Knee Length Padded Coat with Contrast Lining and Hood",
+        "qty": 1,
+        "price": 173.04,
+        "basePrice": 173.04,
+        "originalPrice": "199.00",
+        "discountPercent": "64.65",
+        "soldBy": "STYLI",
+        "brandName": "Styli",
+        "imgUrl": "https://images.stylishop.com/media/catalog/product/7003332801/images/7003332801_1.jpg?v=2",
+        "discountAmount": 128.65,
+        "baseDiscountAmount": 128.65,
+        "taxPercent": 15,
+        "taxAmount": 9.15,
+        "baseTaxAmount": 9.15,
+        "rowTotal": 173.04,
+        "baseRowTotal": 173.04,
+        "rowTotalWithDiscount": 0,
+        "productType": "simple",
+        "priceInclTax": 199,
+        "basePriceInclTax": 199,
+        "rowTotalInclTax": 199,
+        "baseRowTotalInclTax": 199,
+        "discountTaxCompensationAmount": 16.81,
+        "baseDiscountTaxCompensationAmount": 16.81,
+        "superAttributeId": "213",
+        "superAttributeValue": "1818",
+        "superAttributeLabel": "M",
+        "caSource": "plp",
+        "caSourceType": "context",
+        "caSourceValue": "winterwear-w",
+        "caBannerPromoName": "EN-KSA-Top Category-W",
+        "gender": "Women",
+        "enrich": {
+          "color": [
+            "Black"
+          ],
+          "rs_asdfa_2": 1,
+          "c_collection-nov2-false": 1,
+          "c_sanjib-test-dec-16": 1,
+          "allu": 457203,
+          "sku": "7003332801",
+          "c_combo-offer-new": 1,
+          "rs_allu_2": 467465,
+          "c_collection-10": 1,
+          "asdfa": 1,
+          "c_collection-styli-dec6": 1,
+          "c_winterwear-collection-test-w": 1,
+          "Universal_Women_Ranking": 1,
+          "brand_name": "Styli",
+          "c_collection-nov1-21": 1,
+          "rs_abhilash_spark_test_2": 1,
+          "c_nishanth-collection": 1,
+          "abhilash_spark_test": 1,
+          "c_sanjib1stnov22": 1,
+          "rs_Universal_Women_Ranking_1": 499520,
+          "ranktest": 1,
+          "c_noufs-collection-test-w": 1,
+          "rs_ranktest_2": 1,
+          "c_combo-offer-qa": 1,
+          "rs_test_abhilash_2": 1,
+          "test_abhilash": 1,
+          "c_soundstorm-2022-w": 1,
+          "c_cat-nav-outerwear-coats-uae-w": 1,
+          "c_december-women-travelemailer": 1,
+          "c_camping-collection-2022-w": 1,
+          "c_winterwear-flat-40-percent-off-uae-w": 1,
+          "c_test-shohin-women": 1,
+          "c_cat-nav-winter-outerwear-uae-hw-w": 1,
+          "c_min-40-percent-off-on-outerwear-crm-w": 1,
+          "c_outerwear-uae-w": 1,
+          "c_nouf-wk21-23": 1,
+          "c_30-percent-to-80-percent-uae-w": 1,
+          "c_nouf-wk17-23": 1,
+          "c_bundle-buy-1-get-2-free-brands-w": 1,
+          "c_cat-nav-coats-w": 1,
+          "c_up-to-80-percent-off-uae-w": 1,
+          "c_winterwear-uae-w": 1,
+          "c_winter2023": 1,
+          "c_jood-wk15-23": 1,
+          "c_up-to-70-percent-off-w": 1,
+          "c_view-all-bestsellers-cat-nav-w": 1,
+          "c_flash-deal-17thdec-6pm-ksa-w": 1,
+          "c_bundle-buy-1-get-1-uae-w": 1,
+          "c_nouf-wk10-25": 1,
+          "c_flash-sale-4thfeb-6pm-ksa-w": 1,
+          "c_jackets-and-coats-bestsellers-cat-nav-w": 1,
+          "c_test-collection-20122022-after-curofy": 1,
+          "c_flashsale-may31-1": 1,
+          "c_bundle-buy-1-get-1-ksa-w": 1,
+          "c_first-time-on-discount-w": 1,
+          "c_flash-deal-10thmay-6pm-ksa-w": 1,
+          "c_womens-collection-performance": 1,
+          "c_outerwear-w": 1,
+          "c_flash-sale-4thfeb-6pm-uae-w": 1,
+          "c_flash-deal-10thmar-1pm-uae-w": 1,
+          "c_winterwear-w": 1,
+          "c_flash-sale-fs-w": 1,
+          "c_winter-layering-w": 1,
+          "c_up-to-80-percent-off-w": 1,
+          "c_flash-deal-10thmar-1pm-ksa-w": 1,
+          "c_nouf-fashion-w": 1,
+          "c_light-winterwear-new-w": 1,
+          "c_new-arrivals-crm-w": 1,
+          "c_winterwear-flat-40-percent-off-w": 1,
+          "c_up-to-60-percent-off-uae-w": 1,
+          "c_20-percent-70-percent-off-w": 1,
+          "c_30-percent-to-80-w": 1,
+          "c_bundle-buy-1-get-2-free-brands-uae-w": 1,
+          "c_flash-deal-uae-collection-w": 1,
+          "c_cat-nav-winter-outerwear-hw-w": 1,
+          "c_week21-w-new": 1,
+          "c_flash-deal-9thdec-6pm-ksa-w": 1,
+          "c_up-to-50-percent-off-new-vm": 1,
+          "c_30-percent-60-percent-off-w": 1,
+          "c_view-all-w": 1,
+          "c_20-percent-70-percent-off-uae-w": 1,
+          "c_styli-x-alinma-bank-w": 1,
+          "c_flashsale-21-may30-4": 1,
+          "c_nouf-wk19-23": 1,
+          "c_week23-new-w": 1,
+          "c_outerwear-lw-uae-cat-nav-w": 1,
+          "c_up-to-60-percent-off-w": 1
+        },
+        "metadata": {
+          "level-1": [
+            {
+              "categoryId": "7",
+              "categoryName": "Women",
+              "path": "Women"
+            }
+          ],
+          "level-2": [
+            {
+              "categoryId": "9",
+              "categoryName": "Clothing",
+              "path": "Women /// Clothing"
+            }
+          ],
+          "level-3": [
+            {
+              "categoryId": "303",
+              "categoryName": "Outerwear",
+              "path": "Women /// Clothing /// Outerwear"
+            }
+          ],
+          "level-4": [
+            {
+              "categoryId": "305",
+              "categoryName": "Coats",
+              "path": "Women /// Clothing /// Outerwear /// Coats"
+            }
+          ],
+          "sku": "7003332801",
+          "productId": "7003332801"
+        },
+        "disableSpecialPrice": false,
+        "isMulin": false,
+        "droppedPrice": 0,
+        "appliedCouponValue": [
+          {
+            "coupon": "UTEST1",
+            "type": "MANUAL",
+            "discount": "128.65",
+            "label": {
+              "en": "Coupon discount",
+              "ar": "وفّرت من كود الخصم"
+            },
+            "id": "645b4587530469002739e884",
+            "isGiftVoucher": false
+          }
+        ],
+        "priceHistory": [
+          {
+            "price": 199,
+            "type": "normal"
+          }
+        ],
+        "taxObj": {}
+      }
+    ],
+    "convertedAt": null,
+    "isActive": 1,
+    "itemsCount": 2,
+    "itemsQty": 2,
+    "storeToBaseRate": 0,
+    "baseCurrencyCode": "SAR",
+    "storeCurrencyCode": "SAR",
+    "grandTotal": 0,
+    "baseGrandTotal": 0,
+    "appliedRuleIds": [],
+    "couponCode": "UTEST1",
+    "subtotal": 314,
+    "baseSubtotal": 314,
+    "subtotalWithDiscount": 111,
+    "baseSubtotalWithDiscount": 111,
+    "autoPromoCode": "",
+    "autoPromoAmount": null,
+    "triggerRecollect": 0,
+    "amstorecreditUse": false,
+    "amstorecreditBaseAmount": null,
+    "amstorecreditAmount": null,
+    "promoAppliedAt": null,
+    "quoteAddress": [
+      {
+        "customerAddressId": "2398723",
+        "addressType": "shipping",
+        "email": "",
+        "defaultAddress": true,
+        "firstname": "hgfgh",
+        "lastname": "uygtu",
+        "street": "jrgf frtfgyhuj",
+        "mobileNumber": "+966 509878787",
+        "city": "Al Mada",
+        "region": "Al-Baha{Al-Bahah}",
+        "regionId": "578",
+        "postcode": "",
+        "countryId": "SA",
+        "telephone": "+966 509878787",
+        "shippingMethod": "",
+        "shippingDescription": "",
+        "locationType": "",
+        "nearestLandmark": "",
+        "area": "Al Mada",
+        "buildingNumber": "frtfgyhuj",
+        "latitude": null,
+        "longitude": null,
+        "formattedAddress": "",
+        "cityMapper": {
+          "id": "1",
+          "name_en": "Al Mada",
+          "name_ar": "المدى",
+          "enabled": true,
+          "min_sla": 5,
+          "max_sla": 23,
+          "cod_verification": false,
+          "threshold": 0,
+          "max_threshold": 0,
+          "type": "city",
+          "fast_delivery": false,
+          "cutoff_time_excluded": false,
+          "cut_off_time": "22:30",
+          "holiday": "0,1,2",
+          "country": "SA",
+          "province_id": "578",
+          "estimated_date": "2023-07-05 15:39:50",
+          "estimated_date_tostring_en": "Delivery by ${{'type':'bold', 'text':'Wed, 5th Jul'}}$",
+          "estimated_date_tostring_ar": "التوصيل المتوقع Wed, 5th Jul",
+          "threshold_time": ""
+        }
+      }
+    ],
+    "quotePayment": {
+      "method": null,
+      "additionalInformation": null,
+      "createdAt": null,
+      "updatedAt": "2023-06-12T12:39:50.979Z",
+      "cardBin": "",
+      "applyStoreCredit": null
+    },
+    "metadata": [
+      {
+        "level-1": [
+          {
+            "categoryId": "7",
+            "categoryName": "Women",
+            "path": "Women"
+          }
+        ],
+        "level-2": [
+          {
+            "categoryId": "11683",
+            "categoryName": "Plus & Curvy",
+            "path": "Women /// Plus & Curvy"
+          }
+        ],
+        "level-3": [
+          {
+            "categoryId": "11689",
+            "categoryName": "Plus Dresses",
+            "path": "Women /// Plus & Curvy /// Plus Dresses"
+          }
+        ],
+        "level-4": [
+          {
+            "categoryId": "11691",
+            "categoryName": "Plus Dresses",
+            "path": "Women /// Plus & Curvy /// Plus Dresses /// Plus Dresses"
+          }
+        ],
+        "sku": "7004570428",
+        "productId": "7004570428"
+      },
+      {
+        "level-1": [
+          {
+            "categoryId": "7",
+            "categoryName": "Women",
+            "path": "Women"
+          }
+        ],
+        "level-2": [
+          {
+            "categoryId": "9",
+            "categoryName": "Clothing",
+            "path": "Women /// Clothing"
+          }
+        ],
+        "level-3": [
+          {
+            "categoryId": "303",
+            "categoryName": "Outerwear",
+            "path": "Women /// Clothing /// Outerwear"
+          }
+        ],
+        "level-4": [
+          {
+            "categoryId": "305",
+            "categoryName": "Coats",
+            "path": "Women /// Clothing /// Outerwear /// Coats"
+          }
+        ],
+        "sku": "7003332801",
+        "productId": "7003332801"
+      }
+    ],
+    "createdAt": "2023-06-12T11:28:53.347Z",
+    "customerEmail": "sni@gmail.com",
+    "updatedAt": "2023-06-14T06:13:30.027Z",
+    "previousOrderList": [
+      {
+        "status": "processing",
+        "incrementId": "000362365",
+        "createdAt": "2023-06-09T11:20:48.000Z",
+        "holdOrder": null
+      },
+      {
+        "status": "processing",
+        "incrementId": "000362087",
+        "createdAt": "2023-06-07T13:19:23.000Z",
+        "holdOrder": 0
+      },
+      {
+        "status": "processing",
+        "incrementId": "000361115",
+        "createdAt": "2023-05-30T12:54:31.000Z",
+        "holdOrder": null
+      },
+      {
+        "status": "processing",
+        "incrementId": "000359733",
+        "createdAt": "2023-05-11T07:05:35.000Z",
+        "holdOrder": null
+      },
+      {
+        "status": "processing",
+        "incrementId": "000356459",
+        "createdAt": "2023-04-20T07:45:55.000Z",
+        "holdOrder": null
+      },
+      {
+        "status": "processing",
+        "incrementId": "000355779",
+        "createdAt": "2023-04-14T07:05:18.000Z",
+        "holdOrder": null
+      }
+    ],
+    "discountData": [
+      {
+        "couponCode": "UTEST1",
+        "discountType": "FIXED",
+        "redeemType": "MANUAL",
+        "value": "203",
+        "label": "{\"en\":\"Coupon Code\",\"ar\":\"كود الخصم\"}",
+        "onOsp": false,
+        "isGiftVoucher": false
+      }
+    ],
+    "donationAmount": 0,
+    "totalOrderedCount": 6,
+    "flashSale": {
+      "active": null
+    },
+    "currencyConversionRate": 1,
+    "priceDropData": {
+      "offerTime": 0
+    },
+    "coupon": "UTEST1",
+    "check_for_auto_apply": true,
+    "groupedData": {
+      "data": {
+        "700457042866": {
+          "products": [
+            "700457042866"
+          ],
+          "prospect": {
+            "name": "UTEST5B1G1",
+            "description": "",
+            "context": "dresses-w",
+            "addMore": 1
+          }
+        },
+        "700333280103": {
+          "products": [
+            "700333280103"
+          ]
+        }
+      },
+      "configs": {
+        "translations": {
+          "appliedText": "{{bundleDesc}} applied!",
+          "addCta": "Add",
+          "prospectText": "Add {{addMore}} more items to avail {{bundleDesc}}"
+        },
+        "bgColor": {
+          "applied": "#EAF1E4",
+          "prospect": "#FAEAEB"
+        }
+      }
+    },
+    "couponDiscount": "203",
+    "shippingThreshold": 300,
+    "shippingCharges": 0,
+    "codCharges": 0,
+    "calcSource": "promo",
+    "prepaidPayable": {
+      "total": null,
+      "discount_value": null,
+      "discount_type": null
+    },
+    "freeShippingConfig": {
+      "country": "sa",
+      "language": "en",
+      "expireInHour": "1",
+      "minOrderValue": "100",
+      "customerId": "3910691",
+      "storeId": 1,
+      "requestedAt": "2023-06-14T05:36:19.791Z"
+    },
+    "skus": [
+      "700457042866",
+      "700333280103"
+    ],
+    "websiteId": [
+      1
+    ],
+    "webhookFreeShippingData": {
+      "isFreeShipping": true,
+      "expireOn": "2023-06-14T06:36:19.791Z",
+      "webhookCallOn": "2023-06-14T05:36:19.791Z",
+      "expireAt": "2023-06-14T06:36:19.791Z"
+    },
+    "city": {
+      "id": "1",
+      "name_en": "Al Mada",
+      "name_ar": "المدى",
+      "enabled": true,
+      "min_sla": 5,
+      "max_sla": 23,
+      "cod_verification": false,
+      "threshold": 0,
+      "max_threshold": 0,
+      "type": "city",
+      "fast_delivery": false,
+      "cutoff_time_excluded": false,
+      "cut_off_time": "22:30",
+      "holiday": "0,1,2",
+      "country": "SA",
+      "province_id": "578",
+      "estimated_date": "2023-07-05 15:39:50",
+      "estimated_date_tostring_en": "Delivery by ${{'type':'bold', 'text':'Wed, 5th Jul'}}$",
+      "estimated_date_tostring_ar": "التوصيل المتوقع Wed, 5th Jul",
+      "threshold_time": ""
+    },
+    "isWhitelistedCustomer": false,
+    "appliedFraudRules": [],
+    "appliedFRulesOutput": [],
+    "otpFlag": 0,
+    "bnplSessionAmount": "314",
+    "tabbyPaymentId": null
+  },
+  "quoteForDisable":{
+    "id": "1681477874120535",
+    "storeId": 1,
+    "source": 0,
+    "customerId": "5226811",
+    "customerIsGuest": 0,
+    "quoteItem": [{
+      "addedAt": "2023-04-14T13:11:14.160Z",
+      "landedCost": "37.4300",
+      "parentProductId": "7004174901",
+      "productId": "700417490103",
+      "storeId": 1,
+      "parentSku": "7004174901",
+      "sku": "700417490103",
+      "name": "Lace Insert Sheath Midi Dress",
+      "qty": 1,
+      "price": 111,
+      "basePrice": 111,
+      "originalPrice": "111.00",
+      "discountPercent": 0,
+      "soldBy": "STYLI",
+      "brandName": "Styli",
+      "imgUrl": "https://images.stylishop.com/media/catalog/product/7004174901/images/7004174901_1.jpg?v=1",
+      "discountAmount": 0,
+      "baseDiscountAmount": 0,
+      "taxPercent": 15,
+      "taxAmount": 14.48,
+      "baseTaxAmount": 14.48,
+      "rowTotal": 96.52,
+      "baseRowTotal": 96.52,
+      "rowTotalWithDiscount": 0,
+      "productType": "simple",
+      "priceInclTax": 111,
+      "basePriceInclTax": 111,
+      "rowTotalInclTax": 111,
+      "baseRowTotalInclTax": 111,
+      "discountTaxCompensationAmount": 0,
+      "baseDiscountTaxCompensationAmount": 0,
+      "superAttributeId": "213",
+      "superAttributeValue": "1818",
+      "superAttributeLabel": "M",
+      "caSource": "plp",
+      "caSourceType": "context",
+      "caSourceValue": "dresses-w",
+      "caBannerPromoName": "topcarousel",
+      "gender": "Women",
+      "enrich": {
+        "color": ["Black"],
+        "brand_name": "Styli",
+        "sku": "7004174901",
+        "c_best-of-ramadan-styles-w": 1,
+        "c_yasmeen-dakheels-collection-influenceredit-w": 1,
+        "c_influencer-curation-new": 1,
+        "c_highneck-w": 1,
+        "c_flash-sale-fs-w": 1,
+        "c_alaa-alnoamans-collection-influenceredit-w": 1,
+        "c_iftar-picks-2023-w": 1,
+        "c_inflcuration-new": 1,
+        "c_going-out-dresses": 1,
+        "c_collection-may23-1": 1,
+        "c_nouf-wk38-23": 1,
+        "c_modesr-ramadan-23": 1,
+        "c_cat-nav-dresses-new-arrivals-w": 1,
+        "c_eidedit-23-w": 1,
+        "c_dresses-w": 1,
+        "c_doaa-alnajars-collection-influenceredit-w": 1,
+        "c_flash-deal-uae-collection-w": 1,
+        "c_nouf-wk37-23": 1,
+        "c_nora-al-alis-collection-influenceredit-w": 1,
+        "c_lace-23-w": 1,
+        "c_view-all-w": 1,
+        "c_khloud-abouzieids-collection": 1,
+        "c_best-sellers-uae-w": 1,
+        "c_midi-and-maxi-dresses-ramadan-w": 1,
+        "c_bestsellers-curofy-w": 1,
+        "c_cat-nav-midi-dresses-w": 1,
+        "c_ramadan-w-2023": 1
+      },
+      "metadata": {
+        "level-1": [{
+          "categoryId": "7",
+          "categoryName": "Women",
+          "path": "Women"
+        }],
+        "level-2": [{
+          "categoryId": "9",
+          "categoryName": "Clothing",
+          "path": "Women /// Clothing"
+        }],
+        "level-3": [{
+          "categoryId": "16",
+          "categoryName": "Dresses",
+          "path": "Women /// Clothing /// Dresses"
+        }],
+        "level-4": [{
+          "categoryId": "328",
+          "categoryName": "Dresses",
+          "path": "Women /// Clothing /// Dresses /// Dresses"
+        }],
+        "sku": "7004174901",
+        "productId": "7004174901"
+      },
+      "disableSpecialPrice": false,
+      "isMulin": false,
+      "droppedPrice": 0,
+      "appliedCouponValue": [],
+      "priceHistory": [{
+        "price": 111,
+        "type": "normal"
+      }],
+      "taxObj": {}
+    }, {
+      "addedAt": "2023-06-08T13:15:43.005Z",
+      "landedCost": "43.9714",
+      "parentProductId": "7002345736",
+      "productId": "700234573603",
+      "storeId": 1,
+      "parentSku": "7002345736",
+      "sku": "700234573603",
+      "name": "Contrast Notch Lapel Longline Blazer with Buttons",
+      "qty": 1,
+      "price": 66,
+      "basePrice": 66,
+      "originalPrice": "110.00",
+      "discountPercent": 0,
+      "soldBy": "STYLI",
+      "brandName": "Closet",
+      "imgUrl": "https://images.stylishop.com/media/catalog/product/7002345736/images/7002345736_1.jpg?v=2",
+      "discountAmount": 0,
+      "baseDiscountAmount": 0,
+      "taxPercent": 15,
+      "taxAmount": 8.61,
+      "baseTaxAmount": 8.61,
+      "rowTotal": 57.39,
+      "baseRowTotal": 57.39,
+      "rowTotalWithDiscount": 0,
+      "productType": "simple",
+      "priceInclTax": 66,
+      "basePriceInclTax": 66,
+      "rowTotalInclTax": 66,
+      "baseRowTotalInclTax": 66,
+      "discountTaxCompensationAmount": 0,
+      "baseDiscountTaxCompensationAmount": 0,
+      "superAttributeId": "213",
+      "superAttributeValue": "1818",
+      "superAttributeLabel": "M",
+      "caSource": "plp",
+      "caSourceType": "context",
+      "caSourceValue": "flash-deal-10thmay-6pm-ksa-w",
+      "caBannerPromoName": "EN-KSA-Top Category-W",
+      "gender": "Women",
+      "enrich": {
+        "c_xcbbdsvds": 1,
+        "c_20kfilter": 1,
+        "last7qty": 0,
+        "f_price_QAR": 9.7,
+        "color": ["White"],
+        "c_test-collection-993": 1,
+        "f_price_SAR": 10,
+        "c_promotest": 1,
+        "c_testcsv28": 1,
+        "rs_asdfa_2": 1,
+        "c_sanjib-test-dec-16": 1,
+        "last30views": 1,
+        "last30cr": 2200,
+        "last7rev": 0,
+        "stockCap": 6,
+        "last30qty": 22,
+        "allu": 459778,
+        "sku": "7002345736",
+        "last90rev": 1922,
+        "last30qtyros": 0.733,
+        "rs_allu_2": 490854,
+        "f_price_BHD": 1,
+        "f_price_AED": 9.200000000000001,
+        "c_collection-10": 1,
+        "asdfa": 1,
+        "last90qty": 35,
+        "last30rev": 988,
+        "last15qty": 7,
+        "Universal_Women_Ranking": 1,
+        "last30revros": 32.939,
+        "brand_name": "Closet",
+        "c_test-collection-25k-001": 1,
+        "c_collection-nov1-21": 1,
+        "rs_abhilash_spark_test_2": 1,
+        "c_nishanth-collection": 1,
+        "abhilash_spark_test": 1,
+        "c_sanjib1stnov22": 1,
+        "rs_Universal_Women_Ranking_1": 493821,
+        "ranktest": 1,
+        "last15rev": 274,
+        "rs_ranktest_2": 1,
+        "f_price_KWD": 0.8,
+        "c_dresses-w": 1,
+        "rs_test_abhilash_2": 1,
+        "test_abhilash": 1,
+        "c_test-collection991": 1,
+        "c_diana-mohamed-collection-uae-w": 1,
+        "c_outerwear-aw22-w": 1,
+        "c_winterwear-flat-40-percent-off-uae-w": 1,
+        "c_test-shohin-women": 1,
+        "c_flash-sale-25thjan-6pm-uae-w": 1,
+        "c_flash-deal-24thapr-6pm-uae-w": 1,
+        "c_flash-deal-16thapr-8am-ksa-w": 1,
+        "c_bestsellers-at-uae-w": 1,
+        "c_flash-deal-13thapr-8am-ksa-w": 1,
+        "c_outerwear-uae-w": 1,
+        "c_everything-at-w": 1,
+        "c_going-out-dresses": 1,
+        "c_30-percent-to-80-percent-uae-w": 1,
+        "c_collection-may23-1": 1,
+        "c_upto-45-percent-crm-w": 1,
+        "c_bundle-buy-1-get-2-free-brands-w": 1,
+        "c_flash-deal-18thapr-uae-w": 1,
+        "c_flash-sale-7thfeb-2pm-ksa-w": 1,
+        "c_up-to-80-percent-off-uae-w": 1,
+        "c_flash-deal-24thapr-6pm-ksa-w": 1,
+        "c_everything-at-uae-w": 1,
+        "c_winter2023": 1,
+        "c_free-tees-ksa-w": 1,
+        "c_top-deals-w": 1,
+        "c_flash-deal-13thapr-8am-uae-w": 1,
+        "c_up-to-70-percent-off-w": 1,
+        "c_coats-sweaters-and-more-under-sar-69-w": 1,
+        "c_flash-deal-17thdec-6pm-ksa-w": 1,
+        "c_bundle-b1g1-herobanner-w": 1,
+        "c_flash-deal-29thnov-8pm-ksa-w": 1,
+        "c_bundle-buy-1-get-1-uae-w": 1,
+        "c_nouf-wk10-23": 1,
+        "c_discounted-collection-1-vm-w": 1,
+        "c_rana-alshafey-collection-uae-w": 1,
+        "c_flash-deal-16thapr-8am-uae-w": 1,
+        "c_toleen-essams-collection-w": 1,
+        "c_hina-ashrafs-collection-crm-w": 1,
+        "c_test-collection-20122022-after-curofy": 1,
+        "c_minimum-40-percent-": 1,
+        "c_flashsale-may31-1": 1,
+        "c_flash-deal-18thapr-8am-uae-w": 1,
+        "c_sale-b1g1-topcarousel-w": 1,
+        "c_doctor-menna-collection-uae-w": 1,
+        "c_bundle-buy-1-get-1-ksa-w": 1,
+        "c_collection-2-bogovm-w": 1,
+        "c_flash-deal-21stfeb-6pm-uae-w": 1,
+        "c_flash-deal-2ndmay-6pm-uae-w": 1,
+        "c_flash-deal-10thmay-6pm-ksa-w": 1,
+        "c_outerwear-w": 1,
+        "c_midnight-sale-crm-w": 1,
+        "c_minimum-40-percent-off-crm-w": 1,
+        "c_flash-deal-10thmar-1pm-uae-w": 1,
+        "c_flash-deal-2ndmay-6pm-ksa-w": 1,
+        "c_flash-sale-3rdjan-6pm-uae-w": 1,
+        "c_flash-sale-fs-w": 1,
+        "c_flash-sale-9thfeb-6pm-uae-w": 1,
+        "c_flash-deal-18thapr-8am-ksa-w": 1,
+        "c_coats-sweaters-and-more-under-aed-69-w": 1,
+        "c_price-drop-alert-uae-w": 1,
+        "c_up-to-80-percent-off-w": 1,
+        "c_flash-deal-21stfeb-6pm-ksa-w": 1,
+        "c_flash-deal-10thmar-1pm-ksa-w": 1,
+        "c_co-ords-and-blazers-w": 1,
+        "c_flash-deal-15thapr-8am-uae-w": 1,
+        "c_arwa-alkhiami-collection-uae-w": 1,
+        "c_nouf-jun22": 1,
+        "c_min-30-percent-off-on-new-arrivals-crm-w": 1,
+        "c_price-drop-alert-w": 1,
+        "c_winterwear-flat-40-percent-off-w": 1,
+        "c_up-to-60-percent-off-uae-w": 1,
+        "c_flash-sale-9thfeb-6pm-ksa-w": 1,
+        "c_20-percent-70-percent-off-w": 1,
+        "c_noura-al-refais-picks-w": 1,
+        "c_workwear-uae-w": 1,
+        "c_flash-deal-21stdec-6pm-ksa-w": 1,
+        "c_flash-sale-8thfeb-2pm-ksa-w": 1,
+        "c_flash-deal-15thapr-8am-ksa-w": 1,
+        "c_minimum-30-percent-crm-w": 1,
+        "c_30-percent-to-80-w": 1,
+        "c_bundle-buy-1-get-2-free-brands-uae-w": 1,
+        "c_flash-deal-uae-collection-w": 1,
+        "c_mona-mobarak-collection-uae-w": 1,
+        "c_flash-deal-24thdec-6pm-ksa-w": 1,
+        "c_flash-deal-9thdec-6pm-ksa-w": 1,
+        "c_up-to-50-percent-off-new-vm": 1,
+        "c_30-percent-60-percent-off-w": 1,
+        "c_flash-sale-8thfeb-2pm-uae-w": 1,
+        "c_view-all-w": 1,
+        "c_yara-alhasibi-collection-uae-w": 1,
+        "c_20-percent-70-percent-off-uae-w": 1,
+        "c_flash-sale-1stfeb-6pm-uae-w": 1,
+        "c_everything-under-79-w": 1,
+        "c_nouf-wk51": 1,
+        "c_styli-x-alinma-bank-w": 1,
+        "c_buy-1-get-1-free-herobanner-w": 1,
+        "c_under-99-sar-crm-w": 1,
+        "c_flashsale-21-may30-4": 1,
+        "c_test-badge-w": 1,
+        "c_flash-sale-3rdmar-9pm-uae-w": 1,
+        "c_outerwear": 1,
+        "c_flash-sale-1stfeb-6pm-ksa-w": 1,
+        "c_flash-deal-9thdec-6pm-uae-w": 1,
+        "c_flash-sale-25thjan-6pm-ksa-w": 1,
+        "c_flash-sale-7thmar-6pm-uae-w": 1,
+        "c_bestsellers-at-w": 1,
+        "c_up-to-60-percent-off-w": 1,
+        "c_flash-sale-3rdmar-9pm-ksa-w": 1
+      },
+      "metadata": {
+        "level-1": [{
+          "categoryId": "7",
+          "categoryName": "Women",
+          "path": "Women"
+        }],
+        "level-2": [{
+          "categoryId": "9",
+          "categoryName": "Clothing",
+          "path": "Women /// Clothing"
+        }],
+        "level-3": [{
+          "categoryId": "304",
+          "categoryName": "Outerwear",
+          "path": "Women /// Clothing /// Outerwear"
+        }],
+        "level-4": [{
+          "categoryId": "303",
+          "categoryName": "Blazers",
+          "path": "Women /// Clothing /// Outerwear /// Blazers"
+        }, {
+          "categoryId": "328",
+          "categoryName": "Dresses",
+          "path": "Women /// Clothing /// Dresses /// Dresses"
+        }],
+        "sku": "7002345736",
+        "productId": "7002345736"
+      },
+      "disableSpecialPrice": false,
+      "specialPrice": "66.00",
+      "isMulin": false,
+      "droppedPrice": 0,
+      "appliedCouponValue": [],
+      "taxObj": {},
+      "priceHistory": [{
+        "price": 66,
+        "type": "normal"
+      }]
+    }],
+    "convertedAt": null,
+    "isActive": 1,
+    "itemsCount": 2,
+    "itemsQty": 2,
+    "storeToBaseRate": 0,
+    "baseCurrencyCode": "SAR",
+    "storeCurrencyCode": "SAR",
+    "grandTotal": 0,
+    "baseGrandTotal": 0,
+    "appliedRuleIds": [],
+    "couponCode": null,
+    "subtotal": 177,
+    "baseSubtotal": 177,
+    "subtotalWithDiscount": 177,
+    "baseSubtotalWithDiscount": 177,
+    "autoPromoCode": null,
+    "autoPromoAmount": null,
+    "triggerRecollect": 0,
+    "amstorecreditUse": false,
+    "amstorecreditBaseAmount": null,
+    "amstorecreditAmount": null,
+    "promoAppliedAt": null,
+    "quoteAddress": [{
+      "customerAddressId": "",
+      "addressType": "shipping",
+      "email": "",
+      "defaultAddress": false,
+      "firstname": "",
+      "lastname": "",
+      "mobileNumber": "",
+      "city": "",
+      "region": "",
+      "regionId": "",
+      "postcode": "",
+      "countryId": "",
+      "telephone": "",
+      "shippingMethod": "",
+      "shippingDescription": "",
+      "locationType": "",
+      "nearestLandmark": "",
+      "area": "",
+      "buildingNumber": "",
+      "latitude": null,
+      "longitude": null,
+      "formattedAddress": "",
+      "cityMapper": {}
+    }],
+    "quotePayment": {
+      "method": null,
+      "additionalInformation": null,
+      "createdAt": null,
+      "updatedAt": null,
+      "cardBin": "",
+      "applyStoreCredit": null
+    },
+    "metadata": [{
+      "level-1": [{
+        "categoryId": "7",
+        "categoryName": "Women",
+        "path": "Women"
+      }],
+      "level-2": [{
+        "categoryId": "9",
+        "categoryName": "Clothing",
+        "path": "Women /// Clothing"
+      }],
+      "level-3": [{
+        "categoryId": "16",
+        "categoryName": "Dresses",
+        "path": "Women /// Clothing /// Dresses"
+      }],
+      "level-4": [{
+        "categoryId": "328",
+        "categoryName": "Dresses",
+        "path": "Women /// Clothing /// Dresses /// Dresses"
+      }],
+      "sku": "7004174901",
+      "productId": "7004174901"
+    }, {
+      "level-1": [{
+        "categoryId": "7",
+        "categoryName": "Women",
+        "path": "Women"
+      }],
+      "level-2": [{
+        "categoryId": "9",
+        "categoryName": "Clothing",
+        "path": "Women /// Clothing"
+      }],
+      "level-3": [{
+        "categoryId": "304",
+        "categoryName": "Outerwear",
+        "path": "Women /// Clothing /// Outerwear"
+      }],
+      "level-4": [{
+        "categoryId": "303",
+        "categoryName": "Blazers",
+        "path": "Women /// Clothing /// Outerwear /// Blazers"
+      }, {
+        "categoryId": "328",
+        "categoryName": "Dresses",
+        "path": "Women /// Clothing /// Dresses /// Dresses"
+      }],
+      "sku": "7002345736",
+      "productId": "7002345736"
+    }],
+    "createdAt": "2023-04-14T13:11:14.120Z",
+    "customerEmail": "snigg@gmail.com",
+    "updatedAt": "2023-06-14T10:04:08.287Z",
+    "previousOrderList": [{
+      "status": "processing",
+      "incrementId": "000327647",
+      "createdAt": "2022-12-15T12:36:56.000Z",
+      "holdOrder": 0
+    }],
+    "discountData": [],
+    "donationAmount": 0,
+    "totalOrderedCount": 1,
+    "flashSale": {
+      "active": null
+    },
+    "currencyConversionRate": 1,
+    "priceDropData": {
+      "offerTime": 0
+    },
+    "coupon": null,
+    "check_for_auto_apply": true,
+    "groupedData": {
+      "data": {
+        "700417490103_700234573603": {
+          "products": ["700417490103", "700234573603"]
+        }
+      },
+      "configs": {
+        "translations": {
+          "appliedText": "{{bundleDesc}} applied!",
+          "addCta": "Add",
+          "prospectText": "Add {{addMore}} more items to avail {{bundleDesc}}"
+        },
+        "bgColor": {
+          "applied": "#EAF1E4",
+          "prospect": "#FAEAEB"
+        }
+      }
+    },
+    "couponDiscount": null,
+    "shippingThreshold": 300,
+    "shippingCharges": 0,
+    "codCharges": 0,
+    "calcSource": "native",
+    "prepaidPayable": {},
+    "skus": ["700417490103", "700234573603"],
+    "websiteId": [1],
+    "freeShippingConfig": {
+      "country": "sa",
+      "language": "en",
+      "expireInHour": "1",
+      "minOrderValue": "100",
+      "customerId": "5226811",
+      "requestedAt": "2023-04-14T13:41:41.664Z"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "CREATE_ORDER_SUCCESS": {
+    "incrementId": "1239828723",
+    "orderId": 1223213
+  },
+  "CREATE_ORDER_FAILURE": {
+    "error": "Error In creating order"
+  }
+}

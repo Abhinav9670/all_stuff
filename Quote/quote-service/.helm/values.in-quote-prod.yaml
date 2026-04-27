@@ -1,0 +1,60 @@
+quote:
+  domain: in-prod-api.stylishop.com
+  replicaCountFront: 2
+  replicaCountBack: 1
+  styli_env: live
+  debug_params: couchnode:lcb:error,couchnode:lcb:warn node styli_quote_service
+  jwt_secret: notToShareQWER
+  cb_address_bucket: in_adrsmpr_prod
+  cb_customer_bucket: in_customer_prod
+  cb_expiry: 1296000
+  cb_kv_timeout: 3000
+  cb_n1ql_timeout: 5000
+  elastic_url: http://search-vm.in-curofy-prod:8080
+  order_count_url: http://order-service.in-oms-prod/rest/order/auth/total/count
+  order_list_url: http://omsnode.in-oms-prod:8080/v1/orders/list/lifetime
+  inv_check_url: http://inventory.in-oms-prod:8080/api/inventory/storefront/atp
+  store_credit_url: http://order-service.in-oms-prod/rest/order/auth/v2/storecredit
+  customer_get_profile_url: http://customer-service.in-customer-prod/rest/customer/oms/details
+  customer_delete_status_update_url: http://customer-service.in-oms-prod/rest/customer/delete/status/update
+  promo_url: http://promoweb.in-promoprod
+  apigee_base_url: https://api.stylishop.com/search-vm-prod
+  mysql_import_batch_size: 10000
+  import_last_updated_after: 2020-10-26 02:45:00
+  consul_host: india-consul-consul-server.in-consul
+  consul_port: 8500
+  consul_key: appConfig_live
+  consul_promo_base_url: promoBaseUrl
+  consul_addressMapper_sa_qa: addressMapper_sa_live
+  consul_addressMapper_ae_qa: addressMapper_ae_live
+  consul_addressMapper_kw_qa: addressMapper_kw_live
+  consul_addressMapper_bh_qa: addressMapper_bh_live
+  consul_addressMapper_qa_qa: addressMapper_qa_live
+  consul_customer_auth_config: java/customer-service/authorization_live
+  consul_promo_keys: promo/promo
+  kafka_brokers: 10.154.0.86:9092
+  kafka_client_id: quote-prod-server
+  kafka_topic_quote: quote
+  kafka_topic_quote_items: quoteItem
+  kafka_topic_delete_customer: deleted_customers_live
+  kafka_group_id: consumer-quote
+  new_relic_env: Node-Quote_Service-LIVE
+  elastic_apm_service_name: in-quote-service
+  elastic_apm_service_token:
+  elastic_apm_service_url: http://10.154.15.204:8200
+  consul_payment_methods: payment_methods_live
+  fetch_city_endpoint: http://adrsmpr.in-adrsmpr-prod:8080/api/address/search/city
+  eas_url: http://in-eas.easprod:8080
+  region: IN
+  consul_tax: tax/in_tax_prod
+  memorylim: 1200Mi
+  cpulim: 700m
+  memoryreq: 1200Mi
+  cpureq: 700m
+  payment_service_url: http://payment.in-payment-prod:5001
+  redis_url: redis://10.118.128.20:6379
+  kafka_price_drop_topic: collect-price-drop-prod 
+  braze_base_url: ""
+  braze_auth_token: ""
+  kafka_mulin_client_id: nodeJS-mulin-server-secondary
+

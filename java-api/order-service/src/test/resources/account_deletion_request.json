@@ -1,0 +1,6 @@
+{
+	"requestType":"submit",
+	"customerId":"101",
+	"reason":"fraud user",
+	"otp":"9898"
+}

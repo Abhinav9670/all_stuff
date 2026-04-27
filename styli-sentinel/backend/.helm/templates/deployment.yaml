@@ -1,0 +1,192 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sentinel
+  labels:
+    app: {{ template "app.fullname" . }}
+    service: sentinel
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.sentinel.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "app.fullname" . }}
+      service: sentinel
+      release: {{ .Release.Name }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: {{ template "app.fullname" . }}
+        service: sentinel
+        release: {{ .Release.Name }}
+    spec:
+      nodeSelector:
+        for: wi
+      serviceAccountName: {{ .Values.sentinel.servicekeyname }}
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 50
+              podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    service: sentinel
+                    revision: '{{ .Release.Revision }}'
+                topologyKey: 'kubernetes.io/hostname'
+      volumes:
+        - name: gcpauth
+          secret:
+            secretName: gcp-secret
+      containers:
+        - name: sentinel
+          image: '{{ .Values.sentinel.image }}'
+          imagePullPolicy: "{{ .Values.sentinel.pullPolicy }}"
+          readinessProbe:
+            httpGet:
+              path: "/api/v1/health-check"
+              port: 8080
+              initialDelaySeconds: 30
+            timeoutSeconds: 2
+            periodSeconds: 60
+            failureThreshold: 3
+            successThreshold: 1
+          livenessProbe:
+            httpGet:
+              path: "/api/v1/health-check"
+              port: 8080
+            initialDelaySeconds: 60
+            timeoutSeconds: 2
+            periodSeconds: 10
+            failureThreshold: 3
+          resources:
+            requests:
+              cpu: {{ .Values.sentinel.cpureq }}
+              memory: {{ .Values.sentinel.memoryreq }}
+            limits:
+              cpu: {{ .Values.sentinel.cpulim }}
+              memory: {{ .Values.sentinel.memorylim }}
+          ports:
+            - name: http
+              containerPort: 8080
+          env:
+          - name: NODE_ENV_ALT
+            value: "{{ .Values.sentinel.node_env_alt }}"
+          - name: NODE_ENV
+            value: '{{ .Values.sentinel.node_env }}'
+          - name: MONGODB_AUTH_DB
+            value: '{{ .Values.sentinel.mongo_auth_db }}'
+          - name: MONGODB_URL
+            value: '{{ .Values.sentinel.mongo_url }}'
+          - name: MONGODB_DB
+            value: '{{ .Values.sentinel.mongo_db }}'
+          - name: MONGODB_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: sentinel
+                key: mongo_username
+          - name: MONGODB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: sentinel
+                key: mongo_password
+          - name: MONGO_NODE_COUNT
+            value: '{{ .Values.sentinel.mongo_node_count }}'
+          - name: MONGO_DB_OPTIONS
+            value: '{{ .Values.sentinel.mongo_db_options }}'
+          - name: CONSUL_HOST
+            value: '{{ .Values.sentinel.consul_host }}'
+          - name: CONSUL_PORT
+            value: '{{ .Values.sentinel.consul_port }}'
+          - name: CONSUL_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: consul-secrets
+                key: consul_token
+          - name: ELASTIC_APM_SERVICE_NAME
+            value: '{{ .Values.sentinel.elastic_apm_service_name }}'
+          - name: ELASTIC_APM_SERVER_URL
+            value: '{{ .Values.sentinel.elastic_apm_service_url }}'
+          - name: FIREBASE_APIKEY
+            value: '{{ .Values.sentinel.firebase_apikey }}'
+          - name: FIREBASE_URL
+            value: '{{ .Values.sentinel.firebase_url }}'
+          - name: FIREBASE_REFRESH_TOKEN_URL
+            value: '{{ .Values.sentinel.firebase_refreshtoken_url }}'
+          - name: FIREBASE_SERVICE_KEY_LOCATION
+            value: '{{ .Values.sentinel.firebase_service_key_location }}'
+          - name: PORT
+            value: '{{ .Values.sentinel.port }}'
+          - name: AUTH_SERVICE_URL
+            value: "{{ .Values.sentinel.auth_service_url }}"
+          - name: EPSILON_BASE_URL
+            valueFrom:
+              secretKeyRef:
+                name: sentinel
+                key: EPSILON_BASE_URL
+          - name: EPSILON_AUTH_KEY
+            valueFrom:
+              secretKeyRef:
+                name: sentinel
+                key: EPSILON_AUTH_KEY
+          - name: EPSILON_GRANT_TYPE
+            valueFrom:
+              secretKeyRef:
+                name: sentinel
+                key: EPSILON_GRANT_TYPE
+          - name: EPSILON_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: sentinel
+                key: EPSILON_USERNAME
+          - name: EPSILON_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: sentinel
+                key: EPSILON_PASSWORD
+          - name: EPSILON_RESPONSE_TYPE
+            valueFrom:
+              secretKeyRef:
+                name: sentinel
+                key: EPSILON_RESPONSE_TYPE
+          - name: REDIS_URL
+            valueFrom:
+              secretKeyRef:
+                name: sentinel
+                key: REDIS_URL
+          - name: REDIS_PORT
+            valueFrom:
+              secretKeyRef:
+                name: sentinel
+                key: REDIS_PORT
+          - name: REDIS_AUTH
+            valueFrom:
+              secretKeyRef:
+                name: sentinel
+                key: REDIS_AUTH   
+          volumeMounts:
+          - name: gcpauth
+            mountPath: /var/gcppath
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sentinel
+  labels:
+    app: {{ template "app.fullname" . }}
+    service: sentinel
+    release: {{ .Release.Name }}
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    app: {{ template "app.fullname" . }}
+    service: sentinel
+    release: {{ .Release.Name }}

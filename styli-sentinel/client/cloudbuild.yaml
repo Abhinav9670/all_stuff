@@ -1,0 +1,87 @@
+steps:
+  - name: node:20.14.0
+    entrypoint: yarn
+    args: ['install']
+    dir: '/workspace/client'
+  - name: node:20.14.0
+    entrypoint: yarn
+    args: ['$_BUILD_NAME_']
+    env:
+      - 'BUILD=$BUILD_ID'
+      - 'PROJECT=$PROJECT_ID'
+      - 'REV=$REVISION_ID'
+      - 'BRANCH=$BRANCH_NAME'
+      - 'TAG_NAME=$TAG_NAME'
+      - 'COMMIT_SHA=$COMMIT_SHA'
+      - 'REPO_NAME=$REPO_NAME'
+    dir: '/workspace/client'
+    
+  - id: 'owasp-pre-requisites'
+    name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    volumes:
+      - name: 'code'
+        path: /code
+    args:
+      - '-c'
+      - |
+        if [[ "$_SEC_OPS_" == "true" ]]; then
+          mkdir data
+          gsutil -m cp -r gs://styli_cache/data ./data
+          chmod -R 777 data
+          cp -rf * /code/
+        fi
+
+  - name: 'gcr.io/cloud-builders/docker'
+    entrypoint: bash
+    id: 'dependency-scan'
+    volumes:
+      - name: 'code'
+        path: /code
+    args:
+      - '-c'
+      - |
+        if [[ "$_SEC_OPS_" == "true" ]]; then
+          chmod 777 client
+          docker run --rm \
+            -v /workspace/data/data:/usr/share/dependency-check/data \
+            -v /workspace/client:/workspace/client \
+            owasp/dependency-check:8.4.3 \
+            --log /workspace/client/dependency-check.log \
+            --scan /workspace/client \
+            --format CSV \
+            --out /workspace/client/sentinel-ui-zap-report-$SHORT_SHA.csv
+        fi
+  - name: 'gcr.io/cloud-builders/gsutil'
+    id: 'report-upload'
+    entrypoint: 'bash'
+    dir: '/workspace/client'
+    args:
+      - '-c'
+      - |
+        if [[ "$_SEC_OPS_" == "true" ]]; then
+          gsutil cp -r /workspace/client/sentinel-ui-zap-report-$SHORT_SHA.csv gs://client-reports/sentinel-ui/
+        fi
+
+  - name: 'gcr.io/cloud-builders/docker'
+    entrypoint: bash
+    id: 'email-send'
+    args:
+      - '-c'
+      - |
+        if [[ "$_SEC_OPS_" == "true" ]]; then
+          docker run -i --rm \
+            -v /workspace/client/sentinel-ui-zap-report-$SHORT_SHA.csv:/app/report/sentinel-ui-zap-report-$SHORT_SHA.csv \
+            -e TO_EMAIL=${_TO_EMAIL} \
+            -e FROM_EMAIL=sre@stylishop.com \
+            -e SUBJECT="$TRIGGER_NAME Dependency scan report" \
+            -e TEXT="PFA" \
+            -e ATTACHMENT_DIR=report/ \
+            -e ATTACHMENT_FILE=sentinel-ui-zap-report-$SHORT_SHA.csv \
+            gcr.io/$PROJECT_ID/sendgrid-client
+        fi
+        
+  - name: gcr.io/$PROJECT_ID/firebase
+    args: ['deploy', '--project=$PROJECT_ID', '--only=hosting:$_HOSTING_']
+    dir: '/workspace/client'
+timeout: 40m

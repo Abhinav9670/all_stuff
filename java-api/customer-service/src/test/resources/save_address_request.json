@@ -1,0 +1,17 @@
+{
+  "area": "758001",
+  "buildingNumber": "kokila",
+  "city": "Kendujhargarh",
+  "country": "IN",
+  "defaultAddress": true,
+  "firstName": "sanjay",
+  "landMark": "durga temple",
+  "lastName": "kumar",
+  "mobileNumber": "+91 8989878900",
+  "region": "Odisha",
+  "regionId": "c4504aba-6a6c-429e-8656-9194cd2abf4b",
+  "streetAddress": "mining road",
+  "telephone": "+918989878900",
+  "customerId": 5229113,
+  "addressId":2121
+}

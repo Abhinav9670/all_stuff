@@ -1,0 +1,23 @@
+{
+  "quote_jwt_token_enable": false,
+  "java_create_order_jwt_token_enable": true,
+  "refresh_jwt_token_enable": false,
+  "refresh_jwt_token_app_version": "4.0.5800",
+  "jwt_token_expire_time_in_minutes": 5,
+  "refresh_token_expire_time_in_days": 90,
+  "addressValidationMessage": {
+     "first_name_validation_en": "Address first name missing!",
+     "first_name_validation_ar": "العنوان الأول الاسم مفقود!",
+     "country-name-validation_en": "Address country name missing !!",
+     "country-name-validation_ar": "عنوان البلد اسم مفقود!",
+     "code_validation_en": "Something went wrong! Please save address again!!",
+     "code_validation_ar": "هناك خطأ ما! الرجاء حفظ العنوان مرة أخرى!",
+     "area_validation_en": "area name is inavild ! Please select other adrea.",
+     "area_validation_ar": "اسم المنطقة غير موجود! الرجاء تحديد إعلان آخر.",
+     "city-validation_en": "city name is not valid! Please choose differnt city.",
+     "city-validation_ar": "اسم المدينة غير صالح! الرجاء اختيار مدينة مختلفة.",
+     "region-validation_en": "region name is not valid! Please choose differnt region.",
+     "region-validation_ar": "اسم المنطقة غير صالح! الرجاء اختيار منطقة مختلفة."
+  },
+  "template_host_url": "https://dev.stylifashion.com/"
+}

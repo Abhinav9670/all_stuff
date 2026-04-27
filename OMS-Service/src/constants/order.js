@@ -1,0 +1,138 @@
+const ORDER_SHIPPED_CODE = [2, 3];
+const ORDER_PACKED = 'packed';
+const ORDER_SHIPPED_STATUS_CODE = 'shipped';
+const ORDER_REFUNDED_STATUS_CODE = 'refunded';
+const ORDER_PICKED_UP = "pickedup"
+
+const ORDER_DELIVERED_CODE = 5;
+const ORDER_DELIVERED_STATUS_CODE = 'delivered';
+
+const CASHONDELIVERY = 'cashondelivery';
+
+const PICKED_UP_STATUS_CODE = 'picked_up';
+const DROPPED_OFF_STATUS_CODE = 'dropped_off';
+const RECEIVED_BY_ADMIN_STATUS_CODE = 'received_admin';
+
+const ORDER_STATE_CANCELED = 'canceled';
+const ORDER_STATE_COMPLETE = 'complete';
+const ORDER_STATE_CLOSED = 'closed';
+const ORDER_STATE_LOST = 'lost';
+const ORDER_STATE_CANCELLED = 'cancel';
+
+const OUT_FOR_DELIVERY = 3;
+
+const ORDER_RTO = 12;
+const ORDER_RTO_STATUS_CODE = 'rto';
+
+const ORDER_LOST = 16;
+const ORDER_LOST_STATUS_CODE = 'order_lost';
+
+const ORDER_CANCELLED = 10;
+const ORDER_CANCELLED_STATUS_CODE = 'order_cancelled';
+
+const ORDER_RTO_INITIATED = 6;
+const ORDER_RTO_INITIATED_CODE = 'rto_initiated';
+
+const PICKUP_FAILED = 7;
+const PICKUP_FAILED_STATUS_CODE = 'pickup_failed';
+
+const FAILED_DELIVERY = 4;
+const FAILED_DELIVERY_STATUS_CODE = 'undelivered';
+const SALES_CREDITMEMO = 'sales_creditmemo';
+
+const DROPPED_OFF_STATUS_ID = 19;
+
+const OUT_FOR_PICKUP_CODE = 1;
+const OUT_FOR_PICKUP_STATUS_CODE = 'out_for_pickup';
+
+const RMA_UNDER_VERIFICATION = 'under_verification';
+const RMA_ITEM_VERIFICATION_FAILED = 'verification_failed';
+const RMA_ITEM_VERIFICATION_PASSED = 'verification_passed';
+
+const WMS_RTO_PUSH_PENDING_STATUS = 8;
+const WMS_RTO_PUSH_SUCCESS_STATUS = 9;
+
+
+const STATUS_HISTORY_MAP = {
+  [ORDER_PACKED]: 'packed_date',
+  [ORDER_SHIPPED_STATUS_CODE]: 'shipped_date',
+  [PICKED_UP_STATUS_CODE]: 'picked_up_date',
+  [ORDER_RTO_STATUS_CODE]: 'rto_date',
+  [ORDER_DELIVERED_STATUS_CODE]: 'delivered_date',
+  [ORDER_REFUNDED_STATUS_CODE]: 'refunded_date',
+  [RECEIVED_BY_ADMIN_STATUS_CODE]: 'received_warehouse_date'
+};
+
+const REFUND_TEMPLATE_MAP = {
+  cashondelivery: 'refund_completed_cod',
+  apple_pay: 'refund_completed_online',
+  md_payfort_cc_vault: 'refund_completed_online',
+  md_payfort: 'refund_completed_online',
+  free: 'refund_completed_cod',
+  tabby_installments: 'refund_completed_tabby_ins',
+  tabby_paylater: 'refund_completed_tabby_bnpl',
+  cashfree: 'refund_initiated_cashgram'
+};
+
+const STATUS_ID_CODE_MAP = {
+  2: ORDER_SHIPPED_STATUS_CODE,
+  3: ORDER_SHIPPED_STATUS_CODE,
+  [FAILED_DELIVERY]: FAILED_DELIVERY_STATUS_CODE,
+  [ORDER_DELIVERED_CODE]: ORDER_DELIVERED_STATUS_CODE,
+  [ORDER_RTO]: ORDER_RTO_STATUS_CODE,
+  [ORDER_RTO_INITIATED]: ORDER_RTO_INITIATED_CODE,
+  [ORDER_LOST]: ORDER_LOST_STATUS_CODE,
+  [ORDER_CANCELLED] : ORDER_CANCELLED_STATUS_CODE,
+  [PICKUP_FAILED]:PICKED_UP_STATUS_CODE
+};
+
+const SKIP_DUPLICATE_CHECK_REQ_STATUS = ['OUT_FOR_DELIVERY'];
+
+const ORDER_SORCE_MAP = ['Web', 'App', 'M Site', 'Admin'];
+const ORDER_TRACK_HISTORY= process.env.ORDER_TRACK_HISTORY_TOPIC || 'order_track_history_prod';
+module.exports = {
+  ORDER_SHIPPED_CODE,
+  ORDER_PACKED,
+  ORDER_SHIPPED_STATUS_CODE,
+  ORDER_DELIVERED_CODE,
+  ORDER_DELIVERED_STATUS_CODE,
+  PICKED_UP_STATUS_CODE,
+  RECEIVED_BY_ADMIN_STATUS_CODE,
+  ORDER_STATE_CANCELED,
+  ORDER_STATE_COMPLETE,
+  ORDER_RTO,
+  ORDER_RTO_STATUS_CODE,
+  ORDER_RTO_INITIATED,
+  ORDER_RTO_INITIATED_CODE,
+  FAILED_DELIVERY,
+  FAILED_DELIVERY_STATUS_CODE,
+  SALES_CREDITMEMO,
+  STATUS_HISTORY_MAP,
+  OUT_FOR_DELIVERY,
+  DROPPED_OFF_STATUS_ID,
+  RMA_UNDER_VERIFICATION,
+  OUT_FOR_PICKUP_CODE,
+  OUT_FOR_PICKUP_STATUS_CODE,
+  RMA_ITEM_VERIFICATION_FAILED,
+  RMA_ITEM_VERIFICATION_PASSED,
+  ORDER_REFUNDED_STATUS_CODE,
+  ORDER_STATE_CLOSED,
+  WMS_RTO_PUSH_PENDING_STATUS,
+  WMS_RTO_PUSH_SUCCESS_STATUS,
+  REFUND_TEMPLATE_MAP,
+  STATUS_ID_CODE_MAP,
+  DROPPED_OFF_STATUS_CODE,
+  ORDER_SORCE_MAP,
+  SKIP_DUPLICATE_CHECK_REQ_STATUS,
+  ORDER_LOST,
+  ORDER_LOST_STATUS_CODE,
+  ORDER_STATE_LOST,
+  ORDER_CANCELLED_STATUS_CODE,
+  ORDER_CANCELLED,
+  ORDER_STATE_CANCELLED,
+  PICKUP_FAILED,
+  PICKUP_FAILED_STATUS_CODE,
+  ORDER_TRACK_HISTORY,
+  ORDER_PICKED_UP,
+  CASHONDELIVERY
+};

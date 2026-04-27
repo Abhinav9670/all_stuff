@@ -1,0 +1,14 @@
+{
+  "isStandaloneLogin": false,
+  "loginType": "SOCIAL_LOGIN_APPLE",
+  "password": "test@123",
+  "useridentifier": "sanjay.800@mailinator.com",
+  "socialLoginDetails": {
+	    "tokenId":"87",
+	  "clientType":"IOS_CLIENT"
+
+  },
+  "phoneNumber": "",
+  "ageGroupId": 1,
+  "websiteId": 51
+}

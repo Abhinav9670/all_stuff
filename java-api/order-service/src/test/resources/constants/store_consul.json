@@ -1,0 +1,430 @@
+[
+        {
+          "storeId": "1",
+          "storeCode": "en",
+          "storeLanguage": "en_US",
+          "storeCurrency": "SAR",
+          "showAddLowValueAmount": 50,
+          "shipmentChargesThreshold": 200,
+          "shipmentCharges": 10,
+          "codCharges": 9,
+          "taxPercentage": 15,
+          "websiteId": 1,
+          "websiteIdentifier": "sa/en",
+          "storeName": "Saudi Arabia",
+          "websiteCode": "sa",
+          "countryCode": "+966",
+          "currencyConversionRate": 1,
+          "termsAndUse": "https://stylishop.com/en/legal/user-agreement",
+          "privecyPolicy": "https://stylishop.com/en/legal/privacy",
+          "helpCentreAndFaq": "https://stylishop.com/en/helpcentre",
+          "contract": "https://stylishop.com/en/contact",
+          "customDutiesPercentage": 0,
+          "importFeePercentage": 0,
+          "minimumDutiesAmount": 0,
+          "flagUrl": "https://bucket.stylishop.com/flags/flag_sa.png",
+          "quoteProductMaxAddedQty": 0,
+          "importMaxFeePercentage": 0,
+          "catalogCurrencyConversionRate": 1,
+          "decimalPricing": false,
+          "phoneNumberValidation": {
+            "maxLength": 10,
+            "actualLength": 9,
+            "lableHintNumber": "501234567",
+            "validation": [
+              {
+                "zeroInitialIndex": true,
+                "regex": [
+                  "(^(?:[0])?([0-9]{10})$)"
+                ]
+              },
+              {
+                "zeroInitialIndex": false,
+                "regex": [
+                  "(^([1-9]){1}([0-9]{8})$)"
+                ]
+              }
+            ]
+          },
+          "warehouseId": 110,
+          "mapperTable": "sa_inventory",
+          "rmaapplicableThreshold": 0,
+          "minimumFirstOrderValue": null,
+          "holdOrder": true,
+          "isPayfortAuthorized": false
+        },
+        {
+          "storeId": "3",
+          "storeCode": "ar",
+          "storeLanguage": "ar_SA",
+          "storeCurrency": "SAR",
+          "showAddLowValueAmount": 50,
+          "shipmentChargesThreshold": 200,
+          "shipmentCharges": 10,
+          "codCharges": 9,
+          "taxPercentage": 15,
+          "websiteId": 1,
+          "websiteIdentifier": "sa/ar",
+          "storeName": "السعودية",
+          "websiteCode": "sa",
+          "countryCode": "+966",
+          "currencyConversionRate": 1,
+          "termsAndUse": "https://stylishop.com/ar/legal/user-agreement",
+          "privecyPolicy": "https://stylishop.com/ar/legal/privacy",
+          "helpCentreAndFaq": "https://stylishop.com/ar/helpcentre",
+          "contract": "https://stylishop.com/ar/contact",
+          "customDutiesPercentage": 0,
+          "importFeePercentage": 0,
+          "minimumDutiesAmount": 300,
+          "flagUrl": "https://bucket.stylishop.com/flags/flag_sa.png",
+          "quoteProductMaxAddedQty": 4,
+          "importMaxFeePercentage": 5,
+          "catalogCurrencyConversionRate": 1,
+          "decimalPricing": false,
+          "phoneNumberValidation": {
+            "maxLength": 10,
+            "actualLength": 9,
+            "lableHintNumber": "501234567",
+            "validation": [
+              {
+                "zeroInitialIndex": true,
+                "regex": [
+                  "(^(?:[0])?([0-9]{10})$)"
+                ]
+              },
+              {
+                "zeroInitialIndex": false,
+                "regex": [
+                  "(^([1-9]){1}([0-9]{8})$)"
+                ]
+              }
+            ]
+          },
+          "warehouseId": 110,
+          "mapperTable": "sa_inventory",
+          "rmaapplicableThreshold": 0,
+          "minimumFirstOrderValue": null,
+          "holdOrder": true,
+          "isPayfortAuthorized": false
+        },
+        {
+          "storeId": "7",
+          "storeCode": "ae_en",
+          "storeLanguage": "en_US",
+          "storeCurrency": "AED",
+          "showAddLowValueAmount": 50,
+          "shipmentChargesThreshold": 200,
+          "shipmentCharges": 10,
+          "codCharges": 12,
+          "taxPercentage": 0,
+          "websiteId": 3,
+          "websiteIdentifier": "ae/en",
+          "storeName": "United Arab Emirates",
+          "websiteCode": "ae",
+          "countryCode": "+971",
+          "currencyConversionRate": 1.02,
+          "termsAndUse": "https://stylishop.com/ae_en/legal/user-agreement",
+          "privecyPolicy": "https://stylishop.com/ae_en/legal/privacy",
+          "helpCentreAndFaq": "https://stylishop.com/ae_en/helpcentre",
+          "contract": "https://stylishop.com/ae_en/contact",
+          "customDutiesPercentage": 0,
+          "importFeePercentage": 0,
+          "minimumDutiesAmount": 300,
+          "flagUrl": "https://bucket.stylishop.com/flags/flag_ae.png",
+          "quoteProductMaxAddedQty": 5,
+          "importMaxFeePercentage": 5,
+          "catalogCurrencyConversionRate": 0.92,
+          "decimalPricing": false,
+          "phoneNumberValidation": {
+            "maxLength": 10,
+            "actualLength": 9,
+            "lableHintNumber": "501234567",
+            "validation": [
+              {
+                "zeroInitialIndex": true,
+                "regex": [
+                  "(^(?:[0])?([0-9]{10})$)"
+                ]
+              },
+              {
+                "zeroInitialIndex": false,
+                "regex": [
+                  "(^([1-9]){1}([0-9]{8})$)"
+                ]
+              }
+            ]
+          },
+          "warehouseId": 110,
+          "mapperTable": "sa_inventory",
+          "rmaapplicableThreshold": 0,
+          "minimumFirstOrderValue": null,
+          "holdOrder": true,
+          "isPayfortAuthorized": true
+        },
+        {
+          "storeId": "11",
+          "storeCode": "ae_ar",
+          "storeLanguage": "ar_SA",
+          "storeCurrency": "AED",
+          "showAddLowValueAmount": 50,
+          "shipmentChargesThreshold": 200,
+          "shipmentCharges": 12,
+          "codCharges": 12,
+          "taxPercentage": 0,
+          "websiteId": 3,
+          "websiteIdentifier": "ae/ar",
+          "storeName": "الإمارات",
+          "websiteCode": "ae",
+          "countryCode": "+971",
+          "currencyConversionRate": 1.02,
+          "termsAndUse": "https://stylishop.com/ae_ar/legal/user-agreement",
+          "privecyPolicy": "https://stylishop.com/ae_ar/legal/privacy",
+          "helpCentreAndFaq": "https://stylishop.com/ae_ar/helpcentre",
+          "contract": "https://stylishop.com/ae_ar/contact",
+          "customDutiesPercentage": 0,
+          "importFeePercentage": 0,
+          "minimumDutiesAmount": 300,
+          "flagUrl": "https://bucket.stylishop.com/flags/flag_ae.png",
+          "quoteProductMaxAddedQty": 3,
+          "importMaxFeePercentage": 5,
+          "catalogCurrencyConversionRate": 0.92,
+          "decimalPricing": false,
+          "phoneNumberValidation": {
+            "maxLength": 10,
+            "actualLength": 9,
+            "lableHintNumber": "501234567",
+            "validation": [
+              {
+                "zeroInitialIndex": true,
+                "regex": [
+                  "(^(?:[0])?([0-9]{10})$)"
+                ]
+              },
+              {
+                "zeroInitialIndex": false,
+                "regex": [
+                  "(^([1-9]){1}([0-9]{8})$)"
+                ]
+              }
+            ]
+          },
+          "warehouseId": 110,
+          "mapperTable": "sa_inventory",
+          "rmaapplicableThreshold": 0,
+          "minimumFirstOrderValue": null,
+          "holdOrder": true,
+          "isPayfortAuthorized": true
+        },
+        {
+          "storeId": "12",
+          "storeCode": "kw_en",
+          "storeLanguage": "en_US",
+          "storeCurrency": "KWD",
+          "showAddLowValueAmount": 0,
+          "shipmentChargesThreshold": 20,
+          "shipmentCharges": 1.5,
+          "codCharges": 1.5,
+          "taxPercentage": 0,
+          "websiteId": 4,
+          "websiteIdentifier": "kw/en",
+          "storeName": "Kuwait",
+          "websiteCode": "kw",
+          "countryCode": "+965",
+          "currencyConversionRate": 13.5,
+          "termsAndUse": "https://stylishop.com/kw_en/legal/user-agreement",
+          "privecyPolicy": "https://stylishop.com/kw_en/legal/privacy",
+          "helpCentreAndFaq": "https://stylishop.com/kw_en/helpcentre",
+          "contract": "https://stylishop.com/kw_en/contact",
+          "customDutiesPercentage": 0,
+          "importFeePercentage": 2.5,
+          "minimumDutiesAmount": 100,
+          "flagUrl": "https://bucket.stylishop.com/flags/flag_kw.png",
+          "quoteProductMaxAddedQty": 3,
+          "importMaxFeePercentage": 7.5,
+          "catalogCurrencyConversionRate": 0.08,
+          "decimalPricing": true,
+          "phoneNumberValidation": {
+            "maxLength": 9,
+            "actualLength": 8,
+            "lableHintNumber": "50123456",
+            "validation": [
+              {
+                "zeroInitialIndex": true,
+                "regex": [
+                  "(^(?:[0])?([0-9]{9})$)"
+                ]
+              },
+              {
+                "zeroInitialIndex": false,
+                "regex": [
+                  "(^([1-9]){1}([0-9]{7})$)"
+                ]
+              }
+            ]
+          },
+          "warehouseId": 110,
+          "mapperTable": "sa_inventory",
+          "rmaapplicableThreshold": 0,
+          "minimumFirstOrderValue": null,
+          "holdOrder": false,
+          "isPayfortAuthorized": false
+        },
+        {
+          "storeId": "13",
+          "storeCode": "kw_ar",
+          "storeLanguage": "ar_SA",
+          "storeCurrency": "KWD",
+          "showAddLowValueAmount": 0,
+          "shipmentChargesThreshold": 20,
+          "shipmentCharges": 1.5,
+          "codCharges": 1.5,
+          "taxPercentage": 0,
+          "websiteId": 4,
+          "websiteIdentifier": "kw/ar",
+          "storeName": "الكويت‎",
+          "websiteCode": "kw",
+          "countryCode": "+965",
+          "currencyConversionRate": 13.5,
+          "termsAndUse": "https://stylishop.com/kw_ar/legal/user-agreement",
+          "privecyPolicy": "https://stylishop.com/kw_ar/legal/privacy",
+          "helpCentreAndFaq": "https://stylishop.com/kw_ar/helpcentre",
+          "contract": "https://stylishop.com/kw_ar/contact",
+          "customDutiesPercentage": 0,
+          "importFeePercentage": 2.5,
+          "minimumDutiesAmount": 100,
+          "flagUrl": "https://bucket.stylishop.com/flags/flag_kw.png",
+          "quoteProductMaxAddedQty": 3,
+          "importMaxFeePercentage": 7.5,
+          "catalogCurrencyConversionRate": 0.08,
+          "decimalPricing": true,
+          "phoneNumberValidation": {
+            "maxLength": 9,
+            "actualLength": 8,
+            "lableHintNumber": "50123456",
+            "validation": [
+              {
+                "zeroInitialIndex": true,
+                "regex": [
+                  "(^(?:[0])?([0-9]{9})$)"
+                ]
+              },
+              {
+                "zeroInitialIndex": false,
+                "regex": [
+                  "(^([1-9]){1}([0-9]{7})$)"
+                ]
+              }
+            ]
+          },
+          "warehouseId": 110,
+          "mapperTable": "sa_inventory",
+          "rmaapplicableThreshold": 0,
+          "minimumFirstOrderValue": null,
+          "holdOrder": false,
+          "isPayfortAuthorized": false
+        },
+        {
+          "storeId": "19",
+          "storeCode": "bh_en",
+          "storeLanguage": "en_US",
+          "storeCurrency": "BHD",
+          "shipmentChargesThreshold": 20,
+          "shipmentCharges": 1.2,
+          "codCharges": 1.2,
+          "taxPercentage": 0,
+          "websiteId": 7,
+          "websiteIdentifier": "bh/en",
+          "storeName": "Bahrain",
+          "websiteCode": "bh",
+          "countryCode": "+973",
+          "currencyConversionRate": 10,
+          "termsAndUse": "https://stylishop.com/bh_en/legal/user-agreement",
+          "privecyPolicy": "https://stylishop.com/bh_en/legal/privacy",
+          "helpCentreAndFaq": "https://stylishop.com/bh_en/helpcentre",
+          "contract": "https://stylishop.com/bh_en/contact",
+          "customDutiesPercentage": 0,
+          "importFeePercentage": 2,
+          "minimumDutiesAmount": 300,
+          "flagUrl": "https://bucket.stylishop.com/flags/flag_bh.png",
+          "quoteProductMaxAddedQty": 3,
+          "importMaxFeePercentage": 6,
+          "catalogCurrencyConversionRate": 0.1,
+          "decimalPricing": true,
+          "phoneNumberValidation": {
+            "maxLength": 9,
+            "actualLength": 8,
+            "lableHintNumber": "50123456",
+            "validation": [
+              {
+                "zeroInitialIndex": true,
+                "regex": [
+                  "(^(?:[0])?([0-9]{9})$)"
+                ]
+              },
+              {
+                "zeroInitialIndex": false,
+                "regex": [
+                  "(^([1-9]){1}([0-9]{7})$)"
+                ]
+              }
+            ]
+          },
+          "warehouseId": 110,
+          "mapperTable": "sa_inventory",
+          "rmaapplicableThreshold": 0,
+          "holdOrder": false,
+          "isPayfortAuthorized": false
+        },
+        {
+          "storeId": "21",
+          "storeCode": "bh_ar",
+          "storeLanguage": "ar_SA",
+          "storeCurrency": "BHD",
+          "shipmentChargesThreshold": 20,
+          "shipmentCharges": 1.2,
+          "codCharges": 1.2,
+          "taxPercentage": 0,
+          "websiteId": 7,
+          "websiteIdentifier": "bh/ar",
+          "storeName": "البحرين",
+          "websiteCode": "bh",
+          "countryCode": "+973",
+          "currencyConversionRate": 10,
+          "termsAndUse": "https://stylishop.com/bh_ar/legal/user-agreement",
+          "privecyPolicy": "https://stylishop.com/bh_ar/legal/privacy",
+          "helpCentreAndFaq": "https://stylishop.com/bh_ar/helpcentre",
+          "contract": "https://stylishop.com/bh_ar/contact",
+          "customDutiesPercentage": 0,
+          "importFeePercentage": 2,
+          "minimumDutiesAmount": 300,
+          "flagUrl": "https://bucket.stylishop.com/flags/flag_bh.png",
+          "quoteProductMaxAddedQty": 3,
+          "importMaxFeePercentage": 6,
+          "catalogCurrencyConversionRate": 0.1,
+          "decimalPricing": true,
+          "phoneNumberValidation": {
+            "maxLength": 9,
+            "actualLength": 8,
+            "lableHintNumber": "50123456",
+            "validation": [
+              {
+                "zeroInitialIndex": true,
+                "regex": [
+                  "(^(?:[0])?([0-9]{9})$)"
+                ]
+              },
+              {
+                "zeroInitialIndex": false,
+                "regex": [
+                  "(^([1-9]){1}([0-9]{7})$)"
+                ]
+              }
+            ]
+          },
+          "warehouseId": 110,
+          "mapperTable": "sa_inventory",
+          "rmaapplicableThreshold": 0,
+          "holdOrder": false,
+          "isPayfortAuthorized": false
+        }
+      ]

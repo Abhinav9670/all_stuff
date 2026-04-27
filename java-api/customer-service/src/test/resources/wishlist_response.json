@@ -1,0 +1,189 @@
+{
+  "status": true,
+  "statusCode": "200",
+  "statusMsg": "Success!",
+  "response": {
+    "customerId": 5229113,
+    "productCount": 2,
+    "products": [
+      {
+        "id": "80392001",
+        "sku": "80392001",
+        "name": "Slit Hem Detail Slim Fit Trouser with Zipper Closure",
+        "productType": "configurable",
+        "prices": {
+          "price": "1999.0",
+          "specialPrice": "1299.35"
+        },
+        "images": {
+          "image": "https://images.stylishop.com/media/catalog/product/80392001/images/80392001_1.jpg",
+          "smallImage": null,
+          "thumbnail": null,
+          "image2": null,
+          "smallImage2": null,
+          "thumbnail2": null,
+          "mediaGallery": [
+            "https://images.stylishop.com/media/catalog/product/80392001/images/80392001_1.jpg",
+            "https://images.stylishop.com/media/catalog/product/80392001/images/80392001_2.jpg",
+            "https://images.stylishop.com/media/catalog/product/80392001/images/80392001_3.jpg",
+            "https://images.stylishop.com/media/catalog/product/80392001/images/80392001_4.jpg",
+            "https://images.stylishop.com/media/catalog/product/80392001/images/80392001_5.jpg"
+          ]
+        },
+        "currency": "INR",
+        "quantity": "0",
+        "isVisibleProduct": true,
+        "discount": 35,
+        "brand": "Closet",
+        "wishListItemId": "80392001",
+        "url": "https://qa.stylifashion.com/in/en/product-closet-slit-hem-detail-slim-fit-trouser-with-zipper-closure-80392001",
+        "configProducts": [
+          {
+            "id": "8039200102",
+            "sku": "8039200102",
+            "size": "S",
+            "quantity": "99958",
+            "isVisibleProduct": true,
+            "outOfStock": false
+          },
+          {
+            "id": "8039200103",
+            "sku": "8039200103",
+            "size": "M",
+            "quantity": "99993",
+            "isVisibleProduct": true,
+            "outOfStock": false
+          },
+          {
+            "id": "8039200104",
+            "sku": "8039200104",
+            "size": "L",
+            "quantity": "99927",
+            "isVisibleProduct": true,
+            "outOfStock": false
+          },
+          {
+            "id": "8039200105",
+            "sku": "8039200105",
+            "size": "XL",
+            "quantity": "99879",
+            "isVisibleProduct": true,
+            "outOfStock": false
+          }
+        ],
+        "categories": {
+          "level0": [
+            "Women"
+          ],
+          "level1": [
+            "Women /// Clothing"
+          ],
+          "level2": [
+            "Women /// Clothing /// Bottoms"
+          ],
+          "level3": [
+            "Women /// Clothing /// Bottoms /// Pants"
+          ]
+        },
+        "returnCategoryRestriction": false,
+        "priceSource": "VM",
+        "flashSale": {
+          "active": null,
+          "start": null,
+          "end": null,
+          "color": null
+        },
+        "outOfStock": false
+      },
+      {
+        "id": "60078827",
+        "sku": "60078827",
+        "name": "Contrast Cross Back Strap Active Sports Bra",
+        "productType": "configurable",
+        "prices": {
+          "price": "1099.0",
+          "specialPrice": ""
+        },
+        "images": {
+          "image": "https://images.stylishop.com/media/catalog/product/60078827/images/60078827_4.jpg",
+          "smallImage": null,
+          "thumbnail": null,
+          "image2": null,
+          "smallImage2": null,
+          "thumbnail2": null,
+          "mediaGallery": [
+            "https://images.stylishop.com/media/catalog/product/60078827/images/60078827_4.jpg",
+            "https://images.stylishop.com/media/catalog/product/60078827/images/60078827_1.jpg",
+            "https://images.stylishop.com/media/catalog/product/60078827/images/60078827_2.jpg",
+            "https://images.stylishop.com/media/catalog/product/60078827/images/60078827_3.jpg",
+            "https://images.stylishop.com/media/catalog/product/60078827/images/60078827_5.jpg"
+          ]
+        },
+        "currency": "INR",
+        "quantity": "0",
+        "isVisibleProduct": true,
+        "discount": 0,
+        "brand": "Closet",
+        "wishListItemId": "60078827",
+        "url": "https://qa.stylifashion.com/in/en/product-closet-contrast-cross-back-strap-active-sports-bra-60078827",
+        "configProducts": [
+          {
+            "id": "6007882702",
+            "sku": "6007882702",
+            "size": "S",
+            "quantity": "0",
+            "isVisibleProduct": true,
+            "outOfStock": false
+          },
+          {
+            "id": "6007882703",
+            "sku": "6007882703",
+            "size": "M",
+            "quantity": "0",
+            "isVisibleProduct": true,
+            "outOfStock": false
+          },
+          {
+            "id": "6007882704",
+            "sku": "6007882704",
+            "size": "L",
+            "quantity": "0",
+            "isVisibleProduct": true,
+            "outOfStock": false
+          },
+          {
+            "id": "6007882705",
+            "sku": "6007882705",
+            "size": "XL",
+            "quantity": "0",
+            "isVisibleProduct": true,
+            "outOfStock": false
+          }
+        ],
+        "categories": {
+          "level0": [
+            "Women"
+          ],
+          "level1": [
+            "Women /// Clothing"
+          ],
+          "level2": [
+            "Women /// Clothing /// Activewear"
+          ],
+          "level3": [
+            "Women /// Clothing /// Activewear /// Tops"
+          ]
+        },
+        "returnCategoryRestriction": false,
+        "priceSource": "VM",
+        "flashSale": {
+          "active": null,
+          "start": null,
+          "end": null,
+          "color": null
+        },
+        "outOfStock": true
+      }
+    ]
+  }
+}

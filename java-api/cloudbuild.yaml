@@ -1,0 +1,269 @@
+steps:
+  
+  - id: 'report-dir-for-parralel-build'
+    name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args: 
+      - -c
+      - |
+        mkdir dockerfilescan
+        mkdir dockerimagescan
+
+  - name: 'gcr.io/kaniko-project/executor:latest'
+    id: build
+    args:
+    - --destination=$_CLOUDSDK_COMPUTE_ZONE-docker.pkg.dev/$PROJECT_ID/stylidev-orderservice/styli-api-order:$REVISION_ID
+    - --cache=true
+    - --cache-ttl=1000h
+    - --context=order-service
+  
+  
+  - name: 'gcr.io/cloud-builders/docker'
+    entrypoint: 'bash'
+    id: mvn-test
+    args:
+      - '-c'
+      - |
+        if [[ "$_UNIT_TEST_" == "true" ]]; then
+          docker run --rm -v /workspace:/app -w /app maven:3.8.3-openjdk-17 sh -c 'mvn clean test || true' 
+        fi
+
+  - name: 'gcr.io/$PROJECT_ID/zip'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'if [[ "$_UNIT_TEST_" == "true" ]]; then zip -r html-report.zip /workspace/order-service/target/surefire-reports/ /workspace/order-service/target/site/jacoco/; fi'
+
+  - id: 'unit-test-report-upload'
+    name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    args: 
+      - -c
+      - |
+        if [[ "$_UNIT_TEST_" == "true" ]]; then
+          mkdir unittest-$REVISION_ID
+          mv html-report.zip unittest-$REVISION_ID/
+          gsutil -m cp -r /workspace/unittest-$REVISION_ID gs://stylishopdev-cireports/
+        fi
+   
+  
+  - name: 'gcr.io/cloud-builders/docker'
+    entrypoint: 'bash'
+    id: check-coverage-threshold
+    args:
+      - '-c'
+      - |
+        if [[ "$_UNIT_TEST_" == "true" ]]; then
+          percentage=$(grep -oE '<td class="ctr2">([0-9]+)%<\/td>' /workspace/order-service/target/site/jacoco/index.html | sed -E 's/<td class="ctr2">([0-9]+)%<\/td>/\1/g' | head -n 1)
+          if [[ -n "$percentage" ]]; then
+            integer_part=${percentage%%.*}
+            threshold=45
+            if [[ "$integer_part" -gt "$threshold" ]]; then
+              echo "The percentage is greater than $threshold."
+            else
+              echo "The percentage is not greater than $threshold."
+              echo "Threshold not met."
+              docker run -i --rm  -v /workspace/unittest-$REVISION_ID:/app/reports -e TO_EMAIL=$_UNITMAIL_   -e FROM_EMAIL=sre@stylishop.com   -e SUBJECT="$TRIGGER_NAME unit test coverage failed"   -e TEXT="Please check the report at https://storage.cloud.google.com/stylishopdev-cireports/unittest-$REVISION_ID/html-report.zip"   -e ATTACHMENT_DIR=reports/   gcr.io/$PROJECT_ID/sendgrid-client
+              exit 1
+            fi
+          else
+            echo "No valid percentage found in the file."
+            echo "No valid percentage."
+          fi
+        else
+          echo "Skipping coverage check as _UNIT_TEST_ is not true."
+        fi
+
+  - name: 'gcr.io/cloud-builders/docker'
+    entrypoint: 'bash'
+    id: check-failed-test-suites
+    args:
+      - '-c'
+      - |
+        if [[ "$_UNIT_TEST_" == "true" ]]; then
+          # Check for failed test suites pattern
+          if grep -q 'Failures: [^0],' "/workspace/order-service/target/surefire-reports/TestSuite.txt"; then
+            echo "Pattern matched: Test Failures found."
+            echo "Sending email notification..."
+            docker run -i --rm  -v /workspace/unittest-$REVISION_ID:/app/reports -e TO_EMAIL=$_UNITMAIL_   -e FROM_EMAIL=sre@stylishop.com   -e SUBJECT="$TRIGGER_NAME unit test Failed"   -e TEXT="Please check the report at https://storage.cloud.google.com/stylishopdev-cireports/unittest-$REVISION_ID/html-report.zip"   -e ATTACHMENT_DIR=reports/   gcr.io/$PROJECT_ID/sendgrid-client
+            exit 1
+          else
+            echo "There are no failures in unit tests, so passing: Test Passed"
+          fi
+        else
+          echo "Skipping test suite check as _UNIT_TEST_ is not true."
+        fi
+
+        
+  - id: 'owasp-pre-requisites'
+    name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'bash'
+    volumes:
+    - name: 'code'
+      path: /code  
+    args: 
+      - -c
+      - |
+        if [[ "$_SEC_OPS_" == "true" ]]; then
+         mkdir data
+         mkdir report
+         gsutil -m cp -r gs://styli_cache/data ./data
+         chmod -R 777 data
+         chmod -R 777 report
+         ls -la
+         pwd
+         ls -la /
+         cp -rf ./* /code/
+        fi
+
+  - name: 'gcr.io/cloud-builders/docker'
+    entrypoint: bash
+    volumes:
+    - name: 'code'
+      path: /code
+    args: 
+      - -c
+      - |
+        if [[ "$_SEC_OPS_" == "true" ]]; then
+          docker run --rm -v /workspace/data/data:/usr/share/dependency-check/data:rw -v /workspace:/project:rw -v /workspace/report:/usr/share/report docker.io/owasp/dependency-check:8.4.3 dependency-check.sh  --scan /project/ -f CSV -o /usr/share/report
+        fi
+  
+
+
+  - name: 'gcr.io/cloud-builders/git'
+    id: ci-report-dir
+    entrypoint: 'bash'
+    args:
+      - -c
+      - |
+        mkdir /report/$REVISION_ID
+    volumes:
+      - name: 'report'
+        path: '/report'
+
+  - name: 'aquasec/trivy:0.36.1'
+    id: 'Dockerfile scan'
+    dir: order-service
+    args: ['config', './Dockerfile', '-f', 'json', '-o', '/report/$REVISION_ID/trivy_docker_scan_report.txt']
+    volumes:
+    - name: 'report'
+      path: '/report'
+  
+  - name: 'aquasec/trivy:0.36.1'
+    id: 'Docker image scan'
+    dir: order-service
+    args: ['image', '-f', 'json', '--security-checks', 'vuln', '-o', '/report/$REVISION_ID/trivy_docker_image_scan_report.txt', '$_CLOUDSDK_COMPUTE_ZONE-docker.pkg.dev/$PROJECT_ID/stylidev-orderservice/styli-api-order:$REVISION_ID']
+    volumes:
+    - name: 'report'
+      path: '/report'
+
+  
+  - name: 'gcr.io/cloud-builders/git'
+    id: ci-status-generate
+    entrypoint: 'bash'
+    volumes:
+      - name: 'report'
+        path: '/report'
+    args:
+    - -c
+    - |
+      cp /workspace/report/dependency-check-report.csv /report/$REVISION_ID/
+      mkdir failurereports
+      matching_files=()
+      for filename in /report/$REVISION_ID/*; do
+          content=$(cat "$filename")
+          if echo "$content" | grep -q "${_CRITICALITY}"; then
+              matching_files+=("$filename")
+              cp $filename failurereports/
+         fi
+      done
+      if [ ${#matching_files[@]} -gt 0 ]; then
+          echo "Found security risks in the reports: ${matching_files[@]}"
+      fi
+
+
+  - name: 'gcr.io/cloud-builders/gsutil'
+    args: ['cp', '-r', '/report/*', 'gs://$PROJECT_ID-cireports/']
+    volumes:
+    - name: 'report'
+      path: '/report'
+
+  - id: ci-status-gate-check
+    name: 'gcr.io/cloud-builders/docker'
+    entrypoint: 'bash'
+    volumes:
+    - name: 'report'
+      path: '/report'
+    args:
+    - -c
+    - |
+      if [ "$(ls -A failurereports)" ]; then
+        # Check for security risks in the reports
+        matching_files=()
+        for filename in /report/failurereports/*; do
+          content=$(cat "$filename")
+          if echo "$content" | grep -q "${_CRITICALITY}"; then
+            matching_files+=("$filename")
+          fi
+        done
+
+        if [ ${#matching_files[@]} -gt 0 ]; then
+          echo "SECURITY RISK FOUND AND HENCE FAILING THE PIPELINE. PLEASE CHECK THE REPORTS AT https://console.cloud.google.com/storage/browser/$PROJECT_ID-cireports/report/$REVISION_ID. THE FOLLOWING FILES NEED TO BE CHECKED:"
+          ls -l "${matching_files[@]}"
+          ls -l
+          docker run -i --rm -v /workspace/failurereports:/app/failurereports -e TO_EMAIL=${_TO_EMAIL} -e FROM_EMAIL=sre@stylishop.com -e SUBJECT="$TRIGGER_NAME CI Status" -e TEXT="PFA" -e ATTACHMENT_DIR=failurereports/ gcr.io/$PROJECT_ID/sendgrid-client
+        else
+          echo "NO SECURITY RISKS FOUND AND HENCE PROCEEDING TO NEXT STEP"
+        fi
+      else
+        echo "No files found in failurereports directory. Proceeding to the next step."
+      fi
+
+  - name: 'gcr.io/cloud-builders/git'
+    id: order-env-setup
+    entrypoint: 'bash'
+    args:
+    - -c
+    - |
+      mkdir helmtmplt
+      mv .helm/templates/* helmtmplt/
+      mv helmtmplt/_helpers.tpl .helm/templates/
+      mv helmtmplt/order* .helm/templates/
+  
+  - name: 'gcr.io/cloud-builders/git'
+    id: build-env-step
+    entrypoint: 'bash'
+    args:
+    - -c
+    - |
+      cp -r .helm styli-storefront
+
+
+  - id: 'helm lint'
+    name: 'gcr.io/$PROJECT_ID/helm'
+    env:
+     - 'CLOUDSDK_COMPUTE_ZONE=${_CLOUDSDK_COMPUTE_ZONE}'
+     - 'CLOUDSDK_CONTAINER_CLUSTER=${_CLOUDSDK_CONTAINER_CLUSTER}'
+     - 'KUBECONFIG=/kube/config'
+    args: [ 
+     'lint', '--namespace', 'oms-$_STYLI_ENV', '-f', '.helm/values.$_STYLI_ENV.yaml',
+      '--set', 'order.image=$_CLOUDSDK_COMPUTE_ZONE-docker.pkg.dev/$PROJECT_ID/stylidev-orderservice/styli-api-order:$REVISION_ID',
+      'styli-storefront'
+    ]
+
+  - id: 'order-helm-deploy'
+    name: 'gcr.io/$PROJECT_ID/helm'
+    env:
+      - 'CLOUDSDK_COMPUTE_ZONE=${_CLOUDSDK_COMPUTE_ZONE}'
+      - 'CLOUDSDK_CONTAINER_CLUSTER=${_CLOUDSDK_CONTAINER_CLUSTER}'
+      - 'KUBECONFIG=/kube/config'
+    args: [
+      'upgrade', '--install', 'java-api-oms-$_STYLI_ENV',
+      '--namespace', 'oms-$_STYLI_ENV', '-f', '.helm/values.$_STYLI_ENV.yaml',
+      '--set', 'order.image=$_CLOUDSDK_COMPUTE_ZONE-docker.pkg.dev/$PROJECT_ID/stylidev-orderservice/styli-api-order:$REVISION_ID',
+      '.helm'
+    ]
+  
+  
+  
+timeout: 1600s

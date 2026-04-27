@@ -1,0 +1,767 @@
+<!doctype html>
+<html>
+  <head><title>Credit Memo</title></head>
+
+  <body>
+    <tcpdf
+      method="SetFillColor"
+      key="0%3A3%3AfbpqynGzfTodMuWQXGgLKNxB%2FuRO5RzXHyyRuFZ3%2BUDUmBPi2nCV72E%3D"
+      params="%5B240%2C240%2C240%5D"
+    >
+      <tcpdf
+        method="writeHTMLCell"
+        key="0%3A3%3AfbpqynGzfTodMuWQXGgLKNxB%2FuRO5RzXHyyRuFZ3%2BUDUmBPi2nCV72E%3D"
+        params="%5B70%2C50%2C25%2C0%2C%22%3Ctable%3E%5Cn++++++++%3Ctr%3E%5Cn++++++++++++%3Ctd+style%3D%5C%22font-size%3A+65px%3B+line-height%3A150%25%3B+color%3A%23575757%3B%5C%22%3E%3Cbr%5C%2F%3E%3Cbr%5C%2F%3ECREDIT%3Cbr%5C%2F%3EMEMO%3C%5C%2Ftd%3E%5Cn++++++++%3C%5C%2Ftr%3E%5Cn++++%3C%5C%2Ftable%3E%22%2C0%2C1%2C1%2Cfalse%2C%22C%22%5D"
+      >
+        <tcpdf
+          method="SetY"
+          key="0%3A3%3AfbpqynGzfTodMuWQXGgLKNxB%2FuRO5RzXHyyRuFZ3%2BUDUmBPi2nCV72E%3D"
+          params="%5B10%5D"
+        >
+          <table width="100%" border="0" cellpadding="6" cellspacing="0">
+            <tbody>
+              <!-- <tr>
+                <td style="text-align: left" width="50%">
+                  <div style="font-size: 23px; color: #575757; margin-top: 5px">
+                    CREDIT MEMO
+                  </div>
+                </td>
+                <td style="text-align: left" width="50%">
+                  <div style="margin-bottom: 15px">
+                    <img
+                      src="https://oms-ui-dev.web.app/assets/logos/black.svg"
+                      width="75px"
+                      height="auto"
+                      style="display: block"
+                    />
+                  </div>
+                </td>
+              </tr> -->
+              <tr>
+                <td style="text-align: center" width="50%">
+                  <div
+                    style="
+                      font-size: 23px;
+                      color: #575757;
+                      margin-top: 15px;
+                      float: left;
+                    "
+                  >
+                    Tax Credit Note
+                  </div>
+                </td>
+                <td style="font-size: 25px; color: #575757" width="50%">
+                  <div style="float: right">{{{data.qrCode}}}</div>
+                  <div style="margin-bottom: 15px">
+                    <img
+                      src="https://in-mdev.stylifashion.com/logo-en.svg"
+                      width="75px"
+                      height="auto"
+                      style="display: block"
+                    />
+                  </div>
+                </td>
+              </tr>
+              <tr style="line-height: 0.4cm">
+                <td
+                  valign="top"
+                  width="50%"
+                  style="
+                    font-weight: bold;
+                    border-bottom: 4px none transparent;
+                    color: #575757;
+                    background-color: #f0f0f0;
+                  "
+                >
+                  <strong>Billing From</strong>
+                </td>
+                <td
+                  valign="top"
+                  style="
+                    font-weight: bold;
+                    border-bottom: 4px none transparent;
+                    color: #575757;
+                    background-color: #f0f0f0;
+                  "
+                >
+                  <strong>Billing To</strong>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" style="font-size: 12px">
+                  {{#each data.companyAddressEn}} {{{this}}} <br />
+                  {{/each}}
+                </td>
+                <td valign="top" style="font-size: 12px">
+                  {{data.shippingAddress.firstName}}
+                  {{data.shippingAddress.lastName}}<br />{{data.shippingAddress.streetAddress}}<br />
+                  {{data.shippingAddress.city}} - {{data.shippingAddress.area}}
+                  <br />{{data.shippingAddress.country}}<br />{{data.shippingAddress.mobileNumber}}<br />
+                  State/UT Code: {{data.shippingAddress.stateCode}}
+                </td>
+              </tr>
+              <tr style="line-height: 0.4cm">
+                <td
+                  valign="top"
+                  width="50%"
+                  style="
+                    font-weight: bold;
+                    border-bottom: 4px none transparent;
+                    color: #575757;
+                    background-color: #f0f0f0;
+                  "
+                >
+                  <strong>Shipping From</strong>
+                </td>
+                <td
+                  valign="top"
+                  style="
+                    font-weight: bold;
+                    border-bottom: 4px none transparent;
+                    color: #575757;
+                    background-color: #f0f0f0;
+                  "
+                >
+                  <strong>Shipping To</strong>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" style="font-size: 12px">
+                  {{#each data.companyAddressEn}} {{{this}}} <br />
+                  {{/each}}
+                </td>
+                <td valign="top" width="50%" style="font-size: 12px">
+                  {{data.shippingAddress.firstName}}
+                  {{data.shippingAddress.lastName}}<br />{{data.shippingAddress.streetAddress}}<br />
+                  {{data.shippingAddress.city}} - {{data.shippingAddress.area}}
+                  <br />{{data.shippingAddress.country}}<br />{{data.shippingAddress.mobileNumber}}<br />
+                  State/UT Code: {{data.shippingAddress.stateCode}}<br/>
+                  Place of supply: {{data.shippingAddress.city}}
+                </td>
+               
+              </tr>
+              <tr>
+                <td valign="top" width="50%" style="font-size: 12px">
+                  GSTIN: {{data.gstIN}}<br />
+                  PAN: {{data.panNo}}<br />
+                </td>
+                <td valign="top" width="50%" style="font-size: 12px">
+                  Tax Credit Note No: {{data.incrementId}}<br />
+                  Tax Credit Note Date: {{data.createdAt}}<br />
+                  Original invoice No: {{data.invoice.increment_id}}<br />
+                  Original Invoice Date: {{data.invoiceCreatedAt}}<br />
+                </td>
+              </tr>
+              <tr style="line-height: 0.4cm">
+                <td
+                  valign="top"
+                  width="50%"
+                  style="
+                    font-weight: bold;
+                    border-bottom: 4px none transparent;
+                    color: #575757;
+                    background-color: #f0f0f0;
+                  "
+                >
+                  <strong>Payment Mode</strong>
+                </td>
+                {{#if data.rmaTrackingNumber}}
+                <td
+                  valign="top"
+                  style="
+                    font-weight: bold;
+                    border-bottom: 4px none transparent;
+                    color: #575757;
+                    background-color: #f0f0f0;
+                  "
+                >
+                  <strong>Shipping Method</strong>
+                </td>
+                {{/if}}
+              </tr>
+              <tr>
+                <td valign="top" width="50%" style="font-size: 12px">
+                  <span>{{data.paymentModeEn}}</span>
+                  <span>{{data.ccNumber}}</span>
+                  <span>{{data.ccType}}</span>
+                </td>
+                {{#if data.rmaTrackingNumber}}
+                <td valign="top" width="50%" style="font-size: 12px">
+                  {{data.rmaTrackingCode}} : {{data.rmaTrackingNumber}}
+                </td>
+                {{/if}}
+              </tr>
+              <tr>
+                <td colspan="2">&nbsp;</td>
+              </tr>
+            </tbody>
+          </table>
+          <br /><br />
+          <br /><br />
+          <div
+            style="
+              /* background-color: #f0f0f0; */
+              float: right;
+              color: #575757;
+              font-weight: bold;
+            "
+          >
+            {{data.currencyText.en}}
+          </div>
+          <table width="100%" border="0" cellspacing="0" cellpadding="2">
+            <thead>
+              <tr style="line-height: 0.4cm" nobr="true">
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="13.363636363636%"
+                >
+                  <strong style="font-size: 10px">Item Code</strong>
+                </th>
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="26.181818181818%"
+                >
+                  <strong style="font-size: 10px">Product name</strong>
+                </th>
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="26.181818181818%"
+                >
+                  <strong style="font-size: 10px">HSN of Goods</strong>
+                </th>
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="5.909090909091%"
+                >
+                  <strong style="font-size: 10px">Qty</strong>
+                </th>
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <strong style="font-size: 10px">MRP (Per Unit)</strong>
+                </th>
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <strong style="font-size: 10px">Gross Amount</strong>
+                </th>
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <strong style="font-size: 10px">Discount</strong>
+                </th>
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <strong style="font-size: 10px">Taxable Amount</strong>
+                </th>
+                {{#each data.taxTitles}}
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <strong style="font-size: 10px">{{this.titlePercentage}}</strong>
+                </th>
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <strong style="font-size: 10px">{{this.titleAmount}}</strong>
+                </th>
+                {{/each}}
+                <th
+                  style="
+                    border-bottom: 4px solid #f0f0f0;
+                    border-top: 4px solid #f0f0f0;
+                    background-color: #f0f0f0;
+                    color: #575757;
+                    font-weight: bold;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <strong style="font-size: 10px">Total Amount</strong>
+                </th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              {{#each data.items}}
+              <tr nobr="true" style="padding-top: 4mm" bgcolor="">
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="left"
+                  width="13.363636363636%"
+                >
+                  <p style="font-size: 10px">{{this.sku}}</p>
+                </td>
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="26.181818181818%"
+                >
+                  <p style="font-size: 10px">{{this.name}}</p>
+                </td>
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="26.181818181818%"
+                >
+                  <p style="font-size: 10px">{{this.hsn_code}}</p>
+                </td>
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="5.909090909091%"
+                >
+                  <p style="font-size: 10px">{{this.qty}}</p>
+                </td>
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <p style="font-size: 10px">{{this.price_incl_tax}}</p>
+                </td>
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <p style="font-size: 10px">{{this.subTotal}}</p>
+                </td>
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <p style="font-size: 10px">{{this.discount_amount}}</p>
+                </td>
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <p style="font-size: 10px">{{this.tax_amount}}</p>
+                </td>
+
+                {{#each this.taxObjects}}
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <p style="font-size: 10px">{{this.taxPercentage}}</p>
+                </td>
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <p style="font-size: 10px">{{this.taxAmount}}</p>
+                </td>
+                {{/each}}
+                <td
+                  style="
+                    border-bottom: 4px none transparent;
+                    border-left: 4px solid #f0f0f0;
+                  "
+                  align="center"
+                  width="10.909090909091%"
+                >
+                  <p style="font-size: 10px">{{this.row_total_incl_tax}}</p>
+                </td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+
+          <!-- TOTALS -->
+          <table width="100%">
+            <tbody>
+              <tr>
+                <td width="25%"></td>
+                <td>
+                  <table
+                    nobr="true"
+                    width="100%"
+                    border="0"
+                    cellpadding="10"
+                    cellspacing="0"
+                  >
+                    <tbody>
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                          Subtotal
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                          {{data.subtotal_incl_tax}}
+                        </td>
+                      </tr>
+                      {{#if data.discount_amount}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                          Discount
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                          -{{data.discount_amount}}
+                        </td>
+                      </tr>
+                      {{/if}} {{#if data.cash_on_delivery_fee}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                          COD Charges
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                          {{data.cash_on_delivery_fee}}
+                        </td>
+                      </tr>
+                      {{/if}} {{#if data.shipping_amount}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                          Shipping Fee
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                          {{data.shipping_amount}}
+                        </td>
+                      </tr>
+                      {{/if}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                          Tax
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                          {{data.tax_amount}}
+                        </td>
+                      </tr>
+                      {{#if data.amstorecredit_amount}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                          STYLI Credits
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                          {{data.amstorecredit_amount}}
+                        </td>
+                      </tr>
+                      {{/if}} {{#if data.easCoins}}
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                          Styli cash ({{data.easCoins}})
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                          -{{data.easValueInCurrency}}
+                        </td>
+                      </tr>
+                      {{/if}}
+
+                      <tr style="">
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-left: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="30%"
+                        >
+                          <strong>Refunded Amount</strong>
+                        </td>
+                        <td
+                          style="
+                            font-size: 12;
+                            line-height: 30%;
+                            border-bottom: 4px none transparent;
+                            color: #575757;
+                            background-color: #f0f0f0;
+                            border-right: 4px solid #f0f0f0;
+                          "
+                          align="right"
+                          width="20%"
+                        >
+                          <strong>{{data.refundedAmount}}</strong>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- END TOTALS -->
+        </tcpdf>
+      </tcpdf>
+    </tcpdf>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+package org.styli.services.order.pojo.order;
+
+import lombok.Data;
+
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import java.util.List;
+
+/**
+ * Wrapper for multiple RMA orders with split orders support
+ */
+@Data
+public class RMAOrderV2RequestWrapper {
+
+    @NotNull
+    @Min(1)
+    private Integer customerId;
+
+    @NotNull
+    @Min(1)
+    private Integer orderId;
+
+    @NotNull
+    @Min(1)
+    private Integer storeId;
+
+    @NotNull
+    private List<RMAOrderV2SubRequest> orders;
+
+    private Boolean isDropOffRequest = false;
+    private Boolean omsRequest = false;
+    private String rmaPaymentMethod;
+    private Double refundAmountDebited;
+    private Double refundAmountCredited;
+    private Double totalRefundAmount;
+    private String dropOffDetails;
+    private String cityName;
+    private String cpId;
+    private String returnIncPayfortId;
+    private Double returnFeeAmount = 0.0;
+} 

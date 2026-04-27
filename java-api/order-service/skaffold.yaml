@@ -1,0 +1,10 @@
+apiVersion: skaffold/v2alpha1
+kind: Config
+metadata:
+  name: order-service
+build:
+  artifacts:
+    - image: deepsamanta143/order
+      jib: {}
+  tagPolicy:
+    gitCommit: {}

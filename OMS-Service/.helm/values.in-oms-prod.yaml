@@ -1,0 +1,53 @@
+omsnode:
+  domain: in-prod-api.stylishop.com
+  node_env: production
+  replicaCount: 1
+  appname: omsnode
+  gcp_project_id: stylishopprod
+  gs_bucket_name: oms-file-upload
+  consul_host: india-consul-consul-server.in-consul
+  consul_port: 8500
+  consul_credentials_env: credentials_live
+  consul_app_config_env: appConfig_live
+  quote_base_url: http://quote-service.in-quote-prod
+  java_customer_base_url: http://customer-service-oms.in-customer-prod
+  java_order_base_url: http://order-service-oms.in-oms-prod
+  python_base_url: http://facto.stylishop.store
+  bucket_base_url: https://bucket.stylishop.com/live
+  elastic_apm_service_name: in-oms-prod-node-service
+  elastic_apm_service_token:
+  elastic_apm_service_url: https://10.154.0.54:8200 
+  kafka_groupid: oms-service-logging-prod
+  kafka_inventory_groupid: inventory-logging-prod
+  kafka_clientid: oms-service-consumer-prod
+  kafka_brokerlist: 10.154.0.86:9092
+  kafka_v2_brokerlist: 10.154.0.86:9092
+  kafka_order_success_topic: order-sms-topic_live
+  kafka_inventory_logging_topic: inventory_logging
+  kafka_auto_refund_topic: queue_based_refund_dropoff_live
+  kafka_shipment_update_topic: shipment_update_navik_live
+  mysql_port: 3306
+  mulin_url: http://mulin.in-mulin-prod:8080
+  oms_api_host: https://in-prod-api.stylishop.com
+  mongo_node_count: 3
+  braze_base_url: https://rest.fra-01.braze.eu
+  braze_auth_token: eca0661e-90b6-4fdd-aa86-8bef847e4e35
+  inventory_base_url: http://inventory.in-oms-prod:8080
+  archive_mysql_db: in_oms_archive_prod
+  eas_url: http://eas.in-easprod:8080
+  custmgmt_base_url: https://customermg.in-customer-prod:5003
+  region: 'IN'
+  memorylim: 1000Mi
+  cpulim: 1000m
+  memoryreq: 1000Mi
+  cpureq: 1000m  
+  authservice_base_url: https://prod-sentinel-api.stylishop.com/api/v1/auth
+  city_data_api_url: http://adrsmpr.adrsmpr-prod:8080
+  main_website_host_name: https://stylishop.com
+  kafka_shipment_return_update_topic: return_shipment_update_navik_live
+  oms_refund_api_rearrangement_topic: oms_refund_api_rearrangement
+
+
+  ots_base_url: https://ordertracking-prod.stylishop.com
+
+

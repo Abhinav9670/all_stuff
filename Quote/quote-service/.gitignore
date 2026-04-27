@@ -1,0 +1,15 @@
+.DS_Store*
+Thumbs.db*
+~*
+
+node_modules/
+.idea
+data/
+package-lock.json
+.vscode/
+.env.development.local
+newrelic_agent.log
+.history
+coverage/
+html-report/
+test-report.xml

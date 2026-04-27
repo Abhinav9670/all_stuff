@@ -1,0 +1,10 @@
+{
+  "status": true,
+  "statusCode": "200",
+  "statusMsg": "SUCCESS",
+  "response": {
+    "statusFlag": "false",
+    "customerId":"1"
+  },
+  "error": null
+}

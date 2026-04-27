@@ -1,0 +1,161 @@
+{
+  "ORDER_LIST": {
+    "filters": {
+      "storeId": [],
+      "incrementId": "",
+      "customerName": "",
+      "customerEmail": "",
+      "status": [],
+      "source": [],
+      "appVersion": "",
+      "fromDate": "",
+      "toDate": "",
+      "paymentMethod": ""
+    },
+    "query": "",
+    "offset": 0,
+    "pageSize": 20,
+    "ordersSource": "live"
+  },
+  "SHIPMENT_UPDATE_FORWARD": {
+    "status": "Pickedup",
+    "waybill": "30496445066",
+    "stylipost_status_code": 8,
+    "cp_id": 79,
+    "timestamp": "2023-02-14 15:02:58+00:00",
+    "additional": {
+      "notification_event_id": 2,
+      "is_rvp": false,
+      "ndr_status_description": "",
+      "latest_status": {
+        "status": "Pickedup",
+        "reference_number": "7000633515",
+        "remark": "for test",
+        "timestamp": "2023-02-14 19:02:58+00:00",
+        "items": [
+          {
+            "quantity": "2",
+            "sku": "700304570103"
+          },
+          {
+            "quantity": "1",
+            "sku": "700304570104"
+          }
+        ]
+      }
+    }
+  },
+  "SHIPMENT_UPDATE_FORWARD_OFD": {
+    "status": "Pickedup",
+    "waybill": "30496445066",
+    "stylipost_status_code": 8,
+    "cp_id": 79,
+    "timestamp": "2023-02-14 15:02:58+00:00",
+    "additional": {
+      "notification_event_id": 3,
+      "is_rvp": false,
+      "ndr_status_description": "",
+      "latest_status": {
+        "status": "Pickedup",
+        "reference_number": "7000633515",
+        "remark": "for test",
+        "timestamp": "2023-02-14 19:02:58+00:00",
+        "items": [
+          {
+            "quantity": "2",
+            "sku": "700304570103"
+          },
+          {
+            "quantity": "1",
+            "sku": "700304570104"
+          }
+        ]
+      }
+    }
+  },
+  "SHIPMENT_UPDATE_FORWARD_DELIVERED": {
+    "status": "Pickedup",
+    "waybill": "30496445066",
+    "stylipost_status_code": 8,
+    "cp_id": 79,
+    "timestamp": "2023-02-14 15:02:58+00:00",
+    "additional": {
+      "notification_event_id": 5,
+      "is_rvp": false,
+      "ndr_status_description": "",
+      "latest_status": {
+        "status": "Pickedup",
+        "reference_number": "7000633515",
+        "remark": "for test",
+        "timestamp": "2023-02-14 19:02:58+00:00",
+        "items": [
+          {
+            "quantity": "2",
+            "sku": "700304570103"
+          },
+          {
+            "quantity": "1",
+            "sku": "700304570104"
+          }
+        ]
+      }
+    }
+  },
+  "SHIPMENT_UPDATE_RVP": {
+    "status": "Pickedup",
+    "waybill": "30496445066",
+    "stylipost_status_code": 8,
+    "cp_id": 79,
+    "timestamp": "2023-02-14 15:02:58+00:00",
+    "additional": {
+      "notification_event_id": 2,
+      "is_rvp": true,
+      "ndr_status_description": "",
+      "latest_status": {
+        "status": "Pickedup",
+        "reference_number": "R1000633515",
+        "remark": "for test",
+        "timestamp": "2023-02-14 19:02:58+00:00",
+        "items": [
+          {
+            "quantity": "2",
+            "sku": "700304570103"
+          },
+          {
+            "quantity": "1",
+            "sku": "700304570104"
+          }
+        ]
+      }
+    }
+  },
+  "SHIPMENT_UPDATE_PICKED_UP": {
+    "status": "PICKED_UP",
+    "waybill": "RN23060815313862",
+    "stylipost_status_code": 4,
+    "cp_id": 210,
+    "timestamp": "2023-06-08 12:32:42.087000+00:00",
+    "additional": {
+      "notification_event_id": 2,
+      "is_rvp": false,
+      "ndr_status_description": "",
+      "alpha_awb": "ALPR000000009823",
+      "latest_status": {
+        "status": "PICKED_UP",
+        "reference_number": "R1000636205",
+        "remark": "Item is PickedUp",
+        "timestamp": "2023-06-08 12:32:42.087000+00:00",
+        "items": [
+          {
+            "quantity": 1,
+            "sku": 700457042868
+          },
+          {
+            "quantity": 2,
+            "sku": 6927632004
+          }
+        ]
+      }
+    }
+  }
+}

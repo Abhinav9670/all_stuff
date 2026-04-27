@@ -1,0 +1,331 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: omsnode
+  labels:
+    app: {{ template "app.fullname" . }}
+    service: omsnode
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.omsnode.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ template "app.fullname" . }}
+      service: omsnode
+      release: {{ .Release.Name }}
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  template:
+    metadata:
+      labels:
+        app: {{ template "app.fullname" . }}
+        service: omsnode
+        release: {{ .Release.Name }}
+    spec:
+      nodeSelector:
+        for: wi
+      serviceAccountName: {{ .Values.omsnode.servicekeyname }}
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 50
+              podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    service: omsnode
+                    revision: "{{ .Release.Revision }}"
+                topologyKey: "kubernetes.io/hostname"
+      volumes:
+        - name: gcpauth
+          secret:
+            secretName: oms-key
+      containers:
+        - name: omsnode
+          image: "{{ .Values.omsnode.image }}"
+          imagePullPolicy: {{ .Values.omsnode.pullPolicy }}
+          readinessProbe:
+            httpGet:
+              path: /v1/misc/health-check
+              port: 8080
+              initialDelaySeconds: 30
+            timeoutSeconds: 2
+            periodSeconds: 60
+            failureThreshold: 3
+            successThreshold: 1
+          livenessProbe:
+            httpGet:
+              path: /v1/misc/health-check
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 3
+            periodSeconds: 10
+            failureThreshold: 3
+          resources:
+            requests:
+              cpu: {{ .Values.omsnode.cpureq }}
+              memory: {{ .Values.omsnode.memoryreq }}
+            limits:
+              cpu: {{ .Values.omsnode.cpulim }}
+              memory: {{ .Values.omsnode.memorylim }}
+          ports:
+            - name: http
+              containerPort: 8080
+          env:
+            - name: APMKEY
+              value: "{{ .Values.omsnode.apmkey }}"
+            - name: ELASTIC_APM_VERIFY_SERVER_CERT
+              value: "false"
+            - name: MONGODB_AUTH_SOURCE
+              valueFrom:
+                secretKeyRef:
+                  name: oms-mongo
+                  key: mongo_auth_dev
+            - name: MONGODB_URL
+              valueFrom:
+                secretKeyRef:
+                  name: oms-mongo
+                  key: mongo_url
+            - name: MONGODB_DB
+              valueFrom:
+                secretKeyRef:
+                  name: oms-mongo
+                  key: mongo_db
+            - name: MONGODB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: oms-mongo
+                  key: mongo_user
+            - name: MONGODB_PASS
+              valueFrom:
+                secretKeyRef:
+                  name: oms-mongo
+                  key: mongo_pass
+            - name: PROXY_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: shukran
+                  key: PROXY_HOST     
+            - name: GLOBAL_REDIS_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: shukran
+                  key: GLOBAL_REDIS_HOST   
+            - name: GLOBAL_REDIS_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: shukran
+                  key: GLOBAL_REDIS_PORT       
+            - name: GLOBAL_REDIS_AUTH
+              valueFrom:
+                secretKeyRef:
+                  name: shukran
+                  key: GLOBAL_REDIS_AUTH 
+            - name: APMKEY
+              value: "{{ .Values.omsnode.apmkey }}"
+            - name: ELASTIC_APM_VERIFY_SERVER_CERT
+              value: "false"
+            - name: MONGO_NODE_COUNT
+              value: "{{ .Values.omsnode.mongo_node_count }}"
+            - name: JAVA_BASE_URL
+              value: "{{ .Values.omsnode.java_order_base_url }}"
+            - name: JAVA_CUSTOMER_BASE_URL
+              value: "{{ .Values.omsnode.java_customer_base_url }}"
+
+            - name: OTS_BASE_URL
+              value: "{{ .Values.omsnode.ots_base_url }}"
+            - name: ARCHIVE_JAVA_BASE_URL
+              value: "{{ .Values.omsnode.archive_java_base_url }}"
+            - name: PYTHON_BASE_URL
+              value: "{{ .Values.omsnode.python_base_url }}"              
+            - name: QUOTE_BASE_URL
+              value: "{{ .Values.omsnode.quote_base_url }}"
+            - name: BUCKET_BASE_URL
+              value: "{{ .Values.omsnode.bucket_base_url }}"
+            - name: CONSUL_HOST
+              value: "{{ .Values.omsnode.consul_host }}"
+            - name: CONSUL_PORT
+              value: "{{ .Values.omsnode.consul_port }}"
+            - name: CONSUL_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: consul-secrets
+                  key: consul_token
+            - name: CONSUL_CREDENTIALS_ENV
+              value: "{{ .Values.omsnode.consul_credentials_env }}"
+            - name: CONSUL_APP_CONFIG_ENV
+              value: "{{ .Values.omsnode.consul_app_config_env }}"              
+            - name: NODE_ENV
+              value: "{{ .Values.omsnode.node_env }}"
+            - name: ELASTIC_APM_SERVICE_NAME
+              value: "{{ .Values.omsnode.elastic_apm_service_name }}"
+            - name: ELASTIC_APM_SECRET_TOKEN
+              value: "{{ .Values.omsnode.elastic_apm_service_token }}"
+            - name: ELASTIC_APM_SERVER_URL
+              value: "{{ .Values.omsnode.elastic_apm_service_url }}"
+            - name: GS_BUCKET_NAME
+              value: "{{ .Values.omsnode.gs_bucket_name }}"
+            - name: RETURN_INVOICE_BUCKET_URL
+              value: "{{ .Values.omsnode.return_invoice_bucket_url }}"
+            - name: GCP_PROJECT_ID
+              value: "{{ .Values.omsnode.gcp_project_id }}"
+            - name: KAFKA_BROKERLIST
+              value: "{{ .Values.omsnode.kafka_brokerlist }}"
+            - name: KAFKA_V2_BROKERLIST
+              value: "{{ .Values.omsnode.kafka_v2_brokerlist }}"
+            - name: KAFKA_GROUP_ID
+              value: "{{ .Values.omsnode.kafka_groupid }}"
+            - name: KAFKA_INVENTORY_GROUP_ID
+              value: "{{ .Values.omsnode.kafka_inventory_groupid }}"
+            - name: KAFKA_CLIENT_ID
+              value: "{{ .Values.omsnode.kafka_clientid }}"
+            - name: KAFKA_ORDER_SUCCESS_TOPIC
+              value: "{{ .Values.omsnode.kafka_order_success_topic }}"
+            - name: KAFKA_LOGGIN_TOPIC
+              value: "{{ .Values.omsnode.kafka_inventory_logging_topic }}"
+            - name: QUEUE_BASED_REFUND_DROPOFF
+              value: "{{ .Values.omsnode.kafka_auto_refund_topic}}"
+            - name: KAFKA_SHIPMENT_UPDATE_TOPIC
+              value: "{{ .Values.omsnode.kafka_shipment_update_topic}}"
+            - name: KAFKA_SHIPMENT_RETURN_UPDATE_TOPIC
+              value: "{{ .Values.omsnode.kafka_shipment_return_update_topic}}"
+            - name: OMS_REFUND_API_REARRANGEMENT_TOPIC
+              value: "{{ .Values.omsnode.oms_refund_api_rearrangement_topic}}"
+            - name: PUB_SUB_LOGGIN_TOPIC_SUB
+              value: "{{ .Values.omsnode.loggingTopicSub }}"
+            - name: PUB_SUB_ORDER_SUCCESS_TOPIC_SUB
+              value: "{{ .Values.omsnode.orderSuccessTopicSub }}"
+            - name: PUB_SUB_SHIPMENT_UPDATE_TOPIC
+              value: "{{ .Values.omsnode.shipmentUpdateTopic }}"
+            - name: PUB_SUB_SHIPMENT_UPDATE_TOPIC_SUB
+              value: "{{ .Values.omsnode.shipmentUpdateTopicSub }}"
+            - name: PUB_SUB_SHIPMENT_QUEUE_RETURN_UPDATE_TOPIC
+              value: "{{ .Values.omsnode.queueBasedRefundDropoff }}"
+            - name: PUB_SUB_SHIPMENT_RETURN_UPDATE_TOPIC
+              value: "{{ .Values.omsnode.returnShipmentUpdateTopic }}"
+            - name: PUB_SUB_SHIPMENT_RETURN_UPDATE_TOPIC_SUB
+              value: "{{ .Values.omsnode.returnShipmentUpdateTopicSub }}"
+            - name: PUB_SUB_REFUND_SMS_TRIGGER_TOPIC_SUB
+              value: "{{ .Values.omsnode.refundSmsTriggerTopicSub }}"   
+            - name: ORDER_TRACK_HISTORY_TOPIC
+              value: "{{ .Values.omsnode.order_track_history_topic }}"
+            - name: SELLER_CENTRAL_ORDER_TOPIC
+              value: "{{ .Values.omsnode.seller_central_order_topic }}"
+              
+
+            - name: MULIN_URL
+              value: "{{ .Values.omsnode.mulin_url }}"
+            - name: AUTH_SERVICE_URL
+              value: "{{ .Values.omsnode.authservice_base_url }}"  
+            - name: OMS_API_HOST
+              value: "{{ .Values.omsnode.oms_api_host }}"
+            - name: CITY_DATA_API_URL
+              value: "{{ .Values.omsnode.city_data_api_url }}"
+            - name: ARCHIVE_MYSQL_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: oms-mysql
+                  key: mysql_host
+            - name: ARCHIVE_MYSQL_USER
+              valueFrom:
+                secretKeyRef:
+                  name: oms-mysql
+                  key: mysql_db_username
+            - name: ARCHIVE_MYSQL_PWD
+              valueFrom:
+                secretKeyRef:
+                  name: oms-mysql
+                  key: mysql_db_password
+            - name: ARCHIVE_MYSQL_DB
+              value: "{{ .Values.omsnode.archive_mysql_db }}"
+            - name: ARCHIVE_MYSQL_DB_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: oms-mysql
+                  key: mysql_port
+            - name: INVENTORY_BASE_URL
+              value: "{{ .Values.omsnode.inventory_base_url }}"
+            - name: MAIN_WEBSITE_HOST_NAME
+              value: "{{ .Values.omsnode.main_website_host_name }}"  
+            - name: CUSTMGMT_BASE_URL
+              value: "{{ .Values.omsnode.custmgmt_base_url }}"
+              
+
+            - name: MYSQL_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: oms-mysql
+                  key: mysql_host
+            - name: MYSQL_USER
+              valueFrom:
+                secretKeyRef:
+                  name: oms-mysql
+                  key: mysql_db_username
+            - name: MYSQL_PWD
+              valueFrom:
+                secretKeyRef:
+                  name: oms-mysql
+                  key: mysql_db_password
+            - name: MYSQL_DB
+              valueFrom:
+                secretKeyRef:
+                  name: oms-mysql
+                  key: mysql_db_name
+            - name: MYSQL_DB_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: oms-mysql
+                  key: mysql_port
+
+            - name: AUTH_EXTERNAL_HEADER_BEARER_TOKEN
+              valueFrom:
+                secretKeyRef:
+                 name: authinternaloms  
+                 key: AUTH_EXTERNAL_HEADER_BEARER_TOKEN
+            - name: AUTH_INTERNAL_HEADER_BEARER_TOKEN
+              valueFrom:
+                secretKeyRef:
+                 name: authinternaloms  
+                 key: AUTH_INTERNAL_HEADER_BEARER_TOKEN
+
+            - name: BRAZE_BASE_URL
+              value: "{{ .Values.omsnode.braze_base_url }}"
+            - name: BRAZE_AUTH_TOKEN
+              value: "{{ .Values.omsnode.braze_auth_token }}"
+            - name: EAS_URL
+              value: "{{ .Values.omsnode.eas_url }}"
+            - name: REGION
+              value: "{{ .Values.omsnode.region }}"
+            - name: FRESH_CHAT_WHATSAPP
+              value: "{{ .Values.omsnode.fresh_chat_whatsapp }}"
+            - name: FRESH_CHAT_WHATSAPP_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: oms
+                  key: freshchat_key
+
+          volumeMounts:
+            - name: gcpauth
+              mountPath: /var/gcppath
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: omsnode
+  labels:
+    app: {{ template "app.fullname" . }}
+    service: omsnode
+    release: {{ .Release.Name }}
+
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    app: {{ template "app.fullname" . }}
+    service: omsnode
+    release: {{ .Release.Name }}

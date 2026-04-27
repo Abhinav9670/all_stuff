@@ -1,0 +1,45 @@
+[
+	{
+		"storeId": "1",
+		"storeCode": "1",
+		"storeLanguage": "en",
+		"storeCurrency": "dolar",
+		"websiteId": "1",
+		"websiteIdentifier": "msite",
+		"storeName": "ksa",
+		"websiteCode": "1",
+		"countryCode": "1",
+		"currencyConversionRate":"1",
+		"holdOrder":"true"
+	},
+	{
+		"storeId": "2",
+		"storeCode": "2",
+		"storeLanguage": "en",
+		"storeCurrency": "rupee",
+		"websiteId": "2",
+		"websiteIdentifier": "msite",
+		"storeName": "ksa",
+		"websiteCode": "2",
+		"countryCode": "2",
+		"currencyConversionRate":"1",
+		"holdOrder":"true"
+	},
+	{
+		"storeId": "7",
+		"storeCode": "7",
+		"storeLanguage": "en",
+		"storeCurrency": "rupee",
+		"websiteId": "2",
+		"websiteIdentifier": "msite",
+		"storeName": "UAE",
+		"websiteCode": "2",
+		"countryCode": "2",
+		"currencyConversionRate":"1",
+		"holdOrder":"true",
+		"customDutiesPercentage": 5,
+		"importFeePercentage": 5,
+		"minimumDutiesAmount": 1000,
+		"importMaxFeePercentage": 5
+	}
+]

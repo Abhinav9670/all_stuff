@@ -1,0 +1,376 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <style>
+            @font-face {
+                font-family: "myFont";
+                src: "/fonts/eng.otf";
+                /* src: url("https://m.stylishop.com/fonts/Swissra-Regular.woff2"); */
+            }
+
+            @font-face {
+                font-family: "myFontAR";
+                src: "/fonts/arabic.otf";
+                /* src: url("https://m.stylishop.com/fonts/Swissra-Regular.woff2"); */
+            }
+
+            .myFont {
+                font-family: "myFont";
+            }
+
+            .myFontAr {
+                font-family: "myFontAR";
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <table width="100%" border="0" cellpadding="6" cellspacing="0" dir="rtl" class="myFontAr">
+            <tbody>
+                <tr>
+                    <td style="text-align: center;" width="50%">
+                        <div style="font-size: 23px; color: #575757; float: right; margin-top: 15px;">
+                            {{data.headers.invoiceHeading.ar}}
+                        </div>
+                    </td>
+                    <td style="font-size: 25px; color: #575757;" width="50%">
+                        <div style="float: left;">{{{data.qrCode}}}</div>
+                        <div style="margin-bottom: 15px;">
+                            <img src="https://oms-ui-dev.web.app/assets/logos/black.svg" width="75px" height="auto" style="display: block;" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="50%" style="font-size: 12px;">
+                        رقم الفاتورة #: {{data.incrementId}}<br />
+                        تاريخ الفاتورة: {{data.createdAt}}<br />
+                        تاريخ العرض : {{data.createdAt}}<br />
+                        وقت الإصدار: {{data.issueTime}}<br />
+                        عملة :{{data.currency}}<br />
+                    </td>
+                  
+                </tr>
+                <tr style="line-height: 0.4cm;">
+                    
+                    <td valign="top" style="font-weight: bold; border-bottom: 4px none transparent; color: #575757; background-color: #f0f0f0;">
+                        <strong>عنوان البائع</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="50%" style="font-size: 12px;">
+                        {{data.seller.name}}<br />
+                        {{data.seller.streetAddress}}<br />
+                        {{data.seller.area}}<br />
+                        {{data.seller.city}} <br />
+                        {{data.seller.country}}<br />
+                        {{data.seller.mobileNumber}}<br />
+                    </td>
+                </tr>
+             
+                <tr>
+                    <td valign="top" width="50%" style="font-size: 12px;"></td>
+                    <td valign="top" width="50%" style="font-size: 12px;">
+                        <span>ضريبة القيمة المضافة</span>
+                        :
+                        <span>{{data.vat}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <table width="100%" border="1" cellspacing="0" dir="rtl" class="myFontAr">
+            <thead>
+                <tr height="35px" nobr="true">
+                    <th align="center" width="9.363636363636%">
+                        <strong style="font-size: 5px;">س. لا.</strong>
+                    </th>
+                    <th align="center" width="18.181818181818%">
+                        <strong style="font-size: 5px;">رمز الصنف</strong>
+                    </th>
+                    <th align="center" width="3.909090909091%">
+                        <strong style="font-size: 5px;">وصف</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 5px;">الكمية</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 5px;">سعر الوحدة</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 5px;">المجموع الفرعي</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 5px;">المبلغ الخاضع للضريبة</strong>
+                    </th>
+                    <th align="center" width="3.909090909091%">
+                        <strong style="font-size: 5px;">قيمة الضريبة</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 5px;">قيمة الضريبة</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 5px;">المبلغ الإجمالي</strong>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+               
+                <tr nobr="true" height="35px" bgcolor="">
+                    <td align="left" width="9.363636363636%">
+                        <p style="font-size: 10px;">1</p>
+                    </td>
+                    <td align="center" width="18.181818181818%">
+                        <p style="font-size: 10px;"></p>
+                    </td>
+                    <td align="center" width="3.909090909091%">
+                        <p style="font-size: 9px;">رسوم إضافية للعودة الثانية</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">1</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.unitPrice}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;"></p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.unitPrice}}</p>
+                    </td>
+                    <td align="center" width="3.909090909091%">
+                        <p style="font-size: 9px;">{{data.taxPercentage}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.taxAmount}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totalPrice}}</p>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <!-- TOTALS -->
+        <table width="100%" border="1" cellpadding="10" cellspacing="0" dir="rtl" class="myFontAr">
+            <tbody>
+                <tr style="">
+                    <td align="right" width="40%">
+                        الإجمالي (باستثناء ضريبة القيمة المضافة)
+                    </td>
+                    <td align="right" width="10%">
+                        {{data.unitPrice}}
+                    </td>
+                </tr>
+                <tr style="">
+                    <td align="right" width="10%">
+                        إجمالي ضريبة القيمة المضافة
+                    </td>
+                    <td align="right" width="10%">
+                        {{data.taxAmount}}
+                    </td>
+                </tr>
+                
+                <tr style="">
+                    <td align="right" width="10%">
+                        المبلغ الإجمالي
+                    </td>
+                    <td align="right" width="10%">
+                        {{data.totalPrice}}
+                    </td>
+                </tr>
+              
+                <tr style="">
+                    <td align="right" width="30%">
+                        المبلغ المستحق
+                    </td>
+                    <td align="right" width="10%">
+                        {{data.totalPrice}}
+                    </td>
+                </tr>
+               
+            </tbody>
+        </table>
+<!-- END TOTALS -->
+        <br />
+        <br />
+<!-- English starts here -->
+        <p style="page-break-before: always;"></p>
+        
+        <table width="100%" border="0" cellpadding="6" cellspacing="0">
+            <tbody>
+                <tr>
+                    <td style="text-align: center;" width="50%">
+                        <div style="font-size: 23px; color: #575757; margin-top: 15px; float: left;">
+                            {{data.headers.invoiceHeading.en}}
+                        </div>
+                    </td>
+                    <td style="font-size: 25px; color: #575757;" width="50%">
+                        <div style="float: right;">{{{data.qrCode}}}</div>
+                        <div style="margin-bottom: 15px;">
+                            <img src="https://oms-ui-dev.web.app/assets/logos/black.svg" width="75px" height="auto" style="display: block;" />
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td valign="top" width="50%" style="font-size: 12px;">
+                        Invoice No: {{data.incrementId}}<br />
+                        Invoice Date: {{data.createdAt}}<br />
+                        Supply Date: {{data.createdAt}}<br />
+                        Issue Time: {{data.issueTime}}<br />
+                        Currency: {{data.currency}}<br />
+                    </td>
+                   
+                </tr>
+                <tr style="line-height: 0.4cm;">
+                  
+                    <td valign="top" style="font-weight: bold; border-bottom: 4px none transparent; color: #575757; background-color: #f0f0f0;">
+                        <strong>Seller Address</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top" width="50%" style="font-size: 12px;">
+                        {{data.seller.name}}<br />
+                        {{data.seller.streetAddress}}<br />
+                        {{data.seller.area}}<br />
+                        {{data.seller.city}} <br />
+                        {{data.seller.country}}<br />
+                        {{data.seller.mobileNumber}}<br />
+                    </td>
+                  
+                </tr>
+              
+                <tr>
+                    
+                    <td valign="top" width="50%" style="font-size: 12px;">
+                        <span>VAT No</span>
+                        :
+                        <span>{{data.vat}}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+      
+        <table width="100%" border="1" cellspacing="0">
+            <thead>
+                <tr nobr="true" height="35px">
+                    <th align="center" width="16.363636363636%">
+                        <strong style="font-size: 10px;">S. No.</strong>
+                    </th>
+                    <th align="center" width="18.181818181818%">
+                        <strong style="font-size: 10px;">Item Code</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 10px;">Description</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 10px;">Qty</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 10px;">Unit Price</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 10px;">Sub Total</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 10px;">Taxable Amount</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 10px;">VAT Rate</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 10px;">VAT Amount</strong>
+                    </th>
+                    <th align="center" width="10.909090909091%">
+                        <strong style="font-size: 10px;">Total Amount</strong>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+               
+                <tr nobr="true" height="35px" bgcolor="">
+                    <td align="left" width="16.363636363636%">
+                        <p style="font-size: 10px;">1</p>
+                    </td>
+                    <td align="center" width="18.181818181818%">
+                        <p style="font-size: 10px;"></p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">Extra Charges For Second Return</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">1</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.unitPrice}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;"></p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.unitPrice}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.taxPercentage}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.taxAmount}}</p>
+                    </td>
+                    <td align="center" width="10.909090909091%">
+                        <p style="font-size: 9px;">{{data.totalPrice}}</p>
+                    </td>
+                </tr>
+                
+               
+              
+              
+            </tbody>
+        </table>
+        <!-- TOTALS -->
+        <table nobr="true" width="100%" border="1" cellpadding="10" cellspacing="0">
+            <tbody>
+                <tr style="">
+                    <td align="right" width="40%">
+                        Total (Excluding VAT)
+                    </td>
+                    <td align="right" width="10%">
+                        {{data.unitPrice}}
+                    </td>
+                </tr>
+                <tr style="">
+                    <td align="right" width="10%">
+                       Total VAT
+                    </td>
+                    <td align="right" width="10%">
+                        {{data.taxAmount}}
+                    </td>
+                </tr>
+                <tr style="">
+                    <td align="right" width="10%">
+                       Gross Amount
+                    </td>
+                    <td align="right" width="10%">
+                        {{data.totalPrice}}
+                    </td>
+                </tr>
+                
+                <tr style="">
+                    <td align="right" width="30%">
+                        Payable Amount
+                    </td>
+                    <td align="right" width="10%">
+                        {{data.totalPrice}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- END TOTALS -->
+    </body>
+</html>

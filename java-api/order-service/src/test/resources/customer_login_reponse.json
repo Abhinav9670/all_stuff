@@ -1,0 +1,29 @@
+{
+  "status": true,
+  "statusCode": "200",
+  "statusMsg": "Logged In Successfully!!",
+  "response": {
+    "customer": {
+      "customerId": 5229113,
+      "jwtToken": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW5qYXkuODAwQG1haWxpbmF0b3IuY29tIiwiY29kZSI6IjE2ODMxODI0NjAwMzMiLCJyb2xlIjoidXNlciIsImN1c3RvbWVySWQiOjUyMjkxMTN9.myIpKhxN-rtLEOtlqiQibBBPzaQUaL7WfuKluCyNVi5WSHGCZnhzEG_J-iZG7jBFu5ZfX_MeFm_3EAZaWE6Z7A",
+      "groupId": 1,
+      "createdAt": "Thu May 04 06:40:18 GMT 2023",
+      "updatedAt": "Thu May 04 06:40:18 GMT 2023",
+      "email": "sanjay.800@mailinator.com",
+      "firstName": "sanjay",
+      "lastName": "800",
+      "mobileNumber": "+91 9898123456",
+      "gender": 2,
+      "ageGroupId": 1,
+      "whatsAppoptn": false,
+      "updateEmail": false,
+      "deleteRequested": false,
+      "storeId": 51,
+      "whatsApp": false,
+      "passwordAvailable": true
+    },
+    "registrationResponse": false
+  },
+  "responseToken": null,
+  "error": null
+}

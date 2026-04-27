@@ -1,0 +1,8 @@
+﻿email_id,store,amount_to_be_refunded,order_no,comment
+abc@gmail.com,KSA,27,3001763289,Some comment about something
+abc@gmail.com,KSA,100,Added SAR 100 for testing,testing
+abc@gmail.com,UAE,120,Added AED 120 for testing,comment1
+abc@gmail.com,UAE,-120,Removed AED 120 for testing,comment2
+abc@gmail.com,QAT,-120,Removed AED 120 for testing,comment3
+abc@gmail.com,UAE,123,Removed AED 120 for testing,comment4
+abc@gmail.com,KWT,5,Added KWT 5 for testing,comment5
